@@ -29,3 +29,4 @@ proguard/
 
 #jekyll generated
 _site
+_pages
