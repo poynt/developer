@@ -1,0 +1,1 @@
+/Users/palavilli/dev/git/developer/_posts/2015-01-22-setup-poyntos.md

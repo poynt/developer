@@ -24,3 +24,8 @@ proguard/
 
 # Log Files
 *.log
+# Mac
+.DS_Store
+
+#jekyll generated
+_site
