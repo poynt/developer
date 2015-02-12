@@ -11,6 +11,11 @@ Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categ
 ruby bin/jekyll-page "Some Page Title" ref
 ```
 
+To run it locally - simple run jekyll locally
+```bash
+jekyll serve
+```
+
 #### Don't Forget
 
 - Add your own content to this page (i.e. `index.md`) and change the `title`
