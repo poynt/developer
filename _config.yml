@@ -1,6 +1,6 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'Poynt Developer'
-subtitle: 'Documentation and resources for PoyntOS App Developers'
+#subtitle: 'Documentation and resources for PoyntOS App Developers'
 
 # Enable/show navigation. There are there options:
 #   0 - always hide
