@@ -20,12 +20,12 @@ Poynt OS apps can be built using any 7" android tablet (Tegra Note 7 is recommen
 
 1. Download the install script from: https://s3-us-west-1.amazonaws.com/poynt-apks/v1.2/setup_poynt_os.py
 2. Change the permissions for the downloaded script so you can execute it.
-    - $ chmod +x setup_poynt.os.py
+    - $ chmod +x setup_poynt_os.py
 3. Connect your android tablet or start your emulator.
     - Make sure you can connect with your device or emulator via adb.
     - running "adb devices” should show the connected android devices
 4. Run the script from your command line so it can download the required apks and install them on your device:
-    - ```$ ./setup_poynt.os.py```
+    - ```$ ./setup_poynt_os.py```
     - *NOTE*: the script tries to uninstall existing Poynt OS apps and services, if they do not exist, you will notice some uninstall “Failures" and they are completely ok to ignore.
 5. Wait until you see installation complete message.
     - ```*** install complete***```
