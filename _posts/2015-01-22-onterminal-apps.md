@@ -42,16 +42,16 @@ Please contact us to obtain the latest copy of the Poynt SDK.
 
 Poynt Services provide the core functionality exposed as AIDL services for 3rd party applications. These include,
 
-1. [Poynt Transaction Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntTransactionService.html) - provides the payment transactional information (status, amounts, etc.)
-2. [Poynt Order Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) - provides the order management apis
-3. [Poynt Business Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntBusinessService.html) - provides the information about the merchant’s business, stores, employees, etc.
-4. [Poynt Customer Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides apis to lookup and manage customers of the merchant
-5. [Poynt Email Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides apis to request receipts sent as email
-6. [Poynt Product Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to get product catalog for the merchant
-7. [Poynt Receipt Printing Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to print receipts for payment transaction and/or orders
-8. [Poynt Second Screen Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides apis to request content to be displayed in the the consumer screen
-9. [Poynt Cash Register Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides apis to open/close Cash drawer connected over USB
-10. [Poynt Session Service]({{site.url}}/javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides apis to obtain current logged in business user (merchant) information
+1. [Poynt Transaction Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntTransactionService.html) - provides the payment transactional information (status, amounts, etc.)
+2. [Poynt Order Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) - provides the order management apis
+3. [Poynt Business Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntBusinessService.html) - provides the information about the merchant’s business, stores, employees, etc.
+4. [Poynt Customer Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides apis to lookup and manage customers of the merchant
+5. [Poynt Email Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides apis to request receipts sent as email
+6. [Poynt Product Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to get product catalog for the merchant
+7. [Poynt Receipt Printing Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to print receipts for payment transaction and/or orders
+8. [Poynt Second Screen Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides apis to request content to be displayed in the the consumer screen
+9. [Poynt Cash Register Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides apis to open/close Cash drawer connected over USB
+10. [Poynt Session Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides apis to obtain current logged in business user (merchant) information
 11. Poynt Authenticator - provides business user (merchant) login/authentication through Android’s [Account Manager API](http://developer.android.com/reference/android/accounts/AccountManager.html).
 
 All the AIDL files required to generate the service stubs through Android SDK are bundled in the Poynt SDK. Please see [calling an IPC method](http://developer.android.com/guide/components/aidl.html#Calling) in Android developer documentation on how to use AIDL services.
@@ -80,7 +80,7 @@ When the Payment Fragments are launched by an application, the consumer facing s
 
 ### Poynt Intents
 
-Intents are a standard way for cross-application notifications in Android OS. Poynt Services broadcast various [events]({{site.url}}/javadoc/co/poynt/os/model/Intents.html) (as implicit intents) related to payments, orders and various other activities happening on the Terminal in real time. These events can be received by Applications and Services interested in receiving them and handle custom logic as needed. Please refer to the [javadocs]({{site.url}}/javadoc/co/poynt/os/model/Intents.html) for a complete list of Intent Actions defined in the PoyntOS platform.
+Intents are a standard way for cross-application notifications in Android OS. Poynt Services broadcast various [events]({{site.url}}../javadoc/co/poynt/os/model/Intents.html) (as implicit intents) related to payments, orders and various other activities happening on the Terminal in real time. These events can be received by Applications and Services interested in receiving them and handle custom logic as needed. Please refer to the [javadocs]({{site.url}}../javadoc/co/poynt/os/model/Intents.html) for a complete list of Intent Actions defined in the PoyntOS platform.
 
 Also as a good citizen in our App ecosystem, we request you to broadcast events that might be useful to other apps running the same terminal. This will help in building an integrated experience to the merchant - eg. when a POS app creates a new order, broadcasting an event about the new order created would help other apps and services (eg. an analytics and reporting app, or a order fulfillment app) to react as necessary.
 
