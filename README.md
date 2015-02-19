@@ -24,6 +24,8 @@ jekyll serve
 
 #### Modifying css/js/html templates
 
+Don't change anything in `_includes/`, `_layouts/`, `_css/`, or `_js/` -- they are all generated from source files inside `_build/`.
+
 ```
 cd _build
 npm install
