@@ -21,3 +21,11 @@ jekyll serve
 - Add your own content to this page (i.e. `index.md`) and change the `title`
 - Change `title` and `subtitle` defined in `config.yml` for your site
 - Set the `baseurl` in `_config.yml` for your repo if deploying to GitHub pages
+
+#### Modifying css/js/html templates
+
+```
+cd _build
+npm install
+npm start
+```
