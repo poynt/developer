@@ -1,0 +1,21 @@
+{
+  "asi"       : false,
+  "bitwise"   : true,
+  "curly"     : true,
+  "eqeqeq"    : true,
+  "forin"     : true,
+  "freeze"    : true,
+  "immed"     : true,
+  "latedef"   : true,
+  "newcap"    : true,
+  "noarg"     : true,
+  "node"      : true,
+  "nonew"     : true,
+  "quotmark"  : "single",
+  "undef"     : true,
+  "unused"    : "vars",
+  "trailing"  : true,
+  "globals"   : {
+    "$"       : true
+  }
+}

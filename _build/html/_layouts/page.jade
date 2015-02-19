@@ -1,0 +1,12 @@
+| ---
+| layout: default
+| ---
+| 
+div.page-header
+  h2
+    | {{ page.title }}
+    | {% if page.subtitle %}
+    small {{ page.subtitle }}
+    | {% endif %}
+| 
+| {{ content }}

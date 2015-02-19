@@ -1,0 +1,15 @@
+{
+  "css": {
+    "main.css" : ["reset.css", "syntax.css", "main.styl"]
+  },
+  "html": {
+    "_includes/header.html": ["_includes/header.jade"],
+    "_includes/navigation.html": ["_includes/navigation.jade"],
+    "_layouts/default.html": ["_layouts/default.jade"],
+    "_layouts/page.html": ["_layouts/page.jade"]
+  },
+  "js": {
+    "global.js" : ["jquery.js", "global.js"],
+    "shiv.js" : ["aight.js", "html5shiv.js", "respond.js"]
+  }
+}

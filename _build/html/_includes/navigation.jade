@@ -1,0 +1,12 @@
+ul.nav
+  li.heading: a(href='{{ site.baseurl }}/') Home
+  | {% for section in site.sections %}
+  | {% assign attr = section[0] %}
+  | {% assign label = section[1] %}
+  | {% for page in site.categories[attr] %}
+  | {% if forloop.first %}
+  li.head: span {{ label }}
+  | {% endif %}
+  li: a(href='{{ site.baseurl }}{{ page.url }}') {{ page.title }}
+  | {% endfor %}
+  | {% endfor %}
