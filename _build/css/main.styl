@@ -1,0 +1,321 @@
+@import 'nib'
+
+$blue1 = #1d354b
+$blue2 = #375270
+$blue3 = #627793
+$blue4 = #a6baca
+$blue5 = #edeff2
+$grey1 = #23282a
+$grey2 = #333333
+$grey3 = #808080
+$grey4 = #cccccc
+$grey5 = #f6f6f6
+
+*
+*:focus
+  outline none
+
+body
+  color $grey1
+  font-family 'proxima-nova', 'Proxima Nova', 'Myriad Pro', Helvetica, Calibri, sans-serif
+  height 100%
+  margin 0px
+  padding 0px
+
+h1
+h2
+h3
+h4
+  margin-bottom 20px
+
+h1
+  font-size 22px
+  font-weight 600
+  line-height 28px
+
+h2
+  font-size 20px
+  font-weight 600
+  line-height 24px
+
+h3
+  font-size 17px
+  font-weight 600
+  line-height 21px
+  margin-top 25px
+
+h4
+  color $grey3
+  font-size 13px
+  font-weight 300
+  margin-bottom 12px
+  margin-top 30px
+  line-height 18px
+  text-transform uppercase
+
+p
+  font-size 14px
+  line-height 18px
+  margin-bottom 10px
+
+strong
+  font-weight 600
+
+a
+button
+input
+  outline none !important
+  transition background-color 0.2s, border-color 0.2s, color 0.2s
+
+a
+  color $blue2
+
+  &:hover
+    color $blue2
+
+  > .fa
+    margin-right 6px
+
+ul > hr
+  margin-bottom 15px
+  margin-top 15px
+
+code
+  font-family Menlo, Monaco, Consolas, 'Courier New', monospace
+
+ol
+ul
+  padding-left 20px
+
+  > li
+    margin-bottom 5px
+
+.clear
+  clear both
+  display block
+
+@keyframes spin
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+.container-fluid
+  min-width 540px !important
+
+#nav
+  background $blue1
+  height 54px
+  left 0px
+  min-width 950px
+  position fixed
+  top 0px
+  white-space nowrap
+  width 100%
+  z-index 3
+
+  > div
+    padding 0px 10px
+
+#nav-image
+  display inline-block
+  margin-right 15px
+  padding 10px 0px
+  vertical-align middle
+
+  > a
+    display block
+    position relative
+
+    > img
+      display block
+
+      &.spin
+        position absolute
+        opacity 0
+        z-index 4
+
+    &:hover
+      > img.spin
+        opacity 1
+        animation spin 2.5s linear infinite
+
+#nav-links
+  display inline-block
+  margin-left 20px
+  vertical-align middle
+
+  > a
+    color $blue4
+    cursor pointer
+    display inline-block
+    font-size 14px
+    padding 19px 21px 17px
+    text-decoration none
+    text-transform uppercase
+    vertical-align middle
+
+    &:hover
+      color white
+
+    &.active
+      text-shadow 0px 1px 1px rgba(0, 0, 0, 0.1)
+      color white
+
+#sidebar
+  background darken($blue5, 3%)
+  bottom 0px
+  box-sizing border-box
+  left 0px
+  overflow-x auto
+  padding-top 54px
+  position fixed
+  top 0px
+  transition padding-top 0.2s
+  width 200px
+  z-index 1
+
+  &.subnav
+    padding-top 100px
+
+  > ul
+    padding-left 0px
+
+    > li
+      margin-bottom 0px
+
+      > a
+        display block
+        font-size 13px
+        font-weight 300
+        line-height 17px
+        padding 6px 15px
+        text-decoration none
+
+        > .fa
+          margin-right 10px
+
+        &:hover
+          background lighten($blue5, 30%)
+
+      &.heading
+        margin-top 5px
+
+      &.active > a
+        background white
+
+        &:hover
+          background white
+
+      &.head
+        border-top 1px solid rgba(0, 0, 0, 0.07)
+        margin 5px 0px 3px
+        padding-top 5px
+
+        > span
+          color $blue3
+          display block
+          font-size 12px
+          font-weight 600
+          line-height 16px
+          padding 6px 15px
+          text-transform uppercase
+
+hr
+  border-color rgba(0, 0, 0, 0.1)
+  border-bottom none
+  margin-left -30px
+  margin-right -30px
+  margin-bottom 30px
+  margin-top 30px
+
+dl
+  > dt
+    clear left
+    float left
+    text-align right
+
+#main
+  box-sizing border-box
+  color $grey1
+  font-size 14px
+  font-weight 300
+  height 100%
+  left 200px
+  line-height 18px
+  overflow-x hidden
+  overflow-y auto
+  padding 30px
+  position fixed
+  right 0px
+  top 54px
+  z-index 2
+
+  a
+    color $blue3
+    text-decoration underline
+
+    &:hover
+      text-decoration none
+
+  a.anchor
+    display block
+    height 30px
+    margin-top -30px
+
+  dt
+    font-weight 600
+    margin-bottom 10px
+    width 220px !important
+
+    > em
+      font-size 12px
+      font-weight 300
+      margin-left 5px
+
+      &:before
+        content '['
+
+      &:after
+        content ']'
+
+  dd
+    margin-bottom 10px
+    margin-left 230px !important
+    overflow hidden
+
+  code
+  pre
+    background-color $blue5
+    border none
+    color $blue1
+    font-size 12px
+
+  pre
+    display block
+    margin-bottom 10px
+    padding 10px
+
+    > code
+      background none
+
+  img
+    margin 10px 0px
+
+  ul
+  ol
+    li
+      list-style-position outside
+      margin 10px 0px
+
+      > ul > li
+      > ol > li
+        margin 5px 0px
+
+  ul
+    li
+      list-style-type disc
+
+  ol
+    li
+      list-style-type decimal
