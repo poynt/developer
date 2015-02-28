@@ -14,9 +14,9 @@ codeurl: 'https://github.com/poynt/developer'
 # Default categories (in order) to appear in the navigation
 sections: [
     ['doc', 'Documentation'],
-    ['ref', 'Reference'],
     ['tut', 'Tutorials'],
-    ['post', 'Posts']
+    ['post', 'Posts'],
+    ['ref', 'Reference']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
