@@ -5,7 +5,21 @@ category: ref
 date: 2015-01-22 16:49:01
 ---
 
-### Current release: ***beta2***
+### Current release: ***beta2-update***
+### PoyntOS SDK Version: 1.2.4
+
+#### Changes since beta2
+
+* Discounts (item level only) support in Poynt Register (API support for both item level and order level)
+* Performance improvements in Register for catalog load
+* Sync adapters to keep various data resources in sync w/ Poynt Cloud
+* Poynt Cloud Messaging - enables application developers to send push notifications to Poynt Terminals
+* Multi-tender bug fixes in Payment Fragments
+* Various UI fixes in Poynt Terminal and Register Apps
+* Updates to Product Content Provider
+* Support for custom invoiceId, auth only mode and non-reference credits both in APIs and Poynt Terminal/Register Apps
+* Login screen changes
+
 
 #### Changes since beta1
 
@@ -27,6 +41,8 @@ websocket based live stream connection with host
 
 ### Older Releases
 
-| Release  | Date       |
-|:--------:|:----------:|
-| beta1    | 11/10/2014 |
+| Release  | Date       | SDK Version |
+|:--------:|:----------:|:-----------:|
+| beta2-update| 03/04/2015| 1.2.4 |
+| beta2    | 01/16/2015 | 1.2.1 |
+| beta1    | 11/10/2014 | 1.0 |

@@ -30,8 +30,8 @@ dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
   // Poynt SDK and Model Dependencies
-  compile 'co.poynt.api:android-api-model:1.2.1@jar'
-  compile 'co.poynt.android.sdk:poynt-sdk:1.2.1@aar'
+  compile 'co.poynt.api:android-api-model:<release-version>@jar'
+  compile 'co.poynt.android.sdk:poynt-sdk:<release-version>@aar'
 
   // JWT dependencies - if you want to parse JWTs
   compile 'net.jcip:jcip-annotations:1.0@jar'
@@ -40,6 +40,8 @@ dependencies {
 }
 
 ```
+
+NOTE: Please refer to release notes for current '<release-version>'
 
 At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or Poynt Sample app to start using the SDK.
 
