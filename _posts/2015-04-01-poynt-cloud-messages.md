@@ -20,7 +20,9 @@ This tutorial assumes that you are proficient at development in:
 
 The main purpose of PCM is to allow developers to easily send push notifications to their application running on the Poynt Smart Terminal with minimal effort.
 
+<center>
 ![image](../assets/PoyntCloudMessage.png)
+</center>
 
 Developers will need to build two components:
 
@@ -121,4 +123,3 @@ PCM message have a parameter called `collapseKey`. When specified, this key beco
 
 ### What is the maximum message size that I can send?
 PCM messages payload (i.e. the `data` element) can be up to 4096 bytes long.
-
