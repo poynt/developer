@@ -5,8 +5,17 @@ category: ref
 date: 2015-01-22 16:49:01
 ---
 
-### Current release: ***beta2-update***
-### PoyntOS SDK Version: 1.2.4
+### Current release: ***beta3***
+### PoyntOS SDK Version: 1.2.6
+### Poynt API Model Version: 1.2.11
+
+#### Changes since beta2 update (1.2.4)
+* Payment Fragments converted into Payment Activity
+* Bug fixes in Register and Terminal Apps
+* Bug fixes in Payment Activity
+* Updates to Poynt Messages to support push notifications from cloud
+* API Model and SDK are now tracked with different version numbers
+* AIDL service interfaces clean up - mostly removing unnecessary test interfaces
 
 #### Changes since beta2
 
@@ -43,6 +52,7 @@ websocket based live stream connection with host
 
 | Release  | Date       | SDK Version |
 |:--------:|:----------:|:-----------:|
+| beta3    | 04/22/2015 | 1.2.6 |
 | beta2-update| 03/04/2015| 1.2.4 |
 | beta2    | 01/16/2015 | 1.2.1 |
 | beta1    | 11/10/2014 | 1.0 |
