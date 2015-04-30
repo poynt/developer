@@ -18,7 +18,7 @@ Poynt OS apps can be built using any 7" android tablet (Tegra Note 7 is recommen
 
 ### Installation
 
-1. Download the install script from: https://s3-us-west-1.amazonaws.com/poynt-apks/v1.2/setup_poynt_os.py
+1. Download the install script from: https://s3-us-west-1.amazonaws.com/poynt-apks/setup_poynt_os.py
 2. Change the permissions for the downloaded script so you can execute it.
     - $ chmod +x setup_poynt_os.py
 3. Connect your android tablet or start your emulator.
