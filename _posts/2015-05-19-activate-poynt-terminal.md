@@ -11,12 +11,10 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 
 * Android SDK with android-api 19 (Kitkat) installed on your development machine
 * Poynt Developer Unit
-* Developer SignUp email from Poynt
-** Note that this email is sent only when you purchase a Poynt Terminal. If you've already purchased a developer unit but never received your signup email, please check your spam folders to see if it's in there. Otherwise just contact us and we will resend.
 
 ### Installation
 
-1. From the Poynt developer email that you've received, click on the signup link to register your developer account.
+1. Go to https://poynt.net/auth/signup/developer and register your developer account.
 ![SignUp]({{site.url}}../assets/poynt-signup-2.png)
 2. Once you’re registered, you will see Poynt Developer dashboard.
     - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
@@ -38,4 +36,6 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 9. Once you activate the device, you will be automatically logged into the device. From the Launcher screen, tap on Poynt Terminal or Register apps to try out the default applications.
 
 
-At this point, your device is ready for development and testing. Refer to <a href="/developer/tut/assign-catalog-to-poynt-register.html">Create and Assign catalog to Poynt Register</a> for information on how you can setup a catalog for the Register app.
+
+
+At this point, your device is ready for development and testing. If there is a system update available refer to <a href="/developer/tut/updating-poynt-terminal.html">Update Poynt Terminal</a>. Otherwise, <a href="/developer/tut/assign-catalog-to-poynt-register.html">Create and Assign catalog to Poynt Register</a>.
