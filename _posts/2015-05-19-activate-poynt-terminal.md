@@ -11,6 +11,7 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 
 * Android SDK with android-api 19 (Kitkat) installed on your development machine
 * Poynt Developer Unit
+* If you want to the ability to install development applications (APKs) on your device <a href="/developer/tut/developer-mode.html">enable developer-mode</a>
 
 ### Installation
 
