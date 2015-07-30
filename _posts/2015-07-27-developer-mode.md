@@ -24,13 +24,26 @@ This puts the device into a state that allows you to install your development AP
 	<div>
 	<img src="{{site.url}}../assets/fastboot_screen1.jpg" alt="fastbootscreen1" width="300">
 	</div>
-3. Ensure your device is properly connected via USB by running `fastboot devices` command on your host machine.
+3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
+<h4>For Windows:</h4>
+Open a command prompt with Administrator privileges. Navigate to the directory that contains the fastboot command. If you installed the Android SDK, this will usually be located in <path to SDK>\sdk\platform-tools\fastboot.exe
+<p>Example of path for Android SDK installed in root C: directory - `C:\adt-bundle-windows-x86_64-2013xxxx\sdk\platform-tools`</p>
+<p>Verify that your Poynt Terminal is in fastboot mode and is being seen by fastboot by issuing fastboot devices. The output should show your device's serial number:</p>
+<p>`C:\adt-bundle-windows-x86_64-2013xxxx\sdk\platform-tools>fastboot devices`</p>
+<p>`YOURSERIALNUMBER fastboot`</p>
+<p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro</p>
+<h4>For Mac OS X/Linux:</h4>
+Add `<SDK_LOCATION>\sdk\platform-tools` to your PATH.
+On some linux distributions, you may be able to install SDK tools with apt-get:
+<p>`apt-get install android-tools-adb android-tools-fastboot`</p>
+<p>Ensure your device is properly connected via USB by running `fastboot devices` command on your host machine.</p>
+
 4. Run the command to initiate the developer mode process: `fastboot oem developer`
 	<div>
 	<img src="{{site.url}}../assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
 	</div>
 
-5. Read the instructions on the screen, press the volume down button to move selection to `Enter developer mode` and Press the Power button to select. At this point your device will clear its cache and the device state in the bootloader screen should show `Unlocked` or `Developer mode`.
+5. Read the instructions on the Poynt Terminal, press the volume down button to move selection to `Enter developer mode` and Press the Power button to select. At this point your device will clear its cache and the device state in the bootloader screen should show `Unlocked` or `Developer mode`.
 
 6. Reboot your device.
 	<div>
