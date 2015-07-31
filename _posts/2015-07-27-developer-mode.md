@@ -37,7 +37,7 @@ Add `<SDK_LOCATION>\sdk\platform-tools` to your PATH.
 On some linux distributions, you may be able to install SDK tools with apt-get:
 <p>`apt-get install android-tools-adb android-tools-fastboot`</p>
 <p>Ensure your device is properly connected via USB by running `fastboot devices` command on your host machine.</p>
-
+<p>If your host machine runs on Linux and does not recognize the device please follow the instructions at http://developer.android.com/tools/device.html#setting-up (Step 3). You can find out the vendor id, by running `lsusb` in the Terminal window.</p>
 4. Run the command to initiate the developer mode process: `fastboot oem developer`
 	<div>
 	<img src="{{site.url}}../assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
