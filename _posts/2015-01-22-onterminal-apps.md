@@ -48,7 +48,7 @@ Poynt Services provide the core functionality exposed as AIDL services for 3rd p
 4. [Poynt Customer Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides apis to lookup and manage customers of the merchant
 5. [Poynt Email Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides apis to request receipts sent as email
 6. [Poynt Product Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to get product catalog for the merchant
-7. [Poynt Receipt Printing Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to print receipts for payment transaction and/or orders
+7. [Poynt Receipt Printing Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntReceiptPrintingService.html) - provides apis to print receipts for payment transaction and/or orders
 8. [Poynt Second Screen Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides apis to request content to be displayed in the the consumer screen
 9. [Poynt Cash Register Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides apis to open/close Cash drawer connected over USB
 10. [Poynt Session Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides apis to obtain current logged in business user (merchant) information
