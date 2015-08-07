@@ -47,4 +47,4 @@ At this point your app should be ready to use the Poynt OS SDK. Please refer to 
 
 ### Adding Maven Credentials
 
-As mentioned above, our maven repository is access controlled to allow access to only invited developers. Please refer to the [SDK FAQs](https://getpoynt.com/faq#poyntos) and submit your request [here](http://goo.gl/forms/dgwMwDysAv).
+As mentioned above, our maven repository is access controlled to allow access to only invited developers. Please refer to the [SDK FAQs](https://poynt.com/faq#poyntos) and submit your request [here](http://goo.gl/forms/dgwMwDysAv).

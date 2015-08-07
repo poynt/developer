@@ -15,4 +15,4 @@ PoyntOS Platform SDK and Cloud APIs provide access (CRUD operations) to RESTful 
 * Customers - information about the customers of the merchant
 
 
-Please refer to the [API Reference](https://getpoynt.com/docs/api/) for more information about the Poynt Resource data model.
+Please refer to the [API Reference](https://poynt.com/docs/api/) for more information about the Poynt Resource data model.
