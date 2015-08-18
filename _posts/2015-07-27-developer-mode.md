@@ -31,7 +31,7 @@ Open a command prompt with Administrator privileges. Navigate to the directory t
 <p>Verify that your Poynt Terminal is in fastboot mode and is being seen by fastboot by issuing fastboot devices. The output should show your device's serial number:</p>
 <p>`C:\adt-bundle-windows-x86_64-2013xxxx\sdk\platform-tools>fastboot devices`</p>
 <p>`YOURSERIALNUMBER fastboot`</p>
-<p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro</p>
+<p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro. If you are using Windows you may need to install the USB driver by following instructions at http://www.teamandroid.com/2012/07/30/how-to-set-up-adb-fastboot-with-android-sdk/3/.</p>
 <h4>For Mac OS X/Linux:</h4>
 Add `<SDK_LOCATION>\sdk\platform-tools` to your PATH.
 On some linux distributions, you may be able to install SDK tools with apt-get:
