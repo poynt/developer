@@ -33,10 +33,13 @@ Open a command prompt with Administrator privileges. Navigate to the directory t
 <p>`YOURSERIALNUMBER fastboot`</p>
 <p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro. If you are using Windows you may need to install the USB driver by following instructions at http://www.teamandroid.com/2012/07/30/how-to-set-up-adb-fastboot-with-android-sdk/3/.</p>
 <p>If your terminal is running build 222 or later you will need to perform the following steps:<br>
-Add this section to the [Google.NTamd64] section of android_winusb.inf in Android\sdk\extras\google\usb_driver\ :</p>
+Add this section to the [Google.NTamd64] and [Google.NTx86] section of android_winusb.inf in Android\sdk\extras\google\usb_driver\ :</p>
 <p>`;Poynt P3301 NVIDIA Tegra Note`<br>
 `%SingleAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302`<br>
 `%CompositeAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302&MI_01`<br>
+;NVIDIA Fastboot<br>
+%SingleAdbInterface% = USB_Install, USB\VID_0955&PID_CF01
+%CompositeAdbInterface% = USB_Install, USB\VID_0955&PID_CF01&MI_01<br>
 </p>
 <p>In addition, update adb_usb.ini file to include the following:
 <p>
