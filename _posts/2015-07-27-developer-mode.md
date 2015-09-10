@@ -37,9 +37,9 @@ Add this section to the [Google.NTamd64] and [Google.NTx86] section of android_w
 <p>`;Poynt P3301 NVIDIA Tegra Note`<br>
 `%SingleAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302`<br>
 `%CompositeAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302&MI_01`<br>
-;NVIDIA Fastboot<br>
-%SingleAdbInterface% = USB_Install, USB\VID_0955&PID_CF01
-%CompositeAdbInterface% = USB_Install, USB\VID_0955&PID_CF01&MI_01<br>
+`;NVIDIA Fastboot`<br>
+`%SingleAdbInterface% = USB_Install, USB\VID_0955&PID_CF01`<br>
+`%CompositeAdbInterface% = USB_Install, USB\VID_0955&PID_CF01&MI_01`<br>
 </p>
 <p>In addition, update adb_usb.ini file to include the following:
 <p>
