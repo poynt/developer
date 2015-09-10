@@ -32,12 +32,34 @@ Open a command prompt with Administrator privileges. Navigate to the directory t
 <p>`C:\adt-bundle-windows-x86_64-2013xxxx\sdk\platform-tools>fastboot devices`</p>
 <p>`YOURSERIALNUMBER fastboot`</p>
 <p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro. If you are using Windows you may need to install the USB driver by following instructions at http://www.teamandroid.com/2012/07/30/how-to-set-up-adb-fastboot-with-android-sdk/3/.</p>
+<p>If your terminal is running build 222 or later you will need to perform the following steps:<br>
+Add this section to the [Google.NTamd64] section of android_winusb.inf in Android\sdk\extras\google\usb_driver\ :</p>
+<p>`;Poynt P3301 NVIDIA Tegra Note`<br>
+`%SingleAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302`<br>
+`%CompositeAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302&MI_01`<br>
+</p>
+<p>In addition, update adb_usb.ini file to include the following:
+<p>
+`# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.`<br>
+`# USE 'android update adb' TO GENERATE.`<br>
+`# 1 USB VENDOR ID PER LINE.`<br>
+`0x2BF9`<br>
+`0x0955`<br>
+</p>
+</p>
 <h4>For Mac OS X/Linux:</h4>
 Add `<SDK_LOCATION>\sdk\platform-tools` to your PATH.
 On some linux distributions, you may be able to install SDK tools with apt-get:
 <p>`apt-get install android-tools-adb android-tools-fastboot`</p>
 <p>Ensure your device is properly connected via USB by running `fastboot devices` command on your host machine.</p>
 <p>If your host machine runs on Linux and does not recognize the device please follow the instructions at http://developer.android.com/tools/device.html#setting-up (Step 3). You can find out the vendor id, by running `lsusb` in the Terminal window.</p>
+<p>We have changed our USB vendor ids in build #222 and later. If your are unable to see the device after following the steps above, run the following command:</p>
+<p>`echo "0x2BF9" >> ~/.android/adb_usb.ini`</p>
+<p>Additional step for **Linux**:</p>
+<p>Add line:</p>
+<p>`SUBSYSTEM=="usb", ATTR{idVendor}=="2bf9", MODE="0664", GROUP="plugdev" # Poynt`</p>
+<p>to /etc/udev/rules.d/51-android.rules</p>
+
 4. Run the command to initiate the developer mode process: `fastboot oem developer`
 	<div>
 	<img src="{{site.url}}../assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
