@@ -84,4 +84,56 @@ Intents are a standard way for cross-application notifications in Android OS. Po
 
 Also as a good citizen in our App ecosystem, we request you to broadcast events that might be useful to other apps running the same terminal. This will help in building an integrated experience to the merchant - eg. when a POS app creates a new order, broadcasting an event about the new order created would help other apps and services (eg. an analytics and reporting app, or a order fulfillment app) to react as necessary.
 
+
 Poynt Intents are broadcasted in addition to the common Intents broadcasted by the Android system. Please see ‘Intents and Intent Filters’ for more information on how to handle Intents programmatically or through Android Manifest file.
+
+### Poynt Register Intents
+
+When merchants add or remove items to the Poynt Register application intents will be broadcast so that you can respond to these actions. 
+
+**ADD_PRODUCT_TO_CART Intent**
+
+When an item is added to an order, the following intent is broadcast. 
+
+```
+poynt.intent.action.ADD_PRODUCT_TO_CART
+```
+
+The following values are available as Intent extras. 
+
+- order_id
+  - the order id (STRING)
+- product_name
+  - OPTIONAL
+  - the name of the order item, if available (STRING) 
+- product_id: 
+  - OPTOINAL	
+  - the product id, if available (STRING)
+- product_sku:
+  - OPTIONAL
+  - the sku of the product, if available (STRING)
+- product_quantity
+  - OPTIONAL
+  - the quantity of the product that was added (FLOAT)
+
+
+**REMOVE_PRODUCT_FROM_CART Intent**
+
+When an item is added to an order, the following intent is broadcast. 
+
+```
+poynt.intent.action.REMOVE_PRODUCT_FROM_CART
+```
+
+- order_id
+  - the order id (STRING)
+- product_name
+  - OPTIONAL
+  - the name of the order item, if available (STRING) 
+- product_id: 
+  - OPTOINAL	
+  - the product id, if available (STRING)
+- product_sku:
+  - OPTIONAL
+  - the sku of the product, if available (STRING)
+
