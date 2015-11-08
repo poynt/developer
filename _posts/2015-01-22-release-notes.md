@@ -5,9 +5,17 @@ category: ref
 date: 2015-01-22 16:49:01
 ---
 
-### Current release: ***beta3***
-### PoyntOS SDK Version: 1.2.6
-### Poynt API Model Version: 1.2.11
+### Current release: ***beta4***
+### PoyntOS SDK Version: 1.2.8
+### Poynt API Model Version: 1.2.32
+
+#### Changes since beta3 (1.2.6)
+* Updated API Model (1.2.32)
+* Initial support for custom tenders (discounts & giftcards)
+* Stability improvements
+* New Payment Fragment UI
+* Payment bridge for external systems
+* Order Inbox
 
 #### Changes since beta2 update (1.2.4)
 * Payment Fragments converted into Payment Activity
@@ -52,6 +60,7 @@ websocket based live stream connection with host
 
 | Release  | Date       | SDK Version |
 |:--------:|:----------:|:-----------:|
+| beta4    | 10/25/2015 | 1.2.8 |
 | beta3    | 04/22/2015 | 1.2.6 |
 | beta2-update| 03/04/2015| 1.2.4 |
 | beta2    | 01/16/2015 | 1.2.1 |
