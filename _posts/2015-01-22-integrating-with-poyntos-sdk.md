@@ -6,7 +6,7 @@ date: 2015-01-22 17:07:40
 ---
 
 
-Poynt OS SDK is distributed as an Android Library (aar) through our Maven repository. The maven repository is access controlled to prevent access to the public. So please do not share the credentials until we open up the access to everyone.
+Poynt OS SDK is distributed as an Android Library (aar) through our Maven repository. 
 
 ### Adding the Poynt OS SDK dependencies
 
@@ -17,10 +17,6 @@ allprojects {
   repositories {
     maven {
       url 'https://nexus.poynt.co/content/repositories/releases'
-      credentials {
-        username mavenUser
-        password mavenPassword
-      }
     }
     mavenCentral()
   }
@@ -45,6 +41,3 @@ NOTE: Please refer to release notes for current '<release-version>'
 
 At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or Poynt Sample app to start using the SDK.
 
-### Adding Maven Credentials
-
-As mentioned above, our maven repository is access controlled to allow access to only invited developers. Please refer to the [SDK FAQs](https://poynt.com/faq#poyntos) and submit your request [here](http://goo.gl/forms/dgwMwDysAv).

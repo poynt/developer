@@ -76,10 +76,13 @@ Yes. More detailed information is in our SDK documentation. Some key points to k
 5. all apps must be reviewed and distributed by Poynt through secure channel.
 
 ### How can I install my app on the device ? Which USB port do I use to connect to the computer with ADB?
-You can sideload an apk using `adb install <myapp.apk> or via Android Studio. The terminal needs to be connected to your computer using the micro USB port located on the right side of the merchant facing screen below the volume keys. Note that USB ports on the dock can only be used to connect peripherals like printer or scanner.
+You can sideload an apk using `adb install <myapp.apk>` or via Android Studio. The terminal needs to be connected to your computer using the micro USB port located on the right side of the merchant facing screen below the volume keys. Note that USB ports on the dock can only be used to connect peripherals like printer or scanner.
 
 ### Can my app have access to NFC APIs?
 We do not provide direct access to NFC APIs at the moment. All the NFC interactions are payment related and only Poynt Payment service has access to it due to PCI/Security reasons.
 
 ### How much of an app’s purchase price do you keep?
-We keep 20% of the app sales.
+We keep 20% of the app purchase price.
+
+### Can I see the second screen on the emulator?
+In the emulator go to device settings > Developer Options > Simulate Secondary Displays and select 720x480 mdpi option. Please keep in mind that you can't interact with the second display using the emulator.
