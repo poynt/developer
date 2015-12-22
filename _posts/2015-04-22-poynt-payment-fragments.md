@@ -15,9 +15,7 @@ Currently the Payment Fragments support the following features:
 3. Collect Tip, Receipt options, and Signature
 4. Collect secure pin for Chip and Pin cards (EMV)
 5. Multi-Tenders (aka split payments)
-6. Keyed-in (manual) transactions.
-7. Various payment actions - AUTHORIZE, CAPTURE, VOID, and REFUND
-8. Non-referenced credits and auth only transactions
+6. Non-referenced credits and auth only transactions
 
 <center>
 ![Payment Fragment]({{site.url}}../assets/payment-fragment.png)
@@ -80,3 +78,24 @@ To handle the response from the Payment Fragments, you would need to override th
         }
     }
 ```
+
+## Post-Payment Actions
+
+Once a payment has been processed often times it's required to provide the merchants ability to execute different actions on the processed payments. These include payment actions like void, capture, refund, and get details, which are provided by Payment Fragments through "DISPLAY_PAYMENT" intent.
+
+```
+    // start Payment activity to display transaction details
+    try {
+        Intent displayPaymentIntent = new Intent(Intents.ACTION_DISPLAY_PAYMENT);
+        displayPaymentIntent.putExtra(Intents.INTENT_EXTRAS_TRANSACTION_ID, transactionId);
+        startActivityForResult(displayPaymentIntent, DISPLAY_PAYMENT_REQUEST);
+    } catch (ActivityNotFoundException ex) {
+        Log.e(TAG, "Poynt Payment Activity not found - did you install PoyntServices?", ex);
+    }
+```
+
+This will launch Poynt Payment Activity to display the details of the payment along with allowed actions (void, capture, refund) based on it's current status.
+
+<center>
+![Payment Fragment]({{site.url}}../assets/payment-details.png)
+</center>
