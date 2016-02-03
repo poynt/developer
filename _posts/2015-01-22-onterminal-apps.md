@@ -36,8 +36,6 @@ Poynt Smart Terminal developer edition is also available for pre-order. We highl
 
 The Poynt SDK for Android provides all the necessary interfaces and helper classes to access both Poynt Services and Data stored on the device and/or cloud, and also to initiate the secure payment process from your applications if needed.
 
-Please contact us to obtain the latest copy of the Poynt SDK.
-
 ### Poynt Services
 
 Poynt Services provide the core functionality exposed as AIDL services for 3rd party applications. These include,
