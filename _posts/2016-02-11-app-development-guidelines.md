@@ -11,6 +11,11 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 ### REQUIRED 
 * Comply with all applicable privacy and data collection laws and regulations if your app collects any customer or merchant data.
+* TLS1.2 must be used for all http based network connections. This also applies to web content displayed in webviews. Invalid certificates are not allowed and will result in failed network connections.
+  * The full list of TLS certificates installed on the device can be found under Settings ­>
+    Systems ­> Security ­> Trusted credentials.
+  * Use certificate pinning. For more information about certificate pinning on Android see:
+    https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android
 * Thoroughly test your app to prevent Null Pointer Exceptions or Application Not Responding errors.
   * Create a snappy, responsive, simple and intuitive UI
   * Make touch targets at least 48x48 pixels
@@ -32,7 +37,6 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 * If you are using a POS Register application make sure you are utilizing IPoyntSecondScreenService to display item information as items are getting entered/scanned.
 
 
-
 ### RECOMMENDED
 * Use Poynt Catalog API and Products Content Provider (to enable inter-operability with complimentary apps in the ecosystem).
 * Link your customer with Poynt customer accounts.  Note: Poynt creates a customer record for every card swiped/used to enable seamless interactions without the need for additional Identification credentials. 
@@ -48,7 +52,6 @@ Please follow the guidelines below when developing apps for the Poynt platform.
      * poynt.intent.action.ORDER_CLOSED
   * Push order information to the Poynt cloud. This will allow merchant to access this information through their Poynt web portal and HQ mobile app.
   * Use or sync with Poynt product catalog as applicable.
-
 
 
 ### NOT ALLOWED
@@ -67,4 +70,3 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 * Collecting sensitive consumer info: debit or credit PIN, SSN (social security number), credit card.
 * Correlating customers across merchants and sharing Poynt customer information with other providers without explicit permission.
 * Adding your own authentication screen for secure operations. Leverage Poynt OS authentication and token service..
-
