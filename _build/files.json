@@ -1,6 +1,6 @@
 {
   "css": {
-    "main.css" : ["reset.css", "syntax.css", "main.styl"]
+    "main.css" : ["reset.css", "syntax.css", "main.styl", "print.styl"]
   },
   "html": {
     "_includes/header.html": ["_includes/header.jade"],

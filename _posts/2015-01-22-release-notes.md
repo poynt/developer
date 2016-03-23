@@ -2,12 +2,20 @@
 layout: page
 title: "Release Notes"
 category: ref
-date: 2015-01-22 16:49:01
+date: 2015-03-04 16:49:01
 ---
 
-### Current release: ***beta4***
-### PoyntOS SDK Version: 1.2.8
-### Poynt API Model Version: 1.2.32
+### Current release: ***beta5***
+### PoyntOS SDK Version: 1.2.10
+### Poynt API Model Version: 1.2.36
+
+### Changes since beta4 (1.2.8)
+* Updaed API Model (1.2.36) - please rebuild your apps to package the new version
+* Printer Service Updated
+* Support for Debit transactions
+* Support for Voice Auths
+* Support for EMV Referrals
+* Stability improvements
 
 #### Changes since beta3 (1.2.6)
 * Updated API Model (1.2.32)
