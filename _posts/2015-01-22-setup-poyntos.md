@@ -13,7 +13,7 @@ Poynt OS apps can be built using any 7" android tablet (Tegra Note 7 is recommen
 * A 7” Android Tablet (Tegra Note 7 is recommended) or an emulator (Genymotion is recommended)
 ** Update your tablet to run Android 4.4.4 (Kitkat) or install your favorite Android emulator
 ** Make sure you configure your virtual device to use android-19 (Kitkat 4.4.4) with screen size as 800x1280 (tvdpi).
-*** We recommend using Genymotion emulator with virtual device for Nexus 7 1280x800.
+*** We recommend using Genymotion emulator with virtual device for Nexus 7 1280x800. (**Please note** that AVD emulator has known issues during activation)
 * Python to run the installation script.
 
 ### Installation
@@ -31,7 +31,10 @@ Poynt OS apps can be built using any 7" android tablet (Tegra Note 7 is recommen
 5. Wait until you see installation complete message.
     - ```*** install complete***```
 6. As the script installs the requires services and applications, your device will ask you to choose which launcher to use. You’ll see 3 options, the default Android Launcher, Poynt Launcher and Setup Wizard.
-7. Select Setup Wizard to start Poynt’s OOBE application.
+7. Select Setup Wizard to start Poynt’s OOBE application. (Note: if you are using Genymotion emulator you need to enable "Use virtual keyboard for text input" option in the device configuration)
+<center>
+![Payment Fragment]({{site.url}}../assets/genymotion_virtual_keyboard.png)
+</center>
 8. You’ll be asked to configure your wifi - select your SSID and enter wifi credentials to connect.
 9. Once connected, you’ll see a device activation screen asking for MID, TID, Acquirer, etc.
 10. At this point, keep the device aside, we will get back to it after setting up the required activation credentials from Poynt developer portal.
