@@ -32,8 +32,8 @@ Open a command prompt with Administrator privileges. Navigate to the directory t
 <p>`C:\adt-bundle-windows-x86_64-2013xxxx\sdk\platform-tools>fastboot devices`</p>
 <p>`YOURSERIALNUMBER fastboot`</p>
 <p>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section here: http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro. If you are using Windows you may need to install the USB driver by following instructions at http://www.teamandroid.com/2012/07/30/how-to-set-up-adb-fastboot-with-android-sdk/3/.</p>
-<p>If your terminal is running build 222 or later you will need to perform the following steps:<br>
-Add this section to the [Google.NTamd64] and [Google.NTx86] section of android_winusb.inf in Android\sdk\extras\google\usb_driver\ :</p>
+<p>
+Add this section to the [Google.NTamd64] and [Google.NTx86] section of android_winusb.inf in Android\sdk\extras\google\usb_driver\ (**Note**: if the "google" directory does not have "usb_driver" you may need to download Google USB drivers from http://developer.android.com/sdk/win-usb.html):</p>
 <p>`;Poynt`<br>
 `%SingleAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302`<br>
 `%CompositeAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302&MI_01`<br>

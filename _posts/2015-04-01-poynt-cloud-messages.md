@@ -123,3 +123,6 @@ PCM message have a parameter called `collapseKey`. When specified, this key beco
 
 ### What is the maximum message size that I can send?
 PCM messages payload (i.e. the `data` element) can be up to 4096 bytes long.
+
+### Why is my application not getting the cloud message I am sending?
+Please refer to [our developer discussion board] (https://discuss.poynt.net/t/is-it-required-to-register-a-terminal-app-before-testing-poynt-cloud-messaging/206/15).
