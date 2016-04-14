@@ -6,8 +6,16 @@ date: 2015-03-04 16:49:01
 ---
 
 ### Current release: ***beta5***
-### PoyntOS SDK Version: 1.2.10
-### Poynt API Model Version: 1.2.36
+### PoyntOS SDK Version: 1.2.11
+### Poynt API Model Version: 1.2.44
+
+### Changes since beta5 (1.2.10)
+* Updated API Model (1.2.44) with a different parcel mechanism that allows for future version compatibility.
+* Updated Receipts as per Acquirer EMV certification requirements
+* Support for Android Emulators
+* Various bug fixes
+* Capability Manager & Accessory Manager updates
+* Settlements application
 
 ### Changes since beta4 (1.2.8)
 * Updaed API Model (1.2.36) - please rebuild your apps to package the new version
