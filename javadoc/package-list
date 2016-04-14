@@ -5,6 +5,7 @@ co.poynt.os.contentproviders.orders.avsresults
 co.poynt.os.contentproviders.orders.base
 co.poynt.os.contentproviders.orders.cards
 co.poynt.os.contentproviders.orders.clientcontexts
+co.poynt.os.contentproviders.orders.customfundingsource
 co.poynt.os.contentproviders.orders.discounts
 co.poynt.os.contentproviders.orders.links
 co.poynt.os.contentproviders.orders.orderamounts
@@ -34,7 +35,6 @@ co.poynt.os.contentproviders.products.variants
 co.poynt.os.contentproviders.products.variations
 co.poynt.os.contentproviders.search
 co.poynt.os.model
-co.poynt.os.sdk
 co.poynt.os.search
 co.poynt.os.services.v1
 co.poynt.os.util
