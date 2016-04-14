@@ -6,50 +6,50 @@ date: 2015-01-22 16:51:51
 ---
 
 
-Applications that provide direct interaction with the merchants, collect real time data, or integrate with other accessories connected to the terminal can be built using Poynt SDK for Android. Developers can build both UI-rich applications as well as background services to run on Poynt terminals.
+Applications that provide direct interaction with the merchants or collect real time data or integrate with other connected devices on the terminal, can be built using Poynt SDK beta for Android. Developers can build both applications and background services to run on the terminal as they may fit their needs.
 
 <center>
 ![On-Terminal Apps]({{site.url}}../assets/developers-on-terminal-apps.png)
 </center>
 
-Given that a main function of the Poynt device is payment processing, there are a few security and compliance requirements that must be abided by:
+Given the primary purpose of the device being payment processing, there are a few security and compliance requirements that we must abide to:
 
-  * No access to sensitive payment card information - NEVER! All payments are securely processed by Poynt Services running on the terminal and only the post-payment transactional information is made available to 3rd party apps and services.
+* No access to sensitive payment card information - NEVER! All payments are processed by the secure Poynt Services on the terminal and only the processed payment transactional information is shared with 3rd party apps and services.
 
-  * What you can display and ask the customer for on the consumer facing screen is limited to what Poynt exposes as part of the SDK. For example, there are methods in the `IPoyntSecondScreenService` for scanning QR codes, requesting customer contact information (email, phone), tips, etc. 
+* What you can display and ask for on the consumer facing screen is limited to what we expose as part of our SDK.
 
-  * No sideloading of apps and services is allowed (either through `adb` or downloading via internet). The Android Debug Bridge (adb) is disabled on live merchant Poynt Terminals.
+* No sideloading of apps and services is allowed (either through adb or downloading via internet). Infact ADB (Android Debug Bridge) is disabled on the actual Poynt Terminals.
 
-  * Access to custom USB devices from your apps must be approved by Poynt (at the time of review) and by the Merchant at the time of install.
+* Access to custom USB devices from your apps must be approved by Poynt (at the time of review) and by the Merchant at the time of install.
 
-  * All apps must be reviewed and distributed by Poynt through secure channel.
+* All apps must be reviewed and distributed by Poynt through secure channel.
 
 ### Developer Tools
 
-Application development for Poynt is the same as any other Android application development process using the standard Android development tools available from [developer.android.com](https://developer.android.com). Poynt Terminals run on a ustomized build of Android 4.4.4 (KitKat), so all applications must set the build target to `android-19`.
+Application development is same as any other Android application development process using the standard android development tools available from developer.android.com. Poynt Terminals run on customized build of Android 4.4.4 (KitKat). So all applications must be built with target as android-19.
 
 Android Studio with gradle build toolkit is recommended. Although any android emulator would work, we would recommend using Genymotion emulator with screen resolution as 800x1280.
 
-Poynt Smart Terminal developer edition is also available for pre-order. We highly recommend testing on it avoid any incompatibility issues before releasing your app to merchants. These developer editions have `adb` enabled so you can easily test your application in your development environments.
+Poynt Smart Terminal developer edition is also available for pre-order. We highly recommend testing on it avoid any incompatibility issues before releasing your app to merchants. These developer editions have adb enabled so you can easily test your application in your development environments.
 
 ### Poynt SDK
 
-The Poynt SDK for Android provides all the necessary interfaces and helper classes to access both Poynt Services and Data stored on the device and in the cloud, and also to initiate the secure payment process from your applications if needed.
+The Poynt SDK for Android provides all the necessary interfaces and helper classes to access both Poynt Services and Data stored on the device and/or cloud, and also to initiate the secure payment process from your applications if needed.
 
 ### Poynt Services
 
-Poynt Services provide the core functionality exposed as AIDL services for 3rd party applications. These include:
+Poynt Services provide the core functionality exposed as AIDL services for 3rd party applications. These include,
 
 1. [Poynt Transaction Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntTransactionService.html) - provides the payment transactional information (status, amounts, etc.)
-2. [Poynt Order Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) - provides the order management APIs
+2. [Poynt Order Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) - provides the order management apis
 3. [Poynt Business Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntBusinessService.html) - provides the information about the merchant’s business, stores, employees, etc.
-4. [Poynt Customer Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides APIs to lookup and manage customers of the merchant
-5. [Poynt Email Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides APIs to request receipts sent as email
-6. [Poynt Product Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides APIs to get product catalog for the merchant
-7. [Poynt Receipt Printing Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntReceiptPrintingService.html) - provides APIs to print receipts for payment transaction and/or orders
-8. [Poynt Second Screen Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides APIs to request content to be displayed in the the consumer screen
-9. [Poynt Cash Register Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides APIs to open/close Cash drawer connected over USB
-10. [Poynt Session Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides APIs to obtain current logged in business user (merchant) information
+4. [Poynt Customer Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides apis to lookup and manage customers of the merchant
+5. [Poynt Email Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides apis to request receipts sent as email
+6. [Poynt Product Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides apis to get product catalog for the merchant
+7. [Poynt Receipt Printing Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntReceiptPrintingService.html) - provides apis to print receipts for payment transaction and/or orders
+8. [Poynt Second Screen Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides apis to request content to be displayed in the the consumer screen
+9. [Poynt Cash Register Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides apis to open/close Cash drawer connected over USB
+10. [Poynt Session Service]({{site.url}}../javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides apis to obtain current logged in business user (merchant) information
 11. Poynt Authenticator - provides business user (merchant) login/authentication through Android’s [Account Manager API](http://developer.android.com/reference/android/accounts/AccountManager.html).
 
 All the AIDL files required to generate the service stubs through Android SDK are bundled in the Poynt SDK. Please see [calling an IPC method](http://developer.android.com/guide/components/aidl.html#Calling) in Android developer documentation on how to use AIDL services.
