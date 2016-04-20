@@ -82,10 +82,10 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 #### USABILITY -- YOU MUST NOT:
   * Create a custom launcher.
   * Use landscape orientation.
-  * Using Poynt logo in your app without receiving prior consent from Poynt.
 
 #### POYNT SPECIFIC -- YOU MUST NOT:
   * Call Poynt Cloud API directly from Poynt terminal (use Poynt Services via SDK).
   * Abuse Poynt Cloud API infrastructure by generating heavy API traffic outside of merchant operations.
   * Use external cloud messaging services (instead, leverage Poynt cloud messaging).
   * Correlate customers across merchants and sharing Poynt customer information with other providers without explicit permission.
+  * Using Poynt logo in your app without receiving prior consent from Poynt.
