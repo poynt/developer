@@ -5,52 +5,46 @@ category: tut
 date: 2015-01-22 16:34:52
 ---
 
-Poynt OS apps can be built using any 7" android tablet (Tegra Note 7 is recommended but any 7" tablet would work as long as you code for multi-screen resolution including tvdpi) or even an android emulator. But do note that certain functionality will not be available unless you run on Poynt Smart Terminal (eg. Collecting consumer input from second screen and handling payment methods like MSR, NFC, EMV, etc.).  Please follow the steps below to set up your emulator or tablet with PoyntOS.
+To help speed up your development and testing, we provide a developer-edition version of PoyntOS that can be run on an Android emulator 
+or directly on an Android Tablet (Tegra Note 7 is recommended, but any 7" tablet would work as long as you code for multi-screen resolution including tvdpi).
+Note that certain functionality will not be available in the emulator (i.e. collecting consumer input from second screen, handling card payments, etc.);
+however, the emulator will give you enough functionality to start building and testing your apps. You'll have access to the terminal application (key in 
+transactions), the register (catalog-driven point of sale app), transaction data, customer data, and more.
 
-### Pre-requisites
+Activating a PoyntOS virtual device a device emulator will mimic exactly the same process of activating a physical Poynt Smart Terminal. Lets get started!
 
-* Android SDK with android-api 19 (Kitkat)
-* A 7” Android Tablet (Tegra Note 7 is recommended) or an emulator (Genymotion is recommended)
-** Update your tablet to run Android 4.4.4 (Kitkat) or install your favorite Android emulator
-** Make sure you configure your virtual device to use android-19 (Kitkat 4.4.4) with screen size as 800x1280 (tvdpi).
-*** We recommend using Genymotion emulator with virtual device for Nexus 7 1280x800. (**Please note** that AVD emulator has known issues during activation)
-* Python to run the installation script.
+### Prerequisites
 
-### Installation
+* Android SDK with API level 19 (KitKat)
+* A virtual device emulator (Android Studio AVD or Genymotion) or a 7” Android Tablet (Tegra Note 7 is recommended)
+* Virtual devices need configured to screen size at 800x1280 (tvdpi)
+* Python (for installation scripts)
 
-1. Download the install script from: https://s3-us-west-1.amazonaws.com/poynt-apks/v1.2.11/setup_poynt_os.py
-    - $ wget https://s3-us-west-1.amazonaws.com/poynt-apks/v1.2.11/setup_poynt_os.py
-2. Change the permissions for the downloaded script so you can execute it.
-    - $ chmod +x setup_poynt_os.py
-3. Connect your android tablet or start your emulator.
-    - Make sure you can connect with your device or emulator via adb.
-    - running "adb devices” should show the connected android devices
-4. Run the script from your command line so it can download the required apks and install them on your device:
-    - ```$ ./setup_poynt_os.py```
-    - *NOTE*: the script tries to uninstall existing Poynt OS apps and services, if they do not exist, you will notice some uninstall “Failures" and they are completely ok to ignore.
-5. Wait until you see installation complete message.
-    - ```*** install complete***```
-6. As the script installs the requires services and applications, your device will ask you to choose which launcher to use. You’ll see 3 options, the default Android Launcher, Poynt Launcher and Setup Wizard.
-7. Select Setup Wizard to start Poynt’s OOBE application. (Note: if you are using Genymotion emulator you need to enable "Use virtual keyboard for text input" option in the device configuration)
-<center>
-![Payment Fragment]({{site.url}}../assets/genymotion_virtual_keyboard.png)
-</center>
-8. You’ll be asked to configure your wifi - select your SSID and enter wifi credentials to connect.
-9. Once connected, you’ll see a device activation screen asking for MID, TID, Acquirer, etc.
-10. At this point, keep the device aside, we will get back to it after setting up the required activation credentials from Poynt developer portal.
-11. In your web browser on your laptop/desktop, signup on Poynt Developer Portal: https://poynt.net/auth/signup/developer
-12. After you’re registered, you will see Poynt Developer dashboard.
-    - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
-13. On the dashboard, click on "COMPLETE YOUR PROFILE”, enter any missing information (eg. Website Url) and click on Save.
-14. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
-15. On the dashboard, click on “ACTIVATE A POYNT TERMINAL”, and you’ll see a list of terminals and their status.
-    - You should see a terminal with status as “Needs Activation"
-16. Click on the Action to activate your terminal - you’ll see your activation credentials (MID, TID and Acquirer).
-    - Keep the page open so you can enter the credentials on the device.
-17. Go back to your device or emulator that you’ve setup (step 10)
-18. Enter your activation credentials from the developer portal and click on Activate.
-19. Once you activate the device, Poynt’s OOBE app disables itself so you won’t see it anymore in the future.
-20. Click on the “Home” icon in your device or emulator navigation bar and select "Poynt Launcher” as the launcher (Select “Always” option).
+### Download the installer
+Download and unzip the PoyntOS emulator installer at http://d1su11fsq8j9e7.cloudfront.net/PoyntOS_Emulator_Install.zip
 
+### Using AVD in Android Studio?
+If you're using AVD (Android Virtual Device Manager in Android Studio), we have packaged a pre-configured device
+image of the PoyntOS Emulator. Using this package should guarantee a smooth running PoyntOS emulator with minimal
+effort. After unzipping the installer above, navigate to the `_INSTALL_ANDROID_STUDIO_AVD` folder in this package
+and review the instructions in `README.md`.
 
-At this point, your device is setup with required services and applications so it can act as a Poynt Smart Terminal that you can use to build your applications. You can try launching the “Poynt Terminal” app, and process a CASH transaction to make sure everything is working as expected. If you encounter any errors, please refer to adb logcat to see what’s failing, and please include that information in your email so we can troubleshoot the problems more easily.
+### Using a different emulator or a physical tablet?
+If you're using an emulator other than AVD (like Genymotion) or you want to install the PoyntOS emulator on a physical
+device, we have provided a script that installs PoyntOS to your device using the adb command line tool. After unzipping
+the installer above, navigate to the `_INSTALL_WITH_ADB` folder in this package and review the instructions in `README.md`.
+
+### Activating your virtual Poynt terminal
+1. The first time you boot up your device you'll be asked to choose a launcher. Select `Setup Wizard` to start Poynt's OOBE ("out of box experience") application. NOTE: If you're using Genymotion, enable `Use virtual keyboard for text input` option in device configuration.
+2. WiFi setup - select your SSID and WiFi credentials to connect.
+3. Once connected, you'll be shown the device activation screen -- keep the device running, we'll get back to this shortly.
+4. From your laptop/desktop, point your browser to the Poynt HQ Developer Portal: https://poynt.net/auth/signup/developer -- register to be a Poynt developer, or sign in if you already have.
+5. After signing in, click `Create a Test Merchant` from the dashboard -- this will create a mock/test business for your development activity.
+6. After creating a test merchant, click `Active a Poynt Terminal` from the dashboard.
+7. A test terminal with the status `Needs activation` was created for you (in step 5 above) -- click the lightning bolt icon to activate the terminal. You'll see your activation credentials that you'll use to activate your virtual Poynt terminal.
+8. Go back to your Poynt emulator terminal. If the camera is active and it's looking for a QR code, click `Don't have a QR code` link. Select the acquirer, and enter the MID and TID values from your browser (in step 7 above).
+9. Once you activate the device, Poynt’s OOBE app disables itself.
+10. Click on the `Home` icon in your device or emulator then select `Poynt Launcher` as the launcher (select `Always` option).
+
+At this point, your device is setup with required services and applications so it can act as a Poynt Smart Terminal. Try launching the `Poynt Terminal` app and process a cash transaction to make sure everything is working as expected. If you encounter any errors, please refer to `adb logcat`.
+This is very useful to pinpoint what's failing. If you do need any assistance, head over to the Poynt developer [discussion forums](https://discuss.poynt.net/c/developers), or reach out to our [support team](https://poynt.net/support).
