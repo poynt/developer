@@ -5,13 +5,14 @@ category: tut
 date: 2015-01-22 16:34:52
 ---
 
+<img style="float: right; margin-left: 10px; margin-top: 0px; width: 300px; height: 573px;" src="https://d85ecz8votkqa.cloudfront.net/docs/poynt_emulator_300x573.png" alt="PoyntOS emulator running on AVD" />
 To help speed up your development and testing, we provide a developer-edition version of PoyntOS that can be run on an Android emulator 
 or directly on an Android Tablet (Tegra Note 7 is recommended, but any 7" tablet would work as long as you code for multi-screen resolution including tvdpi).
 Note that certain functionality will not be available in the emulator (i.e. collecting consumer input from second screen, handling card payments, etc.);
 however, the emulator will give you enough functionality to start building and testing your apps. You'll have access to the terminal application (key in 
 transactions), the register (catalog-driven point of sale app), transaction data, customer data, and more.
 
-Activating a PoyntOS virtual device a device emulator will mimic exactly the same process of activating a physical Poynt Smart Terminal. Lets get started!
+Activating a PoyntOS virtual device on a device emulator is just like activating a physical Poynt Smart Terminal. Lets get started!
 
 ### Prerequisites
 
@@ -21,7 +22,7 @@ Activating a PoyntOS virtual device a device emulator will mimic exactly the sam
 * Python (for installation scripts)
 
 ### Download the installer
-Download and unzip the PoyntOS emulator installer at http://d1su11fsq8j9e7.cloudfront.net/PoyntOS_Emulator_Install.zip
+Download and unzip the PoyntOS emulator installer here: [PoyntOS_Emulator_Install.zip](http://d1su11fsq8j9e7.cloudfront.net/PoyntOS_Emulator_Install.zip)
 
 ### Using AVD in Android Studio?
 If you're using AVD (Android Virtual Device Manager in Android Studio), we have packaged a pre-configured device
