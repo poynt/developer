@@ -20,7 +20,8 @@ problems.
 
 Historically, building solutions for SMB (small and medium-sized business) was difficult -- from both the development and marketing perspectives. 
 With the PoyntOS SDK and Poynt RESTful APIs, building apps and integrating with merchant data is a snap. And because Poynt works directly with 
-acquiring banks and their ISOs (independent sales organizations), your apps can have unprecedented reach to distribution to merchants across many markets.
+acquiring banks and their ISOs (independent sales organizations), your apps can have unprecedented reach and distribution directly to merchants
+across many markets.<br><br>
 
 **Are there any restrictions on what apps can be built on Poynt?**<br>
 Yes. From a technical standpoint, there is detailed information is in our SDK documentation. From a guidelines standpoint, see the [App Development Guidelines](/ref/app-development-guidelines.html). Some key points to keep in mind: 
