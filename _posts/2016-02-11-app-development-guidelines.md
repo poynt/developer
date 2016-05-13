@@ -14,7 +14,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 * TLS 1.2 must be used for all HTTP based network connections. This also applies to web content displayed in webviews. Invalid certificates are not allowed and will result in failed network connections.
   * The full list of TLS certificates installed on the device can be found under `Settings ­>
     Systems ­> Security ­> Trusted credentials`.
-  * Use certificate pinning. For more information about certificate pinning on Android see:
+  * Use certificate pinning when transmitting data between your terminal app and your backend services. For more information about certificate pinning on Android see:
     https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android
 * Device apps must use Poynt JWT tokens for authentication (do not store your private keys on the device).
 * Apps must only ask for permissions needed in the operations provided. For device apps, permissions are set in the Android manifest. For cloud apps, permissions are defined through the app settings in the developer portal.
