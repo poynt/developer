@@ -28,6 +28,9 @@ dependencies {
   // Poynt SDK and Model Dependencies
   compile 'co.poynt.api:android-api-model:<release-version>@jar'
   compile 'co.poynt.android.sdk:poynt-sdk:<release-version>@aar'
+  
+  // Gson dependency
+  compile 'com.google.code.gson:gson:2.2.4@jar'
 
   // JWT dependencies - if you want to parse JWTs
   compile 'net.jcip:jcip-annotations:1.0@jar'
