@@ -16,7 +16,7 @@ To use the Poynt OS SDK, add the following dependencies in your build.gradle fil
 allprojects {
   repositories {
     maven {
-      url 'https://nexus.poynt.co/content/repositories/releases'
+      url 'https://nexus.poynt.com/content/repositories/releases'
     }
     mavenCentral()
   }
