@@ -4,6 +4,7 @@ title: "Enabling Developer Mode"
 category: tut
 date: 2015-05-19 11:21:25
 ---
+**WARNING: This change is irreversible! Putting a production terminal into developer mode will disable terminal's ability to process real payments.**
 
 Once you receive your Poynt Developer Unit, you'll want to put your Poynt device into `Developer-Mode`.
 This puts the device into a state that allows you to install your development APKs on the device.
