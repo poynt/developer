@@ -5,9 +5,15 @@ category: ref
 date: 2015-03-04 16:49:01
 ---
 
-### Current release: ***beta5***
-### PoyntOS SDK Version: 1.2.11
-### Poynt API Model Version: 1.2.44
+### Current release: ***beta7***
+### PoyntOS SDK Version: 1.2.14
+### Poynt API Model Version: 1.2.62
+
+### Changes since beta6 (1.2.11)
+* Updated API Model with new modifiers support (`selectableVariations`)
+* Support for skipping default Poynt receipt (`setSkipReceipt(true)` in payment object)
+* New transaction funding source: checks (`CHEQUE`)
+* Support for fees/surcharges at the item level (in addition to order level)
 
 ### Changes since beta5 (1.2.10)
 * Updated API Model (1.2.44) with a different parcel mechanism that allows for future version compatibility.
@@ -76,6 +82,9 @@ websocket based live stream connection with host
 
 | Release  | Date       | SDK Version |
 |:--------:|:----------:|:-----------:|
+| beta7    | 07/26/2016 | 1.2.14 |
+| beta6    | 05/03/2016 | 1.2.11 |
+| beta5    | 01/22/2016 | 1.2.10 |
 | beta4    | 10/25/2015 | 1.2.8 |
 | beta3    | 04/22/2015 | 1.2.6 |
 | beta2-update| 03/04/2015| 1.2.4 |
