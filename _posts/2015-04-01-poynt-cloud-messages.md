@@ -52,7 +52,7 @@ Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following fun
         if code == requests.codes.accepted:
             print "Successfully sent cloud message."
 ```
-Then in the `main` function near the end of the file, add the line after teh `poyntAPI.getAccessToken()` call:
+Then in the `main` function near the end of the file, add the line after the `poyntAPI.getAccessToken()` call:
 
 ```
 poyntAPI.sendCloudMessage(BUSINESS_ID, STORE_ID, "com.my.android.package", "com.my.android.package.MyBroadcastReceiverClass", "Hello from the cloud.")
