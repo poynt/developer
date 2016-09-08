@@ -15,9 +15,8 @@ This tutorial assumes that you are proficient at development in both Python and 
 
 The main purpose of PCM is to allow developers to easily send push notifications to their application running on the Poynt Smart Terminal with minimal effort.
 
-<center>
+{: .center}
 ![image](../assets/PoyntCloudMessage.png)
-</center>
 
 Developers will need to build two components:
 
@@ -35,7 +34,7 @@ We will be create a simple Python application that `POST` the message to Poynt. 
 
 Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following function to the PoyntAPI class:
 
-```
+~~~
     def sendCloudMessage(self, businessId, storeId, packageName, className, data):
         pcmUrl = self.apiHost + "/cloudMessages"
         cloudMessage = {
@@ -51,12 +50,12 @@ Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following fun
         code, jsonObj = self._sendPostRequest(pcmUrl, json.dumps(cloudMessage), {}, {})
         if code == requests.codes.accepted:
             print "Successfully sent cloud message."
-```
-Then in the `main` function near the end of the file, add the line after the `poyntAPI.getAccessToken()` call:
+~~~
+Then in the `main` function near the end of the file, add the line after teh `poyntAPI.getAccessToken()` call:
 
-```
+~~~
 poyntAPI.sendCloudMessage(BUSINESS_ID, STORE_ID, "com.my.android.package", "com.my.android.package.MyBroadcastReceiverClass", "Hello from the cloud.")
-```
+~~~
 (For easier debugging, you can remove other lines inside the if block under the `poyntAPI.getAccessToken()` call)
 
 This will cause the message to be routed to the `com.my.android.package.MyBroadcastReceiverClass` class in your terminal application.
@@ -67,7 +66,7 @@ Test your python code by executing `python src/PoyntAPI.py`.
 
 In order to receive messages your terminal application must have a broadcast receiver created with the matching package/class name as specified in the previous section.  Also, your receiver must be registered with the correct intent and category.  In your `AndroidManifest.xml` file, add your receiver to your application like so:
 
-```
+~~~
 <receiver android:name="com.my.android.package.MyBroadcastReceiver"
           android:enabled="true"
           android:exported="true">
@@ -76,11 +75,11 @@ In order to receive messages your terminal application must have a broadcast rec
         <category android:name="poynt.category.CLOUD_MESSAGE" />
     </intent-filter>
 </receiver>
-```
+~~~
 
 Your broadcast receiver class should look something like this:
 
-```
+~~~
 public class MyBroadcastReceiver extends BroadcastReceiver {
     public MyBroadcastReceiver() {}
     @Override
@@ -89,7 +88,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
             .INTENT_EXTRA_CLOUD_MESSAGE_BODY));
     }
 }
-```
+~~~
 
 
 The message sent from the cloud will be put in the intent extra named `INTENT_EXTRA_CLOUD_MESSAGE_BODY`.  Compile and redeploy your Android application with the above receiver.  Re-run the python example from the previous step.  You should see that your receiver printed out the message you sent.

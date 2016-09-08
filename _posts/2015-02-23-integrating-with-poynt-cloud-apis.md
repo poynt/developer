@@ -43,7 +43,7 @@ As mentioned above, all Poynt APIS are secured with OAuth2.0 authentication and 
 
 1) The first and foremost thing we need to do is to obtain an access token. We do that by generating a self-signed JWT using the private-key obtained from the Poynt Developer Portal and POST it to token API to obtain Poynt granted AccessToken, TokenType and RefreshToken. Below is a snippet from our [python sample hosted on github](https://github.com/poynt/python-sample).
 
-  ```
+  ~~~
   def getAccessToken(self):
           poyntTokenUrl = self.apiHost + "/token"
           currentDatetime = datetime.utcnow()
@@ -68,21 +68,21 @@ As mentioned above, all Poynt APIS are secured with OAuth2.0 authentication and 
           else:
               print "*** FAILED TO OBTAIN ACCESS TOKEN ***"
               return False
-  ```
+  ~~~
   This will generate a HTTP POST API call to /token API to obtain an Access Token (JWT). Below is a sample raw HTTP request - note that your self-signed JWT must be passed as the 'assertion' parameter:
 
-  ```
+  ~~~
   POST https://services.poynt.net/token
   api-version: 1.2
   Content-Type: application/x-www-form-urlencoded
   Content-Length: 749
   Poynt-Request-Id: 54d6c99a-7520-46dc-814d-1793c086bc5c
   grantType=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YWlkOmIzMmZiNTQwLWU3MzAtNDJiOS05YjFkLWMxMzEwODdkMWRjZCIsImlzcyI6InVybjphaWQ6YjMyZmI1NDAtZTczMC00MmI5LTliMWQtYzEzMTA4N2QxZGNkIiwianRpIjoiZmM5YWYwMGMtZDYxYS00YmM0LWFhNTEtMGQ0Njk0ZjJkNTg4IiwiZXhwIjoxNDI1MTA3NjQ5LCJpYXQiOjE0MjUxMDczNDksImF1ZCI6Imh0dHBzOi8vc2VydmljZXMucG95bnQubmV0In0.ffBbujoeDfm8U5rCPxeuwGCjNWhco3EN5jfHOJgonIBIpmdh0QOTUrArb7tPOrNAiSCq-fYNJUz9AeJl0YAGXNeWgWjv3jbEOzx5Ym3KWX-_n66nWzg1nXUC5vn2BxaVNxt9vdjdiQEPB0gKE4RxSQ45lURhKqs1bMdR5tWQ1y4Oo7jfbIxen-3JFYqz0kfTvjDAPL9qmXxXcCgKgXh94Z4Pw3hAjhVjTMSXS03dhIhvwHr7EmdnP3l5aQJDUDkFj1LS-Pt2wr9MUnqP2yWoo_JKYMg36bWIuLStKNYWSESRQKLN12g-P0o-gfBxNuNmqOskanf5qrjKO8BpZCwNPg
-  ```
+  ~~~
 
 2) Retrieve the access and refresh tokens from the Poynt's /token API response. Sample response:
 
-```
+~~~
 {
     "accessToken": "eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MjUxOTM3NDUsInN1YiI6InVybjphaWQ6YjMyZmI1NDAtZTczMC00MmI5LTliMWQtYzEzMTA4N2QxZGNkIiwicG95bnQuc2N0IjoiSiIsImF1ZCI6WyJ1cm46YWlkOmIzMmZiNTQwLWU3MzAtNDJiOS05YjFkLWMxMzEwODdkMWRjZCJdLCJpc3MiOiJodHRwczpcL1wvc2VydmljZXMucG95bnQubmV0IiwicG95bnQuYXVyIjoidXJuOmFpZDo0YTkzMTc3MC1hMGViLTExZTQtOGFmYy0wNzZiYzcwYjkwNTEiLCJqdGkiOiIwYmFhNTMyOC03ZmEzLTQ0MTEtYWE0Mi1hM2FhMTdmNTUxNTEiLCJpYXQiOjE0MjUxMDczNDUsInBveW50Lm9yZyI6e319.OaoOuuiYJ8dnq_690HHPwNjQPNaq372pgPY2TQ4F-72OQDStylFY9CB2tpCbHQViT8IcQGMgcKJiXdKkrt7Rqo3DUAkGNRaqNAZR-8kQ_hZ3-n2zhvwM0XbkyH7wD2DPw2JYx-wjcccRifypr3R_BSWkqyUB-LW9-dsXXuDbveYHO6WwYQacaISl-r6FACQBeKZEqVr_gx4P9tUpq6Q8LFyNOrtEpbWbdkqHdMFVK_O3e1gbrI1X7XSiC8tIDGB0zX_8MMdciZYTRbSCJKYkgjf6_SkNe7PF6hVCZPRZzVNFlybbdf7p2G1eVMi-YT4o6zZQcJkht_UDA2YmjMt_Cw",
     "expiresIn": 86400,
@@ -90,14 +90,14 @@ As mentioned above, all Poynt APIS are secured with OAuth2.0 authentication and 
     "scope": "ALL",
     "tokenType": "BEARER"
 }
-```
+~~~
 
 3) At this point you can make any Poynt API calls by passing the access token as part of the Authorization header. Note that the 'Authorization' header consists of token type 'BEARER' and the the actual token value.
 
-```
+~~~
 GET https://services.poynt.net/businesses/411c9612-2079-45ba-9a9d-a7b36140b0f1/catalogs
 api-version: 1.2
 Authorization: BEARER eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MjUxOTM3NDUsInN1YiI6InVybjphaWQ6YjMyZmI1NDAtZTczMC00MmI5LTliMWQtYzEzMTA4N2QxZGNkIiwicG95bnQuc2N0IjoiSiIsImF1ZCI6WyJ1cm46YWlkOmIzMmZiNTQwLWU3MzAtNDJiOS05YjFkLWMxMzEwODdkMWRjZCJdLCJpc3MiOiJodHRwczpcL1wvc2VydmljZXMucG95bnQubmV0IiwicG95bnQuYXVyIjoidXJuOmFpZDo0YTkzMTc3MC1hMGViLTExZTQtOGFmYy0wNzZiYzcwYjkwNTEiLCJqdGkiOiIwYmFhNTMyOC03ZmEzLTQ0MTEtYWE0Mi1hM2FhMTdmNTUxNTEiLCJpYXQiOjE0MjUxMDczNDUsInBveW50Lm9yZyI6e319.OaoOuuiYJ8dnq_690HHPwNjQPNaq372pgPY2TQ4F-72OQDStylFY9CB2tpCbHQViT8IcQGMgcKJiXdKkrt7Rqo3DUAkGNRaqNAZR-8kQ_hZ3-n2zhvwM0XbkyH7wD2DPw2JYx-wjcccRifypr3R_BSWkqyUB-LW9-dsXXuDbveYHO6WwYQacaISl-r6FACQBeKZEqVr_gx4P9tUpq6Q8LFyNOrtEpbWbdkqHdMFVK_O3e1gbrI1X7XSiC8tIDGB0zX_8MMdciZYTRbSCJKYkgjf6_SkNe7PF6hVCZPRZzVNFlybbdf7p2G1eVMi-YT4o6zZQcJkht_UDA2YmjMt_Cw
-```
+~~~
 
 A functional [sample in Python](https://github.com/poynt/python-sample) has been provided on github as a reference. Please give it a try to understand how to make API calls and their behavior. Please refer to the [Poynt API reference](https://poynt.com/docs/api/) for more information on the API resources available.
