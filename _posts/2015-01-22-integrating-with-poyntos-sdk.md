@@ -12,7 +12,7 @@ Poynt OS SDK is distributed as an Android Library (aar) through our Maven reposi
 
 To use the Poynt OS SDK, add the following dependencies in your build.gradle file - note that you would need to add our maven repository in your gradle file too:
 
-```
+~~~
 allprojects {
   repositories {
     maven {
@@ -38,7 +38,7 @@ dependencies {
   compile 'net.minidev:json-smart:1.2@jar'
 }
 
-```
+~~~
 
 NOTE: Please refer to release notes for current '<release-version>'
 

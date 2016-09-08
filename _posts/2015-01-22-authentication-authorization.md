@@ -18,7 +18,8 @@ All Poynt RESTful APIs are OAuth 2.0 enabled using JSON Web Tokens (JWT) as OAut
 
 To obtain permission to act on-behalf of a merchant (to access their data or service), you must redirect the merchant to Poynt Authorization URL along with your Application ID. Poynt's Authorization endpoint will verify the identity of the merchant, request consent to the necessary information, record their approval, and redirect the merchant back to your application’s return URL along with the merchant’s business information your application needs for acting on behalf of the merchant.
 
-<center>![Oauth]({{site.url}}../assets/developers-oauth-token-dance.png)</center>
+{: .center}
+![Oauth]({{site.url}}../assets/developers-oauth-token-dance.png)
 
 #### Note on Refresh Tokens
 
@@ -32,7 +33,7 @@ It is recommended that when an application is about to make an API call, it shou
 #### What does a JWT claim set look like? ####
 Sample JWT claim set:
 
-```
+~~~
 {
   "sub": "urn:aid:ab0b4a96-6923-420f-ae10-217470f536da",
   "iss": "urn:aid:ab0b4a96-6923-420f-ae10-217470f536da",
@@ -41,32 +42,32 @@ Sample JWT claim set:
   "iat": 1461791596,
   "aud": "https://services.poynt.net"
 }
-```
+~~~
 
 Here's an explation of the JWT claims above:
 
-```
+~~~
  sub:  subject claim (your application ID)
  iss:  issuer claim (your application ID)
  jti:  jti claim (generated random UUID)
  exp:  expiration time claim (numeric epoch time in future)<br>(i.e. 500 seconds from now)
  iat:  issued at claim (numeric epoch time now)
  aud:  audience claim (Poynt API services endpoint)
-```
+~~~
 
 #### Example: Generating Self-Signed JWT in Java ####
 Here is a sample on how to generate a JWT using [nimbus JWT library](http://connect2id.com/products/nimbus-jose-jwt) for Java. To use the same libraries, please add the following dependencies in your maven/gradle files.
 
-```
+~~~
 compile 'net.jcip:jcip-annotations:1.0@jar'
 compile 'com.nimbusds:nimbus-jose-jwt:3.9@jar'
 compile 'net.minidev:json-smart:1.2@jar'
-```
+~~~
 
 
    Sample Java Code:
 
-   ```
+   ~~~
    // Create RSA-signer with the private key
    JWSSigner signer = new RSASSASigner((RSAPrivateKey) keyPair.getPrivate());
 
@@ -102,12 +103,12 @@ compile 'net.minidev:json-smart:1.2@jar'
    // Compute the RSA Signature
    signedJWT.sign(signer);
    return signedJWT.serialize();
-   ```
+   ~~~
    
 #### Example: Generating Self-Signed JWT in Python ####
 Below is a snippet of the Python code that shows how the JWT is formed and signed/encrypted with your application's private key. You can [download](https://github.com/poynt/python-sample) the full sample Python app on GitHub. 
 
-```
+~~~
     payload = {
         'exp': expiryDatetime,
         'iat': currentDatetime,
@@ -117,13 +118,13 @@ Below is a snippet of the Python code that shows how the JWT is formed and signe
         'jti': str(uuid.uuid4())
     }
     encodedJWT = jwt.encode(payload, self.rsaPrivateKey, algorithm='RS256')
-```
+~~~
 
 
 ### Obtain access token and refresh token using your API credentials ###
 Below is a sample API call to obtain access token and refresh tokens. We use place the `<self-signed-jwt>` generated above in the form POST data:
 
-```
+~~~
 HTTP POST https://services.poynt.net/token
 api-version: 1.2
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
@@ -141,13 +142,13 @@ Poynt-Request-Id: abcdefgh-1234-567a-901b-cdefghijklmn
     "scope":"ALL",
     "tokenType":"BEARER"
 }
-```
+~~~
 
 #### Using refresh token to fetch a new access token
 
 If an access token expires, you'll need to fetch a new one using the refresh token. Below is a sample HTTP session performing that refresh.
 
-```
+~~~
 HTTP POST https://services.poynt.net/token
 api-version: 1.2
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
@@ -165,4 +166,4 @@ Poynt-Request-Id: bdceda34-7941-449d-88a6-cc28bf738fb9
     "scope":"ALL",
     "tokenType":"BEARER"
 }
-```
+~~~
