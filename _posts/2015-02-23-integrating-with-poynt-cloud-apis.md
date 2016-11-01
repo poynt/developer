@@ -17,11 +17,11 @@ To consume Poynt APIs you must:
 3. On the dashboard, click on "COMPLETE YOUR PROFILE”, enter any missing information (eg. Website Url) and click on Save.
 4. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
 5. Once a test merchant is created, click on "CREATE A CLOUD APPLICATION", to create an application to integrate with Poynt APIs.
-![Create Cloud Application]({{site.url}}../assets/poynt_net_create_new_app.png)
+![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_create_new_app.png)
 6. Fill in all the required fields and submit.
-![Create Cloud Application]({{site.url}}../assets/poynt_net_new_app.png)
+![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_new_app.png)
 7. Save your newly created application credentials. Please note that these API credentials cannot be recovered, so please save them in a safe location.
-![Create Cloud Application]({{site.url}}../assets/poynt_net_app_created_credentials.png)
+![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_app_created_credentials.png)
 8. Obtain merchant's permission to access Poynt APIs on behalf of them (access their data)
     1. Construct Poynt Authorization url to redirect the merchant to:
         - ex. https://poynt.net/applications/authorize?callback=http%3A%2F%2Fgetdemoapp.com%2Freturn_from_poynt&applicationId=urn%3Aaid%3A5b4e9993-c815-4070-9859-35f48e492b4f&context=python-test-script

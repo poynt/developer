@@ -9,7 +9,7 @@ date: 2015-01-22 16:51:51
 Applications that provide direct interaction with the merchants, collect real time data, or integrate with other accessories connected to the terminal can be built using Poynt SDK for Android. Developers can build both UI-rich applications as well as background services to run on Poynt terminals.
 
 {: .center}
-![On-Terminal Apps]({{site.url}}../assets/developers-on-terminal-apps.png)
+![On-Terminal Apps]({{site.url}}/developer/assets/developers-on-terminal-apps.png)
 
 Given that a main function of the Poynt device is payment processing, there are a few security and compliance requirements that must be abided by:
 
@@ -62,7 +62,7 @@ Poynt Content Providers provide the data store for various resources related to 
 In order to protect customer payment card information, Poynt provides Payment Fragments that 3rd party applications can launch to collect payment card information securely and process transactions. The Payment Fragments can be launched by providing a ‘Payment’ object containing the transactional information like amounts, tip and reference identifier.
 
 {: .center}
-![Payment Fragment]({{site.url}}../assets/developers-fragment-1.png)
+![Payment Fragment]({{site.url}}/developer/assets/developers-fragment-1.png)
 
 Three types of Payment Fragments are provided through Poynt SDK:
 
