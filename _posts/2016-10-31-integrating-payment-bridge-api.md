@@ -21,7 +21,7 @@ Here is how it works:
 
 ### Payment Bridge Sequence Diagram 
 
-![PaymentBridgeSequenceDiagram]({{site.url}}../assets/PaymentBridgeAPI.png)
+![PaymentBridgeSequenceDiagram]({{site.url}}/developer/assets/PaymentBridgeAPI.png)
 
 ### Poynt Message format
 

@@ -18,12 +18,12 @@ This puts the device into a state that allows you to install your development AP
 
 1. Put your device into fastboot mode by holding the power and volume up button while the device is powered off. For more information about what fastboot does, see: http://elinux.org/Android_Fastboot
 	<div>
-	<img src="{{site.url}}../assets/fastboot0.png" alt="fastboot0" width="600">
+	<img src="{{site.url}}/developer/assets/fastboot0.png" alt="fastboot0" width="600">
 	</div>
 
 2. Select "Fastboot Protocol" from the fastboot menu (press volume down button then power button). Screen will flicker and return to fastboot menu.
 	<div>
-	<img src="{{site.url}}../assets/fastboot_screen1.jpg" alt="fastbootscreen1" width="300">
+	<img src="{{site.url}}/developer/assets/fastboot_screen1.jpg" alt="fastbootscreen1" width="300">
 	</div>
 3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
 <h4>For Windows:</h4>
@@ -66,14 +66,14 @@ On some linux distributions, you may be able to install SDK tools with apt-get:
 
 4. Run the command to initiate the developer mode process: `fastboot oem developer`
 	<div>
-	<img src="{{site.url}}../assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
+	<img src="{{site.url}}/developer/assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
 	</div>
 
 5. Read the instructions on the Poynt Terminal, press the volume down button to move selection to `Enter developer mode` and Press the Power button to select. At this point your device will clear its cache and the device state in the bootloader screen should show `Unlocked` or `Developer mode`.
 
 6. Reboot your device.
 	<div>
-	<img src="{{site.url}}../assets/terminal_fastboot2.png" alt="fastboot2" width="600">
+	<img src="{{site.url}}/developer/assets/terminal_fastboot2.png" alt="fastboot2" width="600">
 	</div>
 
 7. <a href="/developer/tut/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
