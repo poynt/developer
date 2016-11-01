@@ -19,7 +19,7 @@ All Poynt RESTful APIs are OAuth 2.0 enabled using JSON Web Tokens (JWT) as OAut
 To obtain permission to act on-behalf of a merchant (to access their data or service), you must redirect the merchant to Poynt Authorization URL along with your Application ID. Poynt's Authorization endpoint will verify the identity of the merchant, request consent to the necessary information, record their approval, and redirect the merchant back to your application’s return URL along with the merchant’s business information your application needs for acting on behalf of the merchant.
 
 {: .center}
-![Oauth]({{site.url}}../assets/developers-oauth-token-dance.png)
+![Oauth]({{site.url}}/developer/assets/developers-oauth-token-dance.png)
 
 #### Note on Refresh Tokens
 

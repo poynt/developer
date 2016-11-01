@@ -16,7 +16,7 @@ This tutorial assumes that you are proficient at development in both Python and 
 The main purpose of PCM is to allow developers to easily send push notifications to their application running on the Poynt Smart Terminal with minimal effort.
 
 {: .center}
-![image](../assets/PoyntCloudMessage.png)
+![image](/developer/assets/PoyntCloudMessage.png)
 
 Developers will need to build two components:
 

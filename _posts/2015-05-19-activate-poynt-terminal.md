@@ -16,21 +16,21 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 ### Installation
 
 1. Go to https://poynt.net/auth/signup/developer and register your developer account.
-![SignUp]({{site.url}}../assets/poynt-signup-2.png)
+![SignUp]({{site.url}}/developer/assets/poynt-signup-2.png)
 2. Once you’re registered, you will see Poynt Developer dashboard.
     - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
 3. On the dashboard, click on "COMPLETE YOUR PROFILE”, enter any missing information (eg. Website Url) and click on Save.
-![complete profile]({{site.url}}../assets/poynt-signup-3.png)
-![profile]({{site.url}}../assets/poynt-signup-4.png)
+![complete profile]({{site.url}}/developer/assets/poynt-signup-3.png)
+![profile]({{site.url}}/developer/assets/poynt-signup-4.png)
 4. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
-![create test merchant]({{site.url}}../assets/poynt-signup-5.png)
+![create test merchant]({{site.url}}/developer/assets/poynt-signup-5.png)
 5. On the dashboard, click on “ACTIVATE A POYNT TERMINAL”, and you’ll see a list of terminals and their status.
     - You should see a terminal with status as “Needs Activation"
-    ![activate]({{site.url}}../assets/poynt-signup-6.png)
-    ![needs activation]({{site.url}}../assets/poynt-signup-7.png)
+    ![activate]({{site.url}}/developer/assets/poynt-signup-6.png)
+    ![needs activation]({{site.url}}/developer/assets/poynt-signup-7.png)
 6. Click on the Action to activate your terminal - you’ll see your activation credentials (MID, TID and Acquirer).
     - Keep the page open so you can enter the credentials on the device.
-    ![activation credentials]({{site.url}}../assets/poynt-signup-8.png)
+    ![activation credentials]({{site.url}}/developer/assets/poynt-signup-8.png)
 7. Turn on your Poynt Developer unit.
 8. Go through the Poynt activation app to setup wifi and install any updates that are available.
 8. When you are prompted for activation credentials, enter the information from the developer portal (step 6) and click on Activate.

@@ -18,7 +18,7 @@ Currently the Payment Fragments support the following features:
 6. Non-referenced credits and auth only transactions
 
 {: .center}
-![Payment Fragment]({{site.url}}../assets/payment-fragment.png)
+![Payment Fragment]({{site.url}}/developer/assets/payment-fragment.png)
 
 ## Integrating with Payment Fragments
 
@@ -96,4 +96,4 @@ Once a payment has been processed often times it's required to provide the merch
 This will launch Poynt Payment Activity to display the details of the payment along with allowed actions (void, capture, refund) based on it's current status.
 
 {: .center}
-![Payment Fragment]({{site.url}}../assets/payment-details.png)
+![Payment Fragment]({{site.url}}/developer/assets/payment-details.png)
