@@ -18,4 +18,4 @@ With PoyntOS SDK, you can now bring the capabilities of large merchants down to 
 
 PoyntOS consists of an [Android-based application platform](doc/onterminal-apps.html) and RESTful [Cloud APIs](doc/oncloud-apps.html) for integration over cloud. Depending on your app’s use case, you might need to integrate with one or both of them.
 
-![On-Terminal]({{ site.url }}assets/poyntOS-cloud.png)
+![On-Terminal]({{ site.url }}/developer/assets/poyntOS-cloud.png)
