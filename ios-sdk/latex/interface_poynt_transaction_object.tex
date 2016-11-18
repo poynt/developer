@@ -14,7 +14,7 @@ Inheritance diagram for Poynt\+Transaction\+Object\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 (id) -\/ \hyperlink{interface_poynt_transaction_object_a777cf6da1ae0fc9452b06142a5adaa14}{init\+With\+Dictionary\+:}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} using an appropriate formated dictionary object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,17 +29,17 @@ N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_object_aaab84b2e5d0ad
 N\+S\+Array $\ast$ \hyperlink{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c}{amounts}
 \begin{DoxyCompactList}\small\item\em collection of \hyperlink{interface_poynt_transaction_amounts}{Poynt\+Transaction\+Amounts} objects \end{DoxyCompactList}\item 
 N\+S\+Array $\ast$ \hyperlink{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943}{funding\+Source}
-\item 
+\begin{DoxyCompactList}\small\item\em collection of funding source objects used for funding this transaction. \end{DoxyCompactList}\item 
 N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7}{context}
-\item 
+\begin{DoxyCompactList}\small\item\em Contains context about the transaction. \end{DoxyCompactList}\item 
 N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384}{references}
 \begin{DoxyCompactList}\small\item\em References to orders/invoices that this transaction is for. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+\hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} 
 
-
-Definition at line 12 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 16 of file Poynt\+Transaction\+Object.\+h.
 
 
 
@@ -50,7 +50,11 @@ Definition at line 12 of file Poynt\+Transaction\+Object.\+h.
 \subsubsection{\texorpdfstring{init\+With\+Dictionary\+:()}{initWithDictionary:()}}
 {\footnotesize\ttfamily -\/ (id) init\+With\+Dictionary\+: \begin{DoxyParamCaption}\item[{(N\+S\+Dictionary $\ast$)}]{data }\end{DoxyParamCaption}}
 
+
+
 create a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} using an appropriate formated dictionary object 
+
+
 
 \subsection{Property Documentation}
 \hypertarget{interface_poynt_transaction_object_aaab84b2e5d0ad0f648e7e0e17c6afa08}{}\label{interface_poynt_transaction_object_aaab84b2e5d0ad0f648e7e0e17c6afa08} 
@@ -65,7 +69,7 @@ action of this object  \textquotesingle{}A\+U\+T\+H\+O\+R\+I\+ZE\textquotesingle
 
 
 
-Definition at line 29 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 33 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c}{}\label{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!amounts@{amounts}}
@@ -79,7 +83,7 @@ collection of \hyperlink{interface_poynt_transaction_amounts}{Poynt\+Transaction
 
 
 
-Definition at line 33 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 37 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7}{}\label{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!context@{context}}
@@ -87,9 +91,13 @@ Definition at line 33 of file Poynt\+Transaction\+Object.\+h.
 \subsubsection{\texorpdfstring{context}{context}}
 {\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) context\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
 
+
+
 Contains context about the transaction. 
 
-Definition at line 42 of file Poynt\+Transaction\+Object.\+h.
+
+
+Definition at line 46 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943}{}\label{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!funding\+Source@{funding\+Source}}
@@ -97,11 +105,15 @@ Definition at line 42 of file Poynt\+Transaction\+Object.\+h.
 \subsubsection{\texorpdfstring{funding\+Source}{fundingSource}}
 {\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) funding\+Source\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
 
-collection of funding source objects used for funding this transaction. \begin{DoxyRefDesc}{Todo}
+
+
+collection of funding source objects used for funding this transaction. 
+
+\begin{DoxyRefDesc}{Todo}
 \item[\hyperlink{todo__todo000002}{Todo}]at current, we are not populating this field. Developers have access to the data in \hyperlink{interface_poynt_transaction_response_object_a0046f618ca04fd1e7fcf91b87190a944}{Poynt\+Transaction\+Response\+Object.\+raw\+Json} propety \end{DoxyRefDesc}
 
 
-Definition at line 38 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 42 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_af3bd537ec19ed3fac0b5aa56812a1577}{}\label{interface_poynt_transaction_object_af3bd537ec19ed3fac0b5aa56812a1577} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!poynt\+Request\+Id@{poynt\+Request\+Id}}
@@ -115,7 +127,7 @@ U\+U\+I\+D\+String representing this object.
 
 
 
-Definition at line 16 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 20 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384}{}\label{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!references@{references}}
@@ -129,7 +141,7 @@ References to orders/invoices that this transaction is for.
 
 
 
-Definition at line 46 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 50 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_ac2acf327011ce6ed9e26a41ceddaee31}{}\label{interface_poynt_transaction_object_ac2acf327011ce6ed9e26a41ceddaee31} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!status@{status}}
@@ -143,7 +155,7 @@ current status of this object. Mostly commonly set server side\+: \textquotesing
 
 
 
-Definition at line 24 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 28 of file Poynt\+Transaction\+Object.\+h.
 
 \hypertarget{interface_poynt_transaction_object_aacd11580c330a78310c344d78baecf8c}{}\label{interface_poynt_transaction_object_aacd11580c330a78310c344d78baecf8c} 
 \index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!transaction\+Id@{transaction\+Id}}
@@ -157,7 +169,7 @@ U\+U\+I\+D\+String representing a Poynt transaction id.
 
 
 
-Definition at line 20 of file Poynt\+Transaction\+Object.\+h.
+Definition at line 24 of file Poynt\+Transaction\+Object.\+h.
 
 
 

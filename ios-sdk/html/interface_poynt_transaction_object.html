@@ -103,6 +103,7 @@ Inheritance diagram for PoyntTransactionObject:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a777cf6da1ae0fc9452b06142a5adaa14"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_poynt_transaction_object.html#a777cf6da1ae0fc9452b06142a5adaa14">initWithDictionary:</a></td></tr>
+<tr class="memdesc:a777cf6da1ae0fc9452b06142a5adaa14"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a <a class="el" href="interface_poynt_transaction_object.html">PoyntTransactionObject</a> using an appropriate formated dictionary object  <a href="#a777cf6da1ae0fc9452b06142a5adaa14">More...</a><br /></td></tr>
 <tr class="separator:a777cf6da1ae0fc9452b06142a5adaa14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -123,16 +124,19 @@ Properties</h2></td></tr>
 <tr class="memdesc:a5ab449d070271ee2c9d138bb7b472a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">collection of <a class="el" href="interface_poynt_transaction_amounts.html" title="the transaction amounts in a PoyntTransactionObject amounts collection ">PoyntTransactionAmounts</a> objects  <a href="#a5ab449d070271ee2c9d138bb7b472a6c">More...</a><br /></td></tr>
 <tr class="separator:a5ab449d070271ee2c9d138bb7b472a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4cac3360e86d21570d89915c99e6943"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_poynt_transaction_object.html#ab4cac3360e86d21570d89915c99e6943">fundingSource</a></td></tr>
+<tr class="memdesc:ab4cac3360e86d21570d89915c99e6943"><td class="mdescLeft">&#160;</td><td class="mdescRight">collection of funding source objects used for funding this transaction.  <a href="#ab4cac3360e86d21570d89915c99e6943">More...</a><br /></td></tr>
 <tr class="separator:ab4cac3360e86d21570d89915c99e6943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97674af3143e04f09bbc6590dab812d7"><td class="memItemLeft" align="right" valign="top">NSDictionary *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_poynt_transaction_object.html#a97674af3143e04f09bbc6590dab812d7">context</a></td></tr>
+<tr class="memdesc:a97674af3143e04f09bbc6590dab812d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains context about the transaction.  <a href="#a97674af3143e04f09bbc6590dab812d7">More...</a><br /></td></tr>
 <tr class="separator:a97674af3143e04f09bbc6590dab812d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bdc3d5a4da018a352f33b946a0ea384"><td class="memItemLeft" align="right" valign="top">NSDictionary *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_poynt_transaction_object.html#a2bdc3d5a4da018a352f33b946a0ea384">references</a></td></tr>
 <tr class="memdesc:a2bdc3d5a4da018a352f33b946a0ea384"><td class="mdescLeft">&#160;</td><td class="mdescRight">References to orders/invoices that this transaction is for.  <a href="#a2bdc3d5a4da018a352f33b946a0ea384">More...</a><br /></td></tr>
 <tr class="separator:a2bdc3d5a4da018a352f33b946a0ea384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00012">12</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<div class="textblock"><p><a class="el" href="interface_poynt_transaction_object.html">PoyntTransactionObject</a> </p>
+
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00016">16</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 </div><h2 class="groupheader">Method Documentation</h2>
 <a id="a777cf6da1ae0fc9452b06142a5adaa14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a777cf6da1ae0fc9452b06142a5adaa14">&sect;&nbsp;</a></span>initWithDictionary:()</h2>
@@ -149,6 +153,7 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>create a <a class="el" href="interface_poynt_transaction_object.html">PoyntTransactionObject</a> using an appropriate formated dictionary object </p>
 
 </div>
@@ -176,7 +181,7 @@ Properties</h2></td></tr>
 
 <p>action of this object  'AUTHORIZE', 'CAPTURE', 'OFFLINE_AUTHORIZE', 'REFUND', 'SALE', most commonly set by server </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00029">29</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00033">33</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -202,7 +207,7 @@ Properties</h2></td></tr>
 
 <p>collection of <a class="el" href="interface_poynt_transaction_amounts.html" title="the transaction amounts in a PoyntTransactionObject amounts collection ">PoyntTransactionAmounts</a> objects </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00033">33</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00037">37</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -225,9 +230,10 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Contains context about the transaction. </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00042">42</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00046">46</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -250,9 +256,11 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>collection of funding source objects used for funding this transaction. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>at current, we are not populating this field. Developers have access to the data in <a class="el" href="interface_poynt_transaction_response_object.html#a0046f618ca04fd1e7fcf91b87190a944">PoyntTransactionResponseObject.rawJson</a> propety </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00038">38</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>collection of funding source objects used for funding this transaction. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>at current, we are not populating this field. Developers have access to the data in <a class="el" href="interface_poynt_transaction_response_object.html#a0046f618ca04fd1e7fcf91b87190a944">PoyntTransactionResponseObject.rawJson</a> propety </dd></dl>
+
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00042">42</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -278,7 +286,7 @@ Properties</h2></td></tr>
 
 <p>UUIDString representing this object. </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00016">16</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00020">20</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -304,7 +312,7 @@ Properties</h2></td></tr>
 
 <p>References to orders/invoices that this transaction is for. </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00046">46</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00050">50</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -330,7 +338,7 @@ Properties</h2></td></tr>
 
 <p>current status of this object. Mostly commonly set server side: 'CREATED', 'SAVED', 'AUTHORIZED', 'PARTIALLY_CAPTURED', 'CAPTURED', 'DECLINED', 'PARTIALLY_CAPTURED_AND_PARTIALLY_REFUNDED', 'PARTIALLY_REFUNDED', 'REFUNDED', 'VOIDED' </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00024">24</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00028">28</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
@@ -356,7 +364,7 @@ Properties</h2></td></tr>
 
 <p>UUIDString representing a Poynt transaction id. </p>
 
-<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00020">20</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_transaction_object_8h_source.html#l00024">24</a> of file <a class="el" href="_poynt_transaction_object_8h_source.html">PoyntTransactionObject.h</a>.</p>
 
 </div>
 </div>
