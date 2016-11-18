@@ -1,0 +1,147 @@
+\hypertarget{interface_poynt_transaction_amounts}{}\section{Poynt\+Transaction\+Amounts Class Reference}
+\label{interface_poynt_transaction_amounts}\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+
+
+the transaction amounts in a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} amounts collection  
+
+
+
+
+{\ttfamily \#import $<$Poynt\+Transaction\+Amounts.\+h$>$}
+
+Inheritance diagram for Poynt\+Transaction\+Amounts\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_transaction_amounts}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_transaction_amounts_af1bc93b54ea2b50650a15f84ced4f921}{init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:}
+\begin{DoxyCompactList}\small\item\em sets the order amount, tip amount, and cashback amount at initialization \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_poynt_transaction_amounts_ac4a96ce3f50982e0f88ef099c2b3dc5b}{init\+With\+Data\+:}
+\begin{DoxyCompactList}\small\item\em creates a transaction amount with an appropriate dictionary representation \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_transaction_amounts_a1c43473c035627846e64fddfb2bbe57d}{calculate\+:}
+\begin{DoxyCompactList}\small\item\em called on an order object to update the properties attached to this object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Integer \hyperlink{interface_poynt_transaction_amounts_a37e598d8b46c97a36f7fbb47e7b150ad}{order\+Amount}
+\begin{DoxyCompactList}\small\item\em required field representing amount  The portion of transaction\+Amount that went towards the item/service being purchased. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_transaction_amounts_ae4a2e64d79032bc8bb25305486b23859}{tip\+Amount}
+\item 
+N\+S\+Integer \hyperlink{interface_poynt_transaction_amounts_a865d904d3a3af78f51b64d9acd5d2076}{cashback\+Amount}
+\item 
+N\+S\+Integer \hyperlink{interface_poynt_transaction_amounts_aea3b857ebe452c1822cdd05e35cd2769}{transaction\+Amount}
+\begin{DoxyCompactList}\small\item\em required amount field  The total amount to be charged on the tender. This equals order\+Amount + tip\+Amount + cashback\+Amount. \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_amounts_a71a9104f71558df8791cedc5e81941a3}{currency}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the transaction amounts in a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} amounts collection 
+
+\hyperlink{interface_poynt_transaction_amounts}{Poynt\+Transaction\+Amounts} 
+
+Definition at line 17 of file Poynt\+Transaction\+Amounts.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_transaction_amounts_a1c43473c035627846e64fddfb2bbe57d}{}\label{interface_poynt_transaction_amounts_a1c43473c035627846e64fddfb2bbe57d} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!calculate\+:@{calculate\+:}}
+\index{calculate\+:@{calculate\+:}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{calculate\+:()}{calculate:()}}
+{\footnotesize\ttfamily -\/ (void) calculate\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} $\ast$)}]{order }\end{DoxyParamCaption}}
+
+
+
+called on an order object to update the properties attached to this object 
+
+\hypertarget{interface_poynt_transaction_amounts_af1bc93b54ea2b50650a15f84ced4f921}{}\label{interface_poynt_transaction_amounts_af1bc93b54ea2b50650a15f84ced4f921} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:@{init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:}}
+\index{init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:@{init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{init\+With\+Amount\+:tip\+Amount\+:cashback\+Amount\+:()}{initWithAmount:tipAmount:cashbackAmount:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Amount\+: \begin{DoxyParamCaption}\item[{(N\+S\+Integer)}]{order\+Amount }\item[{tipAmount:(N\+S\+Integer)}]{tip\+Amount }\item[{cashbackAmount:(N\+S\+Integer)}]{cashback\+Amount }\end{DoxyParamCaption}}
+
+
+
+sets the order amount, tip amount, and cashback amount at initialization 
+
+\hypertarget{interface_poynt_transaction_amounts_ac4a96ce3f50982e0f88ef099c2b3dc5b}{}\label{interface_poynt_transaction_amounts_ac4a96ce3f50982e0f88ef099c2b3dc5b} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!init\+With\+Data\+:@{init\+With\+Data\+:}}
+\index{init\+With\+Data\+:@{init\+With\+Data\+:}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{init\+With\+Data\+:()}{initWithData:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Data\+: \begin{DoxyParamCaption}\item[{(N\+S\+Dictionary $\ast$)}]{data }\end{DoxyParamCaption}}
+
+
+
+creates a transaction amount with an appropriate dictionary representation 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_transaction_amounts_a865d904d3a3af78f51b64d9acd5d2076}{}\label{interface_poynt_transaction_amounts_a865d904d3a3af78f51b64d9acd5d2076} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!cashback\+Amount@{cashback\+Amount}}
+\index{cashback\+Amount@{cashback\+Amount}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{cashback\+Amount}{cashbackAmount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) cashback\+Amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+The portion of transaction\+Amount that will be returned as cashback (mainly applicable for cash or debit-\/card tenders). Defaults to 0 if not provided. 
+
+Definition at line 30 of file Poynt\+Transaction\+Amounts.\+h.
+
+\hypertarget{interface_poynt_transaction_amounts_a71a9104f71558df8791cedc5e81941a3}{}\label{interface_poynt_transaction_amounts_a71a9104f71558df8791cedc5e81941a3} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!currency@{currency}}
+\index{currency@{currency}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{currency}{currency}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) currency\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+Currency following the I\+S\+O-\/4217 format (\href{http://en.wikipedia.org/wiki/ISO_4217}{\tt http\+://en.\+wikipedia.\+org/wiki/\+I\+S\+O\+\_\+4217}). 
+
+Definition at line 39 of file Poynt\+Transaction\+Amounts.\+h.
+
+\hypertarget{interface_poynt_transaction_amounts_a37e598d8b46c97a36f7fbb47e7b150ad}{}\label{interface_poynt_transaction_amounts_a37e598d8b46c97a36f7fbb47e7b150ad} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!order\+Amount@{order\+Amount}}
+\index{order\+Amount@{order\+Amount}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{order\+Amount}{orderAmount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) order\+Amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+required field representing amount  The portion of transaction\+Amount that went towards the item/service being purchased. 
+
+
+
+Definition at line 22 of file Poynt\+Transaction\+Amounts.\+h.
+
+\hypertarget{interface_poynt_transaction_amounts_ae4a2e64d79032bc8bb25305486b23859}{}\label{interface_poynt_transaction_amounts_ae4a2e64d79032bc8bb25305486b23859} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!tip\+Amount@{tip\+Amount}}
+\index{tip\+Amount@{tip\+Amount}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{tip\+Amount}{tipAmount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) tip\+Amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+The portion of transaction\+Amount that went towards tip. Defaults to 0 if not provided. 
+
+Definition at line 26 of file Poynt\+Transaction\+Amounts.\+h.
+
+\hypertarget{interface_poynt_transaction_amounts_aea3b857ebe452c1822cdd05e35cd2769}{}\label{interface_poynt_transaction_amounts_aea3b857ebe452c1822cdd05e35cd2769} 
+\index{Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}!transaction\+Amount@{transaction\+Amount}}
+\index{transaction\+Amount@{transaction\+Amount}!Poynt\+Transaction\+Amounts@{Poynt\+Transaction\+Amounts}}
+\subsubsection{\texorpdfstring{transaction\+Amount}{transactionAmount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) transaction\+Amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+required amount field  The total amount to be charged on the tender. This equals order\+Amount + tip\+Amount + cashback\+Amount. 
+
+
+
+Definition at line 35 of file Poynt\+Transaction\+Amounts.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_transaction_amounts_8h}{Poynt\+Transaction\+Amounts.\+h}\end{DoxyCompactItemize}

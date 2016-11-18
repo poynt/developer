@@ -1,0 +1,75 @@
+.TH "PoyntDiscountObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntDiscountObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntDiscountObject\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithAmount:customName:\fP"
+.br
+.RI "initialize discount objects using the initWithAmount or init\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSInteger \fBamount\fP"
+.br
+.RI "the amount in cents describing this discount "
+.ti -1c
+.RI "NSString * \fBcustomName\fP"
+.br
+.RI "a human readable name for identifiying the meaning of this discount "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntDiscountObject\fP  discounts are encapsulated in an object to more easily identify their meaning\&.
+.PP
+.PP
+.nf
+PoyntDiscountObject *discount  = [[PoyntDiscountObject alloc] initWithAmount:200 customName:@"Customer Loyalty"];
+.fi
+.PP
+ 
+.PP
+Definition at line 19 of file PoyntDiscountObject\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (id) initWithAmount: (NSInteger) amount(NSString *) customName"
+
+.PP
+initialize discount objects using the initWithAmount or init\&. 
+.PP
+\fBNote:\fP
+.RS 4
+Iniitializing with init will default amount to 0 and customName to an empty string 
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSInteger) amount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+the amount in cents describing this discount 
+.PP
+Definition at line 23 of file PoyntDiscountObject\&.h\&.
+.SS "\- (NSString*) customName\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+a human readable name for identifiying the meaning of this discount 
+.PP
+Definition at line 27 of file PoyntDiscountObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

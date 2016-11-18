@@ -1,0 +1,128 @@
+\hypertarget{interface_poynt_transaction_response_object}{}\section{Poynt\+Transaction\+Response\+Object Class Reference}
+\label{interface_poynt_transaction_response_object}\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+
+
+A \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} is the response from a succesful terminal request. It is not a guarantee that the intended request has the results desired (see {\ttfamily response\+Error}) and can be further understood by its properties.  
+
+
+
+
+{\ttfamily \#import $<$Poynt\+Transaction\+Response\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Transaction\+Response\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_transaction_response_object}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_transaction_response_object_a42ee83b8c11bd68e673b38d2a96ca170}{init\+With\+Data\+:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Error $\ast$ \hyperlink{interface_poynt_transaction_response_object_aefb1590b30be0658ebee825cad6bfa83}{response\+Error}
+\begin{DoxyCompactList}\small\item\em this field will only be populated if there was an error in the request. Most commonly, the error will be descriptive of the problem. \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_response_object_ac2acf327011ce6ed9e26a41ceddaee31}{status}
+\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_transaction_response_object_a12474d50a1838843bcc1cacbbc30c4d2}{transactions}
+\item 
+N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_response_object_a14f67be3c2e0d0a1dfbaf225c2fcef4b}{order}
+\item 
+N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_response_object_a0046f618ca04fd1e7fcf91b87190a944}{raw\+Json}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} is the response from a succesful terminal request. It is not a guarantee that the intended request has the results desired (see {\ttfamily response\+Error}) and can be further understood by its properties. 
+
+\hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} 
+
+Definition at line 16 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_transaction_response_object_a42ee83b8c11bd68e673b38d2a96ca170}{}\label{interface_poynt_transaction_response_object_a42ee83b8c11bd68e673b38d2a96ca170} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!init\+With\+Data\+:@{init\+With\+Data\+:}}
+\index{init\+With\+Data\+:@{init\+With\+Data\+:}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{init\+With\+Data\+:()}{initWithData:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Data\+: \begin{DoxyParamCaption}\item[{(N\+S\+Data $\ast$)}]{data }\end{DoxyParamCaption}}
+
+This initialization is generally reserved for the S\+DK , however remains exposed in the event a developer needs to create their own response object
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & formatted from a Poynt\+Services response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a valid \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_transaction_response_object_a14f67be3c2e0d0a1dfbaf225c2fcef4b}{}\label{interface_poynt_transaction_response_object_a14f67be3c2e0d0a1dfbaf225c2fcef4b} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!order@{order}}
+\index{order@{order}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) order\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+dictionary representation of \hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} \begin{DoxyNote}{Note}
+This is an optional field an often not dependable (ie\+: not populated) 
+\end{DoxyNote}
+
+
+Definition at line 36 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_response_object_a0046f618ca04fd1e7fcf91b87190a944}{}\label{interface_poynt_transaction_response_object_a0046f618ca04fd1e7fcf91b87190a944} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!raw\+Json@{raw\+Json}}
+\index{raw\+Json@{raw\+Json}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{raw\+Json}{rawJson}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) raw\+Json\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+all \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} will contain their {\ttfamily raw\+Json} which can often be useful for attaching more dynamic key/value representations of the response. It is not uncommon for objects to differ in property count or general inheritance 
+
+Definition at line 41 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_response_object_aefb1590b30be0658ebee825cad6bfa83}{}\label{interface_poynt_transaction_response_object_aefb1590b30be0658ebee825cad6bfa83} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!response\+Error@{response\+Error}}
+\index{response\+Error@{response\+Error}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{response\+Error}{responseError}}
+{\footnotesize\ttfamily -\/ (N\+S\+Error$\ast$) response\+Error\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+this field will only be populated if there was an error in the request. Most commonly, the error will be descriptive of the problem. 
+
+
+
+Definition at line 21 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_response_object_ac2acf327011ce6ed9e26a41ceddaee31}{}\label{interface_poynt_transaction_response_object_ac2acf327011ce6ed9e26a41ceddaee31} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!status@{status}}
+\index{status@{status}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+if successful, will be a value of \char`\"{}\+C\+O\+M\+P\+L\+E\+T\+E\+D\char`\"{} or \char`\"{}\+S\+U\+C\+C\+E\+S\+S\char`\"{} 
+
+Definition at line 25 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_response_object_a12474d50a1838843bcc1cacbbc30c4d2}{}\label{interface_poynt_transaction_response_object_a12474d50a1838843bcc1cacbbc30c4d2} 
+\index{Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}!transactions@{transactions}}
+\index{transactions@{transactions}!Poynt\+Transaction\+Response\+Object@{Poynt\+Transaction\+Response\+Object}}
+\subsubsection{\texorpdfstring{transactions}{transactions}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) transactions\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+a collection of \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} objects attached to this transaction request. 
+
+Definition at line 30 of file Poynt\+Transaction\+Response\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_transaction_response_object_8h}{Poynt\+Transaction\+Response\+Object.\+h}\end{DoxyCompactItemize}

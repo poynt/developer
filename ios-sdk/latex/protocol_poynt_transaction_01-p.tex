@@ -1,0 +1,81 @@
+\hypertarget{protocol_poynt_transaction_01-p}{}\section{$<$Poynt\+Transaction $>$ Protocol Reference}
+\label{protocol_poynt_transaction_01-p}\index{$<$\+Poynt\+Transaction $>$@{$<$\+Poynt\+Transaction $>$}}
+
+
+When in doubt (or lazy) default to a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}. In cases where it is optimal to keep clear seperation, subscribe to \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} . The transaction\+Id property and dictionary\+Object method are required.  
+
+
+
+
+{\ttfamily \#import $<$Poynt\+Transaction.\+h$>$}
+
+Inheritance diagram for $<$Poynt\+Transaction $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{protocol_poynt_transaction_01-p}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\+S\+Dictionary $\ast$) -\/ \hyperlink{protocol_poynt_transaction_01-p_a2482f2e9af7fe8eec4ba9710cdc963ee}{dictionary\+Object}
+\begin{DoxyCompactList}\small\item\em dictionary representation of this object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{protocol_poynt_transaction_01-p_aacd11580c330a78310c344d78baecf8c}{transaction\+Id}
+\begin{DoxyCompactList}\small\item\em required property representing a transaction\+Id from past terminal requests, or a new transaction\+Id for creating transaction (eg sale or pre\+Sale) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When in doubt (or lazy) default to a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}. In cases where it is optimal to keep clear seperation, subscribe to \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} . The transaction\+Id property and dictionary\+Object method are required. 
+
+\hyperlink{_poynt_transaction_8h}{Poynt\+Transaction.\+h} 
+
+Definition at line 17 of file Poynt\+Transaction.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{protocol_poynt_transaction_01-p_a2482f2e9af7fe8eec4ba9710cdc963ee}{}\label{protocol_poynt_transaction_01-p_a2482f2e9af7fe8eec4ba9710cdc963ee} 
+\index{Poynt\+Transaction -\/p@{Poynt\+Transaction -\/p}!dictionary\+Object@{dictionary\+Object}}
+\index{dictionary\+Object@{dictionary\+Object}!Poynt\+Transaction -\/p@{Poynt\+Transaction -\/p}}
+\subsubsection{\texorpdfstring{dictionary\+Object()}{dictionaryObject()}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) dictionary\+Object \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+dictionary representation of this object 
+
+the dictionary object is most commonly used in cases to serialize data for making requests.
+
+\begin{DoxyReturn}{Returns}
+dictionary 
+\end{DoxyReturn}
+
+
+\subsection{Property Documentation}
+\hypertarget{protocol_poynt_transaction_01-p_aacd11580c330a78310c344d78baecf8c}{}\label{protocol_poynt_transaction_01-p_aacd11580c330a78310c344d78baecf8c} 
+\index{Poynt\+Transaction -\/p@{Poynt\+Transaction -\/p}!transaction\+Id@{transaction\+Id}}
+\index{transaction\+Id@{transaction\+Id}!Poynt\+Transaction -\/p@{Poynt\+Transaction -\/p}}
+\subsubsection{\texorpdfstring{transaction\+Id}{transactionId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) transaction\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+required property representing a transaction\+Id from past terminal requests, or a new transaction\+Id for creating transaction (eg sale or pre\+Sale) 
+
+Poynt terminal requires both a url and pairing\+Code to establish a connection for passing data.
+
+\begin{DoxyReturn}{Returns}
+string -\/ commonly in the format of {\ttfamily }\mbox{[}\mbox{[}N\+S\+U\+U\+ID U\+U\+ID\mbox{]} U\+U\+I\+D\+String\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file Poynt\+Transaction.\+h.
+
+
+
+The documentation for this protocol was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_transaction_8h}{Poynt\+Transaction.\+h}\end{DoxyCompactItemize}

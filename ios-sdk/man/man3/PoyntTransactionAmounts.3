@@ -1,0 +1,101 @@
+.TH "PoyntTransactionAmounts" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntTransactionAmounts \- the transaction amounts in a \fBPoyntTransactionObject\fP amounts collection  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntTransactionAmounts\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithAmount:tipAmount:cashbackAmount:\fP"
+.br
+.RI "sets the order amount, tip amount, and cashback amount at initialization "
+.ti -1c
+.RI "(id) \- \fBinitWithData:\fP"
+.br
+.RI "creates a transaction amount with an appropriate dictionary representation "
+.ti -1c
+.RI "(void) \- \fBcalculate:\fP"
+.br
+.RI "called on an order object to update the properties attached to this object "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSInteger \fBorderAmount\fP"
+.br
+.RI "required field representing amount  The portion of transactionAmount that went towards the item/service being purchased\&. "
+.ti -1c
+.RI "NSInteger \fBtipAmount\fP"
+.br
+.ti -1c
+.RI "NSInteger \fBcashbackAmount\fP"
+.br
+.ti -1c
+.RI "NSInteger \fBtransactionAmount\fP"
+.br
+.RI "required amount field  The total amount to be charged on the tender\&. This equals orderAmount + tipAmount + cashbackAmount\&. "
+.ti -1c
+.RI "NSString * \fBcurrency\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+the transaction amounts in a \fBPoyntTransactionObject\fP amounts collection 
+
+\fBPoyntTransactionAmounts\fP 
+.PP
+Definition at line 17 of file PoyntTransactionAmounts\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) calculate: (\fBPoyntOrderObject\fP *) order"
+
+.PP
+called on an order object to update the properties attached to this object 
+.SS "\- (id) initWithAmount: (NSInteger) orderAmount(NSInteger) tipAmount(NSInteger) cashbackAmount"
+
+.PP
+sets the order amount, tip amount, and cashback amount at initialization 
+.SS "\- (id) initWithData: (NSDictionary *) data"
+
+.PP
+creates a transaction amount with an appropriate dictionary representation 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSInteger) cashbackAmount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+The portion of transactionAmount that will be returned as cashback (mainly applicable for cash or debit-card tenders)\&. Defaults to 0 if not provided\&. 
+.PP
+Definition at line 30 of file PoyntTransactionAmounts\&.h\&.
+.SS "\- (NSString*) currency\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+Currency following the ISO-4217 format (http://en.wikipedia.org/wiki/ISO_4217)\&. 
+.PP
+Definition at line 39 of file PoyntTransactionAmounts\&.h\&.
+.SS "\- (NSInteger) orderAmount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+required field representing amount  The portion of transactionAmount that went towards the item/service being purchased\&. 
+.PP
+Definition at line 22 of file PoyntTransactionAmounts\&.h\&.
+.SS "\- (NSInteger) tipAmount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+The portion of transactionAmount that went towards tip\&. Defaults to 0 if not provided\&. 
+.PP
+Definition at line 26 of file PoyntTransactionAmounts\&.h\&.
+.SS "\- (NSInteger) transactionAmount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+required amount field  The total amount to be charged on the tender\&. This equals orderAmount + tipAmount + cashbackAmount\&. 
+.PP
+Definition at line 35 of file PoyntTransactionAmounts\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

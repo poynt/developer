@@ -1,0 +1,87 @@
+.TH "PoyntOrderObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntOrderObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntOrderObject\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBnotes\fP"
+.br
+.RI "merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants "
+.ti -1c
+.RI "NSString * \fBorderNumber\fP"
+.br
+.RI "merchant friendly number identifier  Stores often use a human readable order number to hand out to customers\&. Such numbers could be passed here\&. "
+.ti -1c
+.RI "\fBPoyntPaymentAmountObject\fP * \fBamounts\fP"
+.br
+.RI "object store for tracking specifics about the amounts in payment  This object stores and calculates the pertant data that comprises the total, discount and tax of the order "
+.ti -1c
+.RI "NSArray * \fBdiscounts\fP"
+.br
+.RI "array of PoyntDiscountObjects  The amounts object will use this collection in its calculations for describing totals associated to this order object "
+.ti -1c
+.RI "NSArray * \fBitems\fP"
+.br
+.RI "array of \fBPoyntOrderItemObject\fP  Orders contain at least one (or more) items\&. The amounts object will use this collection in its calculations for describing totals associated to this order object "
+.ti -1c
+.RI "NSString * \fBorderId\fP"
+.br
+.RI "system identifier for this object  The id of the order created\&. If provided in the request, it will be used as the order ID\&. If not provided, id will be generated internally\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntOrderObject\fP  Order objects are most commonly found attached to a \fBPoyntPaymentObject\fP\&. The order contains important information identifying itself in the system as well as items attached, discounts, and amounts 
+.PP
+Definition at line 18 of file PoyntOrderObject\&.h\&.
+.SH "Property Documentation"
+.PP 
+.SS "\- (\fBPoyntPaymentAmountObject\fP*) amounts\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+object store for tracking specifics about the amounts in payment  This object stores and calculates the pertant data that comprises the total, discount and tax of the order 
+.PP
+Definition at line 33 of file PoyntOrderObject\&.h\&.
+.SS "\- (NSArray*) discounts\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+array of PoyntDiscountObjects  The amounts object will use this collection in its calculations for describing totals associated to this order object 
+.PP
+Definition at line 38 of file PoyntOrderObject\&.h\&.
+.SS "\- (NSArray*) items\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+array of \fBPoyntOrderItemObject\fP  Orders contain at least one (or more) items\&. The amounts object will use this collection in its calculations for describing totals associated to this order object 
+.PP
+Definition at line 43 of file PoyntOrderObject\&.h\&.
+.SS "\- (NSString*) notes\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants 
+.PP
+Definition at line 23 of file PoyntOrderObject\&.h\&.
+.SS "\- (NSString*) orderId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+system identifier for this object  The id of the order created\&. If provided in the request, it will be used as the order ID\&. If not provided, id will be generated internally\&. 
+.PP
+Definition at line 48 of file PoyntOrderObject\&.h\&.
+.SS "\- (NSString*) orderNumber\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+merchant friendly number identifier  Stores often use a human readable order number to hand out to customers\&. Such numbers could be passed here\&. 
+.PP
+Definition at line 28 of file PoyntOrderObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

@@ -1,0 +1,488 @@
+\hypertarget{interface_poynt_payment_object}{}\section{Poynt\+Payment\+Object Class Reference}
+\label{interface_poynt_payment_object}\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+
+
+The \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} is the required parameter for many sale and presales requests. The object can be built before making requests to the terminal.  
+
+
+
+
+{\ttfamily \#import $<$Poynt\+Payment\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Payment\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_payment_object}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_poynt_payment_object_ac5c54df7ed3b930268c8d7752c101725}{update}
+\begin{DoxyCompactList}\small\item\em a method used to refresh the payment object  This method is most commonly run when the objec it about to send to terminal. It can be manually updated at anytime to refresh the absolute calculations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_a6ff5079a7aa518c578773da69959732d}{amount}
+\begin{DoxyCompactList}\small\item\em the total amount of this object  The amount field should only be explicitly set when requesting a partial refund or partial completion. Otherwise this field is calculated from an attached \hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} \end{DoxyCompactList}\item 
+\hyperlink{interface_poynt_payment_amount_object}{Poynt\+Payment\+Amount\+Object} $\ast$ \hyperlink{interface_poynt_payment_object_a24782f14a239c62d29bf0389fb7fdf8d}{amounts}
+\begin{DoxyCompactList}\small\item\em a summary object for understanding details of an amount  The object is most closely related to orders, but can also be found in the \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_a84de6fd790c3129d6d0a271d915d442a}{cashback}
+\begin{DoxyCompactList}\small\item\em representation of amount cashback in payment  The value that is returned (in cents) for a payment transaction. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a7b74d30854a9218712b55c79cd7786f0}{cash\+Only}
+\begin{DoxyCompactList}\small\item\em if the payment was cash only \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_payment_object_a71a9104f71558df8791cedc5e81941a3}{currency}
+\begin{DoxyCompactList}\small\item\em representation for the currency of this payment \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a76dfb16e254da2dd51a3269700a40581}{debit}
+\begin{DoxyCompactList}\small\item\em if the payment uses debit \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_af4d70322e9072299e80fa78a54e7094e}{disable\+Cash}
+\begin{DoxyCompactList}\small\item\em if the payment will allow cash \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a3f9d08fa34a1f60c5818a7b570d8b41f}{disable\+Debit\+Cards}
+\begin{DoxyCompactList}\small\item\em if the payment will disable debit cards \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a7b291056797beff707e48865aefe7c5a}{disable\+Tip}
+\begin{DoxyCompactList}\small\item\em if the payment will allow a tip \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a42f2647ecd1d090fad6a7b77e28ee013}{multi\+Tender}
+\begin{DoxyCompactList}\small\item\em if the payment uses multiple tenders to complete the transaction \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a84b5ff3701d66e70a3bb2485d4e99a3b}{non\+Referenced\+Credit}
+\begin{DoxyCompactList}\small\item\em if the payment of no referenced credit \end{DoxyCompactList}\item 
+\hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} $\ast$ \hyperlink{interface_poynt_payment_object_a570f3f5a3eb312987a97d46c0ba10a9d}{order}
+\begin{DoxyCompactList}\small\item\em the attached order object  The \hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} is an essential piece of a payment object as it contains the items and calculation components for understanding a payments values \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31}{order\+Id}
+\begin{DoxyCompactList}\small\item\em the order id  The payment object will auto generate an order id at init. The value of this can be kept of explicitly declared \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_payment_object_ab9a55f2b8aef17222c41f356957e2513}{reference\+Id}
+\begin{DoxyCompactList}\small\item\em the reference id  The payment object will auto generate a reference id at init. The value of this can be kept of explicitly declared \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_payment_object_aacd11580c330a78310c344d78baecf8c}{transaction\+Id}
+\begin{DoxyCompactList}\small\item\em the transaction id  The payment object will auto generate a transaction id at init. The value of this can be kept of explicitly declared. It is most common to explictly set this for partial actions (ie\+: Authorize\+Partial\+Refund or Authorize\+Partial\+Capture) \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_payment_object_a065f8677ebd1da13c2f57bd6cbbf3d7c}{skip\+Receipt\+Screen}
+\begin{DoxyCompactList}\small\item\em should the payment skip the receipt screen on the terminal after processing. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_ae4a2e64d79032bc8bb25305486b23859}{tip\+Amount}
+\begin{DoxyCompactList}\small\item\em the amount being tipped (if any)  If there is a tip, it should be set here (in cents) \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_payment_object_a12474d50a1838843bcc1cacbbc30c4d2}{transactions}
+\begin{DoxyCompactList}\small\item\em collection of \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}  A payment can consist of many transactions. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_aa5f2d0bac6ddbb63f1ada849fd4609d2}{absolute\+Discount\+Total}
+\begin{DoxyCompactList}\small\item\em readonly property of calculated discount totals. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_a94b92d7e18d94d33330a7549e345c0eb}{absoulte\+Tax\+Total}
+\begin{DoxyCompactList}\small\item\em readonly property of calculated tax totals. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_payment_object_a4270b0767f8eaabd1b665c1b59bcd787}{absolute\+Total}
+\begin{DoxyCompactList}\small\item\em readonly property of the calculated total. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} is the required parameter for many sale and presales requests. The object can be built before making requests to the terminal. 
+
+\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}
+
+\begin{DoxyNote}{Note}
+While the transaction\+Id is a required field, the \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} will autocreate a unique uuid on init. This can be overwritten if a known transaction\+Id is desired 
+\begin{DoxyCode}
+NSString *orderId = [[NSUUID UUID] UUIDString];
+\textcolor{keyword}{self}.paymentObject = [[\hyperlink{interface_poynt_payment_object}{PoyntPaymentObject} alloc] init];
+\textcolor{keyword}{self}.paymentObject.transactionId = \hyperlink{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31}{orderId}; \textcolor{comment}{//optional}
+\textcolor{keyword}{self}.paymentObject.referenceId = \hyperlink{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31}{orderId};
+\textcolor{keyword}{self}.paymentObject.currency = \textcolor{stringliteral}{@"USD"};
+\textcolor{keyword}{self}.paymentObject.tipAmount = 0;
+\textcolor{keyword}{self}.paymentObject.disableTip = YES;
+\textcolor{keyword}{self}.paymentObject.multiTender = NO;
+
+\hyperlink{interface_poynt_order_object}{PoyntOrderObject}* poyntOrder = [[\hyperlink{interface_poynt_order_object}{PoyntOrderObject} alloc] init];
+poyntOrder.\hyperlink{interface_poynt_order_object_a940861134b75ee3d5167d791e5422afe}{notes} = \textcolor{stringliteral}{@"i am a note"};
+\textcolor{keyword}{self}.paymentObject.order = poyntOrder;
+
+\hyperlink{interface_poynt_order_item_object}{PoyntOrderItemObject}* orderItem = [[\hyperlink{interface_poynt_order_item_object}{PoyntOrderItemObject} alloc] 
+      init];
+orderItem.\hyperlink{interface_poynt_order_item_object_a40fae7616715aeb5f241af769a5f55b4}{sku} = \textcolor{stringliteral}{@"ASKU"};
+orderItem.\hyperlink{interface_poynt_order_item_object_a4655acbe158688f583828a9a3b61a6aa}{unitPrice} = 100;
+orderItem.\hyperlink{interface_poynt_order_item_object_ab39715c10682638e342e25893caa7372}{quantity} = 1;
+orderItem.\hyperlink{interface_poynt_order_item_object_a4b93d352d2fca75b34e1b5a50e03f587}{name} = \textcolor{stringliteral}{@"ANAME"};
+orderItem.\hyperlink{interface_poynt_order_item_object_a8381a2b60fb912bab67a5218ba3ad058}{unitOfMeasure} = \hyperlink{_poynt_order_item_object_8h_a7a5dd044bd57739d1d1b3e3565fbac25a230bc1794689a94bd302517282cb4e88}{EACH};
+orderItem.\hyperlink{interface_poynt_order_item_object_ac2acf327011ce6ed9e26a41ceddaee31}{status} = \textcolor{stringliteral}{@"ORDERED"};
+
+\hyperlink{interface_poynt_discount_object}{PoyntDiscountObject}* discounts = [[\hyperlink{interface_poynt_discount_object}{PoyntDiscountObject} alloc] 
+      initWithAmount:0 customName:\textcolor{stringliteral}{@"discounts"}];
+orderItem.\hyperlink{interface_poynt_order_item_object_a203259381417b0a34916ce3f864161c2}{discounts} = @[discounts];
+
+\hyperlink{interface_poynt_order_item_tax}{PoyntOrderItemTax}* taxes = [[\hyperlink{interface_poynt_order_item_tax}{PoyntOrderItemTax} alloc] initWithAmount:0 
+      type:\textcolor{stringliteral}{@"taxes"}];
+orderItem.\hyperlink{interface_poynt_order_item_object_a24101b932074a386b535ab58e819bf71}{taxes} = @[taxes];
+
+poyntOrder.\hyperlink{interface_poynt_order_object_a79b667618eb44106221f198156b54dd2}{items} = @[orderItem];
+poyntOrder.\hyperlink{interface_poynt_order_object_aac2b120e80b4b9e69c3a577c4f31ed31}{orderId} = \hyperlink{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31}{orderId};
+
+\textcolor{keywordflow}{if}(poyntOrder.\hyperlink{interface_poynt_order_object_a24782f14a239c62d29bf0389fb7fdf8d}{amounts})
+\{
+ poyntOrder.\hyperlink{interface_poynt_order_object_a24782f14a239c62d29bf0389fb7fdf8d}{amounts}.\hyperlink{interface_poynt_payment_amount_object_a71a9104f71558df8791cedc5e81941a3}{currency} = \textcolor{stringliteral}{@"USD"};
+\}
+
+[\textcolor{keyword}{self}.paymentObject \hyperlink{interface_poynt_payment_object_ac5c54df7ed3b930268c8d7752c101725}{update}];
+
+[\textcolor{keyword}{self}.paymentManager authorizeSales:\textcolor{keyword}{self}.paymentObject];
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+
+
+Definition at line 64 of file Poynt\+Payment\+Object.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_payment_object_ac5c54df7ed3b930268c8d7752c101725}{}\label{interface_poynt_payment_object_ac5c54df7ed3b930268c8d7752c101725} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!update@{update}}
+\index{update@{update}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily -\/ (void) update \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+a method used to refresh the payment object  This method is most commonly run when the objec it about to send to terminal. It can be manually updated at anytime to refresh the absolute calculations 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_payment_object_aa5f2d0bac6ddbb63f1ada849fd4609d2}{}\label{interface_poynt_payment_object_aa5f2d0bac6ddbb63f1ada849fd4609d2} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!absolute\+Discount\+Total@{absolute\+Discount\+Total}}
+\index{absolute\+Discount\+Total@{absolute\+Discount\+Total}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{absolute\+Discount\+Total}{absoluteDiscountTotal}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) absolute\+Discount\+Total\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+readonly property of calculated discount totals. 
+
+Use update to refresh this field 
+
+Definition at line 191 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a4270b0767f8eaabd1b665c1b59bcd787}{}\label{interface_poynt_payment_object_a4270b0767f8eaabd1b665c1b59bcd787} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!absolute\+Total@{absolute\+Total}}
+\index{absolute\+Total@{absolute\+Total}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{absolute\+Total}{absoluteTotal}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) absolute\+Total\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+readonly property of the calculated total. 
+
+Use update to refresh this field 
+
+Definition at line 206 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a94b92d7e18d94d33330a7549e345c0eb}{}\label{interface_poynt_payment_object_a94b92d7e18d94d33330a7549e345c0eb} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!absoulte\+Tax\+Total@{absoulte\+Tax\+Total}}
+\index{absoulte\+Tax\+Total@{absoulte\+Tax\+Total}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{absoulte\+Tax\+Total}{absoulteTaxTotal}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) absoulte\+Tax\+Total\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+readonly property of calculated tax totals. 
+
+Use update to refresh this field 
+
+Definition at line 198 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a6ff5079a7aa518c578773da69959732d}{}\label{interface_poynt_payment_object_a6ff5079a7aa518c578773da69959732d} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!amount@{amount}}
+\index{amount@{amount}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+the total amount of this object  The amount field should only be explicitly set when requesting a partial refund or partial completion. Otherwise this field is calculated from an attached \hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} 
+
+
+
+Definition at line 70 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a24782f14a239c62d29bf0389fb7fdf8d}{}\label{interface_poynt_payment_object_a24782f14a239c62d29bf0389fb7fdf8d} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!amounts@{amounts}}
+\index{amounts@{amounts}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{amounts}{amounts}}
+{\footnotesize\ttfamily -\/ (\hyperlink{interface_poynt_payment_amount_object}{Poynt\+Payment\+Amount\+Object}$\ast$) amounts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+a summary object for understanding details of an amount  The object is most closely related to orders, but can also be found in the \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} 
+
+
+
+Definition at line 75 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a84de6fd790c3129d6d0a271d915d442a}{}\label{interface_poynt_payment_object_a84de6fd790c3129d6d0a271d915d442a} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!cashback@{cashback}}
+\index{cashback@{cashback}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{cashback}{cashback}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) cashback\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+representation of amount cashback in payment  The value that is returned (in cents) for a payment transaction. 
+
+
+
+Definition at line 80 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a7b74d30854a9218712b55c79cd7786f0}{}\label{interface_poynt_payment_object_a7b74d30854a9218712b55c79cd7786f0} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!cash\+Only@{cash\+Only}}
+\index{cash\+Only@{cash\+Only}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{cash\+Only}{cashOnly}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) cash\+Only\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment was cash only 
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a71a9104f71558df8791cedc5e81941a3}{}\label{interface_poynt_payment_object_a71a9104f71558df8791cedc5e81941a3} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!currency@{currency}}
+\index{currency@{currency}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{currency}{currency}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) currency\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+representation for the currency of this payment 
+
+\begin{DoxyReturn}{Returns}
+string -\/ I\+SO specific currency code 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a76dfb16e254da2dd51a3269700a40581}{}\label{interface_poynt_payment_object_a76dfb16e254da2dd51a3269700a40581} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!debit@{debit}}
+\index{debit@{debit}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{debit}{debit}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) debit\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment uses debit 
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_af4d70322e9072299e80fa78a54e7094e}{}\label{interface_poynt_payment_object_af4d70322e9072299e80fa78a54e7094e} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!disable\+Cash@{disable\+Cash}}
+\index{disable\+Cash@{disable\+Cash}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{disable\+Cash}{disableCash}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) disable\+Cash\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment will allow cash 
+
+Default is false
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a3f9d08fa34a1f60c5818a7b570d8b41f}{}\label{interface_poynt_payment_object_a3f9d08fa34a1f60c5818a7b570d8b41f} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!disable\+Debit\+Cards@{disable\+Debit\+Cards}}
+\index{disable\+Debit\+Cards@{disable\+Debit\+Cards}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{disable\+Debit\+Cards}{disableDebitCards}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) disable\+Debit\+Cards\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment will disable debit cards 
+
+Default is false
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a7b291056797beff707e48865aefe7c5a}{}\label{interface_poynt_payment_object_a7b291056797beff707e48865aefe7c5a} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!disable\+Tip@{disable\+Tip}}
+\index{disable\+Tip@{disable\+Tip}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{disable\+Tip}{disableTip}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) disable\+Tip\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment will allow a tip 
+
+Default is false
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a42f2647ecd1d090fad6a7b77e28ee013}{}\label{interface_poynt_payment_object_a42f2647ecd1d090fad6a7b77e28ee013} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!multi\+Tender@{multi\+Tender}}
+\index{multi\+Tender@{multi\+Tender}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{multi\+Tender}{multiTender}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) multi\+Tender\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment uses multiple tenders to complete the transaction 
+
+Default is false
+
+in some cases a payment can be fulfilled using multiple methods of payment. IE a user may pay 1/2 with a credit card and the other half with cash \begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a84b5ff3701d66e70a3bb2485d4e99a3b}{}\label{interface_poynt_payment_object_a84b5ff3701d66e70a3bb2485d4e99a3b} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!non\+Referenced\+Credit@{non\+Referenced\+Credit}}
+\index{non\+Referenced\+Credit@{non\+Referenced\+Credit}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{non\+Referenced\+Credit}{nonReferencedCredit}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) non\+Referenced\+Credit\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+if the payment of no referenced credit 
+
+Default is false
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a570f3f5a3eb312987a97d46c0ba10a9d}{}\label{interface_poynt_payment_object_a570f3f5a3eb312987a97d46c0ba10a9d} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!order@{order}}
+\index{order@{order}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily -\/ (\hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object}$\ast$) order\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+the attached order object  The \hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} is an essential piece of a payment object as it contains the items and calculation components for understanding a payments values 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object} for more details 
+\end{DoxySeeAlso}
+
+
+Definition at line 142 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31}{}\label{interface_poynt_payment_object_aac2b120e80b4b9e69c3a577c4f31ed31} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!order\+Id@{order\+Id}}
+\index{order\+Id@{order\+Id}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{order\+Id}{orderId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) order\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+the order id  The payment object will auto generate an order id at init. The value of this can be kept of explicitly declared 
+
+
+
+Definition at line 147 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_ab9a55f2b8aef17222c41f356957e2513}{}\label{interface_poynt_payment_object_ab9a55f2b8aef17222c41f356957e2513} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!reference\+Id@{reference\+Id}}
+\index{reference\+Id@{reference\+Id}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{reference\+Id}{referenceId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) reference\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+the reference id  The payment object will auto generate a reference id at init. The value of this can be kept of explicitly declared 
+
+
+
+Definition at line 152 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a065f8677ebd1da13c2f57bd6cbbf3d7c}{}\label{interface_poynt_payment_object_a065f8677ebd1da13c2f57bd6cbbf3d7c} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!skip\+Receipt\+Screen@{skip\+Receipt\+Screen}}
+\index{skip\+Receipt\+Screen@{skip\+Receipt\+Screen}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{skip\+Receipt\+Screen}{skipReceiptScreen}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) skip\+Receipt\+Screen\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+should the payment skip the receipt screen on the terminal after processing. 
+
+Default is false
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_ae4a2e64d79032bc8bb25305486b23859}{}\label{interface_poynt_payment_object_ae4a2e64d79032bc8bb25305486b23859} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!tip\+Amount@{tip\+Amount}}
+\index{tip\+Amount@{tip\+Amount}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{tip\+Amount}{tipAmount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) tip\+Amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+the amount being tipped (if any)  If there is a tip, it should be set here (in cents) 
+
+
+\begin{DoxyCode}
+paymentObject.tip = 100; \textcolor{comment}{// == $1.00}
+\end{DoxyCode}
+
+
+Default is 0 
+
+Definition at line 178 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_aacd11580c330a78310c344d78baecf8c}{}\label{interface_poynt_payment_object_aacd11580c330a78310c344d78baecf8c} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!transaction\+Id@{transaction\+Id}}
+\index{transaction\+Id@{transaction\+Id}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{transaction\+Id}{transactionId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) transaction\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+the transaction id  The payment object will auto generate a transaction id at init. The value of this can be kept of explicitly declared. It is most common to explictly set this for partial actions (ie\+: Authorize\+Partial\+Refund or Authorize\+Partial\+Capture) 
+
+
+
+Definition at line 157 of file Poynt\+Payment\+Object.\+h.
+
+\hypertarget{interface_poynt_payment_object_a12474d50a1838843bcc1cacbbc30c4d2}{}\label{interface_poynt_payment_object_a12474d50a1838843bcc1cacbbc30c4d2} 
+\index{Poynt\+Payment\+Object@{Poynt\+Payment\+Object}!transactions@{transactions}}
+\index{transactions@{transactions}!Poynt\+Payment\+Object@{Poynt\+Payment\+Object}}
+\subsubsection{\texorpdfstring{transactions}{transactions}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) transactions\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+collection of \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}  A payment can consist of many transactions. 
+
+
+
+Definition at line 184 of file Poynt\+Payment\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_payment_object_8h}{Poynt\+Payment\+Object.\+h}\end{DoxyCompactItemize}

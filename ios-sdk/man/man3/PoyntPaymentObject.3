@@ -1,0 +1,385 @@
+.TH "PoyntPaymentObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntPaymentObject \- The \fBPoyntPaymentObject\fP is the required parameter for many sale and presales requests\&. The object can be built before making requests to the terminal\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntPaymentObject\&.h>\fP
+.PP
+Inherits NSObject, <PoyntSerializedObject>, and <PoyntTransaction>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBupdate\fP"
+.br
+.RI "a method used to refresh the payment object  This method is most commonly run when the objec it about to send to terminal\&. It can be manually updated at anytime to refresh the absolute calculations "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSInteger \fBamount\fP"
+.br
+.RI "the total amount of this object  The amount field should only be explicitly set when requesting a partial refund or partial completion\&. Otherwise this field is calculated from an attached \fBPoyntOrderObject\fP "
+.ti -1c
+.RI "\fBPoyntPaymentAmountObject\fP * \fBamounts\fP"
+.br
+.RI "a summary object for understanding details of an amount  The object is most closely related to orders, but can also be found in the \fBPoyntPaymentObject\fP "
+.ti -1c
+.RI "NSInteger \fBcashback\fP"
+.br
+.RI "representation of amount cashback in payment  The value that is returned (in cents) for a payment transaction\&. "
+.ti -1c
+.RI "BOOL \fBcashOnly\fP"
+.br
+.RI "if the payment was cash only "
+.ti -1c
+.RI "NSString * \fBcurrency\fP"
+.br
+.RI "representation for the currency of this payment "
+.ti -1c
+.RI "BOOL \fBdebit\fP"
+.br
+.RI "if the payment uses debit "
+.ti -1c
+.RI "BOOL \fBdisableCash\fP"
+.br
+.RI "if the payment will allow cash "
+.ti -1c
+.RI "BOOL \fBdisableDebitCards\fP"
+.br
+.RI "if the payment will disable debit cards "
+.ti -1c
+.RI "BOOL \fBdisableTip\fP"
+.br
+.RI "if the payment will allow a tip "
+.ti -1c
+.RI "BOOL \fBmultiTender\fP"
+.br
+.RI "if the payment uses multiple tenders to complete the transaction "
+.ti -1c
+.RI "BOOL \fBnonReferencedCredit\fP"
+.br
+.RI "if the payment of no referenced credit "
+.ti -1c
+.RI "\fBPoyntOrderObject\fP * \fBorder\fP"
+.br
+.RI "the attached order object  The \fBPoyntOrderObject\fP is an essential piece of a payment object as it contains the items and calculation components for understanding a payments values "
+.ti -1c
+.RI "NSString * \fBorderId\fP"
+.br
+.RI "the order id  The payment object will auto generate an order id at init\&. The value of this can be kept of explicitly declared "
+.ti -1c
+.RI "NSString * \fBreferenceId\fP"
+.br
+.RI "the reference id  The payment object will auto generate a reference id at init\&. The value of this can be kept of explicitly declared "
+.ti -1c
+.RI "NSString * \fBtransactionId\fP"
+.br
+.RI "the transaction id  The payment object will auto generate a transaction id at init\&. The value of this can be kept of explicitly declared\&. It is most common to explictly set this for partial actions (ie: AuthorizePartialRefund or AuthorizePartialCapture) "
+.ti -1c
+.RI "BOOL \fBskipReceiptScreen\fP"
+.br
+.RI "should the payment skip the receipt screen on the terminal after processing\&. "
+.ti -1c
+.RI "NSInteger \fBtipAmount\fP"
+.br
+.RI "the amount being tipped (if any)  If there is a tip, it should be set here (in cents) "
+.ti -1c
+.RI "NSArray * \fBtransactions\fP"
+.br
+.RI "collection of \fBPoyntTransactionObject\fP  A payment can consist of many transactions\&. "
+.ti -1c
+.RI "NSInteger \fBabsoluteDiscountTotal\fP"
+.br
+.RI "readonly property of calculated discount totals\&. "
+.ti -1c
+.RI "NSInteger \fBabsoulteTaxTotal\fP"
+.br
+.RI "readonly property of calculated tax totals\&. "
+.ti -1c
+.RI "NSInteger \fBabsoluteTotal\fP"
+.br
+.RI "readonly property of the calculated total\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPoyntPaymentObject\fP is the required parameter for many sale and presales requests\&. The object can be built before making requests to the terminal\&. 
+
+\fBPoyntPaymentObject\fP
+.PP
+\fBNote:\fP
+.RS 4
+While the transactionId is a required field, the \fBPoyntPaymentObject\fP will autocreate a unique uuid on init\&. This can be overwritten if a known transactionId is desired 
+.PP
+.nf
+NSString *orderId = [[NSUUID UUID] UUIDString];
+self\&.paymentObject = [[PoyntPaymentObject alloc] init];
+self\&.paymentObject\&.transactionId = orderId; //optional
+self\&.paymentObject\&.referenceId = orderId;
+self\&.paymentObject\&.currency = @"USD";
+self\&.paymentObject\&.tipAmount = 0;
+self\&.paymentObject\&.disableTip = YES;
+self\&.paymentObject\&.multiTender = NO;
+
+PoyntOrderObject* poyntOrder = [[PoyntOrderObject alloc] init];
+poyntOrder\&.notes = @"i am a note";
+self\&.paymentObject\&.order = poyntOrder;
+
+PoyntOrderItemObject* orderItem = [[PoyntOrderItemObject alloc] init];
+orderItem\&.sku = @"ASKU";
+orderItem\&.unitPrice = 100;
+orderItem\&.quantity = 1;
+orderItem\&.name = @"ANAME";
+orderItem\&.unitOfMeasure = EACH;
+orderItem\&.status = @"ORDERED";
+
+PoyntDiscountObject* discounts = [[PoyntDiscountObject alloc] initWithAmount:0 customName:@"discounts"];
+orderItem\&.discounts = @[discounts];
+
+PoyntOrderItemTax* taxes = [[PoyntOrderItemTax alloc] initWithAmount:0 type:@"taxes"];
+orderItem\&.taxes = @[taxes];
+
+poyntOrder\&.items = @[orderItem];
+poyntOrder\&.orderId = orderId;
+
+if(poyntOrder\&.amounts)
+{
+ poyntOrder\&.amounts\&.currency = @"USD";
+}
+
+[self\&.paymentObject update];
+
+[self\&.paymentManager authorizeSales:self\&.paymentObject];
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file PoyntPaymentObject\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) update "
+
+.PP
+a method used to refresh the payment object  This method is most commonly run when the objec it about to send to terminal\&. It can be manually updated at anytime to refresh the absolute calculations 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSInteger) absoluteDiscountTotal\fC [read]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+readonly property of calculated discount totals\&. Use update to refresh this field 
+.PP
+Definition at line 191 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSInteger) absoluteTotal\fC [read]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+readonly property of the calculated total\&. Use update to refresh this field 
+.PP
+Definition at line 206 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSInteger) absoulteTaxTotal\fC [read]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+readonly property of calculated tax totals\&. Use update to refresh this field 
+.PP
+Definition at line 198 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSInteger) amount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+the total amount of this object  The amount field should only be explicitly set when requesting a partial refund or partial completion\&. Otherwise this field is calculated from an attached \fBPoyntOrderObject\fP 
+.PP
+Definition at line 70 of file PoyntPaymentObject\&.h\&.
+.SS "\- (\fBPoyntPaymentAmountObject\fP*) amounts\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+a summary object for understanding details of an amount  The object is most closely related to orders, but can also be found in the \fBPoyntPaymentObject\fP 
+.PP
+Definition at line 75 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSInteger) cashback\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+representation of amount cashback in payment  The value that is returned (in cents) for a payment transaction\&. 
+.PP
+Definition at line 80 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) cashOnly\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment was cash only 
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSString*) currency\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+representation for the currency of this payment 
+.PP
+\fBReturns:\fP
+.RS 4
+string - ISO specific currency code 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) debit\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment uses debit 
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 95 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) disableCash\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment will allow cash Default is false
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 103 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) disableDebitCards\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment will disable debit cards Default is false
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 111 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) disableTip\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment will allow a tip Default is false
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) multiTender\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment uses multiple tenders to complete the transaction Default is false
+.PP
+in some cases a payment can be fulfilled using multiple methods of payment\&. IE a user may pay 1/2 with a credit card and the other half with cash 
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) nonReferencedCredit\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+if the payment of no referenced credit Default is false
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 136 of file PoyntPaymentObject\&.h\&.
+.SS "\- (\fBPoyntOrderObject\fP*) order\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+the attached order object  The \fBPoyntOrderObject\fP is an essential piece of a payment object as it contains the items and calculation components for understanding a payments values 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBPoyntOrderObject\fP for more details 
+.RE
+.PP
+
+.PP
+Definition at line 142 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSString*) orderId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+the order id  The payment object will auto generate an order id at init\&. The value of this can be kept of explicitly declared 
+.PP
+Definition at line 147 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSString*) referenceId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+the reference id  The payment object will auto generate a reference id at init\&. The value of this can be kept of explicitly declared 
+.PP
+Definition at line 152 of file PoyntPaymentObject\&.h\&.
+.SS "\- (BOOL) skipReceiptScreen\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+should the payment skip the receipt screen on the terminal after processing\&. Default is false
+.PP
+\fBReturns:\fP
+.RS 4
+boolean 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSInteger) tipAmount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+the amount being tipped (if any)  If there is a tip, it should be set here (in cents) 
+.PP
+.nf
+paymentObject\&.tip = 100; // == $1\&.00
+
+.fi
+.PP
+.PP
+Default is 0 
+.PP
+Definition at line 178 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSString*) transactionId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+the transaction id  The payment object will auto generate a transaction id at init\&. The value of this can be kept of explicitly declared\&. It is most common to explictly set this for partial actions (ie: AuthorizePartialRefund or AuthorizePartialCapture) 
+.PP
+Definition at line 157 of file PoyntPaymentObject\&.h\&.
+.SS "\- (NSArray*) transactions\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+collection of \fBPoyntTransactionObject\fP  A payment can consist of many transactions\&. 
+.PP
+Definition at line 184 of file PoyntPaymentObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

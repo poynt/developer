@@ -1,0 +1,71 @@
+.TH "PoyntOrderItemTax" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntOrderItemTax \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntOrderItemTax\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithAmount:type:\fP"
+.br
+.RI "only use initWithAmount:type to create these objects to ensure the obligatory fields are populated "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBorderItemTaxId\fP"
+.br
+.RI "string representing this id "
+.ti -1c
+.RI "NSString * \fBtype\fP"
+.br
+.RI "string value representing the type of tax "
+.ti -1c
+.RI "NSInteger \fBamount\fP"
+.br
+.RI "the amount of tax in cents "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntOrderItemTax\fP  tax object associated to an item 
+.PP
+Definition at line 15 of file PoyntOrderItemTax\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (id) initWithAmount: (NSInteger) amount(NSString *) type"
+
+.PP
+only use initWithAmount:type to create these objects to ensure the obligatory fields are populated 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSInteger) amount\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+the amount of tax in cents 
+.PP
+Definition at line 27 of file PoyntOrderItemTax\&.h\&.
+.SS "\- (NSString*) orderItemTaxId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+string representing this id 
+.PP
+Definition at line 19 of file PoyntOrderItemTax\&.h\&.
+.SS "\- (NSString*) type\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+string value representing the type of tax 
+.PP
+Definition at line 23 of file PoyntOrderItemTax\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

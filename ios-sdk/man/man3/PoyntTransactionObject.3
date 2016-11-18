@@ -1,0 +1,117 @@
+.TH "PoyntTransactionObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntTransactionObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntTransactionObject\&.h>\fP
+.PP
+Inherits NSObject, <PoyntSerializedObject>, and <PoyntTransaction>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithDictionary:\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBpoyntRequestId\fP"
+.br
+.RI "UUIDString representing this object\&. "
+.ti -1c
+.RI "NSString * \fBtransactionId\fP"
+.br
+.RI "UUIDString representing a Poynt transaction id\&. "
+.ti -1c
+.RI "NSString * \fBstatus\fP"
+.br
+.RI "current status of this object\&. Mostly commonly set server side: 'CREATED', 'SAVED', 'AUTHORIZED', 'PARTIALLY_CAPTURED', 'CAPTURED', 'DECLINED', 'PARTIALLY_CAPTURED_AND_PARTIALLY_REFUNDED', 'PARTIALLY_REFUNDED', 'REFUNDED', 'VOIDED' "
+.ti -1c
+.RI "NSString * \fBaction\fP"
+.br
+.RI "action of this object  'AUTHORIZE', 'CAPTURE', 'OFFLINE_AUTHORIZE', 'REFUND', 'SALE', most commonly set by server "
+.ti -1c
+.RI "NSArray * \fBamounts\fP"
+.br
+.RI "collection of \fBPoyntTransactionAmounts\fP objects "
+.ti -1c
+.RI "NSArray * \fBfundingSource\fP"
+.br
+.ti -1c
+.RI "NSDictionary * \fBcontext\fP"
+.br
+.ti -1c
+.RI "NSDictionary * \fBreferences\fP"
+.br
+.RI "References to orders/invoices that this transaction is for\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file PoyntTransactionObject\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (id) initWithDictionary: (NSDictionary *) data"
+create a \fBPoyntTransactionObject\fP using an appropriate formated dictionary object 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) action\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+action of this object  'AUTHORIZE', 'CAPTURE', 'OFFLINE_AUTHORIZE', 'REFUND', 'SALE', most commonly set by server 
+.PP
+Definition at line 29 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSArray*) amounts\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+collection of \fBPoyntTransactionAmounts\fP objects 
+.PP
+Definition at line 33 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSDictionary*) context\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+Contains context about the transaction\&. 
+.PP
+Definition at line 42 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSArray*) fundingSource\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+collection of funding source objects used for funding this transaction\&. 
+.PP
+\fBTodo\fP
+.RS 4
+at current, we are not populating this field\&. Developers have access to the data in \fBPoyntTransactionResponseObject\&.rawJson\fP propety 
+.RE
+.PP
+
+.PP
+Definition at line 38 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSString*) poyntRequestId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+UUIDString representing this object\&. 
+.PP
+Definition at line 16 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSDictionary*) references\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+References to orders/invoices that this transaction is for\&. 
+.PP
+Definition at line 46 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSString*) status\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+current status of this object\&. Mostly commonly set server side: 'CREATED', 'SAVED', 'AUTHORIZED', 'PARTIALLY_CAPTURED', 'CAPTURED', 'DECLINED', 'PARTIALLY_CAPTURED_AND_PARTIALLY_REFUNDED', 'PARTIALLY_REFUNDED', 'REFUNDED', 'VOIDED' 
+.PP
+Definition at line 24 of file PoyntTransactionObject\&.h\&.
+.SS "\- (NSString*) transactionId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+UUIDString representing a Poynt transaction id\&. 
+.PP
+Definition at line 20 of file PoyntTransactionObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

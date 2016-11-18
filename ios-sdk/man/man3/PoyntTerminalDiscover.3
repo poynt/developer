@@ -1,0 +1,69 @@
+.TH "PoyntTerminalDiscover" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntTerminalDiscover \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntTerminalDiscover\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBfindTerminals:\fP"
+.br
+.RI "find terminals on the same WIFI network  pass an OnTerminalsFound block to get a list of terminals currently known on the network\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSArray * \fBterminals\fP"
+.br
+.RI "list of \fBPoyntTerminal\fP currently known on the network "
+.ti -1c
+.RI "\fBOnTerminalsFound\fP \fBonTerminalsFound\fP"
+.br
+.RI "callback called upon finding the device(s) on the WIFI\&.  This callback is called only one time\&. If you need to refresh the search, you must call findTerminals:complete again "
+.ti -1c
+.RI "BOOL \fBsearching\fP"
+.br
+.RI "Boolean value decalaring if the object is searching or is done searching\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file PoyntTerminalDiscover\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) findTerminals: (\fBOnTerminalsFound\fP) complete"
+
+.PP
+find terminals on the same WIFI network  pass an OnTerminalsFound block to get a list of terminals currently known on the network\&. 
+.SH "Property Documentation"
+.PP 
+.SS "\- (\fBOnTerminalsFound\fP) onTerminalsFound\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+callback called upon finding the device(s) on the WIFI\&.  This callback is called only one time\&. If you need to refresh the search, you must call findTerminals:complete again 
+.PP
+Definition at line 27 of file PoyntTerminalDiscover\&.h\&.
+.SS "\- (BOOL) searching\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+Boolean value decalaring if the object is searching or is done searching\&. 
+.PP
+Definition at line 31 of file PoyntTerminalDiscover\&.h\&.
+.SS "\- (NSArray*) terminals\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+list of \fBPoyntTerminal\fP currently known on the network 
+.PP
+Definition at line 22 of file PoyntTerminalDiscover\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

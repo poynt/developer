@@ -1,0 +1,139 @@
+.TH "PoyntOrderItemObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntOrderItemObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntOrderItemObject\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithSku:unitPrice:quantity:\fP"
+.br
+.RI "initialization that will set the sku , unitPrice and quantity "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBclientNotes\fP"
+.br
+.RI "merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants "
+.ti -1c
+.RI "NSArray * \fBdiscounts\fP"
+.br
+.RI "array of \fBPoyntDiscountObject\fP objects  items can have multiple discounts for various reasons\&. Store them here "
+.ti -1c
+.RI "NSString * \fBname\fP"
+.br
+.RI "human friendly name for this item\&.  The name can be any string and does not need to be unique "
+.ti -1c
+.RI "NSString * \fBsku\fP"
+.br
+.RI "sku  Sku of the item\&. "
+.ti -1c
+.RI "NSString * \fBstatus\fP"
+.br
+.RI "Status of the item  this is traditionaly set by the system and is likely 'ORDERED', 'FULFILLED', 'RETURNED'\&. "
+.ti -1c
+.RI "NSArray * \fBtaxes\fP"
+.br
+.RI "array of \fBPoyntOrderItemTax\fP objects  like discounts, various taxes may be applied to an item "
+.ti -1c
+.RI "\fBUnitOfMeasure\fP \fBunitOfMeasure\fP"
+.br
+.RI "UnitOfMeasure  Unit of measure for the quantity\&. "
+.ti -1c
+.RI "NSInteger \fBunitPrice\fP"
+.br
+.RI "price per item in cents "
+.ti -1c
+.RI "float \fBquantity\fP"
+.br
+.RI "Quantity purchased\&.  Note this could be in decimals, e\&.g\&. 2\&.3 Kgs\&. "
+.ti -1c
+.RI "NSInteger \fBtax\fP"
+.br
+.RI "Total tax amount applied on this group of items (not just 1 unit)\&.  If not specified, but the taxes array is present the server will automatically sum up the amounts in taxes array and populate this\&. If not specified and taxes array is empty, this will default to 0\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 46 of file PoyntOrderItemObject\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (id) initWithSku: (NSString *) sku(NSInteger) unitPrice(float) quantity"
+
+.PP
+initialization that will set the sku , unitPrice and quantity 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) clientNotes\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants 
+.PP
+Definition at line 51 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSArray*) discounts\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+array of \fBPoyntDiscountObject\fP objects  items can have multiple discounts for various reasons\&. Store them here 
+.PP
+Definition at line 56 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSString*) name\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+human friendly name for this item\&.  The name can be any string and does not need to be unique 
+.PP
+Definition at line 61 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (float) quantity\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+Quantity purchased\&.  Note this could be in decimals, e\&.g\&. 2\&.3 Kgs\&. 
+.PP
+Definition at line 90 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSString*) sku\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+sku  Sku of the item\&. 
+.PP
+Definition at line 66 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSString*) status\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+Status of the item  this is traditionaly set by the system and is likely 'ORDERED', 'FULFILLED', 'RETURNED'\&. 
+.PP
+Definition at line 71 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSInteger) tax\fC [read]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+Total tax amount applied on this group of items (not just 1 unit)\&.  If not specified, but the taxes array is present the server will automatically sum up the amounts in taxes array and populate this\&. If not specified and taxes array is empty, this will default to 0\&. 
+.PP
+Definition at line 95 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSArray*) taxes\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+array of \fBPoyntOrderItemTax\fP objects  like discounts, various taxes may be applied to an item 
+.PP
+Definition at line 76 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (\fBUnitOfMeasure\fP) unitOfMeasure\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+UnitOfMeasure  Unit of measure for the quantity\&. 
+.PP
+Definition at line 81 of file PoyntOrderItemObject\&.h\&.
+.SS "\- (NSInteger) unitPrice\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+price per item in cents 
+.PP
+Definition at line 85 of file PoyntOrderItemObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

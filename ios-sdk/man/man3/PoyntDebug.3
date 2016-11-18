@@ -1,0 +1,59 @@
+.TH "PoyntDebug" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntDebug \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntDebug\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Class Methods"
+
+.in +1c
+.ti -1c
+.RI "(\fBPoyntDebug\fP *) + \fBsharedDebugger\fP"
+.br
+.RI "singleton property "
+.ti -1c
+.RI "(void) + \fBlog:\fP"
+.br
+.RI "the log: method allows devlopers to take advantage of conditional verbose logging, sending your own message "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "BOOL \fBverbose\fP"
+.br
+.RI "set to true to see the magic, set to false to make your console look blank "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntDebug\fP  PoyntLib logs most requests , responses and errors\&. Use this class to see what your missing 
+.PP
+Definition at line 14 of file PoyntDebug\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "+ (void) log: (NSString *) message"
+
+.PP
+the log: method allows devlopers to take advantage of conditional verbose logging, sending your own message 
+.SS "+ (\fBPoyntDebug\fP*) sharedDebugger "
+
+.PP
+singleton property 
+.SH "Property Documentation"
+.PP 
+.SS "\- (BOOL) verbose\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+set to true to see the magic, set to false to make your console look blank 
+.PP
+Definition at line 22 of file PoyntDebug\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

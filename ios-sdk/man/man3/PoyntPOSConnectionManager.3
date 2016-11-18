@@ -1,0 +1,331 @@
+.TH "PoyntPOSConnectionManager" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntPOSConnectionManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntPOSConnectionManager\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBauthorizeCapture:\fP"
+.br
+.RI "sends a captured sale request to the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizePairing:\fP"
+.br
+.RI "attempts to pair the iOS client with the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizePartialCompletion:\fP"
+.br
+.RI "sends a captured sale request to the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizePartialRefund:\fP"
+.br
+.RI "sends a partial refund request to the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizePreSales:\fP"
+.br
+.RI "sends an authOnly sale request to the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizeRefund:\fP"
+.br
+.RI "sends a refund request to the Poynt terminals "
+.ti -1c
+.RI "(void) \- \fBauthorizeSales:\fP"
+.br
+.RI "sends a sale request for capture to the Poynt terminal "
+.ti -1c
+.RI "(void) \- \fBauthorizeVoid:\fP"
+.br
+.RI "sends a void request to the Poynt terminals "
+.ti -1c
+.RI "(void) \- \fBauthorizeVoidPreSales:\fP"
+.br
+.RI "sends a void request to the Poynt terminals "
+.ti -1c
+.RI "(void) \- \fBauthorizeAdjustment:\fP"
+.br
+.RI "sends an adjustment request to the Poynt terminal "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBclientName\fP"
+.br
+.RI "optional property for displaying/references a name for the device implementing the PoyntLib SDK "
+.ti -1c
+.RI "NSString * \fBpairingCode\fP"
+.br
+.RI "required property for pairing an iOS client with the Poynt terminal "
+.ti -1c
+.RI "NSString * \fBurl\fP"
+.br
+.RI "required property for pairing an iOS client with the Poynt terminal "
+.ti -1c
+.RI "NSInteger \fBtimeout\fP"
+.br
+.RI "optional property for setting the timeout for \fBPoyntPOSConnectionManager\fP requests\&. "
+.ti -1c
+.RI "\fBPoyntPOSPairingStatus\fP \fBpairingStatus\fP"
+.br
+.RI "readonly property for understanding the current pairing state of the \fBPoyntPOSConnectionManager\fP "
+.ti -1c
+.RI "\fBOnTransactionResponse\fP \fBonTransactionResponse\fP"
+.br
+.RI "use the OnTransactionResponse block to capture the response from the Poynt terminal after a successful request completes "
+.ti -1c
+.RI "\fBOnError\fP \fBonError\fP"
+.br
+.RI "use the OnError block to capture the fail state response from the Poynt terminal in the event of an error "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The connection manager is the gateway class to communicating with the Poynt terminal\&.  This object handles all things from pairing to transaction / payment specific requests 
+.PP
+Definition at line 43 of file PoyntPOSConnectionManager\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) authorizeAdjustment: (\fBPoyntPaymentObject\fP *) payment"
+
+.PP
+sends an adjustment request to the Poynt terminal This expects a \fBPoyntPaymentObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler\&. The payment object must have an amount associated, and optional tipAmount (if a tip is included)
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntPaymentObject\fP\fP 
+.RE
+.PP
+
+.SS "\- (void) authorizeCapture: (\fBPoyntTransactionObject\fP *) transaction"
+
+.PP
+sends a captured sale request to the Poynt terminal This expects a valid \fBPoyntTransactionObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntTransactionObject\fP\fP - transactionId is required 
+.RE
+.PP
+
+.SS "\- (void) authorizePairing: (NSString *) code"
+
+.PP
+attempts to pair the iOS client with the Poynt terminal An iOS client creates a pair after establishing a correct url and pairing code to make the request\&. The \fBPoyntTerminalDiscover\fP object can find terminals on the same network, revelaing their ip address, or you can manually address the ip if you already know it\&. The PoyntLib SDK will try to re-establish a connection with the last set credentials even after application termination\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+.PP
+.nf
+self\&.paymentManager\&.url = @"10\&.0\&.1\&.23:55555";
+self\&.paymentManager\&.clientName = @"Happy iPad";
+[self\&.paymentManager authorizePairing:self\&.textFieldCode\&.text];
+.fi
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP representing the pairing code 
+.RE
+.PP
+
+.SS "\- (void) authorizePartialCompletion: (\fBPoyntPaymentObject\fP *) payment"
+
+.PP
+sends a captured sale request to the Poynt terminal This expects a valid \fBPoyntPaymentObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntPaymentObject\fP\fP (where transactionId is required) 
+.RE
+.PP
+
+.SS "\- (void) authorizePartialRefund: (\fBPoyntPaymentObject\fP *) payment"
+
+.PP
+sends a partial refund request to the Poynt terminal This expects a valid \fBPoyntPaymentObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntPaymentObject\fP\fP (where transactionId is required) 
+.RE
+.PP
+
+.SS "\- (void) authorizePreSales: (\fBPoyntPaymentObject\fP *) payment"
+
+.PP
+sends an authOnly sale request to the Poynt terminal This expects a \fBPoyntPaymentObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntPaymentObject\fP\fP 
+.RE
+.PP
+
+.SS "\- (void) authorizeRefund: (id< PoyntTransaction >) transaction"
+
+.PP
+sends a refund request to the Poynt terminals This method expects a valid object subscribing to the \fBPoyntTransaction\fP protocol\&. The transactionId must be in reference of a valid transaction\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fIan\fP object that subscribes to the \fBPoyntTransaction\fP protocol - transactionId is required 
+.RE
+.PP
+
+.SS "\- (void) authorizeSales: (\fBPoyntPaymentObject\fP *) payment"
+
+.PP
+sends a sale request for capture to the Poynt terminal This expects a \fBPoyntPaymentObject\fP\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPoyntPaymentObject\fP\fP 
+.RE
+.PP
+
+.SS "\- (void) authorizeVoid: (id< PoyntTransaction >) transaction"
+
+.PP
+sends a void request to the Poynt terminals This method expects a valid object subscribing to the \fBPoyntTransaction\fP protocol\&. The transactionId must be in reference of a transaction\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fIan\fP object that subscribes to the \fBPoyntTransaction\fP protocol - transactionId is required 
+.RE
+.PP
+
+.SS "\- (void) authorizeVoidPreSales: (id< PoyntTransaction >) transaction"
+
+.PP
+sends a void request to the Poynt terminals This method expects a valid object subscribing to the \fBPoyntTransaction\fP protocol\&. The transactionId must be in reference of an  transaction\&. Upon terminal response the paymentManager will receive either the onTransactionResponse or onError handler
+.PP
+\fBParameters:\fP
+.RS 4
+\fIan\fP object that subscribes to the \fBPoyntTransaction\fP protocol - transactionId is required 
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) clientName\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+optional property for displaying/references a name for the device implementing the PoyntLib SDK When Poynt terminal pairs with an iOS client, it will display the name of the client and the pairingCode used to make the connection\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string for a human readable client name on the Poynt terminal 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (\fBOnError\fP) onError\fC [read]\fP, \fC [write]\fP, \fC [atomic]\fP, \fC [copy]\fP"
+
+.PP
+use the OnError block to capture the fail state response from the Poynt terminal in the event of an error the block will contain an NSError object and PoyntActionType enum
+.PP
+.PP
+.nf
+[paymentManager setOnError:^void(NSError *error, PoyntActionType actionType){
+
+}];
+[paymentManager authorizeCapture:transactionObject]
+.fi
+.PP
+ 
+.PP
+Definition at line 121 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (\fBOnTransactionResponse\fP) onTransactionResponse\fC [read]\fP, \fC [write]\fP, \fC [atomic]\fP, \fC [copy]\fP"
+
+.PP
+use the OnTransactionResponse block to capture the response from the Poynt terminal after a successful request completes the block will contain a \fBPoyntTransactionResponseObject\fP object and PoyntActionType enum to clarify from which method is being calledback
+.PP
+.PP
+.nf
+[paymentManager setOnTransactionResponse:^void(PoyntTransactionResponseObject *data,PoyntActionType actionType){
+   if(actionType == AuthorizePair){
+       // \&.\&.\&. handle this case
+   }else{
+       NSLog(@"success for %@",data);
+   }
+}];
+[paymentManager authorizeCapture:transactionObject]
+.fi
+.PP
+ 
+.PP
+Definition at line 108 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (NSString*) pairingCode\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+required property for pairing an iOS client with the Poynt terminal Poynt terminal requires both a url and pairingCode to establish a connection for passing data\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string an alpha numeric code for pairing\&. 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (\fBPoyntPOSPairingStatus\fP) pairingStatus\fC [read]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+readonly property for understanding the current pairing state of the \fBPoyntPOSConnectionManager\fP 
+.PP
+\fBReturns:\fP
+.RS 4
+enum 
+.RE
+.PP
+
+.PP
+Definition at line 90 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (NSInteger) timeout\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+optional property for setting the timeout for \fBPoyntPOSConnectionManager\fP requests\&. Timout is understood in milliseconds by the Poynt terminal\&. The timeout can be set previous to making a request, depending on what suits best for the client application\&. Setting a new timeout value is persitant until reset to a new value\&. The default value is 60000 ( = one minute)
+.PP
+\fBReturns:\fP
+.RS 4
+NSInteger 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file PoyntPOSConnectionManager\&.h\&.
+.SS "\- (NSString*) url\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+required property for pairing an iOS client with the Poynt terminal Poynt terminal requires both a url and pairingCode to establish a connection for passing data\&. The url can be discovered by using the \fBPoyntTerminalDiscover\fP object for discovery over WiFi
+.PP
+\fBReturns:\fP
+.RS 4
+string for an ip address, including port if necessary\&.
+.RE
+.PP
+.PP
+.nf
+self\&.paymentManager\&.url = @"10\&.0\&.2\&.21:55555"
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBPoyntTerminalDiscover\&.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file PoyntPOSConnectionManager\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

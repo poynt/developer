@@ -1,0 +1,401 @@
+\hypertarget{interface_poynt_p_o_s_connection_manager}{}\section{Poynt\+P\+O\+S\+Connection\+Manager Class Reference}
+\label{interface_poynt_p_o_s_connection_manager}\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+
+
+{\ttfamily \#import $<$Poynt\+P\+O\+S\+Connection\+Manager.\+h$>$}
+
+Inheritance diagram for Poynt\+P\+O\+S\+Connection\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_p_o_s_connection_manager}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_aa35b8ab75b2115f27c8363465b2f4c85}{authorize\+Capture\+:}
+\begin{DoxyCompactList}\small\item\em sends a captured sale request to the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a80bcfbd9a0d3d99af46027edee12d5ba}{authorize\+Pairing\+:}
+\begin{DoxyCompactList}\small\item\em attempts to pair the i\+OS client with the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a9ddd4dfbae869bf65611b03472140b8e}{authorize\+Partial\+Completion\+:}
+\begin{DoxyCompactList}\small\item\em sends a captured sale request to the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a165211f19736758772a4427902bdb932}{authorize\+Partial\+Refund\+:}
+\begin{DoxyCompactList}\small\item\em sends a partial refund request to the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a3eb595755dc0ecbf9fa358f55117f021}{authorize\+Pre\+Sales\+:}
+\begin{DoxyCompactList}\small\item\em sends an auth\+Only sale request to the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a06494ca11a35277bc19c86dcfd34c8a4}{authorize\+Refund\+:}
+\begin{DoxyCompactList}\small\item\em sends a refund request to the Poynt terminals \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_addc8717b201139753094f0d5d9038ea9}{authorize\+Sales\+:}
+\begin{DoxyCompactList}\small\item\em sends a sale request for capture to the Poynt terminal \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_ac78262b676405ba3826f79c55c488e1f}{authorize\+Void\+:}
+\begin{DoxyCompactList}\small\item\em sends a void request to the Poynt terminals \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a9dbf19579902ee4c67310a2d705381b9}{authorize\+Void\+Pre\+Sales\+:}
+\begin{DoxyCompactList}\small\item\em sends a void request to the Poynt terminals \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_poynt_p_o_s_connection_manager_a5a35b99719ec02d91ec102d75a49bd7a}{authorize\+Adjustment\+:}
+\begin{DoxyCompactList}\small\item\em sends an adjustment request to the Poynt terminal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_p_o_s_connection_manager_acc1c5e037cbbc59cd1b00f131660efe2}{client\+Name}
+\begin{DoxyCompactList}\small\item\em optional property for displaying/references a name for the device implementing the Poynt\+Lib S\+DK \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_p_o_s_connection_manager_afb57bf61e0a6b264b5f2765f09a96d2b}{pairing\+Code}
+\begin{DoxyCompactList}\small\item\em required property for pairing an i\+OS client with the Poynt terminal \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_p_o_s_connection_manager_a43481294fa1d2f0ebe7cff14b17726cc}{url}
+\begin{DoxyCompactList}\small\item\em required property for pairing an i\+OS client with the Poynt terminal \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_p_o_s_connection_manager_ad4ac67644bd591b45e7e45448681872d}{timeout}
+\begin{DoxyCompactList}\small\item\em optional property for setting the timeout for \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager} requests. \end{DoxyCompactList}\item 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status} \hyperlink{interface_poynt_p_o_s_connection_manager_ac623b382557bedf15142de86ee6e2782}{pairing\+Status}
+\begin{DoxyCompactList}\small\item\em readonly property for understanding the current pairing state of the \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager} \end{DoxyCompactList}\item 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800}{On\+Transaction\+Response} \hyperlink{interface_poynt_p_o_s_connection_manager_aec722c6cb0f961265852a406242c430b}{on\+Transaction\+Response}
+\begin{DoxyCompactList}\small\item\em use the On\+Transaction\+Response block to capture the response from the Poynt terminal after a successful request completes \end{DoxyCompactList}\item 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_aef7c4526c1bcdb84233ca3d7f7074d5a}{On\+Error} \hyperlink{interface_poynt_p_o_s_connection_manager_a2ea439a383295e69bc2094a614e3b6fb}{on\+Error}
+\begin{DoxyCompactList}\small\item\em use the On\+Error block to capture the fail state response from the Poynt terminal in the event of an error \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The connection manager is the gateway class to communicating with the Poynt terminal.  This object handles all things from pairing to transaction / payment specific requests 
+
+Definition at line 43 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a5a35b99719ec02d91ec102d75a49bd7a}{}\label{interface_poynt_p_o_s_connection_manager_a5a35b99719ec02d91ec102d75a49bd7a} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Adjustment\+:@{authorize\+Adjustment\+:}}
+\index{authorize\+Adjustment\+:@{authorize\+Adjustment\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Adjustment\+:()}{authorizeAdjustment:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Adjustment\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} $\ast$)}]{payment }\end{DoxyParamCaption}}
+
+
+
+sends an adjustment request to the Poynt terminal 
+
+This expects a \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler. The payment object must have an amount associated, and optional tip\+Amount (if a tip is included)
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_aa35b8ab75b2115f27c8363465b2f4c85}{}\label{interface_poynt_p_o_s_connection_manager_aa35b8ab75b2115f27c8363465b2f4c85} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Capture\+:@{authorize\+Capture\+:}}
+\index{authorize\+Capture\+:@{authorize\+Capture\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Capture\+:()}{authorizeCapture:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Capture\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} $\ast$)}]{transaction }\end{DoxyParamCaption}}
+
+
+
+sends a captured sale request to the Poynt terminal 
+
+This expects a valid \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object}} & -\/ transaction\+Id is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a80bcfbd9a0d3d99af46027edee12d5ba}{}\label{interface_poynt_p_o_s_connection_manager_a80bcfbd9a0d3d99af46027edee12d5ba} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Pairing\+:@{authorize\+Pairing\+:}}
+\index{authorize\+Pairing\+:@{authorize\+Pairing\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Pairing\+:()}{authorizePairing:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Pairing\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{code }\end{DoxyParamCaption}}
+
+
+
+attempts to pair the i\+OS client with the Poynt terminal 
+
+An i\+OS client creates a pair after establishing a correct url and pairing code to make the request. The \hyperlink{interface_poynt_terminal_discover}{Poynt\+Terminal\+Discover} object can find terminals on the same network, revelaing their ip address, or you can manually address the ip if you already know it. The Poynt\+Lib S\+DK will try to re-\/establish a connection with the last set credentials even after application termination. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{self}.paymentManager.url = \textcolor{stringliteral}{@"10.0.1.23:55555"};
+\textcolor{keyword}{self}.paymentManager.clientName = \textcolor{stringliteral}{@"Happy iPad"};
+[\textcolor{keyword}{self}.paymentManager authorizePairing:\textcolor{keyword}{self}.textFieldCode.text];
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & representing the pairing code \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a9ddd4dfbae869bf65611b03472140b8e}{}\label{interface_poynt_p_o_s_connection_manager_a9ddd4dfbae869bf65611b03472140b8e} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Partial\+Completion\+:@{authorize\+Partial\+Completion\+:}}
+\index{authorize\+Partial\+Completion\+:@{authorize\+Partial\+Completion\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Partial\+Completion\+:()}{authorizePartialCompletion:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Partial\+Completion\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} $\ast$)}]{payment }\end{DoxyParamCaption}}
+
+
+
+sends a captured sale request to the Poynt terminal 
+
+This expects a valid \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}} & (where transaction\+Id is required) \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a165211f19736758772a4427902bdb932}{}\label{interface_poynt_p_o_s_connection_manager_a165211f19736758772a4427902bdb932} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Partial\+Refund\+:@{authorize\+Partial\+Refund\+:}}
+\index{authorize\+Partial\+Refund\+:@{authorize\+Partial\+Refund\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Partial\+Refund\+:()}{authorizePartialRefund:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Partial\+Refund\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} $\ast$)}]{payment }\end{DoxyParamCaption}}
+
+
+
+sends a partial refund request to the Poynt terminal 
+
+This expects a valid \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}} & (where transaction\+Id is required) \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a3eb595755dc0ecbf9fa358f55117f021}{}\label{interface_poynt_p_o_s_connection_manager_a3eb595755dc0ecbf9fa358f55117f021} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Pre\+Sales\+:@{authorize\+Pre\+Sales\+:}}
+\index{authorize\+Pre\+Sales\+:@{authorize\+Pre\+Sales\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Pre\+Sales\+:()}{authorizePreSales:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Pre\+Sales\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} $\ast$)}]{payment }\end{DoxyParamCaption}}
+
+
+
+sends an auth\+Only sale request to the Poynt terminal 
+
+This expects a \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a06494ca11a35277bc19c86dcfd34c8a4}{}\label{interface_poynt_p_o_s_connection_manager_a06494ca11a35277bc19c86dcfd34c8a4} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Refund\+:@{authorize\+Refund\+:}}
+\index{authorize\+Refund\+:@{authorize\+Refund\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Refund\+:()}{authorizeRefund:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Refund\+: \begin{DoxyParamCaption}\item[{(id$<$ Poynt\+Transaction $>$)}]{transaction }\end{DoxyParamCaption}}
+
+
+
+sends a refund request to the Poynt terminals 
+
+This method expects a valid object subscribing to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol. The transaction\+Id must be in reference of a valid transaction. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em an} & object that subscribes to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol -\/ transaction\+Id is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_addc8717b201139753094f0d5d9038ea9}{}\label{interface_poynt_p_o_s_connection_manager_addc8717b201139753094f0d5d9038ea9} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Sales\+:@{authorize\+Sales\+:}}
+\index{authorize\+Sales\+:@{authorize\+Sales\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Sales\+:()}{authorizeSales:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Sales\+: \begin{DoxyParamCaption}\item[{(\hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object} $\ast$)}]{payment }\end{DoxyParamCaption}}
+
+
+
+sends a sale request for capture to the Poynt terminal 
+
+This expects a \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_ac78262b676405ba3826f79c55c488e1f}{}\label{interface_poynt_p_o_s_connection_manager_ac78262b676405ba3826f79c55c488e1f} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Void\+:@{authorize\+Void\+:}}
+\index{authorize\+Void\+:@{authorize\+Void\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Void\+:()}{authorizeVoid:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Void\+: \begin{DoxyParamCaption}\item[{(id$<$ Poynt\+Transaction $>$)}]{transaction }\end{DoxyParamCaption}}
+
+
+
+sends a void request to the Poynt terminals 
+
+This method expects a valid object subscribing to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol. The transaction\+Id must be in reference of a transaction. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em an} & object that subscribes to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol -\/ transaction\+Id is required \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_poynt_p_o_s_connection_manager_a9dbf19579902ee4c67310a2d705381b9}{}\label{interface_poynt_p_o_s_connection_manager_a9dbf19579902ee4c67310a2d705381b9} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!authorize\+Void\+Pre\+Sales\+:@{authorize\+Void\+Pre\+Sales\+:}}
+\index{authorize\+Void\+Pre\+Sales\+:@{authorize\+Void\+Pre\+Sales\+:}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{authorize\+Void\+Pre\+Sales\+:()}{authorizeVoidPreSales:()}}
+{\footnotesize\ttfamily -\/ (void) authorize\+Void\+Pre\+Sales\+: \begin{DoxyParamCaption}\item[{(id$<$ Poynt\+Transaction $>$)}]{transaction }\end{DoxyParamCaption}}
+
+
+
+sends a void request to the Poynt terminals 
+
+This method expects a valid object subscribing to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol. The transaction\+Id must be in reference of an  transaction. Upon terminal response the payment\+Manager will receive either the on\+Transaction\+Response or on\+Error handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em an} & object that subscribes to the \hyperlink{class_poynt_transaction-p}{Poynt\+Transaction} protocol -\/ transaction\+Id is required \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_p_o_s_connection_manager_acc1c5e037cbbc59cd1b00f131660efe2}{}\label{interface_poynt_p_o_s_connection_manager_acc1c5e037cbbc59cd1b00f131660efe2} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!client\+Name@{client\+Name}}
+\index{client\+Name@{client\+Name}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{client\+Name}{clientName}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) client\+Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+optional property for displaying/references a name for the device implementing the Poynt\+Lib S\+DK 
+
+When Poynt terminal pairs with an i\+OS client, it will display the name of the client and the pairing\+Code used to make the connection.
+
+\begin{DoxyReturn}{Returns}
+string for a human readable client name on the Poynt terminal 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_a2ea439a383295e69bc2094a614e3b6fb}{}\label{interface_poynt_p_o_s_connection_manager_a2ea439a383295e69bc2094a614e3b6fb} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!on\+Error@{on\+Error}}
+\index{on\+Error@{on\+Error}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{on\+Error}{onError}}
+{\footnotesize\ttfamily -\/ (\hyperlink{_poynt_p_o_s_connection_manager_8h_aef7c4526c1bcdb84233ca3d7f7074d5a}{On\+Error}) on\+Error\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}
+
+
+
+use the On\+Error block to capture the fail state response from the Poynt terminal in the event of an error 
+
+the block will contain an N\+S\+Error object and Poynt\+Action\+Type enum
+
+
+\begin{DoxyCode}
+[paymentManager setOnError:^void(NSError *error, \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{PoyntActionType} actionType)\{
+
+\}];
+[paymentManager authorizeCapture:transactionObject]
+\end{DoxyCode}
+ 
+
+Definition at line 121 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_aec722c6cb0f961265852a406242c430b}{}\label{interface_poynt_p_o_s_connection_manager_aec722c6cb0f961265852a406242c430b} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!on\+Transaction\+Response@{on\+Transaction\+Response}}
+\index{on\+Transaction\+Response@{on\+Transaction\+Response}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{on\+Transaction\+Response}{onTransactionResponse}}
+{\footnotesize\ttfamily -\/ (\hyperlink{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800}{On\+Transaction\+Response}) on\+Transaction\+Response\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}
+
+
+
+use the On\+Transaction\+Response block to capture the response from the Poynt terminal after a successful request completes 
+
+the block will contain a \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} object and Poynt\+Action\+Type enum to clarify from which method is being calledback
+
+
+\begin{DoxyCode}
+[paymentManager setOnTransactionResponse:^void(\hyperlink{interface_poynt_transaction_response_object}{PoyntTransactionResponseObject}
+       *data,\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{PoyntActionType} actionType)\{
+   \textcolor{keywordflow}{if}(actionType == \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aadbbca3ad6fc42c73fa7c69608f0a4d7}{AuthorizePair})\{
+       \textcolor{comment}{// ... handle this case}
+   \}\textcolor{keywordflow}{else}\{
+       NSLog(\textcolor{stringliteral}{@"success for %@"},data);
+   \}
+\}];
+[paymentManager authorizeCapture:transactionObject]
+\end{DoxyCode}
+ 
+
+Definition at line 108 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_afb57bf61e0a6b264b5f2765f09a96d2b}{}\label{interface_poynt_p_o_s_connection_manager_afb57bf61e0a6b264b5f2765f09a96d2b} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!pairing\+Code@{pairing\+Code}}
+\index{pairing\+Code@{pairing\+Code}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{pairing\+Code}{pairingCode}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) pairing\+Code\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+required property for pairing an i\+OS client with the Poynt terminal 
+
+Poynt terminal requires both a url and pairing\+Code to establish a connection for passing data.
+
+\begin{DoxyReturn}{Returns}
+string an alpha numeric code for pairing. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_ac623b382557bedf15142de86ee6e2782}{}\label{interface_poynt_p_o_s_connection_manager_ac623b382557bedf15142de86ee6e2782} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!pairing\+Status@{pairing\+Status}}
+\index{pairing\+Status@{pairing\+Status}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{pairing\+Status}{pairingStatus}}
+{\footnotesize\ttfamily -\/ (\hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status}) pairing\+Status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+readonly property for understanding the current pairing state of the \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager} 
+
+\begin{DoxyReturn}{Returns}
+enum 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_ad4ac67644bd591b45e7e45448681872d}{}\label{interface_poynt_p_o_s_connection_manager_ad4ac67644bd591b45e7e45448681872d} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!timeout@{timeout}}
+\index{timeout@{timeout}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) timeout\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+optional property for setting the timeout for \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager} requests. 
+
+Timout is understood in milliseconds by the Poynt terminal. The timeout can be set previous to making a request, depending on what suits best for the client application. Setting a new timeout value is persitant until reset to a new value. The default value is 60000 ( = one minute)
+
+\begin{DoxyReturn}{Returns}
+N\+S\+Integer 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{interface_poynt_p_o_s_connection_manager_a43481294fa1d2f0ebe7cff14b17726cc}{}\label{interface_poynt_p_o_s_connection_manager_a43481294fa1d2f0ebe7cff14b17726cc} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!url@{url}}
+\index{url@{url}!Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}}
+\subsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) url\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+required property for pairing an i\+OS client with the Poynt terminal 
+
+Poynt terminal requires both a url and pairing\+Code to establish a connection for passing data. The url can be discovered by using the \hyperlink{interface_poynt_terminal_discover}{Poynt\+Terminal\+Discover} object for discovery over Wi\+Fi
+
+\begin{DoxyReturn}{Returns}
+string for an ip address, including port if necessary.
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+\textcolor{keyword}{self}.paymentManager.url = \textcolor{stringliteral}{@"10.0.2.21:55555"}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_poynt_terminal_discover_8h}{Poynt\+Terminal\+Discover.\+h} 
+\end{DoxySeeAlso}
+
+
+Definition at line 74 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/\hyperlink{_poynt_p_o_s_connection_manager_8h}{Poynt\+P\+O\+S\+Connection\+Manager.\+h}\end{DoxyCompactItemize}

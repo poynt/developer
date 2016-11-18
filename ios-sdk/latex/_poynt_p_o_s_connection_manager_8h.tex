@@ -1,0 +1,151 @@
+\hypertarget{_poynt_p_o_s_connection_manager_8h}{}\section{Poynt\+Lib/\+Poynt\+P\+O\+S\+Connection\+Manager.h File Reference}
+\label{_poynt_p_o_s_connection_manager_8h}\index{Poynt\+Lib/\+Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+Lib/\+Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
+{\ttfamily \#import $<$Foundation/\+Foundation.\+h$>$}\newline
+{\ttfamily \#import \char`\"{}Poynt\+Transaction.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($^\wedge$ \hyperlink{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800}{On\+Transaction\+Response}) (\hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} $\ast$data, \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type} type)
+\item 
+typedef void($^\wedge$ \hyperlink{_poynt_p_o_s_connection_manager_8h_aef7c4526c1bcdb84233ca3d7f7074d5a}{On\+Error}) (N\+S\+Error $\ast$error, \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type} type)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type} \{ \newline
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a18f893264a00711081b62de694f99db4}{Undefined}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a8eee1d573bd99343df5dec1e44884b44}{Authorize\+Capture}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aeb166f71954b493d9df8fd26a324cf30}{Authorize\+Completion}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aadbbca3ad6fc42c73fa7c69608f0a4d7}{Authorize\+Pair}, 
+\newline
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a215d1c0500650e188038fe84e8fa27c6}{Authorize\+Pre\+Sales}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a85cb40ca216ca4712ce60baab7138cad}{Authorize\+Partial\+Completion}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a2f3ee6e8c5f1779aa9947dc772b9b243}{Authorize\+Partial\+Refund}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ac786502f8e36d569c951df4b036e7897}{Authorize\+Refund}, 
+\newline
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a12c72268850ea267a3205ef95f1cf6d6}{Authorize\+Sales}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ae0256f2a208e083e1bcc486aea937b39}{Authorize\+Void}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a7cb7b2f13ef87f14d188f2a0f201faad}{Authorize\+Void\+Pre\+Sales}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a1fe6a1ba904e49baf51ec1b65455273f}{Authorize\+Adjustment}
+ \}
+\item 
+enum \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status} \{ \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50}{Un\+Paired}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513baa59f3429231e0c946c93e04d32430ab1}{Pairing}, 
+\hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba3e33093c515b4cc0447bf0291331f46a}{Paired}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_poynt_p_o_s_connection_manager_8h_aef7c4526c1bcdb84233ca3d7f7074d5a}{}\label{_poynt_p_o_s_connection_manager_8h_aef7c4526c1bcdb84233ca3d7f7074d5a} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!On\+Error@{On\+Error}}
+\index{On\+Error@{On\+Error}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
+\subsubsection{\texorpdfstring{On\+Error}{OnError}}
+{\footnotesize\ttfamily typedef void($^\wedge$ On\+Error) (N\+S\+Error $\ast$error, \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type} type)}
+
+
+
+Definition at line 37 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800}{}\label{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!On\+Transaction\+Response@{On\+Transaction\+Response}}
+\index{On\+Transaction\+Response@{On\+Transaction\+Response}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
+\subsubsection{\texorpdfstring{On\+Transaction\+Response}{OnTransactionResponse}}
+{\footnotesize\ttfamily typedef void($^\wedge$ On\+Transaction\+Response) (\hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} $\ast$data, \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type} type)}
+
+
+
+Definition at line 36 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Poynt\+Action\+Type@{Poynt\+Action\+Type}}
+\index{Poynt\+Action\+Type@{Poynt\+Action\+Type}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
+\subsubsection{\texorpdfstring{Poynt\+Action\+Type}{PoyntActionType}}
+{\footnotesize\ttfamily enum \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Undefined@{Undefined}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a18f893264a00711081b62de694f99db4}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a18f893264a00711081b62de694f99db4} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Capture@{Authorize\+Capture}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Capture@{Authorize\+Capture}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a8eee1d573bd99343df5dec1e44884b44}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a8eee1d573bd99343df5dec1e44884b44} 
+Authorize\+Capture&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Completion@{Authorize\+Completion}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Completion@{Authorize\+Completion}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aeb166f71954b493d9df8fd26a324cf30}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aeb166f71954b493d9df8fd26a324cf30} 
+Authorize\+Completion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Pair@{Authorize\+Pair}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Pair@{Authorize\+Pair}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aadbbca3ad6fc42c73fa7c69608f0a4d7}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7aadbbca3ad6fc42c73fa7c69608f0a4d7} 
+Authorize\+Pair&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Pre\+Sales@{Authorize\+Pre\+Sales}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Pre\+Sales@{Authorize\+Pre\+Sales}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a215d1c0500650e188038fe84e8fa27c6}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a215d1c0500650e188038fe84e8fa27c6} 
+Authorize\+Pre\+Sales&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Partial\+Completion@{Authorize\+Partial\+Completion}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Partial\+Completion@{Authorize\+Partial\+Completion}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a85cb40ca216ca4712ce60baab7138cad}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a85cb40ca216ca4712ce60baab7138cad} 
+Authorize\+Partial\+Completion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Partial\+Refund@{Authorize\+Partial\+Refund}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Partial\+Refund@{Authorize\+Partial\+Refund}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a2f3ee6e8c5f1779aa9947dc772b9b243}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a2f3ee6e8c5f1779aa9947dc772b9b243} 
+Authorize\+Partial\+Refund&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Refund@{Authorize\+Refund}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Refund@{Authorize\+Refund}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ac786502f8e36d569c951df4b036e7897}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ac786502f8e36d569c951df4b036e7897} 
+Authorize\+Refund&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Sales@{Authorize\+Sales}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Sales@{Authorize\+Sales}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a12c72268850ea267a3205ef95f1cf6d6}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a12c72268850ea267a3205ef95f1cf6d6} 
+Authorize\+Sales&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Void@{Authorize\+Void}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Void@{Authorize\+Void}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ae0256f2a208e083e1bcc486aea937b39}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ae0256f2a208e083e1bcc486aea937b39} 
+Authorize\+Void&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Void\+Pre\+Sales@{Authorize\+Void\+Pre\+Sales}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Void\+Pre\+Sales@{Authorize\+Void\+Pre\+Sales}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a7cb7b2f13ef87f14d188f2a0f201faad}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a7cb7b2f13ef87f14d188f2a0f201faad} 
+Authorize\+Void\+Pre\+Sales&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Authorize\+Adjustment@{Authorize\+Adjustment}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Authorize\+Adjustment@{Authorize\+Adjustment}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a1fe6a1ba904e49baf51ec1b65455273f}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a1fe6a1ba904e49baf51ec1b65455273f} 
+Authorize\+Adjustment&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 15 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+
+\hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b} 
+\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Poynt\+P\+O\+S\+Pairing\+Status@{Poynt\+P\+O\+S\+Pairing\+Status}}
+\index{Poynt\+P\+O\+S\+Pairing\+Status@{Poynt\+P\+O\+S\+Pairing\+Status}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
+\subsubsection{\texorpdfstring{Poynt\+P\+O\+S\+Pairing\+Status}{PoyntPOSPairingStatus}}
+{\footnotesize\ttfamily enum \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Un\+Paired@{Un\+Paired}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Un\+Paired@{Un\+Paired}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50} 
+Un\+Paired&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pairing@{Pairing}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Pairing@{Pairing}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513baa59f3429231e0c946c93e04d32430ab1}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513baa59f3429231e0c946c93e04d32430ab1} 
+Pairing&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paired@{Paired}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Paired@{Paired}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba3e33093c515b4cc0447bf0291331f46a}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba3e33093c515b4cc0447bf0291331f46a} 
+Paired&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 30 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+

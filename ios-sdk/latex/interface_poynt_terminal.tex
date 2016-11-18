@@ -1,0 +1,116 @@
+\hypertarget{interface_poynt_terminal}{}\section{Poynt\+Terminal Class Reference}
+\label{interface_poynt_terminal}\index{Poynt\+Terminal@{Poynt\+Terminal}}
+
+
+{\ttfamily \#import $<$Poynt\+Terminal.\+h$>$}
+
+Inheritance diagram for Poynt\+Terminal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_terminal}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_terminal_a85d039f4fe918b4ab91b90c1bac883f1}{init\+With\+Service\+:}
+\begin{DoxyCompactList}\small\item\em only use init\+With\+Service to create a \hyperlink{interface_poynt_terminal}{Poynt\+Terminal} object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_terminal_a4b93d352d2fca75b34e1b5a50e03f587}{name}
+\begin{DoxyCompactList}\small\item\em the name of the terminal \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_terminal_ab18eca4fc399814b2e86f54006b1e474}{ip}
+\begin{DoxyCompactList}\small\item\em the ip of the terminal  In the event the terminal identifies an explicit port for pairing, it will be found here \end{DoxyCompactList}\item 
+N\+S\+U\+RL $\ast$ \hyperlink{interface_poynt_terminal_a8d02094b967129e59efcc8c670677184}{url}
+\begin{DoxyCompactList}\small\item\em the url object for connecting with this terminal \end{DoxyCompactList}\item 
+N\+S\+Net\+Service $\ast$ \hyperlink{interface_poynt_terminal_a4c12c4a257de1f39c44a0a72b272246a}{service}
+\begin{DoxyCompactList}\small\item\em Poynt\+Lib S\+DK utilized bonjour over W\+I\+FI to detect terminals. The service object is engaged when we reach for pairing the device to client  Use \hyperlink{interface_poynt_terminal_discover}{Poynt\+Terminal\+Discover} to find the service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_poynt_terminal}{Poynt\+Terminal}  objects are useful during the terminal discovery phase when on the same W\+I\+FI network.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]allow multiple terminal connections. Currently, only one terminal connection is supported \end{DoxyRefDesc}
+
+
+Definition at line 16 of file Poynt\+Terminal.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_terminal_a85d039f4fe918b4ab91b90c1bac883f1}{}\label{interface_poynt_terminal_a85d039f4fe918b4ab91b90c1bac883f1} 
+\index{Poynt\+Terminal@{Poynt\+Terminal}!init\+With\+Service\+:@{init\+With\+Service\+:}}
+\index{init\+With\+Service\+:@{init\+With\+Service\+:}!Poynt\+Terminal@{Poynt\+Terminal}}
+\subsubsection{\texorpdfstring{init\+With\+Service\+:()}{initWithService:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Service\+: \begin{DoxyParamCaption}\item[{(N\+S\+Net\+Service $\ast$)}]{service }\end{DoxyParamCaption}}
+
+
+
+only use init\+With\+Service to create a \hyperlink{interface_poynt_terminal}{Poynt\+Terminal} object 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_terminal_ab18eca4fc399814b2e86f54006b1e474}{}\label{interface_poynt_terminal_ab18eca4fc399814b2e86f54006b1e474} 
+\index{Poynt\+Terminal@{Poynt\+Terminal}!ip@{ip}}
+\index{ip@{ip}!Poynt\+Terminal@{Poynt\+Terminal}}
+\subsubsection{\texorpdfstring{ip}{ip}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) ip\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+the ip of the terminal  In the event the terminal identifies an explicit port for pairing, it will be found here 
+
+
+
+Definition at line 25 of file Poynt\+Terminal.\+h.
+
+\hypertarget{interface_poynt_terminal_a4b93d352d2fca75b34e1b5a50e03f587}{}\label{interface_poynt_terminal_a4b93d352d2fca75b34e1b5a50e03f587} 
+\index{Poynt\+Terminal@{Poynt\+Terminal}!name@{name}}
+\index{name@{name}!Poynt\+Terminal@{Poynt\+Terminal}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+the name of the terminal 
+
+
+
+Definition at line 20 of file Poynt\+Terminal.\+h.
+
+\hypertarget{interface_poynt_terminal_a4c12c4a257de1f39c44a0a72b272246a}{}\label{interface_poynt_terminal_a4c12c4a257de1f39c44a0a72b272246a} 
+\index{Poynt\+Terminal@{Poynt\+Terminal}!service@{service}}
+\index{service@{service}!Poynt\+Terminal@{Poynt\+Terminal}}
+\subsubsection{\texorpdfstring{service}{service}}
+{\footnotesize\ttfamily -\/ (N\+S\+Net\+Service$\ast$) service\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+Poynt\+Lib S\+DK utilized bonjour over W\+I\+FI to detect terminals. The service object is engaged when we reach for pairing the device to client  Use \hyperlink{interface_poynt_terminal_discover}{Poynt\+Terminal\+Discover} to find the service. 
+
+
+
+Definition at line 34 of file Poynt\+Terminal.\+h.
+
+\hypertarget{interface_poynt_terminal_a8d02094b967129e59efcc8c670677184}{}\label{interface_poynt_terminal_a8d02094b967129e59efcc8c670677184} 
+\index{Poynt\+Terminal@{Poynt\+Terminal}!url@{url}}
+\index{url@{url}!Poynt\+Terminal@{Poynt\+Terminal}}
+\subsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily -\/ (N\+S\+U\+RL$\ast$) url\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+the url object for connecting with this terminal 
+
+
+
+Definition at line 29 of file Poynt\+Terminal.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_terminal_8h}{Poynt\+Terminal.\+h}\end{DoxyCompactItemize}

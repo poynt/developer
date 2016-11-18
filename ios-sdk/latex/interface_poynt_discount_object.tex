@@ -1,0 +1,90 @@
+\hypertarget{interface_poynt_discount_object}{}\section{Poynt\+Discount\+Object Class Reference}
+\label{interface_poynt_discount_object}\index{Poynt\+Discount\+Object@{Poynt\+Discount\+Object}}
+
+
+{\ttfamily \#import $<$Poynt\+Discount\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Discount\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_discount_object}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_discount_object_aca2778db881b6bf8745ee57b1d4e7639}{init\+With\+Amount\+:custom\+Name\+:}
+\begin{DoxyCompactList}\small\item\em initialize discount objects using the init\+With\+Amount or init. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Integer \hyperlink{interface_poynt_discount_object_a6ff5079a7aa518c578773da69959732d}{amount}
+\begin{DoxyCompactList}\small\item\em the amount in cents describing this discount \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_discount_object_ae38352d9ec7d2d1f03df4d4646c1a641}{custom\+Name}
+\begin{DoxyCompactList}\small\item\em a human readable name for identifiying the meaning of this discount \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_poynt_discount_object}{Poynt\+Discount\+Object}  discounts are encapsulated in an object to more easily identify their meaning.
+
+
+\begin{DoxyCode}
+\hyperlink{interface_poynt_discount_object}{PoyntDiscountObject} *discount  = [[\hyperlink{interface_poynt_discount_object}{PoyntDiscountObject} alloc] 
+      initWithAmount:200 \hyperlink{interface_poynt_discount_object_ae38352d9ec7d2d1f03df4d4646c1a641}{customName}:\textcolor{stringliteral}{@"Customer Loyalty"}];
+\end{DoxyCode}
+ 
+
+Definition at line 19 of file Poynt\+Discount\+Object.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_discount_object_aca2778db881b6bf8745ee57b1d4e7639}{}\label{interface_poynt_discount_object_aca2778db881b6bf8745ee57b1d4e7639} 
+\index{Poynt\+Discount\+Object@{Poynt\+Discount\+Object}!init\+With\+Amount\+:custom\+Name\+:@{init\+With\+Amount\+:custom\+Name\+:}}
+\index{init\+With\+Amount\+:custom\+Name\+:@{init\+With\+Amount\+:custom\+Name\+:}!Poynt\+Discount\+Object@{Poynt\+Discount\+Object}}
+\subsubsection{\texorpdfstring{init\+With\+Amount\+:custom\+Name\+:()}{initWithAmount:customName:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Amount\+: \begin{DoxyParamCaption}\item[{(N\+S\+Integer)}]{amount }\item[{customName:(N\+S\+String $\ast$)}]{custom\+Name }\end{DoxyParamCaption}}
+
+
+
+initialize discount objects using the init\+With\+Amount or init. 
+
+\begin{DoxyNote}{Note}
+Iniitializing with init will default amount to 0 and custom\+Name to an empty string 
+\end{DoxyNote}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_discount_object_a6ff5079a7aa518c578773da69959732d}{}\label{interface_poynt_discount_object_a6ff5079a7aa518c578773da69959732d} 
+\index{Poynt\+Discount\+Object@{Poynt\+Discount\+Object}!amount@{amount}}
+\index{amount@{amount}!Poynt\+Discount\+Object@{Poynt\+Discount\+Object}}
+\subsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) amount\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+the amount in cents describing this discount 
+
+
+
+Definition at line 23 of file Poynt\+Discount\+Object.\+h.
+
+\hypertarget{interface_poynt_discount_object_ae38352d9ec7d2d1f03df4d4646c1a641}{}\label{interface_poynt_discount_object_ae38352d9ec7d2d1f03df4d4646c1a641} 
+\index{Poynt\+Discount\+Object@{Poynt\+Discount\+Object}!custom\+Name@{custom\+Name}}
+\index{custom\+Name@{custom\+Name}!Poynt\+Discount\+Object@{Poynt\+Discount\+Object}}
+\subsubsection{\texorpdfstring{custom\+Name}{customName}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) custom\+Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+a human readable name for identifiying the meaning of this discount 
+
+
+
+Definition at line 27 of file Poynt\+Discount\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_discount_object_8h}{Poynt\+Discount\+Object.\+h}\end{DoxyCompactItemize}

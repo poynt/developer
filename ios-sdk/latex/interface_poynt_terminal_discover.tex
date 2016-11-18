@@ -1,0 +1,96 @@
+\hypertarget{interface_poynt_terminal_discover}{}\section{Poynt\+Terminal\+Discover Class Reference}
+\label{interface_poynt_terminal_discover}\index{Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}}
+
+
+{\ttfamily \#import $<$Poynt\+Terminal\+Discover.\+h$>$}
+
+Inheritance diagram for Poynt\+Terminal\+Discover\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_terminal_discover}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_poynt_terminal_discover_aab8fdef29321b4bf9ff4ba57e1593e9a}{find\+Terminals\+:}
+\begin{DoxyCompactList}\small\item\em find terminals on the same W\+I\+FI network  pass an On\+Terminals\+Found block to get a list of terminals currently known on the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_terminal_discover_a5388c2786127d007a5b553986779ee46}{terminals}
+\begin{DoxyCompactList}\small\item\em list of \hyperlink{interface_poynt_terminal}{Poynt\+Terminal} currently known on the network \end{DoxyCompactList}\item 
+\hyperlink{_poynt_terminal_discover_8h_a45c48a836064cd340f281fa5ef2edef5}{On\+Terminals\+Found} \hyperlink{interface_poynt_terminal_discover_a2108a121006de9953dbf24fa265db472}{on\+Terminals\+Found}
+\begin{DoxyCompactList}\small\item\em callback called upon finding the device(s) on the W\+I\+FI.  This callback is called only one time. If you need to refresh the search, you must call find\+Terminals\+:complete again \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_poynt_terminal_discover_a3ec4dc196847dee68ad6c99d08bfef95}{searching}
+\begin{DoxyCompactList}\small\item\em Boolean value decalaring if the object is searching or is done searching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file Poynt\+Terminal\+Discover.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_terminal_discover_aab8fdef29321b4bf9ff4ba57e1593e9a}{}\label{interface_poynt_terminal_discover_aab8fdef29321b4bf9ff4ba57e1593e9a} 
+\index{Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}!find\+Terminals\+:@{find\+Terminals\+:}}
+\index{find\+Terminals\+:@{find\+Terminals\+:}!Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}}
+\subsubsection{\texorpdfstring{find\+Terminals\+:()}{findTerminals:()}}
+{\footnotesize\ttfamily -\/ (void) find\+Terminals\+: \begin{DoxyParamCaption}\item[{(\hyperlink{_poynt_terminal_discover_8h_a45c48a836064cd340f281fa5ef2edef5}{On\+Terminals\+Found})}]{complete }\end{DoxyParamCaption}}
+
+
+
+find terminals on the same W\+I\+FI network  pass an On\+Terminals\+Found block to get a list of terminals currently known on the network. 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_terminal_discover_a2108a121006de9953dbf24fa265db472}{}\label{interface_poynt_terminal_discover_a2108a121006de9953dbf24fa265db472} 
+\index{Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}!on\+Terminals\+Found@{on\+Terminals\+Found}}
+\index{on\+Terminals\+Found@{on\+Terminals\+Found}!Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}}
+\subsubsection{\texorpdfstring{on\+Terminals\+Found}{onTerminalsFound}}
+{\footnotesize\ttfamily -\/ (\hyperlink{_poynt_terminal_discover_8h_a45c48a836064cd340f281fa5ef2edef5}{On\+Terminals\+Found}) on\+Terminals\+Found\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+callback called upon finding the device(s) on the W\+I\+FI.  This callback is called only one time. If you need to refresh the search, you must call find\+Terminals\+:complete again 
+
+
+
+Definition at line 27 of file Poynt\+Terminal\+Discover.\+h.
+
+\hypertarget{interface_poynt_terminal_discover_a3ec4dc196847dee68ad6c99d08bfef95}{}\label{interface_poynt_terminal_discover_a3ec4dc196847dee68ad6c99d08bfef95} 
+\index{Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}!searching@{searching}}
+\index{searching@{searching}!Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}}
+\subsubsection{\texorpdfstring{searching}{searching}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) searching\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Boolean value decalaring if the object is searching or is done searching. 
+
+
+
+Definition at line 31 of file Poynt\+Terminal\+Discover.\+h.
+
+\hypertarget{interface_poynt_terminal_discover_a5388c2786127d007a5b553986779ee46}{}\label{interface_poynt_terminal_discover_a5388c2786127d007a5b553986779ee46} 
+\index{Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}!terminals@{terminals}}
+\index{terminals@{terminals}!Poynt\+Terminal\+Discover@{Poynt\+Terminal\+Discover}}
+\subsubsection{\texorpdfstring{terminals}{terminals}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) terminals\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+list of \hyperlink{interface_poynt_terminal}{Poynt\+Terminal} currently known on the network 
+
+
+
+Definition at line 22 of file Poynt\+Terminal\+Discover.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/\hyperlink{_poynt_terminal_discover_8h}{Poynt\+Terminal\+Discover.\+h}\end{DoxyCompactItemize}

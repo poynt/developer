@@ -1,0 +1,126 @@
+\hypertarget{interface_poynt_order_object}{}\section{Poynt\+Order\+Object Class Reference}
+\label{interface_poynt_order_object}\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+
+
+{\ttfamily \#import $<$Poynt\+Order\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Order\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_order_object}
+\end{center}
+\end{figure}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_object_a940861134b75ee3d5167d791e5422afe}{notes}
+\begin{DoxyCompactList}\small\item\em merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_object_add3af147d846009706270bf6315b1229}{order\+Number}
+\begin{DoxyCompactList}\small\item\em merchant friendly number identifier  Stores often use a human readable order number to hand out to customers. Such numbers could be passed here. \end{DoxyCompactList}\item 
+\hyperlink{interface_poynt_payment_amount_object}{Poynt\+Payment\+Amount\+Object} $\ast$ \hyperlink{interface_poynt_order_object_a24782f14a239c62d29bf0389fb7fdf8d}{amounts}
+\begin{DoxyCompactList}\small\item\em object store for tracking specifics about the amounts in payment  This object stores and calculates the pertant data that comprises the total, discount and tax of the order \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_order_object_a203259381417b0a34916ce3f864161c2}{discounts}
+\begin{DoxyCompactList}\small\item\em array of Poynt\+Discount\+Objects  The amounts object will use this collection in its calculations for describing totals associated to this order object \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_order_object_a79b667618eb44106221f198156b54dd2}{items}
+\begin{DoxyCompactList}\small\item\em array of \hyperlink{interface_poynt_order_item_object}{Poynt\+Order\+Item\+Object}  Orders contain at least one (or more) items. The amounts object will use this collection in its calculations for describing totals associated to this order object \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_object_aac2b120e80b4b9e69c3a577c4f31ed31}{order\+Id}
+\begin{DoxyCompactList}\small\item\em system identifier for this object  The id of the order created. If provided in the request, it will be used as the order ID. If not provided, id will be generated internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_poynt_order_object}{Poynt\+Order\+Object}  Order objects are most commonly found attached to a \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. The order contains important information identifying itself in the system as well as items attached, discounts, and amounts 
+
+Definition at line 18 of file Poynt\+Order\+Object.\+h.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_order_object_a24782f14a239c62d29bf0389fb7fdf8d}{}\label{interface_poynt_order_object_a24782f14a239c62d29bf0389fb7fdf8d} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!amounts@{amounts}}
+\index{amounts@{amounts}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{amounts}{amounts}}
+{\footnotesize\ttfamily -\/ (\hyperlink{interface_poynt_payment_amount_object}{Poynt\+Payment\+Amount\+Object}$\ast$) amounts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+object store for tracking specifics about the amounts in payment  This object stores and calculates the pertant data that comprises the total, discount and tax of the order 
+
+
+
+Definition at line 33 of file Poynt\+Order\+Object.\+h.
+
+\hypertarget{interface_poynt_order_object_a203259381417b0a34916ce3f864161c2}{}\label{interface_poynt_order_object_a203259381417b0a34916ce3f864161c2} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!discounts@{discounts}}
+\index{discounts@{discounts}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{discounts}{discounts}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) discounts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+array of Poynt\+Discount\+Objects  The amounts object will use this collection in its calculations for describing totals associated to this order object 
+
+
+
+Definition at line 38 of file Poynt\+Order\+Object.\+h.
+
+\hypertarget{interface_poynt_order_object_a79b667618eb44106221f198156b54dd2}{}\label{interface_poynt_order_object_a79b667618eb44106221f198156b54dd2} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!items@{items}}
+\index{items@{items}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) items\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+array of \hyperlink{interface_poynt_order_item_object}{Poynt\+Order\+Item\+Object}  Orders contain at least one (or more) items. The amounts object will use this collection in its calculations for describing totals associated to this order object 
+
+
+
+Definition at line 43 of file Poynt\+Order\+Object.\+h.
+
+\hypertarget{interface_poynt_order_object_a940861134b75ee3d5167d791e5422afe}{}\label{interface_poynt_order_object_a940861134b75ee3d5167d791e5422afe} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!notes@{notes}}
+\index{notes@{notes}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{notes}{notes}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) notes\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants 
+
+
+
+Definition at line 23 of file Poynt\+Order\+Object.\+h.
+
+\hypertarget{interface_poynt_order_object_aac2b120e80b4b9e69c3a577c4f31ed31}{}\label{interface_poynt_order_object_aac2b120e80b4b9e69c3a577c4f31ed31} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!order\+Id@{order\+Id}}
+\index{order\+Id@{order\+Id}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{order\+Id}{orderId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) order\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+system identifier for this object  The id of the order created. If provided in the request, it will be used as the order ID. If not provided, id will be generated internally. 
+
+
+
+Definition at line 48 of file Poynt\+Order\+Object.\+h.
+
+\hypertarget{interface_poynt_order_object_add3af147d846009706270bf6315b1229}{}\label{interface_poynt_order_object_add3af147d846009706270bf6315b1229} 
+\index{Poynt\+Order\+Object@{Poynt\+Order\+Object}!order\+Number@{order\+Number}}
+\index{order\+Number@{order\+Number}!Poynt\+Order\+Object@{Poynt\+Order\+Object}}
+\subsubsection{\texorpdfstring{order\+Number}{orderNumber}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) order\+Number\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+merchant friendly number identifier  Stores often use a human readable order number to hand out to customers. Such numbers could be passed here. 
+
+
+
+Definition at line 28 of file Poynt\+Order\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_order_object_8h}{Poynt\+Order\+Object.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\hypertarget{interface_poynt_transaction_object}{}\section{Poynt\+Transaction\+Object Class Reference}
+\label{interface_poynt_transaction_object}\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+
+
+{\ttfamily \#import $<$Poynt\+Transaction\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Transaction\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_transaction_object}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_transaction_object_a777cf6da1ae0fc9452b06142a5adaa14}{init\+With\+Dictionary\+:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_object_af3bd537ec19ed3fac0b5aa56812a1577}{poynt\+Request\+Id}
+\begin{DoxyCompactList}\small\item\em U\+U\+I\+D\+String representing this object. \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_object_aacd11580c330a78310c344d78baecf8c}{transaction\+Id}
+\begin{DoxyCompactList}\small\item\em U\+U\+I\+D\+String representing a Poynt transaction id. \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_object_ac2acf327011ce6ed9e26a41ceddaee31}{status}
+\begin{DoxyCompactList}\small\item\em current status of this object. Mostly commonly set server side\+: \textquotesingle{}C\+R\+E\+A\+T\+ED\textquotesingle{}, \textquotesingle{}S\+A\+V\+ED\textquotesingle{}, \textquotesingle{}A\+U\+T\+H\+O\+R\+I\+Z\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+C\+A\+P\+T\+U\+R\+ED\textquotesingle{}, \textquotesingle{}C\+A\+P\+T\+U\+R\+ED\textquotesingle{}, \textquotesingle{}D\+E\+C\+L\+I\+N\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+C\+A\+P\+T\+U\+R\+E\+D\+\_\+\+A\+N\+D\+\_\+\+P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}V\+O\+I\+D\+ED\textquotesingle{} \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_transaction_object_aaab84b2e5d0ad0f648e7e0e17c6afa08}{action}
+\begin{DoxyCompactList}\small\item\em action of this object  \textquotesingle{}A\+U\+T\+H\+O\+R\+I\+ZE\textquotesingle{}, \textquotesingle{}C\+A\+P\+T\+U\+RE\textquotesingle{}, \textquotesingle{}O\+F\+F\+L\+I\+N\+E\+\_\+\+A\+U\+T\+H\+O\+R\+I\+ZE\textquotesingle{}, \textquotesingle{}R\+E\+F\+U\+ND\textquotesingle{}, \textquotesingle{}S\+A\+LE\textquotesingle{}, most commonly set by server \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c}{amounts}
+\begin{DoxyCompactList}\small\item\em collection of \hyperlink{interface_poynt_transaction_amounts}{Poynt\+Transaction\+Amounts} objects \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943}{funding\+Source}
+\item 
+N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7}{context}
+\item 
+N\+S\+Dictionary $\ast$ \hyperlink{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384}{references}
+\begin{DoxyCompactList}\small\item\em References to orders/invoices that this transaction is for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Poynt\+Transaction\+Object.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_transaction_object_a777cf6da1ae0fc9452b06142a5adaa14}{}\label{interface_poynt_transaction_object_a777cf6da1ae0fc9452b06142a5adaa14} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!init\+With\+Dictionary\+:@{init\+With\+Dictionary\+:}}
+\index{init\+With\+Dictionary\+:@{init\+With\+Dictionary\+:}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{init\+With\+Dictionary\+:()}{initWithDictionary:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Dictionary\+: \begin{DoxyParamCaption}\item[{(N\+S\+Dictionary $\ast$)}]{data }\end{DoxyParamCaption}}
+
+create a \hyperlink{interface_poynt_transaction_object}{Poynt\+Transaction\+Object} using an appropriate formated dictionary object 
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_transaction_object_aaab84b2e5d0ad0f648e7e0e17c6afa08}{}\label{interface_poynt_transaction_object_aaab84b2e5d0ad0f648e7e0e17c6afa08} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!action@{action}}
+\index{action@{action}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) action\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+action of this object  \textquotesingle{}A\+U\+T\+H\+O\+R\+I\+ZE\textquotesingle{}, \textquotesingle{}C\+A\+P\+T\+U\+RE\textquotesingle{}, \textquotesingle{}O\+F\+F\+L\+I\+N\+E\+\_\+\+A\+U\+T\+H\+O\+R\+I\+ZE\textquotesingle{}, \textquotesingle{}R\+E\+F\+U\+ND\textquotesingle{}, \textquotesingle{}S\+A\+LE\textquotesingle{}, most commonly set by server 
+
+
+
+Definition at line 29 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c}{}\label{interface_poynt_transaction_object_a5ab449d070271ee2c9d138bb7b472a6c} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!amounts@{amounts}}
+\index{amounts@{amounts}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{amounts}{amounts}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) amounts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+collection of \hyperlink{interface_poynt_transaction_amounts}{Poynt\+Transaction\+Amounts} objects 
+
+
+
+Definition at line 33 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7}{}\label{interface_poynt_transaction_object_a97674af3143e04f09bbc6590dab812d7} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!context@{context}}
+\index{context@{context}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) context\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+Contains context about the transaction. 
+
+Definition at line 42 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943}{}\label{interface_poynt_transaction_object_ab4cac3360e86d21570d89915c99e6943} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!funding\+Source@{funding\+Source}}
+\index{funding\+Source@{funding\+Source}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{funding\+Source}{fundingSource}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) funding\+Source\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+collection of funding source objects used for funding this transaction. \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]at current, we are not populating this field. Developers have access to the data in \hyperlink{interface_poynt_transaction_response_object_a0046f618ca04fd1e7fcf91b87190a944}{Poynt\+Transaction\+Response\+Object.\+raw\+Json} propety \end{DoxyRefDesc}
+
+
+Definition at line 38 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_af3bd537ec19ed3fac0b5aa56812a1577}{}\label{interface_poynt_transaction_object_af3bd537ec19ed3fac0b5aa56812a1577} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!poynt\+Request\+Id@{poynt\+Request\+Id}}
+\index{poynt\+Request\+Id@{poynt\+Request\+Id}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{poynt\+Request\+Id}{poyntRequestId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) poynt\+Request\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+U\+U\+I\+D\+String representing this object. 
+
+
+
+Definition at line 16 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384}{}\label{interface_poynt_transaction_object_a2bdc3d5a4da018a352f33b946a0ea384} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!references@{references}}
+\index{references@{references}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{references}{references}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) references\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+References to orders/invoices that this transaction is for. 
+
+
+
+Definition at line 46 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_ac2acf327011ce6ed9e26a41ceddaee31}{}\label{interface_poynt_transaction_object_ac2acf327011ce6ed9e26a41ceddaee31} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!status@{status}}
+\index{status@{status}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+current status of this object. Mostly commonly set server side\+: \textquotesingle{}C\+R\+E\+A\+T\+ED\textquotesingle{}, \textquotesingle{}S\+A\+V\+ED\textquotesingle{}, \textquotesingle{}A\+U\+T\+H\+O\+R\+I\+Z\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+C\+A\+P\+T\+U\+R\+ED\textquotesingle{}, \textquotesingle{}C\+A\+P\+T\+U\+R\+ED\textquotesingle{}, \textquotesingle{}D\+E\+C\+L\+I\+N\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+C\+A\+P\+T\+U\+R\+E\+D\+\_\+\+A\+N\+D\+\_\+\+P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}P\+A\+R\+T\+I\+A\+L\+L\+Y\+\_\+\+R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}R\+E\+F\+U\+N\+D\+ED\textquotesingle{}, \textquotesingle{}V\+O\+I\+D\+ED\textquotesingle{} 
+
+
+
+Definition at line 24 of file Poynt\+Transaction\+Object.\+h.
+
+\hypertarget{interface_poynt_transaction_object_aacd11580c330a78310c344d78baecf8c}{}\label{interface_poynt_transaction_object_aacd11580c330a78310c344d78baecf8c} 
+\index{Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}!transaction\+Id@{transaction\+Id}}
+\index{transaction\+Id@{transaction\+Id}!Poynt\+Transaction\+Object@{Poynt\+Transaction\+Object}}
+\subsubsection{\texorpdfstring{transaction\+Id}{transactionId}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) transaction\+Id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+U\+U\+I\+D\+String representing a Poynt transaction id. 
+
+
+
+Definition at line 20 of file Poynt\+Transaction\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_transaction_object_8h}{Poynt\+Transaction\+Object.\+h}\end{DoxyCompactItemize}

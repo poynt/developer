@@ -1,0 +1,81 @@
+.TH "PoyntTerminal" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntTerminal \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntTerminal\&.h>\fP
+.PP
+Inherits NSObject\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(id) \- \fBinitWithService:\fP"
+.br
+.RI "only use initWithService to create a \fBPoyntTerminal\fP object "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBname\fP"
+.br
+.RI "the name of the terminal "
+.ti -1c
+.RI "NSString * \fBip\fP"
+.br
+.RI "the ip of the terminal  In the event the terminal identifies an explicit port for pairing, it will be found here "
+.ti -1c
+.RI "NSURL * \fBurl\fP"
+.br
+.RI "the url object for connecting with this terminal "
+.ti -1c
+.RI "NSNetService * \fBservice\fP"
+.br
+.RI "PoyntLib SDK utilized bonjour over WIFI to detect terminals\&. The service object is engaged when we reach for pairing the device to client  Use \fBPoyntTerminalDiscover\fP to find the service\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntTerminal\fP  \fBPoyntTerminal\fP objects are useful during ther terminal discovery phase when on the same WIFI network\&. 
+.PP
+Definition at line 14 of file PoyntTerminal\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (id) initWithService: (NSNetService *) service"
+
+.PP
+only use initWithService to create a \fBPoyntTerminal\fP object 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) ip\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+the ip of the terminal  In the event the terminal identifies an explicit port for pairing, it will be found here 
+.PP
+Definition at line 23 of file PoyntTerminal\&.h\&.
+.SS "\- (NSString*) name\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+the name of the terminal 
+.PP
+Definition at line 18 of file PoyntTerminal\&.h\&.
+.SS "\- (NSNetService*) service\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+PoyntLib SDK utilized bonjour over WIFI to detect terminals\&. The service object is engaged when we reach for pairing the device to client  Use \fBPoyntTerminalDiscover\fP to find the service\&. 
+.PP
+Definition at line 32 of file PoyntTerminal\&.h\&.
+.SS "\- (NSURL*) url\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+the url object for connecting with this terminal 
+.PP
+Definition at line 27 of file PoyntTerminal\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

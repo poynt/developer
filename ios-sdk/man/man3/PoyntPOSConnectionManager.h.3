@@ -1,0 +1,99 @@
+.TH "PoyntLib/PoyntPOSConnectionManager.h" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntLib/PoyntPOSConnectionManager.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#import <Foundation/Foundation\&.h>\fP
+.br
+\fC#import 'PoyntTransaction\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBPoyntPOSConnectionManager\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(^ \fBOnTransactionResponse\fP) (\fBPoyntTransactionResponseObject\fP *data, \fBPoyntActionType\fP type)"
+.br
+.ti -1c
+.RI "typedef void(^ \fBOnError\fP) (NSError *error, \fBPoyntActionType\fP type)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPoyntActionType\fP { \fBUndefined\fP, \fBAuthorizeCapture\fP, \fBAuthorizeCompletion\fP, \fBAuthorizePair\fP, \fBAuthorizePreSales\fP, \fBAuthorizePartialCompletion\fP, \fBAuthorizePartialRefund\fP, \fBAuthorizeRefund\fP, \fBAuthorizeSales\fP, \fBAuthorizeVoid\fP, \fBAuthorizeVoidPreSales\fP, \fBAuthorizeAdjustment\fP }"
+.br
+.ti -1c
+.RI "enum \fBPoyntPOSPairingStatus\fP { \fBUnPaired\fP, \fBPairing\fP, \fBPaired\fP }"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void(^ OnError) (NSError *error, \fBPoyntActionType\fP type)"
+
+.PP
+Definition at line 37 of file PoyntPOSConnectionManager\&.h\&.
+.SS "typedef void(^ OnTransactionResponse) (\fBPoyntTransactionResponseObject\fP *data, \fBPoyntActionType\fP type)"
+
+.PP
+Definition at line 36 of file PoyntPOSConnectionManager\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBPoyntActionType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUndefined \fP\fP
+.TP
+\fB\fIAuthorizeCapture \fP\fP
+.TP
+\fB\fIAuthorizeCompletion \fP\fP
+.TP
+\fB\fIAuthorizePair \fP\fP
+.TP
+\fB\fIAuthorizePreSales \fP\fP
+.TP
+\fB\fIAuthorizePartialCompletion \fP\fP
+.TP
+\fB\fIAuthorizePartialRefund \fP\fP
+.TP
+\fB\fIAuthorizeRefund \fP\fP
+.TP
+\fB\fIAuthorizeSales \fP\fP
+.TP
+\fB\fIAuthorizeVoid \fP\fP
+.TP
+\fB\fIAuthorizeVoidPreSales \fP\fP
+.TP
+\fB\fIAuthorizeAdjustment \fP\fP
+.PP
+Definition at line 15 of file PoyntPOSConnectionManager\&.h\&.
+.SS "enum \fBPoyntPOSPairingStatus\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUnPaired \fP\fP
+.TP
+\fB\fIPairing \fP\fP
+.TP
+\fB\fIPaired \fP\fP
+.PP
+Definition at line 30 of file PoyntPOSConnectionManager\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

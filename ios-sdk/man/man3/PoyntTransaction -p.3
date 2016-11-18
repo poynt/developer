@@ -1,0 +1,68 @@
+.TH "<PoyntTransaction >" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+<PoyntTransaction > \- When in doubt (or lazy) default to a \fBPoyntTransactionObject\fP\&. In cases where it is optimal to keep clear seperation, subscribe to \fBPoyntTransaction\fP \&. The transactionId property and dictionaryObject method are required\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntTransaction\&.h>\fP
+.PP
+Inherits <NSObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(NSDictionary *) \- \fBdictionaryObject\fP"
+.br
+.RI "dictionary representation of this object "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSString * \fBtransactionId\fP"
+.br
+.RI "required property representing a transactionId from past terminal requests, or a new transactionId for creating transaction (eg sale or preSale) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+When in doubt (or lazy) default to a \fBPoyntTransactionObject\fP\&. In cases where it is optimal to keep clear seperation, subscribe to \fBPoyntTransaction\fP \&. The transactionId property and dictionaryObject method are required\&. 
+
+\fBPoyntTransaction\&.h\fP 
+.PP
+Definition at line 17 of file PoyntTransaction\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (NSDictionary*) dictionaryObject "
+
+.PP
+dictionary representation of this object the dictionary object is most commonly used in cases to serialize data for making requests\&.
+.PP
+\fBReturns:\fP
+.RS 4
+dictionary 
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) transactionId\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [copy]\fP"
+
+.PP
+required property representing a transactionId from past terminal requests, or a new transactionId for creating transaction (eg sale or preSale) Poynt terminal requires both a url and pairingCode to establish a connection for passing data\&.
+.PP
+\fBReturns:\fP
+.RS 4
+string - commonly in the format of \fC\fP[[NSUUID UUID] UUIDString] 
+.RE
+.PP
+
+.PP
+Definition at line 26 of file PoyntTransaction\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

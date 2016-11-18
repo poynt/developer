@@ -1,0 +1,81 @@
+.TH "PoyntPaymentAmountObject" 3 "Fri Nov 18 2016" "Version 0.1" "Poynt-iOS-SDK" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PoyntPaymentAmountObject \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#import <PoyntPaymentAmountObject\&.h>\fP
+.PP
+Inherits NSObject, and <PoyntSerializedObject>\&.
+.SS "Instance Methods"
+
+.in +1c
+.ti -1c
+.RI "(void) \- \fBcalculate:\fP"
+.br
+.RI "call the calculate method to refresh the properites of this object\&. The SDK occasionly calls calculate on this object, and will always call for a fresh calculation immediately before sending a request to the terminal\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "NSInteger \fBsubTotal\fP"
+.br
+.RI "total sum of unitPrice * quantity for each item in and order "
+.ti -1c
+.RI "NSInteger \fBdiscountTotal\fP"
+.br
+.RI "total sum of discounts for each item in and order plus sum of discounts applied to the order itself "
+.ti -1c
+.RI "NSInteger \fBtaxTotal\fP"
+.br
+.RI "total sum of tax for each item in and order "
+.ti -1c
+.RI "NSString * \fBcurrency\fP"
+.br
+.RI "currency of this payment amount  this field defaults to USD\&. When attached to an order descended from a payment, it will inherit currency from the order's payment object "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPoyntPaymentAmountObject\fP  the payment amount storage object responsible for calculating totals , taxes and discounts for a \fBPoyntOrderObject\fP 
+.PP
+Definition at line 16 of file PoyntPaymentAmountObject\&.h\&.
+.SH "Method Documentation"
+.PP 
+.SS "\- (void) calculate: (\fBPoyntOrderObject\fP *) order"
+
+.PP
+call the calculate method to refresh the properites of this object\&. The SDK occasionly calls calculate on this object, and will always call for a fresh calculation immediately before sending a request to the terminal\&. 
+.SH "Property Documentation"
+.PP 
+.SS "\- (NSString*) currency\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [strong]\fP"
+
+.PP
+currency of this payment amount  this field defaults to USD\&. When attached to an order descended from a payment, it will inherit currency from the order's payment object 
+.PP
+Definition at line 33 of file PoyntPaymentAmountObject\&.h\&.
+.SS "\- (NSInteger) discountTotal\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+total sum of discounts for each item in and order plus sum of discounts applied to the order itself 
+.PP
+Definition at line 24 of file PoyntPaymentAmountObject\&.h\&.
+.SS "\- (NSInteger) subTotal\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+total sum of unitPrice * quantity for each item in and order 
+.PP
+Definition at line 20 of file PoyntPaymentAmountObject\&.h\&.
+.SS "\- (NSInteger) taxTotal\fC [read]\fP, \fC [write]\fP, \fC [nonatomic]\fP, \fC [assign]\fP"
+
+.PP
+total sum of tax for each item in and order 
+.PP
+Definition at line 28 of file PoyntPaymentAmountObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Poynt-iOS-SDK from the source code\&.

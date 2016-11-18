@@ -1,0 +1,215 @@
+\hypertarget{interface_poynt_order_item_object}{}\section{Poynt\+Order\+Item\+Object Class Reference}
+\label{interface_poynt_order_item_object}\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+
+
+{\ttfamily \#import $<$Poynt\+Order\+Item\+Object.\+h$>$}
+
+Inheritance diagram for Poynt\+Order\+Item\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_poynt_order_item_object}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_poynt_order_item_object_a9af033018e30ae4ea14b2425c449e443}{init\+With\+Sku\+:unit\+Price\+:quantity\+:}
+\begin{DoxyCompactList}\small\item\em initialization that will set the sku , unit\+Price and quantity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_item_object_a1748706da6a2d9e7513e0075dadfc348}{client\+Notes}
+\begin{DoxyCompactList}\small\item\em merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_order_item_object_a203259381417b0a34916ce3f864161c2}{discounts}
+\begin{DoxyCompactList}\small\item\em array of \hyperlink{interface_poynt_discount_object}{Poynt\+Discount\+Object} objects  items can have multiple discounts for various reasons. Store them here \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_item_object_a4b93d352d2fca75b34e1b5a50e03f587}{name}
+\begin{DoxyCompactList}\small\item\em human friendly name for this item.  The name can be any string and does not need to be unique \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_item_object_a40fae7616715aeb5f241af769a5f55b4}{sku}
+\begin{DoxyCompactList}\small\item\em sku  Sku of the item. \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_poynt_order_item_object_ac2acf327011ce6ed9e26a41ceddaee31}{status}
+\begin{DoxyCompactList}\small\item\em Status of the item  this is traditionaly set by the system and is likely \textquotesingle{}O\+R\+D\+E\+R\+ED\textquotesingle{}, \textquotesingle{}F\+U\+L\+F\+I\+L\+L\+ED\textquotesingle{}, \textquotesingle{}R\+E\+T\+U\+R\+N\+ED\textquotesingle{}. \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface_poynt_order_item_object_a24101b932074a386b535ab58e819bf71}{taxes}
+\begin{DoxyCompactList}\small\item\em array of \hyperlink{interface_poynt_order_item_tax}{Poynt\+Order\+Item\+Tax} objects  like discounts, various taxes may be applied to an item \end{DoxyCompactList}\item 
+\hyperlink{_poynt_order_item_object_8h_a7a5dd044bd57739d1d1b3e3565fbac25}{Unit\+Of\+Measure} \hyperlink{interface_poynt_order_item_object_a8381a2b60fb912bab67a5218ba3ad058}{unit\+Of\+Measure}
+\begin{DoxyCompactList}\small\item\em Unit\+Of\+Measure  Unit of measure for the quantity. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_order_item_object_a4655acbe158688f583828a9a3b61a6aa}{unit\+Price}
+\begin{DoxyCompactList}\small\item\em price per item in cents \end{DoxyCompactList}\item 
+float \hyperlink{interface_poynt_order_item_object_ab39715c10682638e342e25893caa7372}{quantity}
+\begin{DoxyCompactList}\small\item\em Quantity purchased.  Note this could be in decimals, e.\+g. 2.\+3 Kgs. \end{DoxyCompactList}\item 
+N\+S\+Integer \hyperlink{interface_poynt_order_item_object_a23a4b2c80d04d250fb56741b46a2cb0d}{tax}
+\begin{DoxyCompactList}\small\item\em Total tax amount applied on this group of items (not just 1 unit).  If not specified, but the taxes array is present the server will automatically sum up the amounts in taxes array and populate this. If not specified and taxes array is empty, this will default to 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_poynt_order_item_object}{Poynt\+Order\+Item\+Object}  order items are essential for the makeup of a \hyperlink{interface_poynt_payment_object}{Poynt\+Payment\+Object}. All order items declare their amount (in cents) and other details attached to accurately describe payments
+
+
+\begin{DoxyCode}
+\hyperlink{interface_poynt_order_item_object}{PoyntOrderItemObject} *item  = [[\hyperlink{interface_poynt_order_item_object}{PoyntOrderItemObject} alloc] 
+      initWithSku:\textcolor{stringliteral}{"unique.sku.name"} \hyperlink{interface_poynt_order_item_object_a4655acbe158688f583828a9a3b61a6aa}{unitPrice}:200 \hyperlink{interface_poynt_order_item_object_ab39715c10682638e342e25893caa7372}{quantity}:2.1];
+\end{DoxyCode}
+ 
+
+Definition at line 54 of file Poynt\+Order\+Item\+Object.\+h.
+
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_poynt_order_item_object_a9af033018e30ae4ea14b2425c449e443}{}\label{interface_poynt_order_item_object_a9af033018e30ae4ea14b2425c449e443} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!init\+With\+Sku\+:unit\+Price\+:quantity\+:@{init\+With\+Sku\+:unit\+Price\+:quantity\+:}}
+\index{init\+With\+Sku\+:unit\+Price\+:quantity\+:@{init\+With\+Sku\+:unit\+Price\+:quantity\+:}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{init\+With\+Sku\+:unit\+Price\+:quantity\+:()}{initWithSku:unitPrice:quantity:()}}
+{\footnotesize\ttfamily -\/ (id) init\+With\+Sku\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{sku }\item[{unitPrice:(N\+S\+Integer)}]{unit\+Price }\item[{quantity:(float)}]{quantity }\end{DoxyParamCaption}}
+
+
+
+initialization that will set the sku , unit\+Price and quantity 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_poynt_order_item_object_a1748706da6a2d9e7513e0075dadfc348}{}\label{interface_poynt_order_item_object_a1748706da6a2d9e7513e0075dadfc348} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!client\+Notes@{client\+Notes}}
+\index{client\+Notes@{client\+Notes}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{client\+Notes}{clientNotes}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) client\+Notes\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+merchant notes for human readablity  the notes field can be used to document information that is not imperative, but useful to merchants 
+
+
+
+Definition at line 59 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a203259381417b0a34916ce3f864161c2}{}\label{interface_poynt_order_item_object_a203259381417b0a34916ce3f864161c2} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!discounts@{discounts}}
+\index{discounts@{discounts}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{discounts}{discounts}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) discounts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+array of \hyperlink{interface_poynt_discount_object}{Poynt\+Discount\+Object} objects  items can have multiple discounts for various reasons. Store them here 
+
+
+
+Definition at line 64 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a4b93d352d2fca75b34e1b5a50e03f587}{}\label{interface_poynt_order_item_object_a4b93d352d2fca75b34e1b5a50e03f587} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!name@{name}}
+\index{name@{name}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+human friendly name for this item.  The name can be any string and does not need to be unique 
+
+
+
+Definition at line 69 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_ab39715c10682638e342e25893caa7372}{}\label{interface_poynt_order_item_object_ab39715c10682638e342e25893caa7372} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!quantity@{quantity}}
+\index{quantity@{quantity}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{quantity}{quantity}}
+{\footnotesize\ttfamily -\/ (float) quantity\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Quantity purchased.  Note this could be in decimals, e.\+g. 2.\+3 Kgs. 
+
+
+
+Definition at line 98 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a40fae7616715aeb5f241af769a5f55b4}{}\label{interface_poynt_order_item_object_a40fae7616715aeb5f241af769a5f55b4} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!sku@{sku}}
+\index{sku@{sku}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{sku}{sku}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) sku\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+sku  Sku of the item. 
+
+
+
+Definition at line 74 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_ac2acf327011ce6ed9e26a41ceddaee31}{}\label{interface_poynt_order_item_object_ac2acf327011ce6ed9e26a41ceddaee31} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!status@{status}}
+\index{status@{status}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+Status of the item  this is traditionaly set by the system and is likely \textquotesingle{}O\+R\+D\+E\+R\+ED\textquotesingle{}, \textquotesingle{}F\+U\+L\+F\+I\+L\+L\+ED\textquotesingle{}, \textquotesingle{}R\+E\+T\+U\+R\+N\+ED\textquotesingle{}. 
+
+
+
+Definition at line 79 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a23a4b2c80d04d250fb56741b46a2cb0d}{}\label{interface_poynt_order_item_object_a23a4b2c80d04d250fb56741b46a2cb0d} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!tax@{tax}}
+\index{tax@{tax}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{tax}{tax}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) tax\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Total tax amount applied on this group of items (not just 1 unit).  If not specified, but the taxes array is present the server will automatically sum up the amounts in taxes array and populate this. If not specified and taxes array is empty, this will default to 0. 
+
+
+
+Definition at line 103 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a24101b932074a386b535ab58e819bf71}{}\label{interface_poynt_order_item_object_a24101b932074a386b535ab58e819bf71} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!taxes@{taxes}}
+\index{taxes@{taxes}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{taxes}{taxes}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) taxes\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+array of \hyperlink{interface_poynt_order_item_tax}{Poynt\+Order\+Item\+Tax} objects  like discounts, various taxes may be applied to an item 
+
+
+
+Definition at line 84 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a8381a2b60fb912bab67a5218ba3ad058}{}\label{interface_poynt_order_item_object_a8381a2b60fb912bab67a5218ba3ad058} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!unit\+Of\+Measure@{unit\+Of\+Measure}}
+\index{unit\+Of\+Measure@{unit\+Of\+Measure}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{unit\+Of\+Measure}{unitOfMeasure}}
+{\footnotesize\ttfamily -\/ (\hyperlink{_poynt_order_item_object_8h_a7a5dd044bd57739d1d1b3e3565fbac25}{Unit\+Of\+Measure}) unit\+Of\+Measure\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Unit\+Of\+Measure  Unit of measure for the quantity. 
+
+
+
+Definition at line 89 of file Poynt\+Order\+Item\+Object.\+h.
+
+\hypertarget{interface_poynt_order_item_object_a4655acbe158688f583828a9a3b61a6aa}{}\label{interface_poynt_order_item_object_a4655acbe158688f583828a9a3b61a6aa} 
+\index{Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}!unit\+Price@{unit\+Price}}
+\index{unit\+Price@{unit\+Price}!Poynt\+Order\+Item\+Object@{Poynt\+Order\+Item\+Object}}
+\subsubsection{\texorpdfstring{unit\+Price}{unitPrice}}
+{\footnotesize\ttfamily -\/ (N\+S\+Integer) unit\+Price\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+price per item in cents 
+
+
+
+Definition at line 93 of file Poynt\+Order\+Item\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Poynt\+Lib/models/\hyperlink{_poynt_order_item_object_8h}{Poynt\+Order\+Item\+Object.\+h}\end{DoxyCompactItemize}
