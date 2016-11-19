@@ -55,7 +55,7 @@ N\+S\+Integer \hyperlink{interface_poynt_p_o_s_connection_manager_ad4ac67644bd59
 \subsection{Detailed Description}
 The connection manager is the gateway class to communicating with the Poynt terminal.  This object handles all things from pairing to transaction / payment specific requests 
 
-Definition at line 43 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 52 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 
 
@@ -258,7 +258,7 @@ string for a human readable client name on the Poynt terminal
 \end{DoxyReturn}
 
 
-Definition at line 51 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 60 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_a2ea439a383295e69bc2094a614e3b6fb}{}\label{interface_poynt_p_o_s_connection_manager_a2ea439a383295e69bc2094a614e3b6fb} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!on\+Error@{on\+Error}}
@@ -270,7 +270,7 @@ Definition at line 51 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 use the On\+Error block to capture the fail state response from the Poynt terminal in the event of an error 
 
-the block will contain an N\+S\+Error object and Poynt\+Action\+Type enum
+the block will contain an N\+S\+Error object and {\ttfamily Poynt\+Action\+Type} enum
 
 
 \begin{DoxyCode}
@@ -281,7 +281,7 @@ the block will contain an N\+S\+Error object and Poynt\+Action\+Type enum
 \end{DoxyCode}
  
 
-Definition at line 121 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 133 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_aec722c6cb0f961265852a406242c430b}{}\label{interface_poynt_p_o_s_connection_manager_aec722c6cb0f961265852a406242c430b} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!on\+Transaction\+Response@{on\+Transaction\+Response}}
@@ -295,6 +295,9 @@ use the On\+Transaction\+Response block to capture the response from the Poynt t
 
 the block will contain a \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object} object and Poynt\+Action\+Type enum to clarify from which method is being calledback
 
+\begin{DoxyNote}{Note}
+While receiving this callback does mean that there were not errors in the request, it is not a guarantee that all results were as expected. It is important to verify results from the {\ttfamily \hyperlink{interface_poynt_transaction_response_object}{Poynt\+Transaction\+Response\+Object}} that is returned in this callback.
+\end{DoxyNote}
 
 \begin{DoxyCode}
 [paymentManager setOnTransactionResponse:^void(\hyperlink{interface_poynt_transaction_response_object}{PoyntTransactionResponseObject}
@@ -309,7 +312,7 @@ the block will contain a \hyperlink{interface_poynt_transaction_response_object}
 \end{DoxyCode}
  
 
-Definition at line 108 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 120 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_afb57bf61e0a6b264b5f2765f09a96d2b}{}\label{interface_poynt_p_o_s_connection_manager_afb57bf61e0a6b264b5f2765f09a96d2b} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!pairing\+Code@{pairing\+Code}}
@@ -328,7 +331,7 @@ string an alpha numeric code for pairing.
 \end{DoxyReturn}
 
 
-Definition at line 59 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 68 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_ac623b382557bedf15142de86ee6e2782}{}\label{interface_poynt_p_o_s_connection_manager_ac623b382557bedf15142de86ee6e2782} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!pairing\+Status@{pairing\+Status}}
@@ -345,7 +348,7 @@ enum
 \end{DoxyReturn}
 
 
-Definition at line 90 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 99 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_ad4ac67644bd591b45e7e45448681872d}{}\label{interface_poynt_p_o_s_connection_manager_ad4ac67644bd591b45e7e45448681872d} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!timeout@{timeout}}
@@ -364,7 +367,7 @@ N\+S\+Integer
 \end{DoxyReturn}
 
 
-Definition at line 83 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 92 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{interface_poynt_p_o_s_connection_manager_a43481294fa1d2f0ebe7cff14b17726cc}{}\label{interface_poynt_p_o_s_connection_manager_a43481294fa1d2f0ebe7cff14b17726cc} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager@{Poynt\+P\+O\+S\+Connection\+Manager}!url@{url}}
@@ -392,7 +395,7 @@ string for an ip address, including port if necessary.
 \end{DoxySeeAlso}
 
 
-Definition at line 74 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 83 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 
 

@@ -32,12 +32,12 @@ enum \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e
 \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7ae0256f2a208e083e1bcc486aea937b39}{Authorize\+Void}, 
 \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a7cb7b2f13ef87f14d188f2a0f201faad}{Authorize\+Void\+Pre\+Sales}, 
 \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a1fe6a1ba904e49baf51ec1b65455273f}{Authorize\+Adjustment}
- \}
+ \}\begin{DoxyCompactList}\small\item\em The available type of actions for the {\ttfamily \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager}}  after calling an action on connection manager, the {\ttfamily On\+Transaction\+Response} or {\ttfamily On\+Error} block will be calledback. These callbacks contain the action type enum to help identify which action is being returned values in the event multiple requests were made. \end{DoxyCompactList}
 \item 
 enum \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status} \{ \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50}{Un\+Paired}, 
 \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513baa59f3429231e0c946c93e04d32430ab1}{Pairing}, 
 \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba3e33093c515b4cc0447bf0291331f46a}{Paired}
- \}
+ \}\begin{DoxyCompactList}\small\item\em The current pairing/connection status of a {\ttfamily \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager}} \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 
 
@@ -50,7 +50,7 @@ enum \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263
 
 
 
-Definition at line 37 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 46 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800}{}\label{_poynt_p_o_s_connection_manager_8h_ae268209596a83d1d61f8ce4f2513d800} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!On\+Transaction\+Response@{On\+Transaction\+Response}}
@@ -60,7 +60,7 @@ Definition at line 37 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 
 
-Definition at line 36 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 45 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 
 
@@ -70,6 +70,10 @@ Definition at line 36 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 \index{Poynt\+Action\+Type@{Poynt\+Action\+Type}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
 \subsubsection{\texorpdfstring{Poynt\+Action\+Type}{PoyntActionType}}
 {\footnotesize\ttfamily enum \hyperlink{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7}{Poynt\+Action\+Type}}
+
+
+
+The available type of actions for the {\ttfamily \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager}}  after calling an action on connection manager, the {\ttfamily On\+Transaction\+Response} or {\ttfamily On\+Error} block will be calledback. These callbacks contain the action type enum to help identify which action is being returned values in the event multiple requests were made. 
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Undefined@{Undefined}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a18f893264a00711081b62de694f99db4}{}\label{_poynt_p_o_s_connection_manager_8h_a9d1a2639d9b9775a21d4c181160e7af7a18f893264a00711081b62de694f99db4} 
@@ -123,13 +127,17 @@ Authorize\+Adjustment&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 15 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 21 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 
 \hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b} 
 \index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Poynt\+P\+O\+S\+Pairing\+Status@{Poynt\+P\+O\+S\+Pairing\+Status}}
 \index{Poynt\+P\+O\+S\+Pairing\+Status@{Poynt\+P\+O\+S\+Pairing\+Status}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}
 \subsubsection{\texorpdfstring{Poynt\+P\+O\+S\+Pairing\+Status}{PoyntPOSPairingStatus}}
 {\footnotesize\ttfamily enum \hyperlink{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513b}{Poynt\+P\+O\+S\+Pairing\+Status}}
+
+
+
+The current pairing/connection status of a {\ttfamily \hyperlink{interface_poynt_p_o_s_connection_manager}{Poynt\+P\+O\+S\+Connection\+Manager}} 
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Un\+Paired@{Un\+Paired}!Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}}\index{Poynt\+P\+O\+S\+Connection\+Manager.\+h@{Poynt\+P\+O\+S\+Connection\+Manager.\+h}!Un\+Paired@{Un\+Paired}}}\hypertarget{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50}{}\label{_poynt_p_o_s_connection_manager_8h_af6bc4a828ea6541e27d04eef1263513ba1871b19cbd721f8de5e0759259b59e50} 
@@ -147,5 +155,5 @@ Paired&\\
 \end{DoxyEnumFields}
 
 
-Definition at line 30 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
+Definition at line 39 of file Poynt\+P\+O\+S\+Connection\+Manager.\+h.
 

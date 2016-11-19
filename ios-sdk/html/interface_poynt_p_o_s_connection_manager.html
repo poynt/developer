@@ -160,7 +160,7 @@ Properties</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The connection manager is the gateway class to communicating with the Poynt terminal.  This object handles all things from pairing to transaction / payment specific requests </p>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00043">43</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00052">52</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 </div><h2 class="groupheader">Method Documentation</h2>
 <a id="a5a35b99719ec02d91ec102d75a49bd7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a35b99719ec02d91ec102d75a49bd7a">&sect;&nbsp;</a></span>authorizeAdjustment:()</h2>
@@ -457,7 +457,7 @@ Properties</h2></td></tr>
 <p>When Poynt terminal pairs with an iOS client, it will display the name of the client and the pairingCode used to make the connection.</p>
 <dl class="section return"><dt>Returns</dt><dd>string for a human readable client name on the Poynt terminal </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00051">51</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00060">60</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -482,9 +482,9 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>use the OnError block to capture the fail state response from the Poynt terminal in the event of an error </p>
-<p>the block will contain an NSError object and PoyntActionType enum</p>
+<p>the block will contain an NSError object and <code>PoyntActionType</code> enum</p>
 <div class="fragment"><div class="line">[paymentManager setOnError:^void(NSError *error, <a class="code" href="_poynt_p_o_s_connection_manager_8h.html#a9d1a2639d9b9775a21d4c181160e7af7">PoyntActionType</a> actionType){</div><div class="line"></div><div class="line">}];</div><div class="line">[paymentManager authorizeCapture:transactionObject]</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00121">121</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00133">133</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -510,8 +510,9 @@ Properties</h2></td></tr>
 
 <p>use the OnTransactionResponse block to capture the response from the Poynt terminal after a successful request completes </p>
 <p>the block will contain a <a class="el" href="interface_poynt_transaction_response_object.html" title="A PoyntTransactionResponseObject is the response from a succesful terminal request. It is not a guarantee that the intended request has the results desired (see responseError) and can be further understood by its properties. ">PoyntTransactionResponseObject</a> object and PoyntActionType enum to clarify from which method is being calledback</p>
+<dl class="section note"><dt>Note</dt><dd>While receiving this callback does mean that there were not errors in the request, it is not a guarantee that all results were as expected. It is important to verify results from the <code><a class="el" href="interface_poynt_transaction_response_object.html" title="A PoyntTransactionResponseObject is the response from a succesful terminal request. It is not a guarantee that the intended request has the results desired (see responseError) and can be further understood by its properties. ">PoyntTransactionResponseObject</a></code> that is returned in this callback.</dd></dl>
 <div class="fragment"><div class="line">[paymentManager setOnTransactionResponse:^void(<a class="code" href="interface_poynt_transaction_response_object.html">PoyntTransactionResponseObject</a> *data,<a class="code" href="_poynt_p_o_s_connection_manager_8h.html#a9d1a2639d9b9775a21d4c181160e7af7">PoyntActionType</a> actionType){</div><div class="line">   <span class="keywordflow">if</span>(actionType == <a class="code" href="_poynt_p_o_s_connection_manager_8h.html#a9d1a2639d9b9775a21d4c181160e7af7aadbbca3ad6fc42c73fa7c69608f0a4d7">AuthorizePair</a>){</div><div class="line">       <span class="comment">// ... handle this case</span></div><div class="line">   }<span class="keywordflow">else</span>{</div><div class="line">       NSLog(<span class="stringliteral">@&quot;success for %@&quot;</span>,data);</div><div class="line">   }</div><div class="line">}];</div><div class="line">[paymentManager authorizeCapture:transactionObject]</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00108">108</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00120">120</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -539,7 +540,7 @@ Properties</h2></td></tr>
 <p>Poynt terminal requires both a url and pairingCode to establish a connection for passing data.</p>
 <dl class="section return"><dt>Returns</dt><dd>string an alpha numeric code for pairing. </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00059">59</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00068">68</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +567,7 @@ Properties</h2></td></tr>
 <p>readonly property for understanding the current pairing state of the <a class="el" href="interface_poynt_p_o_s_connection_manager.html">PoyntPOSConnectionManager</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>enum </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00090">90</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00099">99</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -594,7 +595,7 @@ Properties</h2></td></tr>
 <p>Timout is understood in milliseconds by the Poynt terminal. The timeout can be set previous to making a request, depending on what suits best for the client application. Setting a new timeout value is persitant until reset to a new value. The default value is 60000 ( = one minute)</p>
 <dl class="section return"><dt>Returns</dt><dd>NSInteger </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00083">83</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00092">92</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
@@ -623,7 +624,7 @@ Properties</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>string for an ip address, including port if necessary.</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">self</span>.paymentManager.url = <span class="stringliteral">@&quot;10.0.2.21:55555&quot;</span></div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="_poynt_terminal_discover_8h.html">PoyntTerminalDiscover.h</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00074">74</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
+<p>Definition at line <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html#l00083">83</a> of file <a class="el" href="_poynt_p_o_s_connection_manager_8h_source.html">PoyntPOSConnectionManager.h</a>.</p>
 
 </div>
 </div>
