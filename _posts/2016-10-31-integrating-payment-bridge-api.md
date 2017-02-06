@@ -25,9 +25,9 @@ Here is how it works:
 
 ### Poynt Message format
 
-e.g. `{"ttl": 500, "businessId": "d9f90edd-53d0-49ed-9589-22d92b9bfda4", "storeId": "8a545d2b-e5d8-4cf0-b766-0fe32870813b", "data": "{\"action\":\"sale\", \"purchaseAmount\": 1000, \"tipAmount\": 100, \"currency\":\"USD\", \"referenceId\":\"ABC1234\"}"}`
+e.g. `{"ttl": 500, "businessId": "d9f90edd-53d0-49ed-9589-22d92b9bfda4", "storeId": "8a545d2b-e5d8-4cf0-b766-0fe32870813b", "storeDeviceId": "urn:tid:9a645d2b-e3c8-7cf0-d766-9fe32870813b", "data": "{\"action\":\"sale\", \"purchaseAmount\": 1000, \"tipAmount\": 100, \"currency\":\"USD\", \"referenceId\":\"ABC1234\"}"}`
 
-* **storeId** and **businessId** of the merchant 
+* **storeId** and **businessId** of the merchant (and optionally **storeDeviceId**. If not included the payment request will be sent to all terminals in the store)
 * data is the actual payload:
   * Format: `{"action":"sale", "purchaseAmount": 1000, "tipAmount": 100, "currency":"USD", "referenceId":”ABC1234”, “callbackUrl”: “-urlencoded-url-"}`
   * **action**: authorize, sale, void, refund, non-referenced-credit
