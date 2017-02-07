@@ -43,7 +43,7 @@ Apps that are submitted for review and approved by Poynt will be made available 
 It's a simple 80/20 revenue split -- 80% to you (the developer), 20% to Poynt.<br><br>
 
 **When will an app marketplace be available to all merchants?**<br>
-Poynt will start strategic rollouts of app marketplaces in Q3/2016. We're currently piloting select apps with live merchants using Poynt terminals. If your app is merchant-ready and 
+Poynt will start strategic rollouts of app marketplaces in Q2/2017. We're currently piloting select apps with live merchants using Poynt terminals. If your app is merchant-ready and 
 you would like us to review it for inclusion in a pilot deployment program, we'd love to hear more at devrelations@poynt.com.<br><br>
 
 **What type of subscription models does Poynt support? How do I define those?**<br>
