@@ -40,7 +40,7 @@ Yes. From a technical standpoint, there is detailed information is in our SDK do
 Apps that are submitted for review and approved by Poynt will be made available to merchants for purchase/subscription (see marketplace question below). Invoicing and billing is managed by Poynt.<br><br>
 
 **What is the revenue share on app subscriptions?**<br>
-It's a simple 80/20 revenue split of Net Revenue (as defined in the Developer Distribution Agreement) -- 80% to you (the developer), 20% to Poynt.
+It's a simple 80/20 revenue split of Net Revenue (as defined in the Developer Distribution Agreement) -- 80% to you (the developer), 20% to Poynt.<br><br>
 
 **When will an app marketplace be available to all merchants?**<br>
 Poynt will start strategic rollouts of app marketplaces in Q2/2017. We're currently piloting select apps with live merchants using Poynt terminals. If your app is merchant-ready and 
