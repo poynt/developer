@@ -5,38 +5,6 @@ category: tut
 date: 2015-02-23 17:20:24
 ---
 
-<style>
-.alert{
-  position: relative;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 12px;
-  color: #264c72;
-  border: 1px solid #97c1da;
-  border-radius: 3px;
-  background-color: #d8ebf8;
-  background: -moz-linear-gradient(#d8ebf8, #d0e3ef);
-  background: -webkit-linear-gradient(#d8ebf8, #d0e3ef);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ebf8', endColorstr='#d0e3ef')";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .8)
-}
-.warning{
-  position: relative;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 12px;
-  color: #000000;
-  border: 1px solid #999999;
-  border-radius: 3px;
-  background-color: #f8fba8;
-  background: -moz-linear-gradient(#f8fba8, #F0F3Af);
-  background: -webkit-linear-gradient(#f8fba8, #F0F3Af);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8fba8', endColorstr='#F0F3Af')";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .8)
-}
-</style>
 
 Poynt Cloud APIs can be used to build applications in the cloud that can sync or process data, create and manage various resources (orders, customers, products, etc.) on-behalf of the merchant, build mobile applications for consumers that connect back to the merchant’s Poynt Terminal, and many more.
 
