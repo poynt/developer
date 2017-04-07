@@ -10,7 +10,7 @@ Poynt Cloud APIs can be used to build applications in the cloud that can sync or
 
 All Poynt APIs are built with commonly used RESTful design patterns in the industry. All APIs using the standard OAuth2.0 authentication & authorization framework and uses Json Web Tokens (aka JWTs) as bearer tokens.
 
-<div class="alert">
+<div class="note">
 <p>
   <strong>Note:</strong> If you already have an on-terminal app you can use it's appId to make cloud API calls without additional authorization from the merchant as long as the app is installed on their terminal.
 </p>

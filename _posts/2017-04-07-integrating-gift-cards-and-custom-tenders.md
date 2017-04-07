@@ -9,6 +9,8 @@ date: 2014-04-07 07:09:00
 
 PoyntOS architecture provides an extensible way to add new payment methods (custom tenders). This document describes how a developer can build a custom transaction processor by implemeting [IPoyntTransactionService](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntTransactionService.html) interface to create a gift card app for Poynt. While the scope of this document is to address integration with gift card providers this interface can be used to implement Loyalty, Discount or any other type of service that can create a custom tender transaction.
 
+[PoyntSamples app](https://github.com/poynt/PoyntSamples) has a sample implementation of a custom transaction processor.
+
 On a traditional terminal, a merchant would need to select a gift card option before swiping a gift card. Poynt Payment Fragment automatically determines whether or not the swiped card is a gift card based on it's BIN range and routes the transaction to the custom transaction processor. In addition, based on the configuration of the custom transaction processor you can add a button in the payment options screen of the payment fragment to process a non-swipe input (e.g. scan QR code, manually input gift card number, coupon code, etc).
 
 ## Integration Steps
