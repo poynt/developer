@@ -5,38 +5,6 @@ category: tut
 date: 2015-02-23 17:20:24
 ---
 
-<style>
-.alert{
-  position: relative;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 12px;
-  color: #264c72;
-  border: 1px solid #97c1da;
-  border-radius: 3px;
-  background-color: #d8ebf8;
-  background: -moz-linear-gradient(#d8ebf8, #d0e3ef);
-  background: -webkit-linear-gradient(#d8ebf8, #d0e3ef);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8ebf8', endColorstr='#d0e3ef')";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .8)
-}
-.warning{
-  position: relative;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 12px;
-  color: #000000;
-  border: 1px solid #999999;
-  border-radius: 3px;
-  background-color: #f8fba8;
-  background: -moz-linear-gradient(#f8fba8, #F0F3Af);
-  background: -webkit-linear-gradient(#f8fba8, #F0F3Af);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8fba8', endColorstr='#F0F3Af')";
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .8)
-}
-</style>
 
 Poynt Cloud APIs can be used to build applications in the cloud that can sync or process data, create and manage various resources (orders, customers, products, etc.) on-behalf of the merchant, build mobile applications for consumers that connect back to the merchant’s Poynt Terminal, and many more.
 
@@ -58,9 +26,9 @@ To consume Poynt APIs you must:
 4. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
 ![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_create_new_app2.png)
 5. Once a test merchant is created, go to  "DEVELOPMENT" > "Cloud apps" and   click on "CREATE A CLOUD APPLICATION", to create an application to integrate with Poynt APIs.
-6. Fill in all the required fields and submit.
+6. Fill in all the required fields and submit.<br/>
 ![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_new_app2.png){:height="800px" width="600px"}
-7. Save your newly created application credentials.
+7. Save your newly created application credentials.<br/>
 ![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_app_created_credentials2.png){:height="350" width="600"}
 
 8. Obtain merchant's permission to access Poynt APIs on behalf of them (access their data)
