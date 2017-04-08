@@ -29,8 +29,10 @@ As defined in OAuth 2.0 specification:
 
 It is recommended that when an application is about to make an API call, it should first check for the validity of the access token by checking it's expiry time. Note that due to clock synchronization issues, a token your app believes is valid might get rejected by Poynt Server as invalid/expired. Therefore, your app should always handle the case of receiving HTTP status code 401 (Unauthorized Request) by obtaining a new token using the refresh token.
 
-### Generating a JWT ###
-#### What does a JWT claim set look like? ####
+### Generating a JWT
+
+#### What does a JWT claim set look like?
+
 Sample JWT claim set:
 
 ~~~
@@ -58,57 +60,57 @@ Here's an explation of the JWT claims above:
 #### Example: Generating Self-Signed JWT in Java ####
 Here is a sample on how to generate a JWT using [nimbus JWT library](http://connect2id.com/products/nimbus-jose-jwt) for Java. To use the same libraries, please add the following dependencies in your maven/gradle files.
 
-~~~
+~~~groovy
 compile 'net.jcip:jcip-annotations:1.0@jar'
 compile 'com.nimbusds:nimbus-jose-jwt:3.9@jar'
 compile 'net.minidev:json-smart:1.2@jar'
 ~~~
 
 
-   Sample Java Code:
+Sample Java Code:
 
-   ~~~
-   // Create RSA-signer with the private key
-   JWSSigner signer = new RSASSASigner((RSAPrivateKey) keyPair.getPrivate());
+~~~java
+// Create RSA-signer with the private key
+JWSSigner signer = new RSASSASigner((RSAPrivateKey) keyPair.getPrivate());
 
-   // Audience for the cleaim set
-   final List < String > aud = new ArrayList < String > ();
-   aud.add(cloudConfig.getPoyntAPIHost());
+// Audience for the cleaim set
+final List < String > aud = new ArrayList < String > ();
+aud.add(cloudConfig.getPoyntAPIHost());
 
-   // Prepare JWT with claims set
-   JWTClaimsSet claimsSet = new JWTClaimsSet();
-   claimsSet.setAudience(aud);
-   claimsSet.setSubject(deviceMetaData.getStoreDeviceId());
-   claimsSet.setIssuer(deviceMetaData.getStoreDeviceId());
-   claimsSet.setIssueTime(Calendar.getInstance().getTime());
-   claimsSet.setExpirationTime(fiveMinutesFromNow());
-   claimsSet.setJWTID(UUID.randomUUID().toString());
-   if (appSettings != null) {
-      if (appSettings.getBusinessId() != null) {
-             claimsSet.setCustomClaim(Claims.POYNT_BIZ, appSettings.getBusinessId().toString());
-      }
-      if (appSettings.getStoreId() != null) {
-          claimsSet.setCustomClaim(Claims.POYNT_STORE, appSettings.getStoreId().toString());
-      }
-      if (appSettings.getStoreDeviceId() != null) {
-         claimsSet.setCustomClaim(Claims.POYNT_DEVICE_ID, deviceMetaData.getStoreDeviceId());
-      }
-   }
-   if (Strings.notEmpty(issuedTo)) {
-       claimsSet.setCustomClaim(Claims.POYNT_ISSUED_TO, issuedTo);
-   }
+// Prepare JWT with claims set
+JWTClaimsSet claimsSet = new JWTClaimsSet();
+claimsSet.setAudience(aud);
+claimsSet.setSubject(deviceMetaData.getStoreDeviceId());
+claimsSet.setIssuer(deviceMetaData.getStoreDeviceId());
+claimsSet.setIssueTime(Calendar.getInstance().getTime());
+claimsSet.setExpirationTime(fiveMinutesFromNow());
+claimsSet.setJWTID(UUID.randomUUID().toString());
+if (appSettings != null) {
+  if (appSettings.getBusinessId() != null) {
+         claimsSet.setCustomClaim(Claims.POYNT_BIZ, appSettings.getBusinessId().toString());
+  }
+  if (appSettings.getStoreId() != null) {
+      claimsSet.setCustomClaim(Claims.POYNT_STORE, appSettings.getStoreId().toString());
+  }
+  if (appSettings.getStoreDeviceId() != null) {
+     claimsSet.setCustomClaim(Claims.POYNT_DEVICE_ID, deviceMetaData.getStoreDeviceId());
+  }
+}
+if (Strings.notEmpty(issuedTo)) {
+   claimsSet.setCustomClaim(Claims.POYNT_ISSUED_TO, issuedTo);
+}
 
-   SignedJWT signedJWT = new SignedJWT(new JWSHeader(JWSAlgorithm.RS256), claimsSet);
+SignedJWT signedJWT = new SignedJWT(new JWSHeader(JWSAlgorithm.RS256), claimsSet);
 
-   // Compute the RSA Signature
-   signedJWT.sign(signer);
-   return signedJWT.serialize();
-   ~~~
-   
-#### Example: Generating Self-Signed JWT in Python ####
-Below is a snippet of the Python code that shows how the JWT is formed and signed/encrypted with your application's private key. You can [download](https://github.com/poynt/python-sample) the full sample Python app on GitHub. 
-
+// Compute the RSA Signature
+signedJWT.sign(signer);
+return signedJWT.serialize();
 ~~~
+
+#### Example: Generating Self-Signed JWT in Python ####
+Below is a snippet of the Python code that shows how the JWT is formed and signed/encrypted with your application's private key. You can [download](https://github.com/poynt/python-sample) the full sample Python app on GitHub.
+
+{% highlight python %}
     payload = {
         'exp': expiryDatetime,
         'iat': currentDatetime,
@@ -118,7 +120,7 @@ Below is a snippet of the Python code that shows how the JWT is formed and signe
         'jti': str(uuid.uuid4())
     }
     encodedJWT = jwt.encode(payload, self.rsaPrivateKey, algorithm='RS256')
-~~~
+{% endhighlight %}
 
 
 ### Obtain access token and refresh token using your API credentials ###
