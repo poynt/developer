@@ -6,13 +6,13 @@ date: 2015-01-22 17:07:40
 ---
 
 
-Poynt OS SDK is distributed as an Android Library (aar) through our Maven repository. 
+Poynt OS SDK is distributed as an Android Library (aar) through our Maven repository.
 
 ### Adding the Poynt OS SDK dependencies
 
 To use the Poynt OS SDK, add the following dependencies in your build.gradle file - note that you would need to add our maven repository in your gradle file too:
 
-~~~
+~~~groovy
 allprojects {
   repositories {
     maven {
@@ -28,7 +28,7 @@ dependencies {
   // Poynt SDK and Model Dependencies
   compile 'co.poynt.api:android-api-model:<release-version>@jar'
   compile 'co.poynt.android.sdk:poynt-sdk:<release-version>@aar'
-  
+
   // Gson dependency
   compile 'com.google.code.gson:gson:2.2.4@jar'
 
@@ -43,4 +43,3 @@ dependencies {
 NOTE: Please refer to release notes for current '<release-version>'
 
 At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or Poynt Sample app to start using the SDK.
-

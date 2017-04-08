@@ -15,7 +15,7 @@ Given that a main function of the Poynt device is payment processing, there are 
 
   * No access to sensitive payment card information - NEVER! All payments are securely processed by Poynt Services running on the terminal and only the post-payment transactional information is made available to 3rd party apps and services.
 
-  * What you can display and ask the customer for on the consumer facing screen is limited to what Poynt exposes as part of the SDK. For example, there are methods in the `IPoyntSecondScreenService` for scanning QR codes, requesting customer contact information (email, phone), tips, etc. 
+  * What you can display and ask the customer for on the consumer facing screen is limited to what Poynt exposes as part of the SDK. For example, there are methods in the `IPoyntSecondScreenService` for scanning QR codes, requesting customer contact information (email, phone), tips, etc.
 
   * No sideloading of apps and services is allowed (either through `adb` or downloading via internet). The Android Debug Bridge (adb) is disabled on live merchant Poynt Terminals.
 
@@ -62,7 +62,7 @@ Poynt Content Providers provide the data store for various resources related to 
 In order to protect customer payment card information, Poynt provides Payment Fragments that 3rd party applications can launch to collect payment card information securely and process transactions. The Payment Fragments can be launched by providing a ‘Payment’ object containing the transactional information like amounts, tip and reference identifier.
 
 {: .center}
-![Payment Fragment]({{site.url}}/developer/assets/developers-fragment-1.png)
+![Payment Fragment]({{site.url}}/developer/assets/pf-2.png){:height="480" width="300"}
 
 Three types of Payment Fragments are provided through Poynt SDK:
 
@@ -85,25 +85,25 @@ Poynt Intents are broadcasted in addition to the common Intents broadcasted by t
 
 ### Poynt Register Intents
 
-When merchants add or remove items to the Poynt Register application intents will be broadcast so that you can respond to these actions. 
+When merchants add or remove items to the Poynt Register application intents will be broadcast so that you can respond to these actions.
 
 **ADD_PRODUCT_TO_CART Intent**
 
-When an item is added to an order, the following intent is broadcast. 
+When an item is added to an order, the following intent is broadcast.
 
 ~~~
 poynt.intent.action.ADD_PRODUCT_TO_CART
 ~~~
 
-The following values are available as Intent extras. 
+The following values are available as Intent extras.
 
 - order_id
   - the order id (STRING)
 - product_name
   - OPTIONAL
-  - the name of the order item, if available (STRING) 
-- product_id: 
-  - OPTOINAL	
+  - the name of the order item, if available (STRING)
+- product_id:
+  - OPTOINAL
   - the product id, if available (STRING)
 - product_sku:
   - OPTIONAL
@@ -115,7 +115,7 @@ The following values are available as Intent extras.
 
 **REMOVE_PRODUCT_FROM_CART Intent**
 
-When an item is added to an order, the following intent is broadcast. 
+When an item is added to an order, the following intent is broadcast.
 
 ~~~
 poynt.intent.action.REMOVE_PRODUCT_FROM_CART
@@ -125,11 +125,14 @@ poynt.intent.action.REMOVE_PRODUCT_FROM_CART
   - the order id (STRING)
 - product_name
   - OPTIONAL
-  - the name of the order item, if available (STRING) 
-- product_id: 
-  - OPTOINAL	
+  - the name of the order item, if available (STRING)
+- product_id:
+  - OPTOINAL
   - the product id, if available (STRING)
 - product_sku:
   - OPTIONAL
   - the sku of the product, if available (STRING)
 
+<p><div class="note">
+<strong>Note</strong> Full list of broadcast intents can be seen in PoyntOS SDK's <a href="https://poynt.github.io/developer/javadoc/co/poynt/os/model/Intents.html" target="_blank">Intents</a> class
+</div></p>
