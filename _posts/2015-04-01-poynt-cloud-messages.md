@@ -34,7 +34,7 @@ We will be create a simple Python application that `POST` the message to Poynt. 
 
 Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following function to the PoyntAPI class:
 
-~~~
+{% highlight python %}
     def sendCloudMessage(self, businessId, storeId, packageName, className, data):
         pcmUrl = self.apiHost + "/cloudMessages"
         cloudMessage = {
@@ -50,12 +50,15 @@ Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following fun
         code, jsonObj = self._sendPostRequest(pcmUrl, json.dumps(cloudMessage), {}, {})
         if code == requests.codes.accepted:
             print "Successfully sent cloud message."
-~~~
+{% endhighlight %}
+
 Then in the `main` function near the end of the file, add the line after teh `poyntAPI.getAccessToken()` call:
 
-~~~
-poyntAPI.sendCloudMessage(BUSINESS_ID, STORE_ID, "com.my.android.package", "com.my.android.package.MyBroadcastReceiverClass", "Hello from the cloud.")
-~~~
+{% highlight python %}
+poyntAPI.sendCloudMessage(BUSINESS_ID, STORE_ID, "com.my.android.package", "com.my.android.package.MyBroadcastReceiverClass",
+"Hello from the cloud.")
+{% endhighlight %}
+
 (For easier debugging, you can remove other lines inside the if block under the `poyntAPI.getAccessToken()` call)
 
 This will cause the message to be routed to the `com.my.android.package.MyBroadcastReceiverClass` class in your terminal application.
@@ -66,7 +69,7 @@ Test your python code by executing `python src/PoyntAPI.py`.
 
 In order to receive messages your terminal application must have a broadcast receiver created with the matching package/class name as specified in the previous section.  Also, your receiver must be registered with the correct intent and category.  In your `AndroidManifest.xml` file, add your receiver to your application like so:
 
-~~~
+~~~xml
 <receiver android:name="com.my.android.package.MyBroadcastReceiver"
           android:enabled="true"
           android:exported="true">
@@ -79,7 +82,7 @@ In order to receive messages your terminal application must have a broadcast rec
 
 Your broadcast receiver class should look something like this:
 
-~~~
+~~~java
 public class MyBroadcastReceiver extends BroadcastReceiver {
     public MyBroadcastReceiver() {}
     @Override
@@ -100,10 +103,10 @@ The message sent from the cloud will be put in the intent extra named `INTENT_EX
 No. PCM will hold your message only up to the time specified in the message `ttl` (time-to-live) parameter.  If, for whatever reason, the Poynt Terminal is offline longer than that period of time, your message will not be delivered.
 
 ### Does PCM guarantee at MOST once delivery?
-Yes. PCM delivers your message **only once**, so you don't need de-dupe logic. 
+Yes. PCM delivers your message **only once**, so you don't need de-dupe logic.
 
 ### Does PCM guarantee ordered message delivery?
-No. Cloud message order is not guaranteed. While most messages will arrive in the order sent, there is a chance that messages will arrive out of order. Your app must take this scenario into account. 
+No. Cloud message order is not guaranteed. While most messages will arrive in the order sent, there is a chance that messages will arrive out of order. Your app must take this scenario into account.
 
 ### How fast are messages delivered from the cloud to the Poynt device?
 A number of network conditions can impact the speed of message delivery from the cloud to the app on the Poynt Terminal. While most messages are delivered in near real-time, your application logic must take into account delays in message delivery. Even if your cloud application is running from a world-class data center, Poynt terminals are connected to the Internet using various methods (i.e. WiFi, Ethernet, 3G) and conditions. There are a number of tools that can simulate various network conditions, including Android Emulator.

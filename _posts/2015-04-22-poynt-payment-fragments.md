@@ -24,7 +24,7 @@ Currently the Payment Fragments support the following features:
 
 When an application need to collect a payment, it can launch the Payment Fragments using the Poynt Payment Activity. To launch the payment activity, you will have to create a simple Payment object and specify the total amount that needs to be collected, the currency and a reference ID. The Payment activity can be launched with the Payment object using the standard android 'startActivityForResult()' method. The Payment Activity will walk both the merchant and consumer through the payment flows (payment method entry and consumer authorization). Once a payment is successfully processed, the fragment returns an updated Payment object with the payment status and processed transaction including the redacted payment card info that you can use to display in your application.
 
-~~~
+~~~java
     Payment payment = new Payment();
     String referenceId = UUID.randomUUID().toString();
     payment.setReferenceId(referenceId);
@@ -43,7 +43,7 @@ When an application need to collect a payment, it can launch the Payment Fragmen
 
 To handle the response from the Payment Fragments, you would need to override the 'onActivityResult()' method and process the response.
 
-~~~
+~~~java
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -82,7 +82,7 @@ To handle the response from the Payment Fragments, you would need to override th
 
 Once a payment has been processed often times it's required to provide the merchants ability to execute different actions on the processed payments. These include payment actions like void, capture, refund, and get details, which are provided by Payment Fragments through "DISPLAY_PAYMENT" intent.
 
-~~~
+~~~java
     // start Payment activity to display transaction details
     try {
         Intent displayPaymentIntent = new Intent(Intents.ACTION_DISPLAY_PAYMENT);
