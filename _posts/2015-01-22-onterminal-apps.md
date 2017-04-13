@@ -25,7 +25,7 @@ Given that a main function of the Poynt device is payment processing, there are 
 
 ### Developer Tools
 
-Application development for Poynt is the same as any other Android application development process using the standard Android development tools available from [developer.android.com](https://developer.android.com). Poynt Terminals run on a ustomized build of Android 4.4.4 (KitKat), so all applications must set the build target to `android-19`.
+Application development for Poynt is the same as any other Android application development process using the standard Android development tools available from [developer.android.com](https://developer.android.com). Poynt Terminals run on a customized build of Android 4.4.4 (KitKat), so all applications must set the build target to `android-19`.
 
 Android Studio with gradle build toolkit is recommended. Although any android emulator would work, we would recommend using Genymotion emulator with screen resolution as 800x1280.
 
