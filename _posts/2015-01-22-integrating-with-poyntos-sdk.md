@@ -30,7 +30,7 @@ dependencies {
   compile 'co.poynt.android.sdk:poynt-sdk:<release-version>@aar'
 
   // Gson dependency
-  compile 'com.google.code.gson:gson:2.2.4@jar'
+  compile 'com.google.code.gson:gson:2.8.0@jar'
 
   // JWT dependencies - if you want to parse JWTs
   compile 'net.jcip:jcip-annotations:1.0@jar'
@@ -40,6 +40,6 @@ dependencies {
 
 ~~~
 
-NOTE: Please refer to release notes for current '<release-version>'
+NOTE: Please refer to release notes for current <release-version>
 
 At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or Poynt Sample app to start using the SDK.
