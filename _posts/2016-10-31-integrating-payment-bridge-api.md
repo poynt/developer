@@ -15,11 +15,11 @@ Here is how it works:
 
 ### Prerequites:
 
-1. [Create a developer account and activate your developer terminal](http://poynt.github.io/developer/tut/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](http://poynt.github.io/developer/tut/setup-poyntos.html)) 
+1. [Create a developer account and activate your developer terminal](http://poynt.github.io/developer/tut/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](http://poynt.github.io/developer/tut/setup-poyntos.html))
 2. Create an app and make sure it has "Cloud Messages" WRITE permission
-3. Use "Merchant Login Url" of your app to authorizes one of your test merchants 
+3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](http://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html) 
 
-### Payment Bridge Sequence Diagram 
+### Payment Bridge Sequence Diagram
 
 ![PaymentBridgeSequenceDiagram]({{site.url}}/developer/assets/PaymentBridgeAPI.png)
 
@@ -35,7 +35,7 @@ e.g. `{"ttl": 500, "businessId": "d9f90edd-53d0-49ed-9589-22d92b9bfda4", "storeI
   * **tipAmount**: tip amount if enabled for merchant
   * **currency**: 3 digit currency value (e.g. "USD")
   * **referenceId**: external referenceId that you can use to correlate transactions across systems
-  * **callbackUrl**: where you will receive a callback (HTTP POST) with [Poynt Payment object](http://poynt.github.io/developer/javadoc/co/poynt/os/model/Payment.html) 
+  * **callbackUrl**: where you will receive a callback (HTTP POST) with [Poynt Payment object](http://poynt.github.io/developer/javadoc/co/poynt/os/model/Payment.html)
   * **transactionId**: transactionId to use for void, refund operations
   * **custom-http-header**: Custom HTTP header name and value that will be set by Poynt in the callback request
   * **skipReceiptScreen**: value of `true` will force the receipt options screen to be skipped
@@ -58,7 +58,7 @@ Host: myserver.com:8080
 Connection: Keep-Alive
 Accept-Encoding: gzip
 User-Agent: okhttp/2.5.0
- 
+
 {
     "referenceId": "ABC1234",
     "status": "PROCESSED",
@@ -136,4 +136,3 @@ User-Agent: okhttp/2.5.0
     ]
 }
 ~~~
-

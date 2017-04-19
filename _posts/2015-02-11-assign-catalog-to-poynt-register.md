@@ -36,7 +36,7 @@ update it to with your products and categories
 ![Bulk Upload]({{site.url}}/developer/assets/poynt_net_bulk_upload.png)
 
 6. Drag and drop your catalog csv file to begin your catalog upload
-  * wait until you see the upload as complete (green check mark) <br />
+  * Wait until you see the upload as complete (green check mark) <br />
 ![Bulk Upload Status]({{site.url}}/developer/assets/poynt_net_bulk_upload_complete.png)
 
 7. Click on `PRODUCTS` in the left navigation to confirm the products you've uploaded.
@@ -46,7 +46,7 @@ update it to with your products and categories
 1. Click on `TERMINALS & APPS` in the top navigation bar <br />
 ![Top Nav]({{site.url}}/developer/assets/poynt_net_top_nav.png)
 
-2. You should see the terminal that you've activate (either on Poynt Terminal or an Android device/emulator) <br />
+2. You should see the terminal that you've activated (either on Poynt Terminal or an Android device/emulator) <br />
 ![Terminals]({{site.url}}/developer/assets/poynt_net_terminals.png)
 
 3. Click on `Edit` under actions to open Terminal info page.
@@ -59,6 +59,3 @@ update it to with your products and categories
 
 6. At this point your terminal is configured with your catalog, and the Poynt Register
 would load the Catalog when it's started next time.
-  * NOTE: If you do not see the Catalog loaded in to the Poynt Register, try restarting your device/emulator.
-  This will happen if the new Catalog message to the device is lost. This is a known issue and we have a fix
-  for this in the next version.

@@ -5,9 +5,9 @@ category: ref
 date: 2015-03-04 16:49:01
 ---
 
-### Current release: ***beta7***
-### PoyntOS SDK Version: 1.2.14
-### Poynt API Model Version: 1.2.62
+
+### PoyntOS SDK Version: 1.2.24
+### Poynt API Model Version: 1.2.94
 
 ### Changes since beta6 (1.2.11)
 * Updated API Model with new modifiers support (`selectableVariations`)
