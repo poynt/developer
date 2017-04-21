@@ -20,6 +20,20 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 * Apps must only ask for permissions needed in the operations provided. For device apps, permissions are set in the Android manifest. For cloud apps, permissions are defined through the app settings in the developer portal.
 * Webviews must only load content within your control and not permit users to navigate to arbitrary web pages. For hostname whitelisting, see `shouldOverrideUrlLoading` method in Android docs.
 
+#### INTEROPERABILITY:
+* If you are building an app that generates or operates on orders (POS, order taking, etc.), utilize the `IPoyntOrderService` ([SDK](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntOrderService.html)) and/or `Orders` resource ([API](https://poynt.com/docs/api/#orders)) and provide item-level details.
+  * This guideline applies whether or not your app utilizies the Poynt `Products`/`Catalog` resources.
+  * Publish and subscribe to the following intents which carry `order_id` or order object (if the order has not been persisted):
+    * `poynt.intent.action.NEW_ORDER_CREATED`
+    * `poynt.intent.action.ORDER_UPDATED`
+    * `poynt.intent.action.ORDER_ITEM_ADDED`
+    * `poynt.intent.action.ORDER_ITEM_REMOVED`
+    * `poynt.intent.action.ORDER_ITEM_UPDATED`
+    * `poynt.intent.action.ORDER_CANCELED`
+    * `poynt.intent.action.ORDER_FULFILLED`
+    * `poynt.intent.action.ORDER_CLOSED`
+
+
 #### RELIABILITY, USABILITY AND RESPONSIVENESS: 
 * Thoroughly test your app to prevent `NullPointerException` (NPE) and Application Not Responding (ANR) errors.
 * Create a snappy, responsive, simple and intuitive UI
@@ -36,7 +50,9 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Optimize operations for battery usage (i.e. push long running tasks to the cloud).
   * Provide support contact information for customers with issues/questions.
 
+
 #### POYNT SPECIFIC: 
+  * Push order information to the Poynt cloud. This will allow merchant to access this information through ther merchant facing Poynt HQ portal (web) and mobile app (see Interoperabilty above).
   * Only use the Poynt Payment Fragment to collect payment, tip, signature, PIN and payment processor response information.
   * Disable Pay/Charge button when launching Payment Fragment to prevent multiple Payment Fragments from stacking up if the merchant clicks the button repeatedly.
 
@@ -47,23 +63,12 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 #### INTEROPERABILITY:
   * Use Poynt Catalog API and Products Content Provider (enables interoperability with complimentary apps in the ecosystem).
   * Link your customer with Poynt customer accounts.  Note: Poynt creates a customer record for every card swiped/used to enable seamless interactions without the need for additional Identification credentials. 
-  * If you are building an app that generates or operates on orders (POS, order taking, etc.):
-    * Publish and subscribe to the following intents which carry `order_id` or order object (if the order has not been persisted):
-      * `poynt.intent.action.NEW_ORDER_CREATED`
-      * `poynt.intent.action.ORDER_UPDATED`
-      * `poynt.intent.action.ORDER_ITEM_ADDED`
-      * `poynt.intent.action.ORDER_ITEM_REMOVED`
-      * `poynt.intent.action.ORDER_ITEM_UPDATED`
-      * `poynt.intent.action.ORDER_CANCELED`
-      * `poynt.intent.action.ORDER_FULFILLED`
-      * `poynt.intent.action.ORDER_CLOSED`
 
 #### USABILITY AND RESPONSIVENESS:
   * Native UI is recommended for a better user experience.
   * Non-native apps should use stylized components that present a native-like experience.
 
 #### POYNT SPECIFIC:
-  * Push order information to the Poynt cloud. This will allow merchant to access this information through ther merchant facing Poynt HQ portal (web) and mobile app.
   * Use or sync with Poynt product catalog as applicable.
   * POS/register applications should utilize `IPoyntSecondScreenService` to display item information as items are getting entered/scanned.
   
@@ -90,3 +95,4 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Use external cloud messaging services (instead, leverage Poynt cloud messaging).
   * Correlate customers across merchants and sharing Poynt customer information with other providers without explicit permission.
   * Using Poynt logo in your app without receiving prior consent from Poynt.
+
