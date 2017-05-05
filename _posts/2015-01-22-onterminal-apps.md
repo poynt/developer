@@ -43,13 +43,11 @@ Poynt Services provide the core functionality exposed as AIDL services for 3rd p
 2. [Poynt Order Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) - provides the order management APIs
 3. [Poynt Business Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntBusinessService.html) - provides the information about the merchant’s business, stores, employees, etc.
 4. [Poynt Customer Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntCustomerService.html) - provides APIs to lookup and manage customers of the merchant
-5. [Poynt Email Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntEmailService.html) - provides APIs to request receipts sent as email
-6. [Poynt Product Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides APIs to get product catalog for the merchant
-7. [Poynt Receipt Printing Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntReceiptPrintingService.html) - provides APIs to print receipts for payment transaction and/or orders
-8. [Poynt Second Screen Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides APIs to request content to be displayed in the the consumer screen
-9. [Poynt Cash Register Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntCashRegisterService.html) - provides APIs to open/close Cash drawer connected over USB
-10. [Poynt Session Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides APIs to obtain current logged in business user (merchant) information
-11. Poynt Authenticator - provides business user (merchant) login/authentication through Android’s [Account Manager API](http://developer.android.com/reference/android/accounts/AccountManager.html).
+5. [Poynt Product Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntProductService.html) - provides APIs to get product catalog for the merchant
+6. [Poynt Receipt Printing Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntReceiptPrintingService.html) - provides APIs to print receipts for payment transaction and/or orders
+7. [Poynt Second Screen Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntSecondScreenService.html) - provides APIs to request content to be displayed in the the consumer screen
+8. [Poynt Session Service]({{site.url}}/developer/javadoc/co/poynt/os/services/v1/IPoyntSessionService.html) - provides APIs to obtain current logged in business user (merchant) information
+9. Poynt Authenticator - provides business user (merchant) login/authentication through Android’s [Account Manager API](http://developer.android.com/reference/android/accounts/AccountManager.html).
 
 All the AIDL files required to generate the service stubs through Android SDK are bundled in the Poynt SDK. Please see [calling an IPC method](http://developer.android.com/guide/components/aidl.html#Calling) in Android developer documentation on how to use AIDL services.
 
