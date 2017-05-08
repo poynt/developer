@@ -18,7 +18,7 @@ Currently the Payment Fragments support the following features:
 6. Non-referenced credits and auth only transactions
 
 {: .center}
-![Payment Fragment]({{site.url}}/developer/assets/payment-fragment.png)
+![Payment Fragment]({{site.url}}/developer/assets/payment-fragment2.png)
 
 ## Integrating with Payment Fragments
 
