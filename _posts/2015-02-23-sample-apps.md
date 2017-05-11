@@ -9,6 +9,8 @@ date: 2015-02-23 17:10:02
 
 * Android Apps using PoyntOS SDK: [https://github.com/poynt/PoyntSamples](https://github.com/poynt/PoyntSamples)
 
+  -(Note:-Poynt Terminals run on a customized build of Android 4.4.4 (KitKat), so all applications must set the build target to android-19.)
+
 
 
 ## Cloud API SDKs and Samples
