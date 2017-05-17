@@ -70,9 +70,9 @@ In addition, update _adb_usb.ini_{:.italic} config file to include the following
 
 
 ### For Mac OS X/Linux Users
-Add `{SDK_LOCATION}\sdk\platform-tools` to your PATH environmental variable.
-On some Linux distributions, you may be able to install Android SDK tools with _apt-get_{:.italic} command:
+Add `{SDK_LOCATION}\sdk\platform-tools` to your PATH environmental variable. To find out your Android SDK location, open Android Studio, Go to Android Studio->Preference->System Settings->Android SDK.
 
+On some Linux distributions, you may be able to install Android SDK tools with _apt-get_{:.italic} command:
 `apt-get install android-tools-adb android-tools-fastboot`
 
 Ensure your device is properly connected via USB by running `fastboot devices` command on your host machine.
