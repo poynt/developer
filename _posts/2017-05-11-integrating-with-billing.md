@@ -2,7 +2,7 @@
 layout: page
 title: "Integration with Billing"
 category: tut
-date: 2017-05-11 07:05:00
+date: 2014-04-06 07:05:00
 ---
 ## Overview
 PoyntOS SDK provides an easy way for third party apps to provide In-App Billing services such as Subscriptions. This can be done on the terminal by implementing _IPoyntInAppBillingService_{:.italic} interface. To setup Merchant billing, you will need to first create Plans. Please reach out to Poynt developer support (dev-support@poynt.co) for this step. Poynt team will also help with initial activation of Subscriptions with the respective Plans.
