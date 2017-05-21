@@ -2,7 +2,7 @@
 layout: page
 title: "Integration with In-App Billing Service"
 category: tut
-date: 2017-05-20 07:05:00
+date: 2014-04-06 07:05:00
 ---
 
 Poynt In-App Billing service provides application developers an easy way to check the status of their subscriptions and request merchants to subscribe for other plans as necessary.
