@@ -1,200 +1,148 @@
 ---
 layout: page
-title: "Integration with Billing"
+title: "Integration with In-App Billing Service"
 category: tut
-date: 2014-04-06 07:05:00
+date: 2017-05-20 07:05:00
 ---
-## Overview
-PoyntOS SDK provides an easy way for third party apps to provide In-App Billing services such as Subscriptions. This can be done on the terminal by implementing _IPoyntInAppBillingService_{:.italic} interface. To setup Merchant billing, you will need to first create Plans. Please reach out to Poynt developer support (dev-support@poynt.co) for this step. Poynt team will also help with initial activation of Subscriptions with the respective Plans.
 
-<p>&nbsp;</p>
+Poynt In-App Billing service provides application developers an easy way to check the status of their subscriptions and request merchants to subscribe for other plans as necessary.
 
-# Get Merchant Subscriptions
-## Steps:
-1. Modify android Manifest file (_AndroidManifest.xml_{:.italic})
-2. Create a service that implements _IPoyntInAppBillingService_{:.italic}
+~~~java
+interface IPoyntInAppBillingService{
+
+    /**
+      * This method returns the current subscriptions for the calling app owned by the merchant.
+      * Result will be returned in
+      * {@link IPoyntInAppBillingServiceListener#onResponse}.
+      *
+      * @param packageName Package name of the call originator - this is verified against the
+      * calling Uid provided by the android system.
+      * @param requestId Request id of the call originator.
+      * @param callback {@link IPoyntActivationServiceListener}
+      */
+    void getSubscriptions( String packageName,
+                           String requestId,
+                           IPoyntInAppBillingServiceListener callback);
+
+    /**
+      * This method returns an intent that can be used to launch Poynt billing fragment to allow
+      * a merchant to subscribe to your application.
+      *
+      * @param packageName Package name of the call originator - this is verified against the
+      * calling Uid provided by the android system.
+      * @param extras bundle containing extra fields used to identify things like planId, etc.
+      *         extras supported: plan_id
+      *
+      * @return Bundle containing a pending intent
+      */
+    Bundle getBillingIntent( String packageName, in Bundle extras);
+}
+~~~
 
 
-<p>&nbsp;</p>
-### Manifest file
+## Integration with IPoyntInAppBillingService
 
-Add the a permission `com.poynt.store.BILLING` to your manifest as follows:
+Integration with Poynt In-App Billing service in your application involves:
+
+(1) Creating your subscription plans. Please contact Poynt developer support for creating and loading your subscription plans for your applications. Below is a simple plan that charges $5 per month per business. You can always define multiple plans based on your needs.
+
+~~~json
+{
+	"name": "Basic Plan",
+	"amounts": [
+		{
+			"country": "US",
+			"currency": "USD",
+			"value": 500
+		}
+	],
+	"interval": "MONTH",
+	"scope": "BUSINESS"
+}
+~~~
+
+(2) Add the following permissions to your Android Manifest file so you can invoke the PoyntInAppBillingService.
 
 ~~~xml
 ...
 <uses-permission android:name="com.poynt.store.BILLING" />
 ...
 ~~~
-<p>&nbsp;</p>
 
-### Gradle file
-Add the following dependencies in your build.gradle file:
-~~~xml
-
-// Poynt SDK and Model Dependencies
-compile 'co.poynt.api:android-api-model:<release-version>@jar'
-compile 'co.poynt.android.sdk:poynt-sdk:<release-version>@aar'
-
-~~~
-NOTE: Please refer to [Release Notes](https://poynt.github.io/developer/ref/release-notes.html) for  most up-to-date release information.
-
-<p>&nbsp;</p>
-
-## Implementing IPoyntInAppBillingService interface
-Your Android Service class needs to implement _IPoyntInAppBillingService_{:.italic} interface's **getSubscriptions()** method. This method returns all the Merchant subscriptions corresponding to the associated PlanID. In addition, Service class can implement **getBillingIntent()** method as well.
-
-1. Define a Static field of type _ComponentName_{:.italic}. Create a new Service Connection.
-2. Bind the Service in the _OnResume()_{:.italic} method. You may UnBind the service in the _OnPause()_{:.italic} method.
-
+(3) Bind to PoyntInAppBillingService from your activity or service. Note: You would need to have the corresponding "unbindService" call in the same activity or service.
 
 ~~~java
-public class MainActivity extends Activity {
+Intent serviceIntent = new Intent("com.poynt.store.PoyntInAppBillingService.BIND");
+serviceIntent.setPackage("com.poynt.store");
+bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
+~~~
 
-    private static final String TAG = MainActivity.class.getSimpleName();
-    private Button checkSubscriptionBtn;
-
-    IPoyntInAppBillingService mBillingService;
-
-    private static final ComponentName COMPONENT_POYNT_INAPP_BILLING_SERVICE = new ComponentName("com.poynt.store", "co.poynt.os.services.v1.IPoyntInAppBillingService");
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
-        checkSubscriptionBtn = (Button) findViewById(R.id.checkSubscriptionBtn);
-        // hide it until we are connected to inapp billing service
-//        checkSubscriptionBtn.setVisibility(GONE);
-        checkSubscriptionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mBillingService != null) {
-                    logReceivedMessage("Sending GetSubscriptions()");
-                    checkSubscriptionStatus();
-                } else {
-                    Log.d(TAG, "NOT CONNECTED TO INAPP-BILLING");
-                    logReceivedMessage("Not Connected to inApp Billing Service");
-//                    checkSubscriptionBtn.setVisibility(GONE);
-                }
-            }
-        });
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Intent serviceIntent =
-                new Intent("com.poynt.store.PoyntInAppBillingService.BIND");
-        serviceIntent.setPackage("com.poynt.store");
-        bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
-    }
-
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        if (mBillingService != null) {
-            unbindService(mServiceConn);
-        }
-    }
-
-    private ServiceConnection mServiceConn = new ServiceConnection() {
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            Log.d(TAG, "Disconnected from InAppBilling");
-            mBillingService = null;
-        }
-
-        @Override
-        public void onServiceConnected(ComponentName name,
-                                       IBinder service) {
-            Log.d(TAG, "Connected to InAppBilling");
-            mBillingService = IPoyntInAppBillingService.Stub.asInterface(service);
-            // enable button to test subscriptions
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    checkSubscriptionBtn.setVisibility(View.VISIBLE);
-                }
-            });
-        }
-    };
-
-    }
-
-    private void checkSubscriptionStatus() {
-        try {
-            if (mBillingService != null) {
-                Log.d(TAG, "calling checkSubscriptionStatus()");
-                String requestId = UUID.randomUUID().toString();
-//                mBillingService.getBillingIntent()
-                mBillingService.getSubscriptions(getApplicationContext().getPackageName(), requestId,
+(4) Check current subscriptions for the merchant - note that the merchant is inferred from the Poynt Terminal Settings.
+~~~java
+                mBillingService.getSubscriptions("<your-package-name>", requestId,
                         new IPoyntInAppBillingServiceListener.Stub() {
                             @Override
                             public void onResponse(final String resultJson, final PoyntError poyntError, String requestId)
                                     throws RemoteException {
-                                Log.d(TAG, "Received response from InAppBillingService for " +
-                                        "getSubscriptions(" + requestId + ")");
-//                                Log.d(TAG, "response: " + resultJson);
                                 if (poyntError != null) {
-                                    Log.d(TAG, "poyntError: " + poyntError.toString());
+                                    // handle errors
+                                } else {
+                                    // resultJson is a json list of subscriptions
                                 }
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        if (poyntError != null) {
-                                            logReceivedMessage("Failed to obtain subscriptions: "
-                                                    + poyntError.toString());
-                                        } else {
-                                            logReceivedMessage("Result for get subscriptions: "
-                                                    + resultJson);
-                                        }
-                                    }
-                                });
                             }
                         });
+~~~
 
+(5) (Optional) Launch In-App billing fragment for additional subscriptions (Eg. upsell, additional services). This involves two steps, first to request a launch intent from PoyntInAppBillingService and then launching the billing fragment using 'startIntentSenderForResult()'. Please make
+
+~~~java
+
+private void launchBillingFragment() throws RemoteException {
+        Bundle bundle = new Bundle();
+        // add plan Id
+        bundle.putString("plan_id", "<your-plan-id>");
+        Intent launchIntent = mBillingService.getBillingIntent(getPackageName(), bundle);
+        if (bundle != null && bundle.containsKey("BUY_INTENT")) {
+            PendingIntent intent = bundle.getParcelable("BUY_INTENT");
+            if (intent != null) {
+                try {
+                    startIntentSenderForResult(
+                                            intent.getIntentSender(),
+                                            BUY_INTENT_REQUEST_CODE,
+                                            null,
+                                            Integer.valueOf(0),
+                                            Integer.valueOf(0),
+                                            Integer.valueOf(0));
+                } catch (IntentSender.SendIntentException e) {
+                    e.printStackTrace();
+                    // handle error - Failed to launch billing fragment!
+                }
             } else {
-                Log.e(TAG, "Not connected to InAppBillingService!");
+                // handle error - Did not receive buy intent!
             }
-        } catch (RemoteException e) {
-            e.printStackTrace();
         }
-    }
-
-
-    public void logReceivedMessage(final String message) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Log.d(TAG, "<< " + message + "\n\n");
-
-            }
-        });
-    }
-
-    private void clearLog() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        });
-    }
-
 }
 
+
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    // Check which request we're responding to
+    if (requestCode == BUY_INTENT_REQUEST_CODE) {
+        // Make sure the request was successful
+        if (resultCode == RESULT_OK) {
+            // Subscription request was successful - run Check Subscription to confirm!"
+        } else if (resultCode == RESULT_CANCELED) {
+            // Subscription request canceled
+        }
+    }
+}    
+
 ~~~
+
+## Sample App
+
+[PoyntSamples](https://github.com/poynt/PoyntSamples) repository on github contains a working sample of PoyntInAppBillingService. Please refer to [InAppBillingActivity.java](https://github.com/poynt/PoyntSamples/blob/develop/codesamples/src/main/java/co/poynt/samples/codesamples/InAppBillingActivity.java) for billing service specific code. Below are some screenshots of what you would see when you run the PoyntSamples application with your own packageName and Plans.
+
+<div>
+<img src="{{site.url}}/developer/assets/InAppBilling1.jpg" alt="InAppBilling1" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling2.jpg" alt="InAppBilling2" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling3.jpg" alt="InAppBilling3" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling8.jpg" alt="InAppBilling8" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling7.jpg" alt="InAppBilling7" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling5.jpg" alt="InAppBilling5" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling6.jpg" alt="InAppBilling6" width="300" style="border:20px;margin:20px">
+</div>
