@@ -35,11 +35,12 @@ We will be create a simple Python application that `POST` the message to Poynt. 
 Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following function to the PoyntAPI class:
 
 {% highlight python %}
-    def sendCloudMessage(self, businessId, storeId, packageName, className, data):
+    def sendCloudMessage(self, businessId, storeId, storeDeviceId, packageName, className, data):
         pcmUrl = self.apiHost + "/cloudMessages"
         cloudMessage = {
             "businessId": businessId,
             "storeId": storeId,
+            “storeDeviceId”: storeDeviceId,
             "ttl": 500,
             "recipient": {
                 "className": className,
