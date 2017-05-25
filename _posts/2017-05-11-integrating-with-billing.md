@@ -4,7 +4,7 @@ title: "Integration with In-App Billing Service"
 category: tut
 date: 2014-04-06 07:05:00
 ---
-# Client-Side changes
+# In-App changes
 Poynt In-App Billing service provides application developers an easy way to check the status of their subscriptions and request merchants to subscribe for other plans as necessary.
 
 ~~~java
@@ -148,58 +148,18 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 </div>
 
 
+
+# Webhooks for Billing
+
+The Event types supported for receiving Billing Webhooks are:<br>
+<br>&nbsp;&nbsp;1)  <strong>_Subscription activation_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_START` )
+<br>&nbsp;&nbsp;2)  <strong>_Subscription cancellation/end_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_END` )
+
 <p>&nbsp;</p>
-# Server-Side changes
+To Receive Billing Webhooks, please follow these steps:
 
 
-## Webhook for Billings
-
-For Billing integrations, webhooks provide a way for you to verify postback notifications for billing events such as Subscription activation and removal. Here are the steps to setup and receive these webhooks:
-
-
-### (1) Get Access Token
-
-~~~
-Sample Jwt REQUEST:
-
-curl -X POST \
-  https://services.poynt.net/testing/jwt \
-  -H 'api-version: 1.2' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: text/plain' \
-  -d '{
-    "privateKey": "<app-private-key>",
-    "aud": [
-        "https://services.poynt.net"
-    ],
-    "iss": "<applicationId>",
-    "sub": "<applicationId>",
-    "iat": 1403747463,
-    "jti": "30467c0e-1c41-428d-85ba-aa56c5983861",
-    "exp": 2269382400
-}'
-
-RESPONSE:
-
-{"jwt":"<jwt-token>"}
-~~~
-
-~~~
-Access Token REQUEST:
-curl -X POST \
-  https://services.poynt.net/token \
-  -H 'api-version: 1.2' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/x-www-form-urlencoded' \
-  -d 'grantType=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=<jwt-token>'
-
-  RESPONSE:
-
-  {"expiresIn":3600,"accessToken":"<access-token>","refreshToken":"<refresh-token>","scope":"ALL","tokenType":"BEARER"}
-~~~
-
-
-### (2) Billing Webhook Registration
+#### (1) Billing Webhook Registration
 
 Billing Webhooks can be registered with the following Event Types:
 ~~~
@@ -207,12 +167,14 @@ Billing Webhooks can be registered with the following Event Types:
 	        "APPLICATION_SUBSCRIPTION_START",
                 "APPLICATION_SUBSCRIPTION_END"]
 ~~~
-Please refer to [Webhooks Registration](https://poynt.github.io/developer/doc/webhooks.html) section for additional details.
-The `businessId` value corresponds to the `OrgId` value from your Developer Portal account.
+Please refer to [Webhooks Registration](https://poynt.github.io/developer/doc/webhooks.html) section for details on webhooks.
+The `businessId` value in the request corresponds to the `OrgId` value from your Developer Portal account online.
 
-### (3) Webhook Response
+Note: For calling into Poynt services to register webhooks, the app will need an `<access-token>` to authenticate itself. Access token generation is described in the [Authentication & Authorization](https://poynt.github.io/developer/doc/authentication-authorization.html) section.
 
-When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl`.
+#### (2) Webhook
+
+When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl` from step (1).
 ~~~
 Sample Webhook:
 {  
@@ -235,10 +197,14 @@ Sample Webhook:
 }
 ~~~
 
+The subscription resource url returned in `href` can be used to retrieve the complete Subscription Information as described in Step (3).
 
-### (3) Get Subscription Information
+Note: For receiving webhooks on multiple apps, one webhook per app needs to be registered.
 
-Once you receive the Webhook, you may use the `href` value from the response to issue a HTTP GET request for fetching the subscription details.
+#### (3) Get Subscription Information
+
+Additional Subscription details can be obtained from the Subscription Resource Url as follows:
+
 For eg:
 ~~~
 curl -X GET \
@@ -247,3 +213,14 @@ curl -X GET \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
 ~~~
+~~~
+Sample Response:
+
+{"createdAt":"2017-05-24T02:13:43Z","updatedAt":"2017-05-24T02:13:43Z","planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,
+"businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+"subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb","status":"ACTIVE"}
+~~~
+
+#### (4) Next steps
+
+The Subscription information on activations/deletions allows you to get merchant's current subscription status, upsell services/plans or provide technical support.
