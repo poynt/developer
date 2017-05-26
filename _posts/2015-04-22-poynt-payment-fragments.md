@@ -18,11 +18,11 @@ Currently the Payment Fragments support the following features:
 6. Non-referenced credits and auth only transactions
 
 {: .center}
-![Payment Fragment]({{site.url}}/developer/assets/payment-fragment.png)
+![Payment Fragment]({{site.url}}/developer/assets/payment-fragment2.png)
 
 ## Integrating with Payment Fragments
 
-When an application need to collect a payment, it can launch the Payment Fragments using the Poynt Payment Activity. To launch the payment activity, you will have to create a simple Payment object and specify the total amount that needs to be collected, the currency and a reference ID. The Payment activity can be launched with the Payment object using the standard android 'startActivityForResult()' method. The Payment Activity will walk both the merchant and consumer through the payment flows (payment method entry and consumer authorization). Once a payment is successfully processed, the fragment returns an updated Payment object with the payment status and processed transaction including the redacted payment card info that you can use to display in your application.
+When an application need to collect a payment, it can launch the Payment Fragments using the Poynt Payment Activity. To launch the payment activity, you will have to create a Payment object and specify the total amount that needs to be collected, the currency and an optional reference ID. The Payment activity has to be launched with the Payment object using the standard android 'startActivityForResult()' method. The Payment Activity will walk both the merchant and consumer through the payment flows (payment method entry and consumer authorization). Once a payment is successfully processed, the fragment returns an updated Payment object with the payment status and processed transaction including the redacted payment card info that you can use to display in your application.
 
 ~~~java
     Payment payment = new Payment();
@@ -77,6 +77,68 @@ To handle the response from the Payment Fragments, you would need to override th
         }
     }
 ~~~
+<p>&nbsp;</p>
+
+
+## Parameters
+
+_Payment_{:.italic} object contains a number of parameters that allows developers to configure the payment experience:
+
+**cashbackAmount**  _(long)_{:.italic} - Presets the cash back amount when customer pays by debit  
+
+**tipAmount** _(long)_{:.italic} - Presets the tip amount. The tip selection screen will be skipped
+
+**references** _(List\<TransactionReferences\>)_{:.italic} - Allows the application to pass custom reference information, such as custom order id and other metadata. This list is returned inside Transaction object once the payment is completed
+
+**multiTender** _(boolean)_{:.italic} - starts the payment fragment in the multiTender mode which allows the buyer to pay using 2 or more tenders
+
+**authzOnly** _(boolean)_{:.italic} - indicates that this is a pre-auth transaction that will not be part of the open settlement batch until it is captured;
+
+**orderId** _(String)_{:.italic} - the id of the Order object which has already been created or will be created after the payment. Having an Order object allow Payment Fragment to display item details and sends the itemized email receipt if the customer chooses to get an email receipt.
+
+**order** _(Order)_{:.italic} - including Order object allows Payment Fragment to print itemized receipt if the customer chooses paper receipt option
+
+**nonReferencedCredit** _(boolean)_{:.italic} - setting this flag will allow merchant to issue a credit to a card without having a prior sale. This is a high risk permission and typically merchant has to be enabled by the acquirer to issue non-refeenced credits.
+
+**disableDebit** _(boolean)_{:.italic} - disables debit card option
+
+**disableCheck** _(boolean)_{:.italic} - disables check option
+
+**disableOther** _(boolean)_{:.italic} - disables "other" option
+
+**disableManual** _(boolean)_{:.italic} - disables manual entry
+
+**disableEMVCT** _(boolean)_{:.italic} - disables EMV (chip card) payment
+
+**disableEMVCL** _(boolean)_{:.italic} - disables contactless payments
+
+**disableMSR** _(boolean)_{:.italic} - disables payments with magstripe cards
+
+**disableCash** _(boolean)_{:.italic} - disables cash option
+
+**disableTip** _(boolean)_{:.italic} - disables tip if the merchant account is configured to present tip screen.
+
+**disableChangeAmount** _(boolean)_{:.italic} - if the payment fragment is invoked to perform refund or capture, setting this flag to "true" will not allow the merchant to edit the amount, i.e. no partial capture or partial refund.
+
+**notes** _(String)_{:.italic} - custom note which will be added to the transaction
+
+**cashOnly** _(boolean)_{:.italic} - launches Payment Fragment directly into the cash flow
+
+**debitOnly** _(boolean)_{:.italic} - only allow debit card payment
+
+**creditOnly** _(boolean)_{:.italic} - only allow payment by credit
+
+**skipReceiptScreen** _(boolean)_{:.italic} - do not show the receipt screen
+
+**manualEntry** _(boolean)_{:.italic} - launch Payment Fragment into manual card entry flow
+
+**readCardDataOnly** _(boolean)_{:.italic} - do not process transaction just return some information about the card (e.g. last 4, first 6, name)
+
+**offlineAuth** _(boolean)_{:.italic} - process offline transaction. Can be used if there is no network connectivity. Merchant will be prompted to provide an approval code they obtained from the issuing bank.
+
+**offlineApprovalCode** _(String)_{:.italic} - optionally the approval code can be passed in the request to launch Payment Fragment.
+
+<p>&nbsp;</p>
 
 ## Post-Payment Actions
 

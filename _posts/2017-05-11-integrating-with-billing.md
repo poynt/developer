@@ -93,7 +93,7 @@ bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
                         });
 ~~~
 
-(5) (Optional) Launch In-App billing fragment for additional subscriptions (Eg. upsell, additional services). This involves two steps, first to request a launch intent from PoyntInAppBillingService and then launching the billing fragment using 'startIntentSenderForResult()'. Please make
+(5) (Optional) Launch In-App billing fragment for additional subscriptions (Eg. upsell, additional services). This involves two steps, first to request a launch intent from PoyntInAppBillingService and then launching the billing fragment using 'startIntentSenderForResult()'.
 
 ~~~java
 
@@ -213,9 +213,9 @@ curl -X GET \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
 ~~~
-~~~
-Sample Response:
 
+Sample Response:
+~~~
 {"createdAt":"2017-05-24T02:13:43Z","updatedAt":"2017-05-24T02:13:43Z","planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,
 "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
 "subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb","status":"ACTIVE"}
