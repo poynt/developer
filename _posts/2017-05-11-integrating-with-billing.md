@@ -4,7 +4,7 @@ title: "Integration with In-App Billing Service"
 category: tut
 date: 2014-04-06 07:05:00
 ---
-
+# In-App changes
 Poynt In-App Billing service provides application developers an easy way to check the status of their subscriptions and request merchants to subscribe for other plans as necessary.
 
 ~~~java
@@ -93,7 +93,7 @@ bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
                         });
 ~~~
 
-(5) (Optional) Launch In-App billing fragment for additional subscriptions (Eg. upsell, additional services). This involves two steps, first to request a launch intent from PoyntInAppBillingService and then launching the billing fragment using 'startIntentSenderForResult()'. Please make
+(5) (Optional) Launch In-App billing fragment for additional subscriptions (Eg. upsell, additional services). This involves two steps, first to request a launch intent from PoyntInAppBillingService and then launching the billing fragment using 'startIntentSenderForResult()'.
 
 ~~~java
 
@@ -146,3 +146,81 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 <div>
 <img src="{{site.url}}/developer/assets/InAppBilling1.jpg" alt="InAppBilling1" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling2.jpg" alt="InAppBilling2" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling3.jpg" alt="InAppBilling3" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling8.jpg" alt="InAppBilling8" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling7.jpg" alt="InAppBilling7" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling5.jpg" alt="InAppBilling5" width="300" style="border:20px;margin:20px"><img src="{{site.url}}/developer/assets/InAppBilling6.jpg" alt="InAppBilling6" width="300" style="border:20px;margin:20px">
 </div>
+
+
+
+# Webhooks for Billing
+
+The Event types supported for receiving Billing Webhooks are:<br>
+<br>&nbsp;&nbsp;1)  <strong>_Subscription activation_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_START` )
+<br>&nbsp;&nbsp;2)  <strong>_Subscription cancellation/end_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_END` )
+
+<p>&nbsp;</p>
+To Receive Billing Webhooks, please follow these steps:
+
+
+#### (1) Billing Webhook Registration
+
+Billing Webhooks can be registered with the following Event Types:
+~~~
+"eventTypes":[
+	        "APPLICATION_SUBSCRIPTION_START",
+                "APPLICATION_SUBSCRIPTION_END"]
+~~~
+Please refer to [Webhooks Registration](https://poynt.github.io/developer/doc/webhooks.html) section for details on webhooks.
+The `businessId` value in the request corresponds to the `OrgId` value from your Developer Portal account online.
+
+Note: For calling into Poynt services to register webhooks, the app will need an `<access-token>` to authenticate itself. Access token generation is described in the [Authentication & Authorization](https://poynt.github.io/developer/doc/authentication-authorization.html) section.
+
+#### (2) Webhook
+
+When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl` from step (1).
+~~~
+Sample Webhook:
+{  
+   "createdAt":"2017-05-24T02:13:43Z",
+   "updatedAt":"2017-05-24T02:13:43Z",
+   "links":[  
+      {  
+         "href":"https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
+         "rel":"resource",
+         "method":"GET"
+      }
+   ],
+   "id":"5f97f64e-f7e7-4f1b-be36-c5a9ae016410",
+   "hookId":"f6c07532-2401-40ea-a569-5058a9b8d468",
+   "applicationId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+   "resource":"/apps/subscriptions",
+   "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
+   "eventType":"APPLICATION_SUBSCRIPTION_START",
+   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
+}
+~~~
+
+The subscription resource url returned in `href` can be used to retrieve the complete Subscription Information as described in Step (3).
+
+Note: For receiving webhooks on multiple apps, one webhook per app needs to be registered.
+
+#### (3) Get Subscription Information
+
+Additional Subscription details can be obtained from the Subscription Resource Url as follows:
+
+For eg:
+~~~
+curl -X GET \
+  https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb \
+  -H 'authorization: <access-token>' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+~~~
+
+Sample Response:
+~~~
+{"createdAt":"2017-05-24T02:13:43Z","updatedAt":"2017-05-24T02:13:43Z","planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,
+"businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+"subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb","status":"ACTIVE"}
+~~~
+
+#### (4) Next steps
+
+The Subscription information on activations/deletions allows you to get merchant's current subscription status, upsell services/plans or provide technical support.
