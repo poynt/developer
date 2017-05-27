@@ -40,7 +40,7 @@ Clone the repository and edit the `src/PoyntAPI.py` file.  Add the following fun
         cloudMessage = {
             "businessId": businessId,
             "storeId": storeId,
-            “storeDeviceId”: storeDeviceId,
+            "storeDeviceId": storeDeviceId,
             "ttl": 500,
             "recipient": {
                 "className": className,
