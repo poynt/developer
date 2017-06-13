@@ -88,6 +88,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 #### USABILITY -- YOU MUST NOT:
   * Create a custom launcher.
   * Use landscape orientation.
+  * Launch activity from a background service while Payment Fragment is up.
 
 #### POYNT SPECIFIC -- YOU MUST NOT:
   * Call Poynt Cloud API directly from Poynt terminal (use Poynt Services via SDK).
