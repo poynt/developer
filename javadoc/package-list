@@ -1,13 +1,16 @@
 co.poynt.os
 co.poynt.os.contentproviders
 co.poynt.os.contentproviders.orders.addresses
+co.poynt.os.contentproviders.orders.adjustrecord
 co.poynt.os.contentproviders.orders.avsresults
 co.poynt.os.contentproviders.orders.base
+co.poynt.os.contentproviders.orders.binrange
 co.poynt.os.contentproviders.orders.cards
 co.poynt.os.contentproviders.orders.clientcontexts
 co.poynt.os.contentproviders.orders.customfundingsource
 co.poynt.os.contentproviders.orders.discounts
 co.poynt.os.contentproviders.orders.ebt
+co.poynt.os.contentproviders.orders.exchangerate
 co.poynt.os.contentproviders.orders.fees
 co.poynt.os.contentproviders.orders.links
 co.poynt.os.contentproviders.orders.orderamounts
@@ -46,4 +49,5 @@ co.poynt.os.model
 co.poynt.os.printing
 co.poynt.os.search
 co.poynt.os.services.v1
+co.poynt.os.services.v2
 co.poynt.os.util
