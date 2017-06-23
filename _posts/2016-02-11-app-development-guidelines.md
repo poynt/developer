@@ -91,3 +91,4 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Use external cloud messaging services (instead, leverage Poynt cloud messaging).
   * Correlate customers across merchants and sharing Poynt customer information with other providers without explicit permission.
   * Using Poynt logo in your app without receiving prior consent from Poynt.
+  * Launch any activities when your application is not in the foreground (not currently used by the merchant) including when Payment Fragment is in session. Note: as a background service you can rely on using Android notification framework to bring something to merchant's attention.
