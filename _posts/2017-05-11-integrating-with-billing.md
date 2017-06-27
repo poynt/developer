@@ -1,10 +1,22 @@
 ---
 layout: page
-title: "Integration with In-App Billing Service"
+title: "Integration with Poynt Billing Services"
 category: tut
 date: 2014-04-06 07:05:00
 ---
-# In-App changes
+
+App integration with Poynt Billing can be performed in two steps broadly:<br>
+<br>&nbsp;&nbsp;1)  [_In-App changes_](#in-app-changes)
+<br>&nbsp;&nbsp;2)  [_Backend integration with Poynt Cloud_](#cloud-api-integration)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.  [_Get subscriptions_](#get-subscriptions-api)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.  [_Webhooks_](#webhooks)
+
+
+<p>&nbsp;</p>
+
+
+
+# In-App-changes
 Poynt In-App Billing service provides application developers an easy way to check the status of their subscriptions and request merchants to subscribe for other plans as necessary.
 
 ~~~java
@@ -139,7 +151,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ~~~
 
-## Sample App
+## Sample-App
 
 [PoyntSamples](https://github.com/poynt/PoyntSamples) repository on github contains a working sample of PoyntInAppBillingService. Please refer to [InAppBillingActivity.java](https://github.com/poynt/PoyntSamples/blob/develop/codesamples/src/main/java/co/poynt/samples/codesamples/InAppBillingActivity.java) for billing service specific code. Below are some screenshots of what you would see when you run the PoyntSamples application with your own packageName and Plans.
 
@@ -148,8 +160,40 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 </div>
 
 
+# Cloud-API-integration
+<br>
+### Get-Subscriptions-API
+This API returns a list of ALL Active Subscriptions across ALL merchants for a specific developer appId.
 
-# Webhooks for Billing
+
+For eg:
+~~~
+Request URL - {endpoint}/apps/{appId}/subscriptions (Add query params businessId={businessId}, start={pagination start value}, count={pagination count})
+
+curl -X GET   https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions?businessId=db4a4f0d-d467-472d-a85b-2d08a61b57fa   
+-H 'authorization: Bearer <access-token>'   
+-H 'cache-control: no-cache'   
+-H 'content-type: application/json'
+~~~
+
+Sample Response:
+~~~
+{"list":[{"createdAt":"2017-05-22T21:23:27Z","updatedAt":"2017-05-22T21:23:27Z","businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
+"appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9","subscriptionId":"28d80f61-cc26-4b28-8562-45e750c0e684",
+"planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,"status":"ACTIVE"},
+{"createdAt":"2017-05-24T02:13:43Z","updatedAt":"2017-05-24T02:13:43Z","businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":
+"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9","subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb","planId":
+"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,"status":"ACTIVE"},
+{"createdAt":"2017-05-22T21:49:03Z","updatedAt":"2017-05-22T21:49:03Z","businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":
+"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9","subscriptionId":"6c8dd921-0eaf-4f9c-8620-5b4d018e511a","planId":"
+292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,"status":"ACTIVE"},
+{"createdAt":"2017-05-22T22:36:48Z","updatedAt":"2017-05-22T22:36:48Z","businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa","appId":
+"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9","subscriptionId":"ac827bab-a70f-439b-971c-1ccb9637ce0e","planId":
+"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef","bundled":false,"status":"ACTIVE"}],"start":0,"total":4,"count":4}
+~~~
+
+<p>&nbsp;</p>
+### Webhooks
 
 The Event types supported for receiving Billing Webhooks are:<br>
 <br>&nbsp;&nbsp;1)  <strong>_Subscription activation_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_START` )
@@ -207,6 +251,8 @@ Additional Subscription details can be obtained from the Subscription Resource U
 
 For eg:
 ~~~
+Request URL - {endpoint}/apps/{appId}/subscriptions/{subscriptionId}
+
 curl -X GET \
   https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb \
   -H 'authorization: <access-token>' \
