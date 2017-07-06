@@ -233,6 +233,8 @@ Returning the response to Payment Fragment:
       // if transaction is fully approved
       long approvedAmount = transaction.getAmounts().getTransactionAmount();
       processorResponse.setApprovedAmount(approvedAmount);
+      // if the remaining balance is provided it will be printed on the receipt.
+      processorResponse.setRemainingBalance(200L);
       transaction.getAmounts().setOrderAmount(approvedAmount);
       transaction.getAmounts().setTransactionAmount(approvedAmount);
 
