@@ -105,3 +105,14 @@ to _/etc/udev/rules.d/51-android.rules_{:.italic}
 	</div>
 
 4. <a href="/developer/tut/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
+<p>&nbsp;</p>
+
+## Unlocking Poynt5
+
+1. shutdown the device
+2. start by holding barcode button (left side key) + pull down power switch at the same time until you see the bootloader menu.
+3. on screen select fastboot by using the barcode button and home button to select `unlock on fastboot: you need adb version >= 1.0.36`
+4. execute `fastboot flashing unlock`
+5. select OK, with Barcode button (button, on the left side of the terminal)
+6. After unlock process finished execute `fastboot reboot`
+7. If reboot does not get initiated just use the power switch to initiate reboot
