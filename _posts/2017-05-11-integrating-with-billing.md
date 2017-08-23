@@ -198,6 +198,8 @@ Sample Response:
 The Event types supported for receiving Billing Webhooks are:<br>
 <br>&nbsp;&nbsp;1)  <strong>_Subscription activation_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_START` )
 <br>&nbsp;&nbsp;2)  <strong>_Subscription cancellation/end_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_END` )
+<br>&nbsp;&nbsp;3)  <strong>_Subscription Payment Success_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS` )
+<br>&nbsp;&nbsp;4)  <strong>_Subscription Payment Failure_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_PAYMENT_FAIL` )
 
 <p>&nbsp;</p>
 To Receive Billing Webhooks, please follow these steps:
@@ -209,7 +211,9 @@ Billing Webhooks can be registered with the following Event Types:
 ~~~
 "eventTypes":[
 	        "APPLICATION_SUBSCRIPTION_START",
-                "APPLICATION_SUBSCRIPTION_END"]
+                "APPLICATION_SUBSCRIPTION_END",
+                "APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS",
+                "APPLICATION_SUBSCRIPTION_PAYMENT_FAIL"]
 ~~~
 Please refer to [Webhooks Registration](https://poynt.github.io/developer/doc/webhooks.html) section for details on webhooks.
 The `businessId` value in the request corresponds to the `OrgId` value from your Developer Portal account online.
@@ -255,7 +259,7 @@ Request URL - {endpoint}/apps/{appId}/subscriptions/{subscriptionId}
 
 curl -X GET \
   https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb \
-  -H 'authorization: <access-token>' \
+  -H 'authorization: Bearer <access-token>' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
 ~~~
@@ -267,6 +271,32 @@ Sample Response:
 "subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb","status":"ACTIVE"}
 ~~~
 
-#### (4) Next steps
+#### (4) Get Plan Information
+
+All Plan details for a particular app(using appId) can be obtained as follows:
+
+For eg:
+~~~
+Request URL - {endpoint}/apps/{appId}/plans
+
+curl -X GET \
+  https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/plans \
+  -H 'authorization: Bearer <access-token>' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+
+~~~
+
+Sample Response:
+~~~
+{"list":[{"createdAt":"2017-05-24T01:30:30Z","updatedAt":"2017-05-24T01:30:30Z","amounts":[{"country":"US","currency":"USD","value":100}],
+"interval":"MONTH","trialPeriodDays":0,"amount":100,"planId":"16f62d10-9853-4378-816c-6cd725f5d639","appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+"scope":"BUSINESS","status":"ACTIVE","name":"plan for business"},{"createdAt":"2017-05-22T21:19:26Z","updatedAt":"2017-05-22T21:19:26Z",
+"amounts":[{"country":"US","currency":"USD","value":100}],"interval":"MONTH","trialPeriodDays":0,"amount":100,"planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
+"appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9","scope":"BUSINESS","status":"ACTIVE","name":"plan for business"}],"start":0,"total":2,"count":2}
+~~~
+
+
+#### (5) Next steps
 
 The Subscription information on activations/deletions allows you to get merchant's current subscription status, upsell services/plans or provide technical support.
