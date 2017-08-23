@@ -277,10 +277,10 @@ All Plan details for a particular app(using appId) can be obtained as follows:
 
 For eg:
 ~~~
-Request URL - {endpoint}/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/plans
+Request URL - {endpoint}/apps/{appId}/plans
 
 curl -X GET \
-  https://billing.poynt.net/apps/com.satyavedule.paymentfragment/plans \
+  https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/plans \
   -H 'authorization: Bearer <access-token>' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
