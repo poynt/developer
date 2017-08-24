@@ -262,3 +262,8 @@ public class MainActivity extends Activity {
 ~~~
 
 To review the the working sample loyalty app please refer to [PoyntSamples](https://github.com/poynt/PoyntSamples/tree/master/sampleloyaltyapp).
+
+
+### Additional Info
+
+If your loyalty application needs to get notified if the transactions was completed or canceled you can create a BroadcastReceiver and register to listen to `Intents.ACTION_TRANSACTION_COMPLETED` and `Intents.ACTION_PAYMENT_CANCELED`. The sample is available on [github](https://github.com/poynt/PoyntSamples/blob/develop/codesamples/src/main/java/co/poynt/samples/codesamples/receivers/MyBroadcastReceiver.java).
