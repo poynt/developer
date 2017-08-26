@@ -42,4 +42,4 @@ dependencies {
 
 NOTE: Please refer to release notes for current <release-version>
 
-At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or Poynt Sample app to start using the SDK.
+At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or [Poynt Sample app](https://github.com/poynt/PoyntSamples) to start using the SDK.
