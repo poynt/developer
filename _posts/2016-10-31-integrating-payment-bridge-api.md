@@ -35,6 +35,7 @@ e.g. `{"ttl": 500, "businessId": "d9f90edd-53d0-49ed-9589-22d92b9bfda4", "storeI
   * **tipAmount**: tip amount if enabled for merchant
   * **currency**: 3 digit currency value (e.g. "USD")
   * **referenceId**: external referenceId that you can use to correlate transactions across systems
+  * **orderId**: order id of a previously created order or order that will be created after the payment
   * **callbackUrl**: where you will receive a callback (HTTP POST) with [Poynt Payment object](http://poynt.github.io/developer/javadoc/co/poynt/os/model/Payment.html)
   * **transactionId**: transactionId to use for void, refund operations
   * **custom-http-header**: Custom HTTP header name and value that will be set by Poynt in the callback request
