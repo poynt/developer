@@ -229,7 +229,7 @@ Note: For calling into Poynt services to register webhooks, the app will need an
 When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl` from step (1).
 
 ~~~
-Sample Webhook:
+Sample Webhook for Subscription Start:
 {  
    "createdAt":"2017-05-24T02:13:43Z",
    "updatedAt":"2017-05-24T02:13:43Z",
@@ -246,6 +246,33 @@ Sample Webhook:
    "resource":"/apps/subscriptions",
    "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
    "eventType":"APPLICATION_SUBSCRIPTION_START",
+   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
+}
+~~~
+
+~~~
+Sample Webhook for Payment Success:
+{  
+   "createdAt":"2017-05-24T02:15:43Z",
+   "updatedAt":"2017-05-24T02:15:43Z",
+   "links":[  
+      {  
+         "href":"https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
+         "rel":"resource",
+         "method":"GET"
+      },
+      {
+         "href": "https://billing.poynt.net/businesses/db4a4f0d-d467-472d-a85b-2d08a61b57fa/invoices/d47e96f3-ef63-4190-8e52-b1acd2d625df",
+         "rel": "resource",
+         "method": "GET"
+      }
+   ],
+   "id":"a0b9acd8-5332-438f-9765-5d94c31487ca",
+   "hookId":"f6c07532-2401-40ea-a569-5058a9b8d468",
+   "applicationId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+   "resource":"/apps/subscriptions",
+   "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
+   "eventType":"APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS",
    "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
 }
 ~~~
