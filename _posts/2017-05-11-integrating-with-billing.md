@@ -10,7 +10,7 @@ App integration with Poynt Billing can be performed in two steps broadly:<br>
 <br>&nbsp;&nbsp;2)  [_Backend integration with Poynt Cloud_](#cloud-api-integration)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.  [_Get subscriptions_](#get-subscriptions-api)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.  [_Webhooks_](#webhooks)
-
+<br>&nbsp;&nbsp;3)  [_Poynt Billing Integration Recommendations_](#poynt-billing-integration-recommendations)
 
 <p>&nbsp;</p>
 
@@ -160,7 +160,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 </div>
 
 
-# Cloud-API-integration
+# Cloud API integration
 
 ### Get-Subscriptions-API
 
