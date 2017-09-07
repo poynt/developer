@@ -42,7 +42,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 <p>&nbsp;</p>
 
-## If you are building a brand new app:
+# If you are building a brand new app:
 
 1. Create new dev variant with package name appended with “.dev” suffix.
 2. Create new Application on Poynt app Portal with the dev variant application.
@@ -59,7 +59,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 <p>&nbsp;</p>
 
-## If you are updating an existing app with no prior billing plans:
+# If you are updating an existing app with no prior billing plans:
 
 1. Create new dev variant with package name appended with “.dev” suffix.
 2. Create new Application on Poynt app Portal with the dev variant application.
@@ -76,7 +76,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 <p>&nbsp;</p>
 
-## If you are updating an existing app with prior billing plans:
+# If you are updating an existing app with prior billing plans:
 
 1. If you’ve integrated with Poynt Billing before without a dev variant, please follow previous two section to create a new dev variant with package name appended with “.dev” suffix.
 2. Create new billing plans for development and testing. Note: You can leave existing billing plans as they are or submit request to Poynt Dev Support to deprecate your old plans.
@@ -92,7 +92,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 <p>&nbsp;</p>
 
-#Billing use cases
+# Billing use cases
 
 While integrating with Poynt Billing, please consider the following scenarios and make sure your application code can handle these as necessary. Please refer to [App Billing Best Practices](https://poynt.com/poynt-billing-best-practices/) to make sure your app covers all possible billing scenarios.
 
