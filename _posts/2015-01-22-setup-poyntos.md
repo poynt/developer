@@ -8,7 +8,7 @@ date: 2015-01-22 16:34:52
 <img style="float: right; margin-left: 10px; margin-top: 0px; width: 300px; height: 573px;" src="https://d85ecz8votkqa.cloudfront.net/docs/poynt_emulator_300x573.png" alt="PoyntOS emulator running on AVD" />
 To help speed up your development and testing, we provide a developer-edition version of PoyntOS that can be run on an Android emulator
 or directly on an Android Tablet (Tegra Note 7 is recommended, but any 7" tablet would work as long as you code for multi-screen resolution including tvdpi).
-Note that certain functionality will not be available in the emulator (i.e. collecting consumer input from second screen, handling card payments, etc.);
+Note that certain functionality will not be available in the emulator (i.e. collecting consumer input from second screen, handling card payments, only manual credit entry supported, etc.);
 however, the emulator will give you enough functionality to start building and testing your apps. You'll have access to the terminal application (key in
 transactions), the register (catalog-driven point of sale app), transaction data, customer data, and more.
 
@@ -21,19 +21,8 @@ Activating a PoyntOS virtual device on a device emulator is just like activating
 * Virtual devices need configured to screen size at 800x1280 (tvdpi)
 * Python (for installation scripts)
 
-### Download the installer
-Download and unzip the PoyntOS emulator installer here: [PoyntOS_Emulator_Install.zip](http://d1su11fsq8j9e7.cloudfront.net/PoyntOS_Emulator_Install.zip)
-
-### Using AVD in Android Studio?
-If you're using AVD (Android Virtual Device Manager in Android Studio), we have packaged a pre-configured device
-image of the PoyntOS Emulator. Using this package ensures PoyntOS emulator runs smooth with minimal
-effort. After unzipping the installer above, navigate to the `_INSTALL_ANDROID_STUDIO_AVD` folder in this package
-and review the instructions in `README.md`.
-
-### Using a different emulator or a physical tablet?
-If you're using an emulator other than AVD (like Genymotion) or you want to install the PoyntOS emulator on a physical
-device, we have provided a script that installs PoyntOS to your device using the adb command line tool. After unzipping
-the installer above, navigate to the `_INSTALL_WITH_ADB` folder in this package and review the instructions in `README.md`.
+### Download and install emulator
+Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_Install.zip](https://poynt-emulator.s3.amazonaws.com/v1.2.26/PoyntOS_Emulator_Install.zip). Run the installation script `setup_poynt_os.py`
 
 ### Activating your virtual Poynt terminal
 1. The first time you boot up your device you'll be asked to choose a launcher. Select `Setup Wizard` to start Poynt's OOBE ("out of box experience") application. NOTE: If you're using Genymotion, enable `Use virtual keyboard for text input` option in device configuration.
