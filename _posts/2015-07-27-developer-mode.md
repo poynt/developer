@@ -40,7 +40,7 @@ Verify that your Poynt Terminal is in _fastboot mode_{:.italic} and is being see
 `TERMINALSERIALNUMBER fastboot`
 
 <p><div class="note">
-<strong>Tip: </strong>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section <a href="http://wiki.cyanogenmod.org/w/Doc:_fastboot_intro" target="_blank">here</a>.
+<strong>Tip: </strong>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section <a href="https://zifnab.net/~zifnab/wiki_dump/Doc%3A_fastboot_intro.html" target="_blank">here</a>.
 </div></p>
 
 Add the following configuration block to the **[Google.NTamd64]** and **[Google.NTx86]** sections of   _C:\Users\\{username}\AppData\Local\Android\sdk\extras\google\usb_driver\android_winusb.inf_{:.italic}:
