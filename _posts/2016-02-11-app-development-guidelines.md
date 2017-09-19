@@ -18,6 +18,10 @@ Please follow the guidelines below when developing apps for the Poynt platform.
     https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#Android
 * Device apps must use Poynt JWT tokens for authentication (do not store your private keys on the device).
 * Apps must only ask for permissions needed in the operations provided. For device apps, permissions are set in the Android manifest. For cloud apps, permissions are defined through the app settings in the developer portal.
+<p>
+	<div class="alert"><strong>WARNING:</strong> Applications that use any of the permissions tagged as <span style="font-style: italic">Not for use by third-party applications</span> in <a href="https://developer.android.com/reference/android/Manifest.permission.html">Android developer documentation</a> (e.g. android.permission.MOUNT_UNMOUNT_FILESYSTEMS) will not be accepted.
+	</div>
+</p>
 * Webviews must only load content within your control and not permit users to navigate to arbitrary web pages. For hostname whitelisting, see `shouldOverrideUrlLoading` method in Android docs.
 
 #### INTEROPERABILITY:
