@@ -76,7 +76,7 @@ interface IPoyntInAppBillingService{
 
 Integration with Poynt In-App Billing service in your application involves:
 
-(1) Creating your subscription plans. Please contact Poynt developer support for creating and loading your subscription plans for your applications. Below is a simple plan that charges $5 per month per business. You can always define multiple plans based on your needs.
+(1) Creating your subscription plans. When you upload the apk in the developer portal you will be able to create subscription plans. Once the plans are approved by Poynt App Review team they will be accessible via API. Below is a simple plan that charges $5 per month per business. You can always define multiple plans based on your needs.
 
 ~~~json
 {
