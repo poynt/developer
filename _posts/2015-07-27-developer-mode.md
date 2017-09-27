@@ -31,43 +31,56 @@ This puts the device into a state that allows you to install your development AP
 3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
 
 ### For Windows Users
-Open a command prompt with Administrator privileges. Navigate to the directory that contains the **fastboot.exe** executable. If you installed the Android SDK, this will usually be located in  `C:\Users\{username}\AppData\Local\Android\sdk\platform-tools\`.
 
-Verify that your Poynt Terminal is in _fastboot mode_{:.italic} and is being seen by **fastboot** by issuing the command `fastboot devices`. The output should show your device's serial number:
+In Android Studio go to SDK Manager and install Google USB Driver.
 
-**C:\Users\\{username}\AppData\Local\Android\sdk\platform-tools>** _fastboot devices_{:.italic}
+![](../assets/1.SDKManager.png)
 
-`TERMINALSERIALNUMBER fastboot`
+![](../assets/2.GoogleUSBDriver.png)
 
-<p><div class="note">
-<strong>Tip: </strong>If fastboot is not showing your device's serial number, please see the "Troubleshooting fastboot" section <a href="https://zifnab.net/~zifnab/wiki_dump/Doc%3A_fastboot_intro.html" target="_blank">here</a>.
-</div></p>
+Open android_winusb.inf in Notepad
 
-Add the following configuration block to the **[Google.NTamd64]** and **[Google.NTx86]** sections of   _C:\Users\\{username}\AppData\Local\Android\sdk\extras\google\usb_driver\android_winusb.inf_{:.italic}:
+![](../assets/3.NotepadCmd.png)
+
+Add the following configuration block to the **[Google.NTamd64]** and **[Google.NTx86]** sections and save the file.
 
 ~~~
 ;Poynt
 %SingleAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302
 %CompositeAdbInterface% = USB_Install, USB\VID_2BF9&PID_3302&MI_01
+
 ;Poynt Fastboot
 %SingleAdbInterface% = USB_Install, USB\VID_0955&PID_CF01
 %CompositeAdbInterface% = USB_Install, USB\VID_0955&PID_CF01&MI_01
 ~~~
 
-<p><div class="note">
-<strong>Note: </strong>If the <span style="font-style: italic">google</span> directory does not have <span style="font-style: italic">usb_drive</span> you may need to download Google USB drivers from <a href="http://developer.android.com/sdk/win-usb.html" target="_blank">Android Developer Site</a>.
-</div></p>
+![](../assets/4.NotepadEdit.png)
 
-In addition, update _adb_usb.ini_{:.italic} config file to include the following:
+Connect Poynt to your PC using a micro-USB cable (not included with the devkit), open Device Manager, right click on Poynt and select **Update Driver Software**.
 
-~~~
-# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.
-# USE 'android update adb' TO GENERATE.
-# 1 USB VENDOR ID PER LINE.
-0x2BF9
-0x0955
-~~~
+![](../assets/6.UpdateDriver.png)
 
+Select **Browse my computer..**
+
+![](../assets/7.BrowseMyComputer.png)
+
+Browse to **C:\Users\\{username}\AppData\Local\Android\sdk\extras\google\usb_driver\\** and click Next.
+
+![](../assets/8.BrowserForDriver.png)
+
+Poynt driver is unsigned, so Windows will display a warning, select **Install this driver software anyway**.
+
+![](../assets/9.InstallAnyway.png)
+
+You should see a success confirmation on the next screen, and Device Manager will show a new **Android Composite ADB Interface**
+
+![](../assets/10.Success.png)
+
+![](../assets/11.AndroidComposite.png)
+
+You should be able to see Poynt by running `adb devices` in command line (Note: `adb` and `fastboot` executables are located in `C:\Users\{username}\AppData\Local\Android\sdk\platform-tools\`).
+
+If you are on Windows 10, please read [this](https://www.maketecheasier.com/install-unsigned-drivers-windows10/).
 
 ### For Mac OS X/Linux Users
 Add `{SDK_LOCATION}\sdk\platform-tools` to your PATH environmental variable. To find out your Android SDK location, open Android Studio, Go to Android Studio->Preference->System Settings->Android SDK.
