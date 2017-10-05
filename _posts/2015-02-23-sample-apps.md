@@ -22,3 +22,4 @@ date: 2015-02-23 17:10:02
 ## Other
 * Poynt [Cordova/PhoneGap Plugin](https://www.npmjs.com/package/cordova-plugin-poynt)
 * Poynt [iOS SDK](https://github.com/poynt/pos-connector-ios-sdk-sample) for POS Bridge
+* Poynt [Windows SDK](https://github.com/poynt/pos-connector-windows-sdk) for POS Bridge
