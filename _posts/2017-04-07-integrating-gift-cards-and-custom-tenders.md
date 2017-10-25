@@ -17,7 +17,7 @@ On a traditional terminal, a merchant would need to select a gift card option be
 1. Create a service that implements [IPoyntTransactionService](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntTransactionService.html)
 2. Specify configuration in *giftcard_transaction_capabilities.xml*{:.italic}
 3. Updating card reader configuration on the terminal.
-<div class="note"> <strong>Note:</strong> Currently step #3 requires a manual action from Poynt. Please email devsupport@poynt.com with the serial number of your device and the BIN range of your gift cards.</div>
+<div class="note"> <strong>Note:</strong> By default Poynt card reader encrypts all track data irrespective of card BIN range. To turn off encrypting track data, please refer to <a href="https://github.com/poynt/PoyntSamples/blob/master/samplegiftcardprocessor/src/main/java/co/poynt/samplegiftcardprocessor/MainActivity.java#L60">this code example</a>. Please note that this setting will not apply to cards that start with BIN ranges reserved by <a href="https://en.wikipedia.org/wiki/Payment_card_number#Issuer_identification_number_.28IIN.29">payment card brands</a>.</div>
 <p>&nbsp;</p><p>&nbsp;</p>
 
 ## Transaction Capabilities Configuration
