@@ -6,9 +6,9 @@ date: 2015-03-04 16:49:01
 ---
 
 
-### PoyntOS SDK Version: 1.2.24
+### PoyntOS SDK Version: 1.2.27
 -Note: Poynt Terminals run on a customized build of Android 4.4.4 (KitKat), so all applications must set the build target to android-19.
-### Poynt API Model Version: 1.2.94
+### Poynt API Model Version: 1.2.108
 
 ### Changes since beta6 (1.2.11)
 * Updated API Model with new modifiers support (`selectableVariations`)
