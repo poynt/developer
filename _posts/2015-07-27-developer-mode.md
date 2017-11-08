@@ -80,7 +80,19 @@ You should see a success confirmation on the next screen, and Device Manager wil
 
 You should be able to see Poynt by running `adb devices` in command line (Note: `adb` and `fastboot` executables are located in `C:\Users\{username}\AppData\Local\Android\sdk\platform-tools\`).
 
-If you are on Windows 10, please read [this](https://www.maketecheasier.com/install-unsigned-drivers-windows10/).
+
+<p><div class="note"><span style="font-weight: bold">Note:</span> the same steps may need to be repeated for Windows to recognize when the terminal is the <span style="font-style: italic">fastboot mode</span>.</div></p>
+
+### Windows 10 Users
+
+If are on Windows 10 you may encounter the following error:
+
+<span style="font-weight: bold; color: #FF0000">Windows encountered a problem installing the driver software for your device.
+Windows found driver software for your device but encoutered an error while attempting to install it.
+The hash for the file is not present in the specified catalog file. The file is likely corrupt or the victim of tampering.</span>
+
+
+To proceed you will need to disable Device Driver Signing (please refer to [this](https://www.maketecheasier.com/install-unsigned-drivers-windows10/)) and re-do the steps above.
 
 ### For Mac OS X/Linux Users
 Add `{SDK_LOCATION}\sdk\platform-tools` to your PATH environmental variable. To find out your Android SDK location, open Android Studio, Go to Android Studio->Preference->System Settings->Android SDK.
