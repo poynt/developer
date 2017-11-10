@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Integrating Gift Cards and Custom Tenders"
-category: tut
-date: 2014-04-07 07:09:00
+category: onterminal
+date: 2012-04-07 07:09:00
 ---
 
 ## Overview

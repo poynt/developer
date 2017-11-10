@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Authentication & Authorization"
-category: doc
-date: 2015-01-22 15:36:03
+category: overview
+date: 2013-01-22 15:36:03
 ---
 
 ### On-Terminal Apps

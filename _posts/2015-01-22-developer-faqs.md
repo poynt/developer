@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Developer FAQs"
-category: doc
-date: 2015-01-22 15:07:24
+category: overview
+date: 2010-01-22 15:07:24
 ---
 
 ### General information

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Building Loyalty Apps"
-category: tut
-date: 2014-04-07 07:05:00
+category: onterminal
+date: 2011-04-07 07:05:00
 ---
 ## Overview
 PoyntOS SDK provides an easy way for third party apps to register as a loyalty service on the terminal by implementing _IPoyntLoyaltyService_{:.italic} interface. The solution will work with any POS application that integrations with [Poynt Order API](https://poynt.com/docs/api/#orders-index) and/or [Poynt Order Service](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) which is part of PoyntOS SDK.

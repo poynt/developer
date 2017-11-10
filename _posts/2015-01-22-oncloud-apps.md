@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "On-Cloud Apps"
-category: doc
-date: 2015-01-22 16:26:03
+category: cloud
+date: 2017-01-22 16:26:03
 ---
 
 

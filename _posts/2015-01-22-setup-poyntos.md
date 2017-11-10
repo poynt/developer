@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Setup PoyntOS Emulator"
-category: tut
+category: setup
 date: 2015-01-22 16:34:52
 ---
 

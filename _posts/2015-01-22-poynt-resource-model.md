@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Poynt Resource Model"
-category: doc
+category: overview
 date: 2015-01-22 15:07:24
 ---
 

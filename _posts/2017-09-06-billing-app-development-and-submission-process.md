@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Billing App development and submission process"
-category: tut
-date: 2014-04-06 07:05:00
+category: appstore
+date: 2012-04-06 07:05:00
 ---
 
 While integrating with Poynt Billing is relatively simple and straightforward, the process of development and testing using the same package name that you would use for Live deployment could be challenging. As an app that requires the merchants to pay for subscriptions, you would need to make sure you handle one or more billing plans (as per your monetization strategy), managing existing and new subscriptions, receive and handle webhooks for start & stop of subscriptions and payments, and above all managing multiple versions of your app in different states of development, testing and deployment.
@@ -94,7 +94,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 # Billing use cases
 
-While integrating with Poynt Billing, please consider the following scenarios and make sure your application code can handle these as necessary. Please refer to [App Billing Best Practices](https://poynt.com/poynt-billing-best-practices/) to make sure your app covers all possible billing scenarios.
+While integrating with Poynt Billing, please consider the following scenarios and make sure your application code can handle these as necessary. Please refer to [App Billing Best Practices](app-billing-best-practices.html) to make sure your app covers all possible billing scenarios.
 
 1. merchant has a valid subscription but never used your app before (**first time subscriber**)
 2. merchant has a valid subscription and has used your app before (**returning subscriber**)

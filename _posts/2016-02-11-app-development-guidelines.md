@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "App Development Guidelines"
-category: ref
+category: appstore
 date: 2016-02-11 12:35:00
 ---
 
@@ -38,7 +38,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
     * `poynt.intent.action.ORDER_CLOSED`
 
 
-#### RELIABILITY, USABILITY AND RESPONSIVENESS: 
+#### RELIABILITY, USABILITY AND RESPONSIVENESS:
 * Thoroughly test your app to prevent `NullPointerException` (NPE) and Application Not Responding (ANR) errors.
 * Create a snappy, responsive, simple and intuitive UI
   * Make touch targets at least 48x48 pixels.
@@ -47,15 +47,15 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Use more than just color to convey critical information.
   * Ensure critical text has enough contrast.
   * Native UI is recommended for better user experience.
-  * Use the following dimensions for logo image assets: 70px(w) x 70px(h) (52dp x 52dp, tvdpi). 
+  * Use the following dimensions for logo image assets: 70px(w) x 70px(h) (52dp x 52dp, tvdpi).
   * A flat color logo without any effects is recommended.
   * Provide navigation inside application including back and home buttons.
-  * Authenticate users through Poynt's login screen and Token Service. PoyntOS security locks the screen and requires authentication. Additional layers of authentication are unnecessary and time consuming for merchant users. 
+  * Authenticate users through Poynt's login screen and Token Service. PoyntOS security locks the screen and requires authentication. Additional layers of authentication are unnecessary and time consuming for merchant users.
   * Optimize operations for battery usage (i.e. push long running tasks to the cloud).
   * Provide support contact information for customers with issues/questions.
 
 
-#### POYNT SPECIFIC: 
+#### POYNT SPECIFIC:
   * Push order information to the Poynt cloud. This will allow merchant to access this information through ther merchant facing Poynt HQ portal (web) and mobile app (see Interoperabilty above).
   * Only use the Poynt Payment Fragment to collect payment, tip, signature, PIN and payment processor response information.
   * Disable Pay/Charge button when launching Payment Fragment to prevent multiple Payment Fragments from stacking up if the merchant clicks the button repeatedly.
@@ -66,7 +66,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### INTEROPERABILITY:
   * Use Poynt Catalog API and Products Content Provider (enables interoperability with complimentary apps in the ecosystem).
-  * Link your customer with Poynt customer accounts.  Note: Poynt creates a customer record for every card swiped/used to enable seamless interactions without the need for additional Identification credentials. 
+  * Link your customer with Poynt customer accounts.  Note: Poynt creates a customer record for every card swiped/used to enable seamless interactions without the need for additional Identification credentials.
 
 #### USABILITY AND RESPONSIVENESS:
   * Native UI is recommended for a better user experience.
@@ -75,7 +75,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 #### POYNT SPECIFIC:
   * Use or sync with Poynt product catalog as applicable.
   * POS/register applications should utilize `IPoyntSecondScreenService` to display item information as items are getting entered/scanned.
-  
+
 ---
 
 ### Prohibited Guidelines

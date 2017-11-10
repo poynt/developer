@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Integration with Poynt Billing Services"
-category: tut
-date: 2014-04-06 07:05:00
+category: appstore
+date: 2013-04-06 07:05:00
 ---
 
 While integrating with Poynt Billing Services is relatively simple and straightforward, the process of development and testing will require a special setup to make sure your app can handle all possible scenarios related to billing. We recommend reading the app development process first before writing your code to integrate with Poynt Billing.

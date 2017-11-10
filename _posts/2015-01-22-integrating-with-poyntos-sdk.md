@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Integrating with PoyntOS SDK"
-category: tut
-date: 2015-01-22 17:07:40
+title: "PoyntOS SDK"
+category: onterminal
+date: 2016-01-22 17:07:40
 ---
 
 

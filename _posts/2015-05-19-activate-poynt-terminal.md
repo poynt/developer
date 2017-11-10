@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Activate Poynt Terminal"
-category: tut
-date: 2015-05-19 11:21:25
+category: setup
+date: 2017-05-19 11:21:25
 ---
 
 Once you receive your Poynt Developer Unit, following the instructions below to set it up with a test merchant that you can use to simulate a merchant and start integrating with our PoyntOS SDK and Cloud APIs.
@@ -11,32 +11,33 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 
 * Android SDK with android-api 19 (Kitkat) installed on your development machine
 * Poynt Developer Unit
-* If you want to the ability to install development applications (APKs) on your device <a href="/developer/tut/developer-mode.html">enable developer-mode</a>
+* If you want to the ability to install development applications (APKs) on your device <a href="/developer/tut/developer-mode.html">enable developer-mode</a> (May not be required if your unit arrived already in developer mode).
 
 ### Installation
 
-1. Go to https://poynt.net/auth/signup/developer and register your developer account.
-![SignUp]({{site.url}}/developer/assets/poynt-signup-2.png)
-2. Once you’re registered, you will see Poynt Developer dashboard.
+* Go to [Developer Portal](https://poynt.net/auth/signup/developer) and register your developer account. Once you enter your email address you will receive a verification email to complete your registration.
+
+![SignUp]({{site.url}}/developer/assets/signup1.png){:width="800px"}
+
+![SignUp2]({{site.url}}/developer/assets/signup2.png){:width="800px"}
+
+![SignUp3]({{site.url}}/developer/assets/signup3.png){:width="800px"}
+
+* Once you’re registered, you will see Poynt Developer dashboard.
     - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
-3. On the dashboard, click on "COMPLETE YOUR PROFILE”, enter any missing information (eg. Website Url) and click on Save.
-![complete profile]({{site.url}}/developer/assets/poynt-signup-3.png)
-![profile]({{site.url}}/developer/assets/poynt-signup-4.png)
-4. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
-![create test merchant]({{site.url}}/developer/assets/poynt-signup-5.png)
-5. On the dashboard, click on “ACTIVATE A POYNT TERMINAL”, and you’ll see a list of terminals and their status.
-    - You should see a terminal with status as “Needs Activation"
-    ![activate]({{site.url}}/developer/assets/poynt-signup-6.png)
-    ![needs activation]({{site.url}}/developer/assets/poynt-signup-7.png)
-6. Click on the Action to activate your terminal - you’ll see your activation credentials (MID, TID and Acquirer).
-    - Keep the page open so you can enter the credentials on the device.
-    ![activation credentials]({{site.url}}/developer/assets/poynt-signup-8.png)
-7. Turn on your Poynt Developer unit.
-8. Go through the Poynt activation app to setup wifi and install any updates that are available.
-8. When you are prompted for activation credentials, enter the information from the developer portal (step 6) and click on Activate.
-9. Once you activate the device, you will be automatically logged into the device. From the Launcher screen, tap on Poynt Terminal or Register apps to try out the default applications.
 
+* On the dashboard, go to `Test Merchants` and create a test merchant for your development activity. You can change the name, but for testing purposes we recommend to keep the default `Bank` as all transations will be going against our test environment.
+![create test merchant]({{site.url}}/developer/assets/signup4.png){:width="800px"}
 
+* After a few seconds refresh the page to see the newly created test merchant.
+![test merchant created]({{site.url}}/developer/assets/signup5.png){:width="800px"}
 
+* Click on the merchant name and scroll down until you see green `Activate` button to see the activation information.
+![terminal activation]({{site.url}}/developer/assets/signup6.png){:width="800px"}
 
-At this point, your device is ready for development and testing. If there is a system update available refer to <a href="/developer/tut/updating-poynt-terminal.html">Update Poynt Terminal</a>. Otherwise, <a href="/developer/tut/assign-catalog-to-poynt-register.html">Create and Assign catalog to Poynt Register</a>.
+* Turn on your Poynt Developer unit.
+* Go through the Poynt activation app to setup wifi and install any updates that are available.
+* When you are prompted for activation credentials, scan the QR code or enter the information from the developer portal and click on Activate.
+* Once you activate the device, you will be automatically logged into the device. From the Launcher screen, tap on Poynt Terminal or Register apps to try out the [default applications](overview/default-apps.html).
+
+At this point, your device is ready for development and testing.

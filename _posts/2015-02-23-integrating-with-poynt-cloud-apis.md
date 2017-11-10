@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Integrating with Poynt Cloud APIs"
-category: tut
-date: 2015-02-23 17:20:24
+category: cloud
+date: 2016-02-23 17:20:24
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Poynt Cloud Messages"
-category: tut
+category: onterminal
 date: 2015-04-01 15:05:00
 ---
 

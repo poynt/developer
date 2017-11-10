@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Enabling Developer Mode"
-category: tut
+category: setup
 date: 2015-05-19 11:21:25
 ---
 <p>

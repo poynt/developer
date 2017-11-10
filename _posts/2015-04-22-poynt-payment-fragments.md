@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Poynt Payment Fragments"
-category: tut
+category: overview
 date: 2015-04-22 18:48:17
 ---
 
@@ -140,7 +140,7 @@ _Payment_{:.italic} object contains a number of parameters that allows developer
 
 <p>&nbsp;</p>
 
-## Post-Payment Actions
+## <a name="post-payment-actions"></a>Post-Payment Actions
 
 Once a payment has been processed often times it's required to provide the merchants ability to execute different actions on the processed payments. These include payment actions like void, capture, refund, and get details, which are provided by Payment Fragments through "DISPLAY_PAYMENT" intent.
 

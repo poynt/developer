@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Create and Assign catalog to Poynt Register"
-category: tut
-date: 2015-02-11 16:03:40
+title: "Create and Assign catalog to Terminal"
+category: setup
+date: 2012-02-11 16:03:40
 ---
 
 Assigning a product catalog to a Poynt Register can be done through https://poynt.net
@@ -18,10 +18,11 @@ portal. Usually this involves creating a catalog (either through a csv file uplo
 
 ### Create a Catalog (using bulk upload method)
 
-1. Login to https://poynt.net with your developer account
+1. Login to [Developer Portal](https://poynt.net) with your developer account
 
 2. Select the test business that you want to add the Catalog for.<br />
-![Login Account Chooser]({{site.url}}/developer/assets/poynt_net_login_choose_account_screen.png)
+![Login Account Chooser]({{site.url}}/developer/assets/assign-catalog1.png){:width="800px"}
+![Login Account Chooser 2]({{site.url}}/developer/assets/assign-catalog2.png){:width="800px"}
 
 3. Click on `PRODUCTS` in the top navigation bar <br />
 ![Top Nav]({{site.url}}/developer/assets/poynt_net_top_nav.png)
