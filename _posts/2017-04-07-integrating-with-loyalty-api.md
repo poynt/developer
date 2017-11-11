@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Building Loyalty Apps"
-category: tut
-date: 2014-04-07 07:05:00
+category: onterminal
+date: 2011-04-07 07:05:00
 ---
 ## Overview
 PoyntOS SDK provides an easy way for third party apps to register as a loyalty service on the terminal by implementing _IPoyntLoyaltyService_{:.italic} interface. The solution will work with any POS application that integrations with [Poynt Order API](https://poynt.com/docs/api/#orders-index) and/or [Poynt Order Service](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntOrderService.html) which is part of PoyntOS SDK.
@@ -267,3 +267,6 @@ To review the the working sample loyalty app please refer to [PoyntSamples](http
 ### Additional Info
 
 If your loyalty application needs to get notified if the transactions was completed or canceled you can create a BroadcastReceiver and register to listen to `Intents.ACTION_TRANSACTION_COMPLETED` and `Intents.ACTION_PAYMENT_CANCELED`. The sample is available on [github](https://github.com/poynt/PoyntSamples/blob/develop/codesamples/src/main/java/co/poynt/samples/codesamples/receivers/MyBroadcastReceiver.java).
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

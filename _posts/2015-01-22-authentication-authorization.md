@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Authentication & Authorization"
-category: doc
-date: 2015-01-22 15:36:03
+category: overview
+date: 2013-01-22 15:36:03
 ---
 
 ### On-Terminal Apps
@@ -169,3 +169,6 @@ Poynt-Request-Id: bdceda34-7941-449d-88a6-cc28bf738fb9
     "tokenType":"BEARER"
 }
 ~~~
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

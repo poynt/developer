@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Integration with Poynt Billing Services"
-category: tut
-date: 2014-04-06 07:05:00
+category: appstore
+date: 2013-04-06 07:05:00
 ---
 
 While integrating with Poynt Billing Services is relatively simple and straightforward, the process of development and testing will require a special setup to make sure your app can handle all possible scenarios related to billing. We recommend reading the app development process first before writing your code to integrate with Poynt Billing.
@@ -442,3 +442,6 @@ The Subscription information on activations/deletions allows you to get merchant
 
 
 <p>&nbsp;</p>
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

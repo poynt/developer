@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Poynt Cloud Messages"
-category: tut
+category: onterminal
 date: 2015-04-01 15:05:00
 ---
 
@@ -123,3 +123,6 @@ PCM message payloads (i.e. the `data` element) can be up to 4096 bytes long.
 
 ### Why isn't my on-terminal app receiving cloud messages?
 There could many reasons why your cloud messages aren't making it to the Poynt terminal. If your client app is getting a 401 (unauthorized access) error code, see [this thread](https://discuss.poynt.net/t/is-it-required-to-register-a-terminal-app-before-testing-poynt-cloud-messaging/206/15) on the developer community discussion forums.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

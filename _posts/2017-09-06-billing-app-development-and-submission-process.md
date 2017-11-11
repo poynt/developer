@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Billing App development and submission process"
-category: tut
-date: 2014-04-06 07:05:00
+category: appstore
+date: 2012-04-06 07:05:00
 ---
 
 While integrating with Poynt Billing is relatively simple and straightforward, the process of development and testing using the same package name that you would use for Live deployment could be challenging. As an app that requires the merchants to pay for subscriptions, you would need to make sure you handle one or more billing plans (as per your monetization strategy), managing existing and new subscriptions, receive and handle webhooks for start & stop of subscriptions and payments, and above all managing multiple versions of your app in different states of development, testing and deployment.
@@ -94,7 +94,7 @@ Below you'll find more detailed step by step process on how to setup your applic
 
 # Billing use cases
 
-While integrating with Poynt Billing, please consider the following scenarios and make sure your application code can handle these as necessary. Please refer to [App Billing Best Practices](https://poynt.com/poynt-billing-best-practices/) to make sure your app covers all possible billing scenarios.
+While integrating with Poynt Billing, please consider the following scenarios and make sure your application code can handle these as necessary. Please refer to [App Billing Best Practices](app-billing-best-practices.html) to make sure your app covers all possible billing scenarios.
 
 1. merchant has a valid subscription but never used your app before (**first time subscriber**)
 2. merchant has a valid subscription and has used your app before (**returning subscriber**)
@@ -102,3 +102,6 @@ While integrating with Poynt Billing, please consider the following scenarios an
 4. merchant has no subscriptions and never used your app - although this is no longer possible once you’ve integrated with Poynt Billing, we still recommend you to handle this scenario to prevent any fraud that might occur in the future. (**not a subscriber**)
 5. merchant has no subscriptions and has used your app before - these are your existing merchants before you’ve switched to Poynt billing. You must make sure you grandfather these merchants to provide a more graceful upgrade process to billing. (**grandfathered subscriber**)
 6. merchant has a valid subscription but wants to upgrade or downgrade (**upsell/downsell subscriber**)
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

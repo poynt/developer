@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Integrating Payment Bridge API"
-category: tut
-date: 2015-04-01 13:05:00
+category: semi
+date: 2016-04-01 13:05:00
 ---
 
 Payment Bridge API provides a way for external systems (e.g. web-based point-of-sale systems) to start a transaction flow on Poynt Terminal without requiring to build any apps/services that have to run on the terminal itself.
@@ -17,7 +17,7 @@ Here is how it works:
 
 1. [Create a developer account and activate your developer terminal](http://poynt.github.io/developer/tut/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](http://poynt.github.io/developer/tut/setup-poyntos.html))
 2. Create an app and make sure it has "Cloud Messages" WRITE permission
-3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](http://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html) 
+3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](http://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html)
 
 ### Payment Bridge Sequence Diagram
 
@@ -137,3 +137,6 @@ User-Agent: okhttp/2.5.0
     ]
 }
 ~~~
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

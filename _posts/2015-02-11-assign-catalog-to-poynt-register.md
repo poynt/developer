@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Create and Assign catalog to Poynt Register"
-category: tut
-date: 2015-02-11 16:03:40
+title: "Create and Assign catalog to Terminal"
+category: setup
+date: 2012-02-11 16:03:40
 ---
 
 Assigning a product catalog to a Poynt Register can be done through https://poynt.net
@@ -18,10 +18,11 @@ portal. Usually this involves creating a catalog (either through a csv file uplo
 
 ### Create a Catalog (using bulk upload method)
 
-1. Login to https://poynt.net with your developer account
+1. Login to [Developer Portal](https://poynt.net) with your developer account
 
 2. Select the test business that you want to add the Catalog for.<br />
-![Login Account Chooser]({{site.url}}/developer/assets/poynt_net_login_choose_account_screen.png)
+![Login Account Chooser]({{site.url}}/developer/assets/assign-catalog1.png){:width="800px"}
+![Login Account Chooser 2]({{site.url}}/developer/assets/assign-catalog2.png){:width="800px"}
 
 3. Click on `PRODUCTS` in the top navigation bar <br />
 ![Top Nav]({{site.url}}/developer/assets/poynt_net_top_nav.png)
@@ -59,3 +60,6 @@ update it to with your products and categories
 
 6. At this point your terminal is configured with your catalog, and the Poynt Register
 would load the Catalog when it's started next time.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

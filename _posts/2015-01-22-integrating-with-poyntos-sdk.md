@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Integrating with PoyntOS SDK"
-category: tut
-date: 2015-01-22 17:07:40
+title: "PoyntOS SDK"
+category: onterminal
+date: 2016-01-22 17:07:40
 ---
 
 
@@ -43,3 +43,6 @@ dependencies {
 NOTE: Please refer to [release notes](https://poynt.github.io/developer/ref/release-notes.html) for current <release-version>
 
 At this point your app should be ready to use the Poynt OS SDK. Please refer to the documentation or [Poynt Sample app](https://github.com/poynt/PoyntSamples) to start using the SDK.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

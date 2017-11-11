@@ -13,6 +13,16 @@ codeurl: 'https://github.com/poynt/developer'
 
 # Default categories (in order) to appear in the navigation
 sections: [
+    ['overview', '** Overview ** '],
+    ['setup', '** Setup **'],
+    ['onterminal', '** On-Terminal Apps **'],
+    ['cloud', '** Cloud Apps **'],
+    ['semi', '** Semi-Integration **'],
+    ['peripherals', '** Integrating Peripherals** '],
+    ['appstore', '** Appstore & App Review **'],
+    ['acquirer', '** Acquirer/Gateway Integration **'],
+    ['reference', '** References** '],
+
     ['doc', 'Documentation'],
     ['tut', 'Tutorials'],
     ['post', 'Posts'],
