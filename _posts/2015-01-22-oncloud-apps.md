@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "On-Cloud Apps"
-category: doc
-date: 2015-01-22 16:26:03
+category: cloud
+date: 2017-01-22 16:26:03
 ---
 
 
@@ -18,3 +18,6 @@ At a high level consuming Poynt APIs on behalf of a merchant involves the follow
 2. Obtain Access Token from the Poynt OAuth2.0 end point
 
 3. Make authenticated API calls passing the Access Token in the Authorization header.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

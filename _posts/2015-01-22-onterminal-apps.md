@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "On-Terminal Apps"
-category: doc
-date: 2015-01-22 16:51:51
+category: onterminal
+date: 2017-01-22 16:51:51
 ---
 
 
@@ -25,7 +25,7 @@ Given that a main function of the Poynt device is payment processing, there are 
 
 ### Developer Tools
 
-Application development for Poynt is the same as any other Android application development process using the standard Android development tools available from [developer.android.com](https://developer.android.com). Poynt Terminals run on a customized build of Android 4.4.4 (KitKat), so all applications must set the build target to `android-19`.
+Application development for Poynt is the same as any other Android application development process using the standard Android development tools available from [developer.android.com](https://developer.android.com). Poynt Smart Terminal runs on a customized build of Android 4.4.4 (KitKat), so all applications must set the build target to `android-19`. Poynt 5 runs on a customized build of Android 6.0 (Marshmallow).
 
 Android Studio with gradle build toolkit is recommended. Although any android emulator would work, we would recommend using Genymotion emulator with screen resolution as 800x1280.
 
@@ -134,3 +134,6 @@ poynt.intent.action.REMOVE_PRODUCT_FROM_CART
 <p><div class="note">
 <strong>Note</strong> Full list of broadcast intents can be seen in PoyntOS SDK's <a href="https://poynt.github.io/developer/javadoc/co/poynt/os/model/Intents.html" target="_blank">Intents</a> class
 </div></p>
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
