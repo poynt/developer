@@ -6,22 +6,22 @@ date: 2017-01-01 13:05:00
 ---
 
 ## Overview
-There is a [number of external peripherals](https://poynt.zendesk.com/hc/en-us/articles/115005423568-Supported-Peripherals) that are supported on Poynt by default. However there is a wide number of other peripherals (a.k.a. accessories) or models that merchants may want to connect to their terminal and to ensure that developers can connect new devices we have provided an API to do that. 
+There is a [number of external peripherals](https://poynt.zendesk.com/hc/en-us/articles/115005423568-Supported-Peripherals) that are supported on Poynt by default. However there is a wide number of other peripherals (a.k.a. accessories) or models that merchants may want to connect to their terminal and to ensure that developers can connect new devices we have provided an API to do that.
 
-An Accessory Provider is a android app that manages one of the accessories connected to Poynt device. Example of accessories are Cash Drawer, Cash Register, Scale etc. At this point this API only supports accessories connected via USB. 
+An Accessory Provider is a android app that manages one of the accessories connected to Poynt device. Example of accessories are Cash Drawer, Cash Register, Scale etc. At this point this API only supports accessories connected via USB.
 
 In order to create a accessory provider you need to perform the following steps:
 
 1. Register your app with accessory manager by providing an xml definition in your **AndroidManifest** file.
-2. Create a Accessory Broadcast Receiver class to handle *ACCESSORY\_ATTACHED* and *ACCESSORY\_DETACHED* intent action.
+2. Create a Accessory Broadcast Receiver class to handle **ACCESSORY\_ATTACHED** and **ACCESSORY\_DETACHED** intent action.
 3. Create a Accessory Service class that will initialize and talk to the actual accessory when the events mentioned above are received.
-4. Expose Accessory functionality to rest of the system by implementing standard service interface For example 
+4. Expose Accessory functionality to rest of the system by implementing standard service interface.
 
 ## Details
 
 ### Registering accessory provider with Accessory Manager.
 
-First step of providing a support and managing an accessory is to register your app with Accessory Manager. 
+First step of providing a support and managing an accessory is to register your app with Accessory Manager.
 
 Registering is done via an XML defined in AndroidManifest.xml
 
@@ -33,10 +33,22 @@ Registering is done via an XML defined in AndroidManifest.xml
     <meta-data
         android:name="co.poynt.accessory.resources"
         android:resource="@xml/accessory" />
+
+    <receiver
+        android:name=".AccessoryReceiver"
+        android:enabled="true"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="co.poynt.accessory.manager.action.ACCESSORY_ATTACHED" />
+            <action android:name="co.poynt.accessory.manager.action.ACCESSORY_DETACHED" />
+        </intent-filter>
+    </receiver>
 </application>
 ```
 
-Define the information of the accessory in an xml file 
+You will also need to register your BroadcastReceiver class and the Intents *ACCESSORY_DETACHED* and *ACCESSORY_ATTACHED* as you see above.
+
+Define the information of the accessory in an xml file. You will need to know the vendor id and product id of your accessory device.
 
 ```xml
 <accessories xmlns:android="http://schemas.android.com/apk/res/android">
@@ -49,25 +61,29 @@ Define the information of the accessory in an xml file
  <!-- Please refer to AccessoryProvider and AccessoryType in Poynt SDK -->
  <!-- For example in order to expose CashDrawer function to rest of the system accessory
       provider service needs to implement ICashDrawerService interface. -->
- 
+
  <!-- REQUIRED: application id of this app
       this appid is issued by poynt web portal
       IMPORTANT: Replace this appid with your appid.-->
  <!--<appid>urn:aid:0f39b7a3-b9db-41f1-9cdb-9f04a3620ade</appid>-->
  <appid>urn:aid:d3462a56-737b-4419-b54c-39a59f4dc8d6</appid>
 
-<!-- 
+<!--
 Supported categories:
 - "Printer"
 - "Cash Drawer"
 - "Scanner"
---> 
- <accessory
-     category="Cash Register"
-     model-name="ER-5200M"
-     version="1.0"
-     service_class="co.poynt.accessory.CashRegisterService"
-     type="usb" />
+-->
+  <accessory
+       category="Cash Drawer"
+       model-name="Generic"
+       version="1.0"
+       service_class="co.poynt.accessory.CashDrawerService"
+       type="usb" >
+       <usb-device
+           product-id="12345"
+           vendor-id="1234" />
+   </accessory>
 </accessories>
 ```
 
@@ -84,7 +100,7 @@ public class AccessoryReceiver extends BroadcastReceiver {
     public static final String EXTRA_MODEL_CATEGORY = "co.poynt.accessory.manager.extra.MODEL_CATEGORY";
     public static final String EXTRA_MODEL_VERSION = "co.poynt.accessory.manager.extra.MODEL_VERSION";
     public static final String CATEGORY_CASH_REGISTER = "Cash Register";
- 
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (ACCESSORY_ATTACHED.equals(intent.getAction())) {
@@ -103,7 +119,7 @@ public class AccessoryReceiver extends BroadcastReceiver {
                     context.startService(service_intent);
                 }
             }
- 
+
         } else if (ACCESSORY_DETACHED.equals(intent.getAction())) {
             UsbDevice device = (UsbDevice) intent.getParcelableExtra(EXTRA_USB_DEVICE);
             if (device != null) {
@@ -145,7 +161,7 @@ public class CashDrawerService extends Service {
                     && device.getVendorId() == lastAttachedUsbDevice.getVendorId()) {
                 lastAttachedUsbDevice = null;
             }
-        } 
+        }
         return START_STICKY;
     }
     /**
@@ -177,12 +193,20 @@ public class CashDrawerService extends Service {
         }
 
     };
-  
+
     public boolean open(){
         //TODO Implement your "open()" method that communicates with the cash drawer
     }
 }
 ```
+
+Once you install your accessory app and connect the peripheral you should get a notification from Poynt Accessory Manager. This notification will only show once.
+
+![Accessory Manager Notification]({{site.url}}/developer/assets/accessory1.png)
+
+If you go to Settings > Accessory menu you will should see your accessory there and you can always remove or disable it if needed.
+
+![Accessory Activity]({{site.url}}/developer/assets/accessory2.png)
 
 To create an accessory app for a printer you need to implement [IPoyntPrinterService](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntPrinterService.html), and [IPoyntScannerService](https://poynt.github.io/developer/javadoc/co/poynt/os/services/v1/IPoyntScannerService.html) for a scale.
 
