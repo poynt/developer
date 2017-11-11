@@ -38,3 +38,6 @@ At this moment Poynt Billing Fragment does not provide support for upgrade/downg
 
 ### Test Merchants
  Developers and Test teams using Poynt DevKits and emulators use "Test Merchant" accounts for development and testing. While Poynt makes sure that Test Merchants are not charged for the usage, it's your responsibility to access control usage of your app.  You can verify the business type to make sure it's a LIVE  or TEST merchant.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

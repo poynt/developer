@@ -54,3 +54,6 @@ When a terminal user switch occurs, Poynt broadcasts an event `poynt.intent.acti
 ```
 
 For example, let's say merchant A installed a gift card application and used it to reload a customer's card. When merchant B logs in, the gift card app should receive the `ACCOUNT_LOGIN` event, check if the other merchant is logged in now and present a sign in screen (assuming merchant B also uses the same gift card application) or a registration screen. When merchant A logs back in, the app should recognize that this merchant was already logged in.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

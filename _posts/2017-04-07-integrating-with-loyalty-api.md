@@ -267,3 +267,6 @@ To review the the working sample loyalty app please refer to [PoyntSamples](http
 ### Additional Info
 
 If your loyalty application needs to get notified if the transactions was completed or canceled you can create a BroadcastReceiver and register to listen to `Intents.ACTION_TRANSACTION_COMPLETED` and `Intents.ACTION_PAYMENT_CANCELED`. The sample is available on [github](https://github.com/poynt/PoyntSamples/blob/develop/codesamples/src/main/java/co/poynt/samples/codesamples/receivers/MyBroadcastReceiver.java).
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

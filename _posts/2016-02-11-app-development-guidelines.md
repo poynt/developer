@@ -101,3 +101,6 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Correlate customers across merchants and sharing Poynt customer information with other providers without explicit permission.
   * Using Poynt logo in your app without receiving prior consent from Poynt.
   * Launch any activities when your application is not in the foreground (not currently used by the merchant) including when Payment Fragment is in session. Note: as a background service you can rely on using Android notification framework to bring something to merchant's attention.
+
+<!-- feedback widget -->
+<SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

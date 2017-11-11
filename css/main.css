@@ -45,3 +45,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,canvas,captio
 }
 
 .italic{font-style:italic}
+.fakeSuper {
+  font-size: 0.6em;
+  vertical-align: top;
+}
