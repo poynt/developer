@@ -138,6 +138,8 @@ _Payment_{:.italic} object contains a number of parameters that allows developer
 
 **offlineApprovalCode** _(String)_{:.italic} - optionally the approval code can be passed in the request to launch Payment Fragment.
 
+**disablePaymentOptions** _(boolean)_{:.italic} - hide the "Summary", "Notes" and "Receipt" options from the Payment Fragment.
+
 <p>&nbsp;</p>
 
 ## <a name="post-payment-actions"></a>Post-Payment Actions
