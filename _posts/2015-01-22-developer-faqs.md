@@ -39,8 +39,8 @@ Yes. From a technical standpoint, there is detailed information is in our SDK do
 **How can I monetize my app? How is billing managed?**<br>
 Apps that are submitted for review and approved by Poynt will be made available to merchants for purchase/subscription (see marketplace question below). Invoicing and billing is managed by Poynt.<br><br>
 
-**What is the revenue share on app subscriptions?**<br>
-It's a simple 80/20 revenue split of Net Revenue (as defined in the Developer Distribution Agreement) -- 80% to you (the developer), 20% to Poynt.<br><br>
+**What is the revenue share on my software running on Poynt?**<br>
+It's a simple 80/20 revenue split of Net Revenue (as defined in the Developer Distribution Agreement) -- 80% to you (the developer), 20% to Poynt. *<br><br>
 
 **When will an app marketplace be available to all merchants?**<br>
 Poynt will start strategic rollouts of app marketplaces in Q2/2017. We're currently piloting select apps with live merchants using Poynt terminals. If your app is merchant-ready and
@@ -49,6 +49,8 @@ you would like us to review it for inclusion in a pilot deployment program, we'd
 **What type of subscription models does Poynt support? How do I define those?**<br>
 Poynt supports monthly subscriptions plans. One-time free trial periods are mandatory in most cases. At this time you cannot define app subscription plans; however, as we get closer to the general
 rollout of the app marketplaces, the interface for defining these plans can be done in the application management section of the Poynt HQ developer portal.
+
+\* Please contact Poynt for enterprise pricing and pricing for semi-integrated solutions.
 
 ---
 
