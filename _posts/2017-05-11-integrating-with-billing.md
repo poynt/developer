@@ -281,14 +281,14 @@ Note: For calling into Poynt services to register webhooks, the app will need an
 
 #### (2) Webhook
 
-When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl` from step (1).
+When a Subscription event occurs, a webhook notification is triggered and sent to the `deliveryUrl` from step (1). This event gets triggered regardless of whether the subscription has a free trial.
 
 Sample Webhook for Subscription Start:
 
 ~~~
 {  
-   "createdAt":"2017-05-24T02:13:43Z",
-   "updatedAt":"2017-05-24T02:13:43Z",
+   "createdAt":"2017-05-24T02:13:43Z", // time event created
+   "updatedAt":"2017-05-24T02:13:43Z", // time event updated (in case it's a retry)
    "links":[  
       {  
          "href":"https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
@@ -296,15 +296,17 @@ Sample Webhook for Subscription Start:
          "method":"GET"
       }
    ],
-   "id":"5f97f64e-f7e7-4f1b-be36-c5a9ae016410",
-   "hookId":"f6c07532-2401-40ea-a569-5058a9b8d468",
-   "applicationId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
+   "id":"5f97f64e-f7e7-4f1b-be36-c5a9ae016410", // id of this event
+   "hookId":"f6c07532-2401-40ea-a569-5058a9b8d468",  // id of the web hook that generated this event
+   "applicationId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9", // appId of your application
    "resource":"/apps/subscriptions",
-   "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
+   "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",  // subscription id for this merchant
    "eventType":"APPLICATION_SUBSCRIPTION_START",
-   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
+   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa" // merchant's business id
 }
 ~~~
+
+To get the details of the merchant (i.e. business name, email, phone, etc.) who purchased/installed the app you can make a HTTP GET request to https://services.poynt.net/businesses/{businessId}.  Please refer to [API reference](https://poynt.com/docs/api/#model-business) to see the type of information contained in the response.
 
 Sample Webhook for Payment Success:
 
