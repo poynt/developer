@@ -61,7 +61,7 @@ Additionally, you can also build pure cloud applications that operate independen
 
 
 **Do you have an Android sample app?**<br>
-Our Android sample app is available on Github. The app demonstrates invoking a payment fragment and displaying information on the second screen. For additional capabilities exposed in our SDK please visit https://poynt.github.io/developer/doc/onterminal-apps.html.<br><br>
+Our Android sample app is available on Github. The app demonstrates invoking a payment fragment and displaying information on the second screen. For additional capabilities exposed in our SDK please visit https://poynt.github.io/developer/overview/onterminal-apps.html.<br><br>
 
 **How do I use Poynt’s Cloud APIs?**<br>
 Our Python sample app demonstrates the usage of Poynt Cloud API. For more informaton on how to use Cloud API please refer to https://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html.<br><br>
