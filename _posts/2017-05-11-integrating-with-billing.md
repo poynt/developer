@@ -184,13 +184,21 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ### Get-Subscriptions-API
 
-This API returns a list of ALL Active Subscriptions across ALL merchants for a specific developer appId.
+This API returns a list of ALL active subscriptions across ALL merchants (if **businessId** param is not present) for a specific developer appId.
 
 e.g.:
 
-Request URL - {endpoint}/apps/{appId}/subscriptions (Add query params businessId={businessId}, start={pagination start value}, count={pagination count})
+**Request URL** - https://billing.poynt.net/apps/{appId}/subscriptions 
 
-~~~
+**Optional query params**:
+
+ 1. **businessId** - merchant business id
+ 2. **start** - pagination start value in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)  format
+ 3. **count** - pagination count 
+
+e.g.
+
+~~~bash
 curl -X GET   https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions?businessId=db4a4f0d-d467-472d-a85b-2d08a61b57fa   
 -H 'authorization: Bearer <access-token>'   
 -H 'cache-control: no-cache'   
@@ -274,10 +282,9 @@ Billing Webhooks can be registered with the following Event Types:
                 "APPLICATION_SUBSCRIPTION_PAYMENT_FAIL"]
 ~~~
 
-Please refer to [Webhooks Registration](https://poynt.github.io/developer/doc/webhooks.html) section for details on webhooks.
-The `businessId` value in the request corresponds to the `OrgId` value from your Developer Portal account online.
+Please refer to [Webhooks Registration](https://poynt.github.io/developer/overview/webhooks.html) section for details on webhooks.
 
-Note: For calling into Poynt services to register webhooks, the app will need an `<access-token>` to authenticate itself. Access token generation is described in the [Authentication & Authorization](https://poynt.github.io/developer/doc/authentication-authorization.html) section.
+<div class="note"><span style="font-weight: bold">Note:</span> The <span style="font-weight: bold">businessId</span>  value in the web hook registration request corresponds to the <span style="font-weight: bold">OrgId</span> value from your Developer Portal account online.</div>
 
 #### (2) Webhook
 
