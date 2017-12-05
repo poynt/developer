@@ -15,7 +15,7 @@ If your application has it's own authentication mechanism (e.g. username and pas
 
 To do that you would have to perform the following steps
 
-1. Make a [getSubscriptions](http://poynt.github.io/developer/tut/integrating-with-billing.html) call on the terminal
+1. Make a [getSubscriptions](http://poynt.github.io/developer/appstore/integrating-with-billing.html#in-app-changes) call on the terminal
 2. Compare the **businessId** that you received in the getSubscriptions response to the **businessId** of the current terminal. (Pease note that if your subscription is at the store level or terminal level you would also have to make sure **storeId**s and **deviceId**s match)
 
 There are a couple of ways your application can find out terminal's storeId and businessId:
