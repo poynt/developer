@@ -5,13 +5,14 @@ category: onterminal
 date: 2010-04-07 07:05:00
 ---
 
-##Overview
+## Overview
 
 Multi-MID feature allows a single physical terminal to be associated with multiple merchant accounts. This is used for businesses like salons where each stylist has their own business and a unique Merchant ID. Merchants can easily swap between MIDs by switching the user on the device.
 
-##Setting up a developer terminal/emulator as a multi-MID device
+## Setting up a developer terminal/emulator as a multi-MID device
+
 1. Create two test merchants with the same acquirer (Note: if the merchant accounts do not use the same acquirer multi-MID activation will fail)
-2. Activate the terminal using the first test merchant account by either [scanning the QR code or entering MID and TID information manually](https://poynt.github.io/developer/tut/activate-poynt-terminal.html).
+2. Activate the terminal using the first test merchant account by either [scanning the QR code or entering MID and TID information manually](../setup/activate-poynt-terminal.html).
 3. Once the terminal is activated unlock Poynt Developer settings. (Please note, that most of these settings should not be modified as changing some of them could render the terminal unusable)
 
  * go to Settings

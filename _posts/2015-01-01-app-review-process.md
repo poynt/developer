@@ -15,7 +15,7 @@ Developers have signed up for a [Developer account](https://poynt.net/auth/signu
 Developers have an app submitted for review through the [Developer portal](https://poynt.net/terminalapps).
 
 ### Step 1:
-Developer verifies whether the app follows the general guidelines as described in the [Poynt App Development Guidelines](https://poynt.github.io/developer/ref/app-development-guidelines.html).
+Developer verifies whether the app follows the general guidelines as described in the [Poynt App Development Guidelines](../appstore/app-development-guidelines.html).
 
 ### Step 2:
 Should any changes be required, developer updates their app.
@@ -56,7 +56,7 @@ If the app passes all the necessary checks, it is signed.
 If the app needs to be run on a select few terminals for sanity checks etc, there could be an optional step to run a pilot test before Go-Live.
 
 ### Step 11:
-Billing plans can be created under your app within the [App Dashboard](https://poynt.net/mc/#/developer/dashboard). Please follow the [**Billing Best practices**](https://poynt.com/poynt-billing-best-practices/) when requesting plans creation and through the app billing lifecycle. Plan information should be requested in the following format (Example below):
+Billing plans can be created under your app within the [App Dashboard](https://poynt.net/mc/#/developer/dashboard). Please follow the [**Billing Best practices**](../appstore/app-billing-best-practices.html) when requesting plans creation and through the app billing lifecycle. Plan information should be requested in the following format (Example below):
 
 ```
 "name": "Basic plan",
@@ -102,7 +102,7 @@ The Poynt app team creates the plan and will respond with plan information. Samp
 }
 ```
 
- The developer uses the **planId** to integrate the billing flow in the app by invoking the billing fragment through the SDK. Please see [**Integration with Poynt Billing Services**](http://poynt.github.io/developer/tut/integrating-with-billing.html) for integration details.
+ The developer uses the **planId** to integrate the billing flow in the app by invoking the billing fragment through the SDK. Please see [**Integration with Poynt Billing Services**](../appstore/integrating-with-billing.html) for integration details.
 
 Once the app integration is complete, developer informs the Poynt app team. App team Activates (*"status": "ACTIVE"*) the plan. At this point the plan shows up in the Poynt App Store.
 

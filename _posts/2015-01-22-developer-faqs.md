@@ -24,7 +24,7 @@ acquiring banks and their ISOs (independent sales organizations), your apps can 
 across many markets.<br><br>
 
 **Are there any restrictions on what apps can be built on Poynt?**<br>
-Yes. From a technical standpoint, there is detailed information is in our SDK documentation. From a guidelines standpoint, see the [App Development Guidelines](https://poynt.github.io/developer/ref/app-development-guidelines.html). Some key points to keep in mind:
+Yes. From a technical standpoint, there is detailed information is in our SDK documentation. From a guidelines standpoint, see the [App Development Guidelines](https://poynt.github.io/developer/appstore/app-development-guidelines.html). Some key points to keep in mind:
 
 1. Your app cannot access sensitive payment card information.
 2. The consumer facing screen (the smaller one) has restrictions on what can be displayed.
@@ -56,7 +56,7 @@ rollout of the app marketplaces, the interface for defining these plans can be d
 
 ### Developing on Poynt
 **Can I develop for Poynt if I don’t have a test device?**<br>
-Yes. For developing apps that run on the Poynt Smart Terminal, you can use the [PoyntOS emulator](/developer/tut/setup-poyntos.html) in Android Studio (AVD), Genymotion, or on a standard 7" Android tablet.
+Yes. For developing apps that run on the Poynt Smart Terminal, you can use the [PoyntOS emulator](/developer/setup/setup-poyntos.html) in Android Studio (AVD), Genymotion, or on a standard 7" Android tablet.
 Additionally, you can also build pure cloud applications that operate independent of the physical Poynt terminal. Cloud apps can use the [Poynt Cloud API](https://poynt.com/docs/api/) to access [business](https://poynt.com/docs/api/#businesses-index), [customer](https://poynt.com/docs/api/#customers-index) and [transaction](https://poynt.com/docs/api/#transactions-index) data -- or even create [webhooks](https://poynt.com/docs/api/#hooks-index) for a variety of events.<br><br>
 
 

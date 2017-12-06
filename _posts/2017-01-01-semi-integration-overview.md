@@ -13,7 +13,7 @@ There are several way of integrating an external POS with Poynt:
 
 1. [Payment Bridge API](integrating-payment-bridge-api.html). This API provides support for basic sale, void and refund operations.
 2. Using [PnP button](plug-and-pay.html) which requires no API integration. Payment button can be embed in your web-based POS using our javascript snippet.
-3. Implementing your own communication protocol leveraging [Poynt Cloud API](cloud/integrating-with-poynt-cloud-apis.html). This is the most flexible option but requires more integration effort from the developer.
+3. Implementing your own communication protocol leveraging [Poynt Cloud API](../cloud/integrating-with-poynt-cloud-apis.html). This is the most flexible option but requires more integration effort from the developer.
 
 ### Local Network
 

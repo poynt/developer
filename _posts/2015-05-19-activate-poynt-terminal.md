@@ -11,7 +11,7 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 
 * Android SDK with android-api 19 (Kitkat) installed on your development machine
 * Poynt Developer Unit
-* If you want to the ability to install development applications (APKs) on your device <a href="/developer/tut/developer-mode.html">enable developer-mode</a> (May not be required if your unit arrived already in developer mode).
+* If you want to have the ability to install development applications (APKs) on your device <a href="/developer/setup/developer-mode.html">enable developer-mode</a> (May not be required if your unit arrived already in developer mode).
 
 ### Installation
 
@@ -38,7 +38,7 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 * Turn on your Poynt Developer unit.
 * Go through the Poynt activation app to setup wifi and install any updates that are available.
 * When you are prompted for activation credentials, scan the QR code or enter the information from the developer portal and click on Activate.
-* Once you activate the device, you will be automatically logged into the device. From the Launcher screen, tap on Poynt Terminal or Register apps to try out the [default applications](overview/default-apps.html).
+* Once you activate the device, you will be automatically logged into the device. From the Launcher screen, tap on Poynt Terminal or Register apps to try out the [default applications](../overview/default-apps.html).
 
 At this point, your device is ready for development and testing.
 
