@@ -9,15 +9,15 @@ Payment Bridge API provides a way for external systems (e.g. web-based point-of-
 
 Here is how it works:
 
-1. External System [sends a Poynt Cloud Message](http://poynt.github.io/developer/tut/poynt-cloud-messages.html) with a payment request containing business id, store id and optionally terminal id of the merchant
+1. External System [sends a Poynt Cloud Message](../onterminal/poynt-cloud-messages.html) with a payment request containing business id, store id and optionally terminal id of the merchant
 2. Poynt Cloud authorizes the caller and routes the message to the corresponding merchant terminal(s)
 3. Poynt Payment Bridge receives the incoming message and starts the necessary payment flows on the device.
 
 ### Prerequites:
 
-1. [Create a developer account and activate your developer terminal](http://poynt.github.io/developer/tut/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](http://poynt.github.io/developer/tut/setup-poyntos.html))
+1. [Create a developer account and activate your developer terminal](../setup/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](../setup/setup-poyntos.html))
 2. Create an app and make sure it has "Cloud Messages" WRITE permission
-3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](http://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html)
+3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](../cloud/integrating-with-poynt-cloud-apis.html)
 
 ### Payment Bridge Sequence Diagram
 

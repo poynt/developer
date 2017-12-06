@@ -129,7 +129,7 @@ to _/etc/udev/rules.d/51-android.rules_{:.italic}
 	<img src="{{site.url}}/developer/assets/terminal_fastboot2.png" alt="fastboot2" width="600">
 	</div>
 
-4. <a href="/developer/tut/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
+4. <a href="/developer/setup/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
 <p>&nbsp;</p>
 
 ## Unlocking Poynt5

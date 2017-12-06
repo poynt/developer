@@ -8,9 +8,9 @@ date: 2013-04-06 07:05:00
 While integrating with Poynt Billing Services is relatively simple and straightforward, the process of development and testing will require a special setup to make sure your app can handle all possible scenarios related to billing. We recommend reading the app development process first before writing your code to integrate with Poynt Billing.
 
 
-[Billing App Development Process](/developer/tut/billing-app-development-and-submission-process.html)
+[Billing App Development Process](../appstore/billing-app-development-and-submission-process.html)
 
-Also we highly recommend going through the [App Billing Best Practices](https://poynt.com/poynt-billing-best-practices/) to make sure your app covers all possible billing scenarios.
+Also we highly recommend going through the [App Billing Best Practices](../appstore/app-billing-best-practices.html) to make sure your app covers all possible billing scenarios.
 
 
 App integration with Poynt Billing can be performed in two steps broadly:<br>
@@ -110,6 +110,7 @@ bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
 ~~~
 
 (4) Check current subscriptions for the merchant - note that the merchant is inferred from the Poynt Terminal Settings.
+
 ~~~java
                 mBillingService.getSubscriptions("<your-package-name>", requestId,
                         new IPoyntInAppBillingServiceListener.Stub() {
