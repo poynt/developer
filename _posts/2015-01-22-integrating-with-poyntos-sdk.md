@@ -8,6 +8,8 @@ date: 2016-01-22 17:07:40
 
 Poynt OS SDK is distributed as an Android Library (aar) through our Maven repository.
 
+<div class="alert"><strong>IMPORTANT NOTE:</strong> If you are using Android Studio 3.x please make sure you disable aapt2 by updating your gradle properties file (<span style="font-style: italic">~/.gradle/gradle.properties</span>) and adding <span style="font-style: italic">android.enableAapt2=false</span>. </div>
+
 ### Adding the Poynt OS SDK dependencies
 
 To use the Poynt OS SDK, add the following dependencies in your build.gradle file - note that you would need to add our maven repository in your gradle file too:
