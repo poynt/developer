@@ -5,6 +5,11 @@ category: setup
 date: 2015-01-22 16:34:52
 ---
 
+ * [Pont Smart Terminal Emulator Setup](#p61)
+ * [Poynt 5 Emulator Setup](#p5)
+
+## <a name="p61"></a>Poynt Smart Terminal Emulator
+
 <img style="float: right; margin-left: 10px; margin-top: 0px; width: 300px; height: 573px;" src="../assets/poynt_emulator_300x573.png" alt="PoyntOS emulator running on AVD" />
 To help speed up your development and testing, we provide a developer-edition version of PoyntOS that can be run on an Android emulator
 or directly on an Android Tablet (Tegra Note 7 is recommended, but any 7" tablet would work as long as you code for multi-screen resolution including tvdpi).
@@ -13,6 +18,7 @@ however, the emulator will give you enough functionality to start building and t
 transactions), the register (catalog-driven point of sale app), transaction data, customer data, and more.
 
 Activating a PoyntOS virtual device on a device emulator is just like activating a physical Poynt Smart Terminal. Lets get started!
+
 
 ### Prerequisites
 
@@ -42,3 +48,72 @@ This is very useful to pinpoint what's failing. If you do need any assistance, h
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
+
+
+## <a name="p5"></a>Poynt 5 Emulator
+
+1) Open AVD Manager in Android Studio
+
+![Create Cloud Application](../assets/p5emu01.png)
+
+2) Click on **Create Virtual Device...** button
+
+![Create Cloud Application](../assets/p5emu02.png)
+
+3) Click on **New Hardware Profile** button
+
+![Create Cloud Application](../assets/p5emu03.png)
+
+4) Set the device name, resolution 720x1280, RAM, Orientation and Camera options
+
+![Create Cloud Application](../assets/p5emu04.png)
+
+5) Select Marshmallow system image (without Google Play Services)
+
+![Create Cloud Application](../assets/p5emu05.png)
+
+6) Click on **Finish** button
+
+![Create Cloud Application](../assets/p5emu06.png)
+
+7) After that you should see a new virtual device "Poynt 5". Launch the virtual device you just created.
+
+![Create Cloud Application](../assets/p5emu07.png)
+
+8) Download the [Poynt 5 emulator installer](https://poynt-emulator.s3.amazonaws.com/P5/p5-198.zip) and unzip the archive. Run the python installer script. After the installer finished running you should see the following screen:
+
+![Create Cloud Application](../assets/p5emu08.png)
+
+9) Select and run Setup Wizard
+
+![Create Cloud Application](../assets/p5emu09.png)
+
+10) You may get "Poynt Services has stopped" warning but it can be ignored if in the logcat you see "No permission to write APN settings"
+
+![Create Cloud Application](../assets/p5emu10.png)
+
+![Create Cloud Application](../assets/p5emu11.png)
+
+11) Click **Continue**
+
+![Create Cloud Application](../assets/p5emu12.png)
+
+12) Click on **Don't have a QR Code?**
+
+![Create Cloud Application](../assets/p5emu13.png)
+
+13) Select the a acquirer that matches your test merchant account configuration
+
+![Create Cloud Application](../assets/p5emu14.png)
+
+14) Enter MID and TID
+
+![Create Cloud Application](../assets/p5emu15.png)
+
+15) Create a new user if applicable or click "Log in" if you have existing users
+
+16) Tap the Home button, select "Poynt Launcher" and tap on **ALWAYS**
+
+![Create Cloud Application](../assets/p5emu16.png)
+
+Your Emulator is set up!
