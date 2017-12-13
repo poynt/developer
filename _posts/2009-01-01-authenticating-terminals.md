@@ -20,7 +20,7 @@ To do that you would have to perform the following steps
 
 There are a couple of ways your application can find out terminal's storeId and businessId:
 
-#### Using IPoyntBusinesService
+#### <a name="IPoyntBusinessService"></a>Using IPoyntBusinesService
 
 You can call `IPoyntBusinessService.getBusiness()` to get a **Business** object. The business object will contain an array of **Store** objects with only one element - the current store. The **Store** object will contain an array of **StoreDevice** objects again with only one element - the current terminal.
 
