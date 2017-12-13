@@ -27,7 +27,7 @@ Developers will need to build two components:
 
 To send a message through PCM, you will need two set of information:
 
-1. The businessId + storeId where you want to send your message to.
+1. The businessId + storeId where you want to send your message to (Note: your application running on the terminal can get the storeId by making `IPoyntBusinessService.getBusiness` call. Refer to [this example](authenticating-terminals.html#IPoyntBusinessService)).
 2. Your terminal application's package and broadcast receiver class name that will be listening for the message.
 
 We will be create a simple Python application that `POST` the message to Poynt.  This implementation is based on the [Poynt Python example](https://github.com/poynt/python-sample).  Please fork/clone it as we will need to modify it for this exercise.
