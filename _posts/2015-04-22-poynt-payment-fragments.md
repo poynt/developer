@@ -132,6 +132,8 @@ _Payment_{:.italic} object contains a number of parameters that allows developer
 
 **skipSignatureScreen** _(boolean)_{:.italic} - do not show signature screen
 
+**skipPaymentConfirmationScreen** _(boolean)_{:.italic} - Displays processing screen as opposed to Thank you screen after a payment is complete.
+
 **manualEntry** _(boolean)_{:.italic} - launch Payment Fragment into manual card entry flow
 
 **readCardDataOnly** _(boolean)_{:.italic} - do not process transaction just return some information about the card (e.g. last 4, first 6, name)
