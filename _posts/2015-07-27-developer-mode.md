@@ -117,7 +117,7 @@ to _/etc/udev/rules.d/51-android.rules_{:.italic}
 
 ## Continue Installation
 
-1. Run the command to initiate the developer mode process: `fastboot oem developer`
+1. Run the command to initiate the developer mode process on Poynt Smart Terminal: `fastboot oem developer` (If you are using Poynt 5 please refer <a href="#unlocking-p5">here</a>)
 	<div>
 	<img src="{{site.url}}/developer/assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
 	</div>
@@ -132,7 +132,7 @@ to _/etc/udev/rules.d/51-android.rules_{:.italic}
 4. <a href="/developer/setup/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
 <p>&nbsp;</p>
 
-## Unlocking Poynt5
+## <a name="unlocking-p5"></a>Unlocking Poynt5
 
 1. shutdown the device
 2. start by holding barcode button (left side key) + pull down power switch at the same time until you see the bootloader menu.
