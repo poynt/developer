@@ -67,7 +67,7 @@ Our Android sample app is available on Github. The app demonstrates invoking a p
 Our Python sample app demonstrates the usage of Poynt Cloud API. For more informaton on how to use Cloud API please refer to https://poynt.github.io/developer/tut/integrating-with-poynt-cloud-apis.html.<br><br>
 
 **How do I create a product catalog and assign it to the register app?**<br>
-Please refer to instructions at https://poynt.github.io/developer/tut/assign-catalog-to-poynt-register.html.<br><br>
+Please refer to instructions [here](../setup/assign-catalog-to-poynt-register.html).<br><br>
 
 **Can my cloud-based app communicate with my Android app installed on the terminal?**<br>
 Yes. Your cloud app can send messages to your Android app as described in our documentation. If you need to enable your app id to send cloud messages please send us an email at support@poynt.com and include your app id and package name of your Android application.<br><br>
@@ -123,6 +123,9 @@ We do not currently provide direct access to NFC APIs. All NFC interactions are 
 
 **Can I see the second screen on the emulator?**<br>
 In the emulator go to `Device settings` > `Developer Options` > `Simulate Secondary Displays` and select `720x480 mdpi` option. Please keep in mind that you can't interact with the second display using the emulator.<br><br>
+
+**How can I inject test encryption keys?**<br>
+Go to `Settings` > `About` > tap 10 times on `Payment Firmware` > tap on `Inject` button.<br><br>
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
