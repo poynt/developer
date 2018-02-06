@@ -127,5 +127,18 @@ In the emulator go to `Device settings` > `Developer Options` > `Simulate Second
 **How can I inject test encryption keys?**<br>
 Go to `Settings` > `About` > tap 10 times on `Payment Firmware` > tap on `Inject` button.<br><br>
 
+**How can I get the currency code for the merchant/terminal is configured for?**<br>
+`Currency.getInstance(resources.getConfiguration().locale);`. Alternatively you can look up account currency in `Business.Store.currency` using [getBusiness API](../onterminal/authenticating-terminals.html).
+
+**How can I programmatically get device serial number?**<br>
+You can get it from `android.os.Build.SERIAL`
+
+**How do I unlock `Developer Preferences` on a developer device or emulator?**<br>
+Swipe down from the top of the screen, go to Settings > About > tap 10 times on `PoyntOS Version`. When you go back to the Settings screen, you will see `Develeoper Preferences`
+
+**How do I get to Android System settings on a developer device?**<br>
+You can either unlock Developer Preferences and tap on System or use this adb command `adb shell am start -S com.android.settings/.Settings`.
+
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
