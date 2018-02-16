@@ -280,7 +280,7 @@ You can call `IPoyntBusinessService.getBusiness()` to get a **Business** object.
             "tipType2" : "P",
             "maxOfflineTotal" : "10000",
             "defaultScreenBrightness" : "-1",
-            "merchantContactLastName" : "Natochy",
+            "merchantContactLastName" : "Smith",
             "automaticSettlementTime" : "2330",
             "customScreenBrightness" : "0",
             "enableNotTransactedEmails" : "1",
