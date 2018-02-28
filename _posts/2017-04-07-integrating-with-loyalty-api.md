@@ -66,10 +66,6 @@ This config file should be located in _res/xml_{:.italic} directory of your app 
             <meta-data
                 android:name="co.poynt.os.service.capability"
                 android:resource="@xml/loyalty_capability" />
-            <!-- Optional: Provide a logo that will appear on screen (not implemented yet) -->
-            <meta-data
-                android:name="co.poynt.os.service.logo"
-                android:resource="@mipmap/ic_launcher" />
         </service>
 ...
     </application>
