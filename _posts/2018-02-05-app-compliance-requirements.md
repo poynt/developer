@@ -29,7 +29,7 @@ The apps developed should be in accordance with the Poynt's Compliance requireme
 # List of Compliance Requirements:
 
 1. Apps should only request required permissions in their application manifest. Permission requests to write sensitive information to shared internal storage, read card data, attempt to mount/unmount file systems etc are not allowed.
-2. The app cannot download Adware etc that automatically installs without user consent. Also, app cannot send spam or introduce viruses. Also, app cannot send spam or introduce viruses.
+2. The app cannot download Adware etc that automatically installs without user consent. Also, app cannot send spam or introduce viruses.
 3. The app can only receive updates by way of an upgrade through the Poynt app store.
 4. After download, an app should remain working until user manually minimizes the app or stops it. App should provide a way to seamlessly transition between screens within the app. App should include a Home Button at the top of the navigation bar  which takes user to the Launcher screen. Apps should not interrupt current workflow  of other apps(i.e. Background apps/notifications should not interfere with foreground apps).
 5. For any Identity and Access management, apps should use Poynt’s Identity services to gain access to their system for  onboarding, setup and other functionality.
