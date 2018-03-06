@@ -139,6 +139,9 @@ Swipe down from the top of the screen, go to Settings > About > tap 10 times on 
 **How do I get to Android System settings on a developer device?**<br>
 You can either unlock Developer Preferences and tap on System or use this adb command `adb shell am start -S com.android.settings/.Settings`.
 
+**How can my app tell if it's running on a Poynt 5 terminal?**<br>
+You can use `android.os.Build` class to determine the type of terminal: `if("Poynt-P5".equals(Build.MODEL)){ /* running on Poynt5 */}`
+
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
