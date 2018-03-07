@@ -557,5 +557,12 @@ CARD_CANCELED
 CODE_UNEXPECTED_EXCEPTION
 ~~~
 
+<p>&nbsp;</p>
+
+## FAQ
+
+**When I perform a refund the Payment Fragment shows status Refunded but after Transaction list refreshes the SALE transaction is still showing as refundable**<br>
+Please check the logcat to see if `PUT` call to record the refund in the Poynt cloud has failed. This could happen if your transaction processor did not set all of the required fields in the Transaction object. The developerMessage in the error response will indicate which required field is not set.
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
