@@ -142,6 +142,14 @@ You can either unlock Developer Preferences and tap on System or use this adb co
 **How can my app tell if it's running on a Poynt 5 terminal?**<br>
 You can use `android.os.Build` class to determine the type of terminal: `if("Poynt-P5".equals(Build.MODEL)){ /* running on Poynt5 */}`
 
+**What endpoints does the Poynt terminal connects to? Can I get th list of IPs to whitelist on my network?**<br>
+We host our services on AWS and cannot guarantee static IPs. The terminal needs to be able to connect to the following endpoints:<br>
+
+* https://fouroneone.poynt.net
+* https://mothership.poynt.net
+* https://services.poynt.net
+* wss://pcm.poynt.net
+
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
