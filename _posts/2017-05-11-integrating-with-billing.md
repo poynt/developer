@@ -134,9 +134,9 @@ private void launchBillingFragment() throws RemoteException {
         Bundle bundle = new Bundle();
         // add plan Id
         bundle.putString("plan_id", "<your-plan-id>");
-        Intent launchIntent = mBillingService.getBillingIntent(getPackageName(), bundle);
-        if (bundle != null && bundle.containsKey("BUY_INTENT")) {
-            PendingIntent intent = bundle.getParcelable("BUY_INTENT");
+        Bundle launchBundle = mBillingService.getBillingIntent(getPackageName(), bundle);
+        if (launchBundle != null && launchBundle.containsKey("BUY_INTENT")) {
+            PendingIntent intent = launchBundle.getParcelable("BUY_INTENT");
             if (intent != null) {
                 try {
                     startIntentSenderForResult(
