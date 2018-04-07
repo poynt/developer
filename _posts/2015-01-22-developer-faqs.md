@@ -134,7 +134,7 @@ Go to `Settings` > `About` > tap 10 times on `Payment Firmware` > tap on `Inject
 You can get it from `android.os.Build.SERIAL`
 
 **How do I unlock `Developer Preferences` on a developer device or emulator?**<br>
-Swipe down from the top of the screen, go to Settings > About > tap 10 times on `PoyntOS Version`. When you go back to the Settings screen, you will see `Develeoper Preferences`
+Swipe down from the top of the screen, go to Settings > About > tap 10 times on `PoyntOS Version`. When you go back to the Settings screen, you will see `Develeoper Preferences`. (Please note that enabling Developer Preferences on a production terminal prompts for a PIN. If you really need to access Dev Prefs on a production terminal please contact Developer Support to get the PIN.)
 
 **How do I get to Android System settings on a developer device?**<br>
 You can either unlock Developer Preferences and tap on System or use this adb command `adb shell am start -S com.android.settings/.Settings`.
