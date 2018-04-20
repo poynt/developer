@@ -6,9 +6,9 @@ date: 2017-01-01 13:05:00
 ---
 
 ## Overview
-There is a [number of external peripherals](https://poynt.zendesk.com/hc/en-us/articles/115005423568-Supported-Peripherals) that are supported on Poynt by default. However there is a wide number of other peripherals (a.k.a. accessories) or models that merchants may want to connect to their terminal and to ensure that developers can connect new devices we have provided an API to do that.
+There is a [number of external peripherals](https://poynt.zendesk.com/hc/en-us/articles/115005423568-Supported-Peripherals) that are supported on Poynt by default. However there is a wide number of other peripherals (or accessories) or models that merchants may want to connect to their terminal and to ensure that developers can connect new devices we have provided an API to do that.
 
-An Accessory Provider is a android app that manages one of the accessories connected to Poynt device. Example of accessories are Cash Drawer, Cash Register, Scale etc. At this point this API only supports accessories connected via USB.
+An Accessory Provider is a android app that manages one of the accessories connected to Poynt device. Example of accessories are Cash Drawer, Cash Register, Scale etc. Once implemented, merchants can connect to the new accessory using [Poynt Accessory Manager](https://poynt.zendesk.com/hc/en-us/articles/115012962708-Connect-a-USB-Accessory). 
 
 In order to create a accessory provider you need to perform the following steps:
 

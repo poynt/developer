@@ -142,5 +142,8 @@ User-Agent: okhttp/2.5.0
 **Q: The body in the callback request is gzip compressed. How can I disable the compression?**<br>
 A: Go to Developer Preferences > Poynt API. Toggle the switch for ENABLE HTTP COMPRESSION and tap SAVE. Check [Dev FAQ](overview/developer-faqs.html) page for instructions on accessing Developer Preferences. 
 
+**Q: My request fails with HTTP 401**<br>
+A: This indicates that your appId does not have permission to send cloud messages to the merchant's terminals. Please refer to Step 3 of **Prerequires**.
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
