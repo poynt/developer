@@ -40,6 +40,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### RELIABILITY, USABILITY AND RESPONSIVENESS:
 * Thoroughly test your app to prevent `NullPointerException` (NPE) and Application Not Responding (ANR) errors.
+* The Application needs to be under 50MB.
 * Create a snappy, responsive, simple and intuitive UI
   * Make touch targets at least 48x48 pixels.
   * Support standard gesture navigation.
