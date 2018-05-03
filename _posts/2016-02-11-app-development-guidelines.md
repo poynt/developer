@@ -40,7 +40,6 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### RELIABILITY, USABILITY AND RESPONSIVENESS:
 * Thoroughly test your app to prevent `NullPointerException` (NPE) and Application Not Responding (ANR) errors.
-* The Application needs to be under 50MB.
 * Create a snappy, responsive, simple and intuitive UI
   * Make touch targets at least 48x48 pixels.
   * Support standard gesture navigation.
@@ -58,6 +57,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### POYNT SPECIFIC:
   * Push order information to the Poynt cloud. This will allow merchant to access this information through ther merchant facing Poynt HQ portal (web) and mobile app (see Interoperabilty above).
+  * The application apk must be under 50MB. 
   * Only use the Poynt Payment Fragment to collect payment, tip, signature, PIN and payment processor response information.
   * Disable Pay/Charge button when launching Payment Fragment to prevent multiple Payment Fragments from stacking up if the merchant clicks the button repeatedly.
 
