@@ -57,6 +57,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### POYNT SPECIFIC:
   * Push order information to the Poynt cloud. This will allow merchant to access this information through ther merchant facing Poynt HQ portal (web) and mobile app (see Interoperabilty above).
+  * The application apk must be under 50MB. 
   * Only use the Poynt Payment Fragment to collect payment, tip, signature, PIN and payment processor response information.
   * Disable Pay/Charge button when launching Payment Fragment to prevent multiple Payment Fragments from stacking up if the merchant clicks the button repeatedly.
 
