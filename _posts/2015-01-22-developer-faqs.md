@@ -148,6 +148,7 @@ We host our services on AWS and cannot guarantee static IPs. The terminal needs 
 * https://fouroneone.poynt.net
 * https://mothership.poynt.net
 * https://services.poynt.net
+* https://ding2rj4jlgsl.cloudfront.net
 * wss://pcm.poynt.net
 
 **How can I check card reader configuration?**<br>
