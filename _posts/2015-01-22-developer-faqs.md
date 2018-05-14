@@ -150,6 +150,7 @@ We host our services on AWS and cannot guarantee static IPs. The terminal needs 
 * https://services.poynt.net
 * https://ding2rj4jlgsl.cloudfront.net
 * wss://pcm.poynt.net
+* http://connectivitycheck.gstatic.com
 
 **How can I check card reader configuration?**<br>
 Go to `Settings` > `Developer Preferences` > `Card Reader Configuration`. Tap on `Get Config` button. You should see configuration options set for CONTACT, CONTACTLESS and MSR interfaces.
