@@ -16,22 +16,8 @@ This puts the device into a state that allows you to install your development AP
 
 1. Android SDK with android-api 19 (Kitkat) installed on your development machine
 2. Poynt Developer Unit
-
-## Installation
-1. Put your device into fastboot mode by holding the **power** and **volume up** button while the device is powered off. For more information about what fastboot does, see: [http://elinux.org/Android_Fastboot](http://elinux.org/Android_Fastboot)
-	<div>
-	<img src="{{site.url}}/developer/assets/fastboot0.png" alt="fastboot0" width="600">
-	</div>
-	Newer model of Poynt Smart Terminal does not have volume keys, use a pin or a paper clip to press and hold the button instead
-	<div>
-	<img src="{{site.url}}/developer/assets/fastboot-p61b.png" alt="fastboot-p61b" width="400">
-	</div>
-
-2. Select **Fastboot Protocol** from the fastboot menu (press **volume down** button then **power** button). Screen will flicker and return to fastboot menu.
-	<div>
-	<img src="{{site.url}}/developer/assets/fastboot_screen1.jpg" alt="fastbootscreen1" width="300">
-	</div>
-3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
+<p>&nbsp;</p>
+## Setup Device Drivers
 
 ### For Windows Users
 
@@ -118,24 +104,47 @@ Add line:
 
 to _/etc/udev/rules.d/51-android.rules_{:.italic}
 
-## Continue Installation
-
-1. Run the command to initiate the developer mode process on Poynt Smart Terminal: `fastboot oem developer` (If you are using Poynt 5 please refer <a href="#unlocking-p5">here</a>)
+## Unlocking Device
+### Poynt Smart Terminal
+1. Put your device into fastboot mode by holding the **power** and **volume up** button while the device is powered off. For more information about what fastboot does, see: [http://elinux.org/Android_Fastboot](http://elinux.org/Android_Fastboot)
+	<div>
+	<img src="{{site.url}}/developer/assets/fastboot0.png" alt="fastboot0" width="600">
+	</div>
+2. Select **Fastboot Protocol** from the fastboot menu (press **volume down** button then **power** button). Screen will flicker and return to fastboot menu.
+	<div>
+	<img src="{{site.url}}/developer/assets/fastboot_screen1.jpg" alt="fastbootscreen1" width="300">
+	</div>
+3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
+4. Run the command to initiate the developer mode process on Poynt Smart Terminal: `fastboot oem developer` (If you are using Poynt 5 please refer <a href="#unlocking-p5">here</a>)
 	<div>
 	<img src="{{site.url}}/developer/assets/fastboot_developer_mode.png" alt="fastbootscreen1" width="600">
 	</div>
+5. Read the instructions on the Poynt Terminal, press the volume down button to move selection to `Enter developer mode` and Press the Power button to select. At this point your device will clear its cache and the device state in the bootloader screen should show `Unlocked` or `Developer mode`.
+6. Reboot device
+  <div>
+  <img src="{{site.url}}/developer/assets/terminal_fastboot2.png" alt="fastboot2" width="600">
+  </div>
 
-2. Read the instructions on the Poynt Terminal, press the volume down button to move selection to `Enter developer mode` and Press the Power button to select. At this point your device will clear its cache and the device state in the bootloader screen should show `Unlocked` or `Developer mode`.
-
-3. Reboot your device.
-	<div>
-	<img src="{{site.url}}/developer/assets/terminal_fastboot2.png" alt="fastboot2" width="600">
-	</div>
-
-4. <a href="/developer/setup/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
 <p>&nbsp;</p>
+### <a name="unlocking-terminal-v2"></a> Poynt Smart Terminal v2
 
-## <a name="unlocking-p5"></a>Unlocking Poynt5
+1. Put your device into fastboot mode by holding the **power** and **developer** button while the device is powered off. For more information about what fastboot does, see: [http://elinux.org/Android_Fastboot](http://elinux.org/Android_Fastboot)
+	<div>
+	<img src="{{site.url}}/developer/assets/fastboot-p61b.png" alt="fastboot-p61b" width="600">
+	</div>
+	Note: A pin or paper clip is needed to access the **developer button**
+2. Select **Fastboot Protocol** from the fastboot menu (press **developer** button to navigate and then **power** button to select). The device enters fastboot mode with a beep sound (takes 5-10 seconds)
+	
+3. Make sure you have the <a href="https://developer.android.com/sdk/installing/index.html?pkg=tools">Android SDK tools</a> installed on your computer. You're going to need the `fastboot` command. Ensure your device is properly connected via a micro USB cable.
+4. Run the command to initiate the developer mode process on Poynt Smart Terminal: `fastboot flashing unlock` (If you are using Poynt 5 please refer <a href="#unlocking-p5">here</a>)
+5. Read the instructions on the Poynt Terminal, press the **developer** button to unlock the device
+6. Reboot device
+  <div>
+  <img src="{{site.url}}/developer/assets/terminal_fastboot2.png" alt="fastboot2" width="600">
+  </div>
+
+
+### <a name="unlocking-p5"></a>Poynt5
 
 1. shutdown the device
 2. start by holding barcode button (left side key) + pull down power switch at the same time until you see the bootloader menu.
@@ -144,6 +153,7 @@ to _/etc/udev/rules.d/51-android.rules_{:.italic}
 5. select OK, with Barcode button (button, on the left side of the terminal)
 6. After unlock process finished execute `fastboot reboot`
 7. If reboot does not get initiated just use the power switch to initiate reboot
-
+#### Terminal Activation
+<a href="/developer/setup/activate-poynt-terminal.html">Activate your Poynt terminal</a>. Note: If you've previously activated your device, you can reuse your test MID and TIDs to reactivate.
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
