@@ -22,7 +22,7 @@ This puts the device into a state that allows you to install your development AP
 	<div>
 	<img src="{{site.url}}/developer/assets/fastboot0.png" alt="fastboot0" width="600">
 	</div>
-	Newer models of Poynt Smart Terminal do not have volume buttons, use a pin or paper clip to press the button
+	Newer model of Poynt Smart Terminal does not have volume keys, use a pin or a paper clip to press and hold the button instead
 	<div>
 	<img src="{{site.url}}/developer/assets/fastboot-p61b.png" alt="fastboot-p61b" width="400">
 	</div>
