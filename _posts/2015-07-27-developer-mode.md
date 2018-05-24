@@ -18,10 +18,13 @@ This puts the device into a state that allows you to install your development AP
 2. Poynt Developer Unit
 
 ## Installation
-
 1. Put your device into fastboot mode by holding the **power** and **volume up** button while the device is powered off. For more information about what fastboot does, see: [http://elinux.org/Android_Fastboot](http://elinux.org/Android_Fastboot)
 	<div>
 	<img src="{{site.url}}/developer/assets/fastboot0.png" alt="fastboot0" width="600">
+	</div>
+	Newer models of Poynt Smart Terminal do not have volume buttons, use a pin or paper clip to press the button
+	<div>
+	<img src="{{site.url}}/developer/assets/fastboot-p61b.png" alt="fastboot-p61b" width="400">
 	</div>
 
 2. Select **Fastboot Protocol** from the fastboot menu (press **volume down** button then **power** button). Screen will flicker and return to fastboot menu.
