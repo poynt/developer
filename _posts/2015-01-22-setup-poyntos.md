@@ -41,7 +41,7 @@ Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_Inst
 8. Go back to your Poynt emulator terminal. If the camera is active and it's looking for a QR code, click `Don't have a QR code` link. Select the acquirer, and enter the MID and TID values from your browser (in step 7 above).
 9. Once you activate the device, Poynt’s OOBE app disables itself.
 10. Click on the `Home` icon in your device or emulator then select `Poynt Launcher` as the launcher (select `Always` option).
-  <div class="warning"> <span style="font-weight: bold;">Note: </span>If after selecting Language you get a crash (SecurityException in logcat), just rerun the python installer script.</div>
+  <div class="warning"> <span style="font-weight: bold;">Note: </span>If after selecting Language you get a crash in logcat (<span style="font-style: italic; color: #FF0000">java.lang.SecurityException: Not allowed to bind to service Intent { act=co.poynt.os.services.v1.IPoyntCapabilityManager }</span>), just rerun the python installer script.</div>
 At this point, your device is setup with required services and applications so it can act as a Poynt Smart Terminal. Try launching the `Poynt Terminal` app and process a cash transaction to make sure everything is working as expected. If you encounter any errors, please refer to `adb logcat`.
 This is very useful to pinpoint what's failing. If you do need any assistance, head over to the Poynt developer [discussion forums](https://discuss.poynt.net/c/developers), or reach out to our [support team](https://poynt.net/support).
 
