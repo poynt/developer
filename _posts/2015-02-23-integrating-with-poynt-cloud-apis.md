@@ -21,35 +21,58 @@ To consume Poynt APIs you must:
 
 1. Signup on [Poynt Developer Portal](https://poynt.net/auth/signup/developer)
 2. After you’re registered, you will see Poynt Developer dashboard.
-    - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
-3. On the dashboard, click on "COMPLETE YOUR PROFILE”, enter any missing information (eg. Website Url) and click on Save.
-4. On the dashboard, click on “CREATE A TEST MERCHANT” to create a test merchant for your development activity.
-![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_create_new_app2.png)
-5. Once a test merchant is created, go to  "DEVELOPMENT" > "Cloud apps" and   click on "CREATE A CLOUD APPLICATION", to create an application to integrate with Poynt APIs.
-6. Fill in all the required fields and submit.<br/>
-![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_new_app2.png){:height="800px" width="600px"}
-7. Save your newly created application credentials.<br/>
-![Create Cloud Application]({{site.url}}/developer/assets/poynt_net_app_created_credentials2.png){:height="350" width="600"}
+      - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
+3. On the dashboard, click on “MERCHANTS” tab. To create a test merchant for your development activity, enter the Merchant Name and Bank and click "Submit".<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_test_merchant.png" alt="Create Test Merchant" height="500"/>
 
-8. Obtain merchant's permission to access Poynt APIs on behalf of them (access their data)
+1. Once a test merchant is created, go to  "DEVELOPMENT" -> click on "Create an app".<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_new_app.png" alt="Create New Application" height="500"/>
+
+5. Enter the App name and click on "Submit" button.<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_new_app2.png" alt="Create New Application" height="500"/>
+
+1. Click on "Download keypair" to save your newly created application credentials and click on "Go to app".<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_new_app3.png" alt="Create New Application" height="500"/><br/>
+    <div class="warning"><p><strong>Warning:</strong> Your private key cannot be recovered, so please save them it a safe location. If you lose your private key you will be able to reset the public/private keypair for your appId</p></div><p>&nbsp;</p>
+
+7. You should now be able to see the newly created application.<br/>
+  <img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_new_app_success.png" alt="New Application Created" height="500"/><br/>
+
+8. Complete the application information by clicking on "Edit app details" and filling the required fields. Click on "Save" button.<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_new_app_info.png" alt="Fill Application Info" height="500"/><br/>
+
+9. Click on "Cloud Permissions", enter the OAuth callback URL and edit the permissions. Click on "Save" button.<br/>
+<img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_create_app_permissions.png" alt="Fill Application Info" height="500"/><br/>
+
+10. Obtain merchant's permission to access Poynt APIs on behalf of them (access their data)
     1. Construct Poynt Authorization url to redirect the merchant to:
         - e.g. [https://poynt.net/applications/authorize?redirect_uri=http%3A%2F%2Fgetdemoapp.com%2Freturn_from_poynt&client_id=urn%3Aaid%3A5b4e9993-c815-4070-9859-35f48e492b4f&context=python-test-script](https://poynt.net/applications/authorize?redirect_uri=http%3A%2F%2Fgetdemoapp.com%2Freturn_from_poynt&client_id=urn%3Aaid%3A5b4e9993-c815-4070-9859-35f48e492b4f&context=python-test-script)
         - where `redirect_uri` is an HTTPS page hosted on your own site that will be called with the OAuth authorization code. (Note that this should match the url you've configured in your application settings)
         - `client_id` is your newly created application id starting with urn:aid:
         - `context` is any string value that you would like passed to your callback URL, e.g. a session ID or a user ID on your side so you can match it with the authenticated merchant. This is optional.
-    2. Redirect the merchant to Poynt Authorization url to obtain the necessary permission. The merchant will be prompted to allow access to the resources you specified for your app. If the merchant has already given you permission, the page will automatically redirect to the next step.
-        - Note for development you can use your own test merchant account to give permission and experiment with the APIs.
-        ![Authorization Page]({{site.url}}/developer/assets/authorize_screenshot.png){:height="390" width="600"}
-    3. Merchant gets redirected back to your redirect_uri with `code`, `status`, `context` (optional) and merchant's `businessId`.
-        - Note that `businessId` is a deprecated parameter that has been temporarily kept for backwards compatibility.
-        - `status` provides you info on whether your request has been authorized by the merchant or not.
-9. From your server make a HTTP POST request to `https://services.poynt.net/token` and include the following headers and arguments:
-    1. **Header:** Accept: application/json
-    2. **Header:** Authorization: Bearer {self-signed-JWT}
-    3. **HTTP param:** grant_type=authorization_code
-    4. **HTTP param:** redirect_uri={redirect_uri}
-    5. **HTTP param:** client_id={appId}
-    6. **HTTP param:** code={code} <br>
+    1. Redirect the merchant to Poynt Authorization url to obtain the necessary permission. The merchant needs to login to authorize.<br/>
+      <div class="note">Note for development you can use your own test merchant account to give permission and experiment with the APIs. <br/>  </div>
+      <img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_login_developer.png" alt="Merchant Sign In" height="500"/><br/>
+      
+11.  The merchant will be prompted to allow access to the resources you specified for your app.  If the merchant has already given you permission, the page will automatically redirect to the next step. <br/>
+      <div class="note">Note for developers, you need to login with your developer account credentials to see the next steps.<br/>  </div>
+        
+     1.  Select the test merchant<br/>
+        <img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_login_choose_account_screen.png" alt="Authorization Page" height="300"/>
+        
+     2.   Authorize by clicking on "Authorize Access"<br/>
+       <img class="shadow"  src="{{site.url}}/developer/assets/poynt_net_authorize.png" alt="Authorization Page" height="400"/><br/>
+12. Merchant gets redirected back to your redirect_uri with `code`, `status`, `context` (optional) and merchant's `businessId`.<br/>               
+   - Note that `businessId` is a deprecated parameter that has been temporarily kept for backwards compatibility.<br/>
+   - `status` provides you info on whether your request has been authorized by the merchant or not.
+
+13. From your server make a HTTP POST request to `https://services.poynt.net/token` and include the following headers and arguments:<br/>  
+    - **Header:** Accept: application/json<br/>  
+    - **Header:** Authorization: Bearer {self-signed-JWT}<br/>  
+    - **HTTP param:** grant_type=authorization_code<br/>  
+    - **HTTP param:** redirect_uri={redirect_uri}<br/>  
+    - **HTTP param:** client_id={appId}<br/>  
+    - **HTTP param:** code={code} <br>
 
 Example request:
     {% highlight curl %}
@@ -89,11 +112,6 @@ The accessToken is an encoded JWT (https://jwt.io) containing a poynt.biz attrib
 {% endhighlight %}
 
 At this point your app has all the necessary permissions to make API calls on behalf of the merchant.
-<div class="warning">
-  <p><strong>Warning:</strong> Your private key cannot be recovered, so please save them it a safe location. If you lose your private key you will be able to reset the public/private keypair for your appId</p>
-</div>
-<p>&nbsp;</p><p>&nbsp;</p>
-
 
 
 ## Making the first API call
