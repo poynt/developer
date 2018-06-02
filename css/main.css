@@ -49,3 +49,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,canvas,captio
   font-size: 0.6em;
   vertical-align: top;
 }
+.shadow{
+  position: relative;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+}
