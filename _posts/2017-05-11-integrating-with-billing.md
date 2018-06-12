@@ -301,14 +301,14 @@ Sample Webhook for Subscription Start:
       "method": "GET"
     }
   ],
-  "id": "ff32460f-a0b6-4c17-b945-6649b8df2095",
-  "hookId": "21f4a4da-6c10-43f0-bd23-3875067d2031",
-  "applicationId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+  "id": "ff32460f-a0b6-4c17-b945-6649b8df2095", // id of this event
+  "hookId": "21f4a4da-6c10-43f0-bd23-3875067d2031", // id of the web hook that generated this event
+  "applicationId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",  // appId of your application
   "resource": "/apps/subscriptions",
-  "resourceId": "5edfded9-49fb-464c-922e-cf662734055f",
+  "resourceId": "5edfded9-49fb-464c-922e-cf662734055f", // subscription id for this merchant
   "eventType": "APPLICATION_SUBSCRIPTION_START",
-  "merchantType": "TEST_MERCHANT",
-  "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c"
+  "merchantType": "TEST_MERCHANT",  // TEST_MERCHANT for test merchants and MERCHANT for merchants in Production environment
+  "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c"  // merchant's business id
 }
 ~~~
 
