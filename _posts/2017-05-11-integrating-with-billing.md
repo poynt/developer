@@ -200,7 +200,7 @@ e.g.:
 e.g.
 
 ~~~bash
-curl -X GET   https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions?businessId=db4a4f0d-d467-472d-a85b-2d08a61b57fa   
+curl -X GET   https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/subscriptions?businessId=2bd73f40-60ff-4ced-aafd-66f270a2972c   
 -H 'authorization: Bearer <access-token>'   
 -H 'cache-control: no-cache'   
 -H 'content-type: application/json'
@@ -210,51 +210,35 @@ Sample Response:
 
 ~~~
 {
-   "list":[
-      {
-         "createdAt":"2017-05-22T21:23:27Z",
-         "updatedAt":"2017-05-22T21:23:27Z",
-         "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "subscriptionId":"28d80f61-cc26-4b28-8562-45e750c0e684",
-         "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-         "bundled":false,
-         "status":"ACTIVE"
-      },
-      {
-         "createdAt":"2017-05-24T02:13:43Z",
-         "updatedAt":"2017-05-24T02:13:43Z",
-         "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
-         "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-         "bundled":false,
-         "status":"ACTIVE"
-      },
-      {
-         "createdAt":"2017-05-22T21:49:03Z",
-         "updatedAt":"2017-05-22T21:49:03Z",
-         "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "subscriptionId":"6c8dd921-0eaf-4f9c-8620-5b4d018e511a",
-         "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-         "bundled":false,
-         "status":"ACTIVE"
-      },
-      {
-         "createdAt":"2017-05-22T22:36:48Z",
-         "updatedAt":"2017-05-22T22:36:48Z",
-         "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "subscriptionId":"ac827bab-a70f-439b-971c-1ccb9637ce0e",
-         "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-         "bundled":false,
-         "status":"ACTIVE"
-      }
-   ],
-   "start":0,
-   "total":4,
-   "count":4
+    "list": [
+        {
+            "createdAt": "2018-06-09T02:44:22Z",
+            "updatedAt": "2018-06-10T02:44:23Z",
+            "startAt": "2018-06-09T00:00:00Z",
+            "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c",
+            "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+            "subscriptionId": "569b915f-2631-4cfb-ba36-fd23f9871e13",
+            "phase": "FULL",
+            "planId": "31b0f62f-da70-4bd3-880d-f98b40a05283",
+            "bundleId": "a8d8af83-06fc-4136-b0c5-2064b5a22f46",
+            "status": "ACTIVE"
+        },
+        {
+            "createdAt": "2018-06-11T19:27:45Z",
+            "updatedAt": "2018-06-11T19:27:45Z",
+            "startAt": "2018-06-11T00:00:00Z",
+            "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c",
+            "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+            "subscriptionId": "5edfded9-49fb-464c-922e-cf662734055f",
+            "phase": "TRIAL",
+            "planId": "eba1e538-52c8-4a4e-a73a-3650340de984",
+            "bundleId": "692f9ad6-409c-4035-9e1a-a0ea2bdbdf03",
+            "status": "ACTIVE"
+        }
+    ],
+    "start": 0,
+    "total": 2,
+    "count": 2
 }
 ~~~
 <p>&nbsp;</p>
@@ -266,6 +250,8 @@ The Event types supported for receiving Billing Webhooks are:<br>
 <br>&nbsp;&nbsp;2)  <strong>_Subscription cancellation/end_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_END` )
 <br>&nbsp;&nbsp;3)  <strong>_Subscription Payment Success_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS` )
 <br>&nbsp;&nbsp;4)  <strong>_Subscription Payment Failure_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_PAYMENT_FAIL` )
+<br>&nbsp;&nbsp;4)  <strong>_Subscription Phase Change_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_PHASE_CHANGE` )
+<br>&nbsp;&nbsp;4)  <strong>_Subscription Refund Success_{:.italic}</strong> ( `APPLICATION_SUBSCRIPTION_REFUND_SUCCESS` )
 
 <p>&nbsp;</p>
 To Receive Billing Webhooks, please follow these steps:
@@ -280,9 +266,20 @@ Billing Webhooks can be registered with the following Event Types:
 	        "APPLICATION_SUBSCRIPTION_START",
                 "APPLICATION_SUBSCRIPTION_END",
                 "APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS",
-                "APPLICATION_SUBSCRIPTION_PAYMENT_FAIL"]
+                "APPLICATION_SUBSCRIPTION_PAYMENT_FAIL",
+                "APPLICATION_SUBSCRIPTION_PHASE_CHANGE",
+                "APPLICATION_SUBSCRIPTION_REFUND_SUCCESS"]
+~~~
 ~~~
 
+APPLICATION_SUBSCRIPTION_START              - Subscription Start
+APPLICATION_SUBSCRIPTION_END                - Subscription End
+APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS    - Payment made successfully on the account
+APPLICATION_SUBSCRIPTION_PAYMENT_FAIL       - Payment on the account failed
+APPLICATION_SUBSCRIPTION_PHASE_CHANGE       - Subscription moved from a Trial to a Paid phase
+APPLICATION_SUBSCRIPTION_REFUND_SUCCESS     - Refund from the Gateway succeeded
+
+~~~
 Please refer to [Webhooks Registration](https://poynt.github.io/developer/overview/webhooks.html) section for details on webhooks.
 
 <div class="note"><span style="font-weight: bold">Note:</span> The <span style="font-weight: bold">businessId</span>  value in the web hook registration request corresponds to the <span style="font-weight: bold">OrgId</span> value from your Developer Portal account online.</div>
@@ -294,23 +291,24 @@ When a Subscription event occurs, a webhook notification is triggered and sent t
 Sample Webhook for Subscription Start:
 
 ~~~
-{  
-   "createdAt":"2017-05-24T02:13:43Z", // time event created
-   "updatedAt":"2017-05-24T02:13:43Z", // time event updated (in case it's a retry)
-   "links":[  
-      {  
-         "href":"https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
-         "rel":"resource",
-         "method":"GET"
-      }
-   ],
-   "id":"5f97f64e-f7e7-4f1b-be36-c5a9ae016410", // id of this event
-   "hookId":"f6c07532-2401-40ea-a569-5058a9b8d468",  // id of the web hook that generated this event
-   "applicationId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9", // appId of your application
-   "resource":"/apps/subscriptions",
-   "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",  // subscription id for this merchant
-   "eventType":"APPLICATION_SUBSCRIPTION_START",
-   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa" // merchant's business id
+{
+  "createdAt": "2018-06-11T19:27:46Z",
+  "updatedAt": "2018-06-11T19:27:46Z",
+  "links": [
+    {
+      "href": "https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/subscriptions/5edfded9-49fb-464c-922e-cf662734055f",
+      "rel": "resource",
+      "method": "GET"
+    }
+  ],
+  "id": "ff32460f-a0b6-4c17-b945-6649b8df2095",
+  "hookId": "21f4a4da-6c10-43f0-bd23-3875067d2031",
+  "applicationId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+  "resource": "/apps/subscriptions",
+  "resourceId": "5edfded9-49fb-464c-922e-cf662734055f",
+  "eventType": "APPLICATION_SUBSCRIPTION_START",
+  "merchantType": "TEST_MERCHANT",
+  "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c"
 }
 ~~~
 
@@ -340,6 +338,7 @@ Sample Webhook for Payment Success:
    "resource":"/apps/subscriptions",
    "resourceId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
    "eventType":"APPLICATION_SUBSCRIPTION_PAYMENT_SUCCESS",
+   "merchantType":"TEST_MERCHANT",
    "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
 }
 ~~~
@@ -358,7 +357,7 @@ For eg:
 Request URL - {endpoint}/apps/{appId}/subscriptions/{subscriptionId}
 
 curl -X GET \
-  https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/subscriptions/65f713f3-55eb-40ed-bb4a-e4f392ccc2fb \
+  https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/subscriptions/5edfded9-49fb-464c-922e-cf662734055f \
   -H 'authorization: Bearer <access-token>' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
@@ -368,14 +367,16 @@ Sample Response:
 
 ~~~
 {
-   "createdAt":"2017-05-24T02:13:43Z",
-   "updatedAt":"2017-05-24T02:13:43Z",
-   "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-   "bundled":false,
-   "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa",
-   "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-   "subscriptionId":"65f713f3-55eb-40ed-bb4a-e4f392ccc2fb",
-   "status":"ACTIVE"
+    "createdAt": "2018-06-11T19:27:45Z",
+    "updatedAt": "2018-06-11T19:27:45Z",
+    "startAt": "2018-06-11T00:00:00Z",
+    "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c",
+    "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+    "subscriptionId": "5edfded9-49fb-464c-922e-cf662734055f",
+    "phase": "TRIAL",
+    "planId": "eba1e538-52c8-4a4e-a73a-3650340de984",
+    "bundleId": "692f9ad6-409c-4035-9e1a-a0ea2bdbdf03",
+    "status": "ACTIVE"
 }
 ~~~
 
@@ -389,7 +390,7 @@ For eg:
 Request URL - {endpoint}/apps/{appId}/plans
 
 curl -X GET \
-  https://billing.poynt.net/apps/urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9/plans \
+  https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/plans \
   -H 'authorization: Bearer <access-token>' \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
@@ -399,49 +400,77 @@ Sample Response:
 
 ~~~
 {
-   "list":[
-      {
-         "createdAt":"2017-05-24T01:30:30Z",
-         "updatedAt":"2017-05-24T01:30:30Z",
-         "amounts":[
-            {
-               "country":"US",
-               "currency":"USD",
-               "value":100
-            }
-         ],
-         "interval":"MONTH",
-         "trialPeriodDays":0,
-         "amount":100,
-         "planId":"16f62d10-9853-4378-816c-6cd725f5d639",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "scope":"BUSINESS",
-         "status":"ACTIVE",
-         "name":"plan for business"
-      },
-      {
-         "createdAt":"2017-05-22T21:19:26Z",
-         "updatedAt":"2017-05-22T21:19:26Z",
-         "amounts":[
-            {
-               "country":"US",
-               "currency":"USD",
-               "value":100
-            }
-         ],
-         "interval":"MONTH",
-         "trialPeriodDays":0,
-         "amount":100,
-         "planId":"292771f3-acb2-47fa-9d5a-e64a8f5fe0ef",
-         "appId":"urn:aid:b326335b-ce7c-4482-80d4-109e0fe6f9d9",
-         "scope":"BUSINESS",
-         "status":"ACTIVE",
-         "name":"plan for business"
-      }
-   ],
-   "start":0,
-   "total":2,
-   "count":2
+    "list": [
+        {
+            "createdAt": "2018-06-08T18:28:12Z",
+            "updatedAt": "2018-06-08T18:28:12Z",
+            "amounts": [
+                {
+                    "country": "US",
+                    "currency": "USD",
+                    "value": 100
+                }
+            ],
+            "interval": "DAY",
+            "trialPeriodDays": 0,
+            "startPolicy": "IMMEDIATE",
+            "cancelPolicy": "IMMEDIATE",
+            "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+            "amount": 100,
+            "planId": "2ed4c39f-ddf7-4294-9c10-aab16e8710b8",
+            "scope": "BUSINESS",
+            "description": "BillingTestDev $1",
+            "status": "ACTIVE",
+            "name": "BillingTestDev $1"
+        },
+        {
+            "createdAt": "2018-06-09T02:43:32Z",
+            "updatedAt": "2018-06-09T02:43:32Z",
+            "amounts": [
+                {
+                    "country": "US",
+                    "currency": "USD",
+                    "value": 200
+                }
+            ],
+            "interval": "DAY",
+            "trialPeriodDays": 1,
+            "startPolicy": "IMMEDIATE",
+            "cancelPolicy": "IMMEDIATE",
+            "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+            "amount": 200,
+            "planId": "31b0f62f-da70-4bd3-880d-f98b40a05283",
+            "scope": "BUSINESS",
+            "description": "BillingTest Dev $2 with Trial 1 day",
+            "status": "ACTIVE",
+            "name": "BillingTest Dev $2 with Trial 1 day"
+        },
+        {
+            "createdAt": "2018-06-11T19:10:33Z",
+            "updatedAt": "2018-06-11T19:10:33Z",
+            "amounts": [
+                {
+                    "country": "US",
+                    "currency": "USD",
+                    "value": 10000
+                }
+            ],
+            "interval": "DAY",
+            "trialPeriodDays": 1,
+            "startPolicy": "IMMEDIATE",
+            "cancelPolicy": "IMMEDIATE",
+            "appId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+            "amount": 10000,
+            "planId": "eba1e538-52c8-4a4e-a73a-3650340de984",
+            "scope": "BUSINESS",
+            "description": "BillingTest Dev $100 with Trial 1 day",
+            "status": "ACTIVE",
+            "name": "BillingTest Dev $100 with Trial 1 day"
+        }
+    ],
+    "start": 0,
+    "total": 3,
+    "count": 3
 }
 ~~~
 
