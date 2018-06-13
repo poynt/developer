@@ -2,7 +2,7 @@
 layout: page
 title: "How to Submit an apk through Developer portal"
 category: appstore
-date: 2012-04-06 07:05:00
+date: 2013-01-06 07:05:00
 ---
 <p>&nbsp;</p>
 ### Create a New developer account or Sign-In to your existing one
