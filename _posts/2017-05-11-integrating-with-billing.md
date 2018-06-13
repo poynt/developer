@@ -2,7 +2,7 @@
 layout: page
 title: "Integration with Poynt Billing Services"
 category: appstore
-date: 2013-04-06 07:05:00
+date: 2012-10-06 07:05:00
 ---
 
 While integrating with Poynt Billing Services is relatively simple and straightforward, the process of development and testing will require a special setup to make sure your app can handle all possible scenarios related to billing. We recommend reading the app development process first before writing your code to integrate with Poynt Billing.
@@ -342,6 +342,64 @@ Sample Webhook for Payment Success:
    "businessId":"db4a4f0d-d467-472d-a85b-2d08a61b57fa"
 }
 ~~~
+
+
+
+Sample Webhook for Subscription Phase Change (from Trial to Paid subscription):
+
+~~~
+{
+  "createdAt": "2018-06-12T19:27:46Z",
+  "updatedAt": "2018-06-12T19:27:46Z",
+  "links": [
+    {
+      "href": "https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/subscriptions/5edfded9-49fb-464c-922e-cf662734055f",
+      "rel": "resource",
+      "method": "GET"
+    }
+  ],
+  "id": "d223114f-2f18-401c-a8a0-04d9f8d356e8",
+  "hookId": "21f4a4da-6c10-43f0-bd23-3875067d2031",
+  "applicationId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+  "resource": "/apps/subscriptions",
+  "resourceId": "5edfded9-49fb-464c-922e-cf662734055f",
+  "eventType": "APPLICATION_SUBSCRIPTION_PHASE_CHANGE",
+  "merchantType": "TEST_MERCHANT",
+  "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c"
+}
+~~~
+
+
+Sample Webhook for Successful Refund:
+
+~~~
+{
+  "createdAt": "2018-06-12T21:47:53Z",
+  "updatedAt": "2018-06-12T21:47:53Z",
+  "links": [
+    {
+      "href": "https://billing.poynt.net/apps/urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694/subscriptions/569b915f-2631-4cfb-ba36-fd23f9871e13",
+      "rel": "resource",
+      "method": "GET"
+    },
+    {
+      "href": "https://billing.poynt.net/businesses/2bd73f40-60ff-4ced-aafd-66f270a2972c/invoices/9101b739-f9eb-4400-8aa3-f10aca1bc7bb",
+      "rel": "resource",
+      "method": "GET"
+    }
+  ],
+  "id": "8b262b17-ba1f-4f6d-979a-52e75213a5cb",
+  "hookId": "21f4a4da-6c10-43f0-bd23-3875067d2031",
+  "applicationId": "urn:aid:24c6e3d4-19e4-45c8-8231-6af2089dc694",
+  "resource": "/apps/subscriptions",
+  "resourceId": "569b915f-2631-4cfb-ba36-fd23f9871e13",
+  "eventType": "APPLICATION_SUBSCRIPTION_REFUND_SUCCESS",
+  "merchantType": "TEST_MERCHANT",
+  "businessId": "2bd73f40-60ff-4ced-aafd-66f270a2972c"
+}
+~~~
+
+
 
 The subscription resource url returned in `href` can be used to retrieve the complete Subscription Information as described in Step (3).
 
