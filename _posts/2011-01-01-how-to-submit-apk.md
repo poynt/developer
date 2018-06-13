@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "How to Submit an apk through developer portal"
+title: "How to Submit an apk through Developer portal"
 category: appstore
 date: 2012-04-06 07:05:00
 ---
@@ -39,14 +39,14 @@ date: 2012-04-06 07:05:00
 ### Based on country selection, sign the appropriate developer agreement
 <img src="{{site.url}}/developer/assets/AppSubmit_Screenshot15.png" alt="AppSubmit_Screenshot15" width="1000" style="border:20px;margin:20px">
 
-<div class="alert"><strong>NOTE:</strong> Merchant category codes <strong>(<span style="font-style: bold">MCCs</span>)</strong> are numbers that classify businesses by what they sell or the service they provide. These four-digit codes are assigned by payment card organizations—Visa, MasterCard, American Express and Discover—when the business first starts accepting these methods of payment. Please provide the <strong>(<span style="font-style: bold">MCCs</span>)</strong> codes of merchants that are best suited for the app. More information on <strong>(<span style="font-style: bold">MCCs</span>)</strong> codes can be found <a href="https://www.dm.usda.gov/procurement/card/card_x/mcc.pdf">here</a> </div>
+<div class="alert"><strong>NOTE:</strong> Merchant category codes <strong>(<span style="font-style: bold">MCCs</span>)</strong>(below) are numbers that classify businesses by what they sell or the service they provide. These four-digit codes are assigned by payment card organizations—Visa, MasterCard, American Express and Discover—when the business first starts accepting these methods of payment. Please provide below the <strong>(<span style="font-style: bold">MCC</span>)</strong> codes of merchants that are best suited for the app. More information on <strong>(<span style="font-style: bold">MCCs</span>)</strong> codes can be found <a href="https://www.dm.usda.gov/procurement/card/card_x/mcc.pdf">here</a> </div>
 
 <img src="{{site.url}}/developer/assets/AppSubmit_Screenshot16.png" alt="AppSubmit_Screenshot16" width="1000" style="border:20px;margin:20px">
 
 ### ChangeLog required with each apk submission
 <img src="{{site.url}}/developer/assets/AppSubmit_Screenshot17.png" alt="AppSubmit_Screenshot17" width="1000" style="border:20px;margin:20px">
 
-### Upload two screenshots
+### Upload a minimum of two screenshots
 <img src="{{site.url}}/developer/assets/AppSubmit_Screenshot18.png" alt="AppSubmit_Screenshot18" width="1000" style="border:20px;margin:20px">
 <img src="{{site.url}}/developer/assets/AppSubmit_Screenshot19.png" alt="AppSubmit_Screenshot19" width="1000" style="border:20px;margin:20px">
 
