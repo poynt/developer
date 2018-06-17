@@ -13,7 +13,7 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 * Poynt Developer Unit
 * If you want to have the ability to install development applications (APKs) on your device <a href="/developer/setup/developer-mode.html">enable developer-mode</a> (May not be required if your unit arrived already in developer mode).
 
-### Installation
+### <a name="installation">Installation</a>
 
 * Go to [Developer Portal](https://poynt.net/auth/signup/developer) and register your developer account. Once you enter your email address you will receive a verification email to complete your registration.
 
