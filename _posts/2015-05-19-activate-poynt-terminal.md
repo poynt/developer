@@ -17,23 +17,23 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 
 * Go to [Developer Portal](https://poynt.net/auth/signup/developer) and register your developer account. Once you enter your email address you will receive a verification email to complete your registration.
 
-![SignUp]({{site.url}}/developer/assets/signup1.png){:width="800px"}
+![SignUp](../assets/signup1.png){:width="800px"}
 
-![SignUp2]({{site.url}}/developer/assets/signup2.png){:width="800px"}
+![SignUp2](../assets/signup2.png){:width="800px"}
 
-![SignUp3]({{site.url}}/developer/assets/signup3.png){:width="800px"}
+![SignUp3](../assets/signup3.png){:width="800px"}
 
 * Once you’re registered, you will see Poynt Developer dashboard.
     - All developers by default are assigned their default developer organization so they can invite other teammates to join and access the same applications. You can try this out later after setting up your device.
 
-* On the dashboard, go to `Test Merchants` and create a test merchant for your development activity. You can change the name, but for testing purposes we recommend to keep the default `Bank` as all transations will be going against our test environment.
-![create test merchant]({{site.url}}/developer/assets/signup4.png){:width="800px"}
+* On the dashboard, go to `Test Merchants` and create a test merchant for your development activity. You can change the name, but for testing purposes we recommend to keep the default `Bank` as all transations will be going against our test environment.<br/>
+![create test merchant](../assets/signup4.png){:width="800px"}
 
-* After a few seconds refresh the page to see the newly created test merchant.
-![test merchant created]({{site.url}}/developer/assets/signup5.png){:width="800px"}
+* After a few seconds refresh the page to see the newly created test merchant.<br/>
+![test merchant created](../assets/signup5.png){:width="800px"}
 
-* Click on the merchant name and scroll down until you see green `Activate` button to see the activation information.
-![terminal activation]({{site.url}}/developer/assets/signup6.png){:width="800px"}
+* Click on the merchant name and scroll down until you see green `Activate` button to see the activation information.<br/>
+![terminal activation](../assets/signup6.png){:width="800px"}
 
 * Turn on your Poynt Developer unit.
 * Go through the Poynt activation app to setup wifi and install any updates that are available.
