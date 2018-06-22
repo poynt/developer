@@ -7,10 +7,10 @@ date: 2012-04-06 07:05:00
 <p>&nbsp;</p>
 ### Account Setup
 
-#### 1. Under developer dashoard, click on the App Cloud Permissions section
+#### 1. Under App details, navigate to the Cloud Permissions
 <img src="{{site.url}}/developer/assets/CloudPermissions1.png" alt="CloudPermissions1" width="500" style="border:20px;margin:20px">
 
-#### 2. Select appropriate permissions that Merchant needs to grant to developer. 
+#### 2. Select appropriate permissions that Merchant needs to grant to developer
 In this case, developer needs access to Merchant's 'Orders' and 'Customers' resources for the order-ahead application.
 
 <img src="{{site.url}}/developer/assets/CloudPermissions2.png" alt="CloudPermissions2" width="700" style="border:20px;margin:20px">
@@ -150,7 +150,9 @@ Response:
 }
 {% endhighlight %}
 
-The <strong>***id***</strong> value (in this case 45494460) corresponds to the _customerId_{:.italic}. This value can be passed to the Order for displaying the customer details. 
+The <strong>`id`</strong> value (in this case `45494460`) corresponds to the `customerId`. This value can be passed to the Order for displaying the customer details. 
+
+<p>&nbsp;</p>
 
 #### Create an Order
 
