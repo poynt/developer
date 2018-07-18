@@ -8,20 +8,20 @@ date: 2009-04-06 07:05:00
 
 Order Ahead App can be built to work with Poynt in two ways broadly:<br>
 <br>&nbsp;&nbsp;1)  [_Poynt Register App Integration_](#poynt-register-app-integration)
-<br>&nbsp;&nbsp;2)  [_Custom Order Ahead App Integration_](#custom-order-ahead-app-integration)
+<br>&nbsp;&nbsp;2)  [_Native Order Ahead App Integration_](#native-order-ahead-app-integration)
 
 
 ### Poynt-Register-App-Integration
 
 An Order Ahead application can be built to work with the on-terminal [Poynt Register](https://poynt.zendesk.com/hc/en-us/articles/223240747-Register-App-Training-PDF-) application. Here are the steps:
 
-#### 1. Select the permissions merchant grants to developer
-Permission flow is described under the [Poynt Cloud API](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html) section. In this particular case, merchant grants access to 'Orders' and 'Customers' resources to the app as shown below.
+#### 1. Merchant authorizes the App
+Authorization flow is described under the [Poynt Cloud API](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html) section. In this particular case, merchant authorizes access to 'Orders' and 'Customers' resources as shown below.
 
 <img src="{{site.url}}/developer/assets/CloudPermissions2.png" alt="CloudPermissions2" width="700" style="border:20px;margin:20px">
 
 
-#### 2. Merchant completes the web-flow using the Merchant Login URL to grant permissions to developer
+#### 2. Merchant completes the web-flow using the Merchant Login URL to grant permissions to the App
 The web flow is further described under [Integrating with Cloud APIs](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html).
 
 <p>&nbsp;</p>
@@ -223,29 +223,31 @@ Response:
 <img src="{{site.url}}/developer/assets/OrderAhead2.jpg" alt="OrderAhead2" width="400" style="border:20px;margin:20px">
 
 
-### Custom-Order-Ahead-App-Integration
+### Native-Order-Ahead-App-Integration
 
-A Custom Order Ahead service can be built to work with Poynt. Here are the steps involved:
+A Native Order Ahead app can be built to work with Poynt. Here are the steps involved:
 
-#### 1. Include permissions within the Android app
+#### 1. Implicit Authorization
 
-Following permissions should be included in the Android manifest file: 
+Following permissions should be included in the app Android manifest: 
 
 <strong>Order Service:</strong> `poynt.permission.ORDER_SERVICE`
 
 <strong>Customer Service:</strong> `poynt.permission.CUSTOMER_SERVICE`
 
+When a merchant subscribes to the App, these permissions are <strong>Implicitly</strong> granted to the app.
+
 
 #### 2. Create Customer and Create Order
 
-When a merchant subscribes to the App, the permissions from Step 1. are <strong>Implicitly</strong> granted to the app.
+
 Create a Customer followed by an Order as described in the previous article of Order ahead integration using Register app(Steps 3 and 4).
 
 
 
-#### 2. Listen for the Appropriate Intent
+#### 2. Implement the Appropriate Intent
 
-When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be used to create a custom Order details experience.
+When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be handled to create a custom Order details view and provide a native app experience.
 
 <img src="{{site.url}}/developer/assets/OrderAhead3.jpg" alt="OrderAhead3" width="400" style="border:20px;margin:20px">
 
