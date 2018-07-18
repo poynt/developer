@@ -1,31 +1,32 @@
 ---
 layout: page
 title: "How to Build an Order Ahead application"
-category: appstore
-date: 2012-04-06 07:05:00
+category: onterminal
+date: 2009-04-06 07:05:00
 ---
 <p>&nbsp;</p>
-### Account Setup
 
-#### 1. Under App details, navigate to the Cloud Permissions
-<img src="{{site.url}}/developer/assets/CloudPermissions1.png" alt="CloudPermissions1" width="500" style="border:20px;margin:20px">
+Order Ahead App can be built to work with Poynt in two ways broadly:<br>
+<br>&nbsp;&nbsp;1)  [_Poynt Register App Integration_](#poynt-register-app-integration)
+<br>&nbsp;&nbsp;2)  [_Custom Order Ahead App Integration_](#custom-order-ahead-app-integration)
 
-#### 2. Select appropriate permissions that Merchant needs to grant to developer
-In this case, developer needs access to Merchant's 'Orders' and 'Customers' resources for the order-ahead application.
+
+### Poynt-Register-App-Integration
+
+An Order Ahead application can be built to work with the on-terminal [Poynt Register](https://poynt.zendesk.com/hc/en-us/articles/223240747-Register-App-Training-PDF-) application. Here are the steps:
+
+#### 1. Select the permissions merchant grants to developer
+Permission flow is described under the [Poynt Cloud API](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html) section. In this particular case, merchant grants access to 'Orders' and 'Customers' resources to the app as shown below.
 
 <img src="{{site.url}}/developer/assets/CloudPermissions2.png" alt="CloudPermissions2" width="700" style="border:20px;margin:20px">
 
-#### 3. Select the correct test merchant and Save settings
-<img src="{{site.url}}/developer/assets/CloudPermissions3.png" alt="CloudPermissions3" width="700" style="border:20px;margin:20px">
 
-#### 4. Merchant completes the web-flow using the Merchant Login URL to grant permissions to developer
-For a details on the web flow, refer to the section on [Integrating with Cloud APIs](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html).
-<img src="{{site.url}}/developer/assets/CloudPermissions4.png" alt="CloudPermissions4" width="700" style="border:20px;margin:20px">
-
+#### 2. Merchant completes the web-flow using the Merchant Login URL to grant permissions to developer
+The web flow is further described under [Integrating with Cloud APIs](https://poynt.github.io/developer/cloud/integrating-with-poynt-cloud-apis.html).
 
 <p>&nbsp;</p>
 
-#### Create a Customer
+#### 3. Create a Customer
 
 Sample Request:
 ~~~
@@ -42,7 +43,7 @@ curl -X POST \
                 {
                     "expirationMonth": 12,
                     "expirationYear": 2020,
-                    "number": "4111111111111111",
+                    "number": "xxxxxxxxxxxxxxxx",
                     "cardHolderFirstName": "Satya",
                     "cardHolderLastName": "Vedule"
                 }
@@ -71,43 +72,9 @@ Response:
       "preferredCardId":0
    },
    "insights":{
-      "since":"2018-06-21T21:12:57Z",
-      "lifetimeSpend":[
-         {
-            "amount":5000,
-            "currency":"USD"
-         }
-      ],
-      "scores":[
-         {
-            "score":7.49,
-            "type":"OVERALL"
-         }
-      ],
-      "topItems":[
-         {
-            "count":10.000,
-            "firstPurchasedAt":1529616438,
-            "lastPurchasedAt":1529622086,
-            "name":"Coffee",
-            "countUnit":"EACH"
-         },
-         {
-            "count":10.000,
-            "firstPurchasedAt":1529616438,
-            "lastPurchasedAt":1529622086,
-            "name":"Cream Cheese",
-            "countUnit":"EACH"
-         },
-         {
-            "count":10.000,
-            "firstPurchasedAt":1529616438,
-            "lastPurchasedAt":1529622086,
-            "name":"Bagel",
-            "countUnit":"EACH"
-         }
-      ],
-      "totalOrders":10
+
+      .....
+
    },
    "cards":[
       {
@@ -115,12 +82,12 @@ Response:
          "status":"ACTIVE",
          "expirationMonth":12,
          "expirationYear":2019,
-         "id":43860799,
-         "numberFirst6":"411111",
-         "numberLast4":"1111",
+         "id":xxxxxxxx,
+         "numberFirst6":"xxxxxx",
+         "numberLast4":"xxxx",
          "cardHolderFirstName":"Satya",
          "cardHolderLastName":"Vedule",
-         "cardId":"47b09e3d-a209-44bd-b21a-0c0928b795a7"
+         "cardId":"xxxxx"
       }
    ],
    "loyaltyCustomers":[
@@ -146,7 +113,7 @@ Response:
    },
    "firstName":"Satya",
    "lastName":"Vedule",
-   "businessId":"02b4e3b7-f630-440c-a42c-93005ecc54f0"
+   "businessId":"{businessId}"
 }
 {% endhighlight %}
 
@@ -154,7 +121,7 @@ The <strong>`id`</strong> value (in this case `45494460`) corresponds to the `cu
 
 <p>&nbsp;</p>
 
-#### Create an Order
+#### 4. Create an Order
 
 Sample Request:
 ~~~
@@ -188,17 +155,18 @@ curl -X POST \
    "context": {
       "source":"WEB",
       "transactionInstruction":"EXTERNALLY_PROCESSED",
-      "businessId":"02b4e3b7-f630-440c-a42c-93005ecc54f0", 			// businessId of the merchant
-      "storeId":"a935eae2-f67c-4f93-a56c-4dbb20d3a5ba",				// storeId of the business
-      "storeDeviceId":"urn:aid:035f4833-b350-44f7-9a53-d8127ebfe34b"		// AppId of the developer app
+      "businessId":"{businessId}", 			                               // businessId of the merchant
+      "storeId":"{storeId}",				                               // storeId of the business
+      "storeDeviceId":"{appId}"	                                                       // AppId of the developer app
    },
-   "customerUserId": 45494460,			//customerId from the Create Customer call.
+   "customerUserId": 45494460,			                                   //customerId from the Create Customer call.
    "statuses": {
       "status":"OPENED"
    }
 }'
 ~~~
 
+Order object Request 
 Response:
 
 {% highlight json linenos %}
@@ -207,11 +175,11 @@ Response:
     "updatedAt": "2018-06-22T19:45:41Z",
     "context": {
         "employeeUserId": 0,
-        "storeDeviceId": "urn:aid:035f4833-b350-44f7-9a53-d8127ebfe34b",
+        "storeDeviceId": "{appId}",
         "transactionInstruction": "EXTERNALLY_PROCESSED",
         "source": "WEB",
-        "businessId": "02b4e3b7-f630-440c-a42c-93005ecc54f0",
-        "storeId": "a935eae2-f67c-4f93-a56c-4dbb20d3a5ba"
+        "businessId": "{businessId}",
+        "storeId": "{storeId}"
     },
     "items": [
         {
@@ -243,15 +211,43 @@ Response:
         "status": "OPENED",
         "transactionStatusSummary": "EXTERNALLY_PROCESSED"
     },
-    "id": "a40c77a5-6799-45a0-8e7a-363be39e5073"
+    "id": "xxxxxxx"
 }
 {% endhighlight %}
 
-#### The Order has been successfully created.
+### The Order has been successfully created.
 ### A Poynt Cloud Message is sent to the terminal for the newly created order.
 <img src="{{site.url}}/developer/assets/OrderAhead1.jpg" alt="OrderAhead1" width="400" style="border:20px;margin:20px">
 
 ### Order can be viewed from Order Inbox in the Register app.
 <img src="{{site.url}}/developer/assets/OrderAhead2.jpg" alt="OrderAhead2" width="400" style="border:20px;margin:20px">
+
+
+### Custom-Order-Ahead-App-Integration
+
+A Custom Order Ahead service can be built to work with Poynt. Here are the steps involved:
+
+#### 1. Include permissions within the Android app
+
+Following permissions should be included in the Android manifest file: 
+
+<strong>Order Service:</strong> `poynt.permission.ORDER_SERVICE`
+
+<strong>Customer Service:</strong> `poynt.permission.CUSTOMER_SERVICE`
+
+
+#### 2. Create Customer and Create Order
+
+When a merchant subscribes to the App, the permissions from Step 1. are <strong>Implicitly</strong> granted to the app.
+Create a Customer followed by an Order as described in the previous article of Order ahead integration using Register app(Steps 3 and 4).
+
+
+
+#### 2. Listen for the Appropriate Intent
+
+When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be used to create a custom Order details experience.
+
+<img src="{{site.url}}/developer/assets/OrderAhead3.jpg" alt="OrderAhead3" width="400" style="border:20px;margin:20px">
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
