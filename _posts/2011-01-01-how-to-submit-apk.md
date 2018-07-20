@@ -74,7 +74,7 @@ If you are uploading a new version of your app provide the list of changes in th
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot17.png" alt="AppSubmit_Screenshot17" style="border:20px;margin:20px">
 
-Upload a minimum of two screenshots
+Upload a minimum of two screenshots (for best results use 800x1280px resolution).
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot18.png" alt="AppSubmit_Screenshot18" style="border:20px;margin:20px">
 
