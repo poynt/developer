@@ -357,7 +357,7 @@ You can call `IPoyntBusinessService.getBusiness()` to get a **Business** object.
          },
          "storeDevices" : [
             {
-               "name" : "P61SWD052GS001680",
+               "name" : "counter 1",
                "externalTerminalId" : "941a",
                "catalogId" : "d657f867-aebd-4e90-997e-b04839fc027f",
                "status" : "ACTIVATED",
