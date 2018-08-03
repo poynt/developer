@@ -175,11 +175,12 @@ Response:
 }
 {% endhighlight %}
 
-### The Order has been successfully created.
-### A Poynt Cloud Message is sent to the terminal for the newly created order.
+The Order has been successfully created.
+A Poynt Cloud Message is sent to the terminal for the newly created order.
 <img src="{{site.url}}/developer/assets/OrderAhead1.jpg" alt="OrderAhead1" width="400" style="border:20px;margin:20px">
 
-### Order can be viewed from Order Inbox in the Register app.
+Order can be viewed from Order Inbox in the Register app.
+
 <img src="{{site.url}}/developer/assets/OrderAhead2.jpg" alt="OrderAhead2" width="400" style="border:20px;margin:20px">
 
  
@@ -195,7 +196,7 @@ Following permissions should be included in the app Android manifest:
 
 <strong>Customer Service:</strong> `poynt.permission.CUSTOMER_SERVICE`
 
-When a merchant subscribes to the App, these permissions are <strong>Implicitly</strong> granted to the app.
+When a merchant subscribes to the App, these permissions are implicitly granted to the app.
 
 
 #### 2. Create Customer and Create Order
