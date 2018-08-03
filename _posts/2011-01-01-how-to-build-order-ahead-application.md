@@ -177,10 +177,11 @@ Response:
 
 The Order has been successfully created.
 A Poynt Cloud Message is sent to the terminal for the newly created order.
+<br><br>
 <img src="{{site.url}}/developer/assets/OrderAhead1.jpg" alt="OrderAhead1" width="400" style="border:20px;margin:20px">
 
 Order can be viewed from Order Inbox in the Register app.
-
+<br><br>
 <img src="{{site.url}}/developer/assets/OrderAhead2.jpg" alt="OrderAhead2" width="400" style="border:20px;margin:20px">
 
  
@@ -209,7 +210,7 @@ Create a Customer followed by an Order as described in the previous article of O
 #### 2. Register to listen to order details intent in your app's activity
 
 When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be handled to create a custom Order details view in your app.
-
+<br>
 <img src="{{site.url}}/developer/assets/OrderAhead3.jpg" alt="OrderAhead3" width="400" style="border:20px;margin:20px">
 
 <!-- feedback widget -->
