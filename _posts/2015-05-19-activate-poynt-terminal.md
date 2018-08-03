@@ -16,6 +16,9 @@ Once you receive your Poynt Developer Unit, following the instructions below to 
 ### <a name="installation">Installation</a>
 
 * Go to [Developer Portal](https://poynt.net/auth/signup/developer) and register your developer account. Once you enter your email address you will receive a verification email to complete your registration.
+<p>
+<div class="note"><span style="font-weight: bold">Note:</span> If you are developing applications for Europe region, sign up at  <a href="https://eu.poynt.net/auth/signup/developer" target="_blank">EU Developer Portal</a>.</div>
+</p>
 
 ![SignUp](../assets/signup1.png){:width="800px"}
 
