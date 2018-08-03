@@ -7,11 +7,11 @@ date: 2009-04-06 07:05:00
 <p>&nbsp;</p>
 
 Order Ahead App can be built to work with Poynt in two ways broadly:<br>
-<br>&nbsp;&nbsp;1)  [_Poynt Register App Integration_](#poynt-register-app-integration)
-<br>&nbsp;&nbsp;2)  [_Native Order Ahead App Integration_](#native-order-ahead-app-integration)
+<br>&nbsp;&nbsp;1)  <a href="#PoyntRegister">Poynt Register App Integration</a>
+<br>&nbsp;&nbsp;2)  <a href="#NativeOrderAhead">Native Order Ahead App Integration</a>
 
 
-### Poynt-Register-App-Integration
+### <a name="PoyntRegister">Poynt Register App Integration</a>
 
 An Order Ahead application can be built to work with the on-terminal [Poynt Register](https://poynt.zendesk.com/hc/en-us/articles/223240747-Register-App-Training-PDF-) application. Here are the steps:
 
@@ -38,16 +38,6 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'api-version: 1.2' \
   -d '{
-          
-            "cards": [
-                {
-                    "expirationMonth": 12,
-                    "expirationYear": 2020,
-                    "number": "xxxxxxxxxxxxxxxx",
-                    "cardHolderFirstName": "Satya",
-                    "cardHolderLastName": "Vedule"
-                }
-            ],
             "emails": {
                 "PERSONAL": {
                 "emailAddress": "satya+test@poynt.com"
@@ -62,54 +52,24 @@ curl -X POST \
 Response:
 
 {% highlight json linenos %}
-{
-   "createdAt":"2018-06-21T21:12:57Z",
-   "updatedAt":"2018-06-22T18:15:38Z",
-   "businessPreferences":{
-      "useCardOnFile":false,
-      "emailReceipt":false,
-      "printPaperReceipt":false,
-      "preferredCardId":0
-   },
-   "insights":{
-
-      .....
+{  
+   "businessPreferences":{  
 
    },
-   "cards":[
-      {
-         "type":"VISA",
-         "status":"ACTIVE",
-         "expirationMonth":12,
-         "expirationYear":2019,
-         "id":xxxxxxxx,
-         "numberFirst6":"xxxxxx",
-         "numberLast4":"xxxx",
-         "cardHolderFirstName":"Satya",
-         "cardHolderLastName":"Vedule",
-         "cardId":"xxxxx"
-      }
-   ],
-   "loyaltyCustomers":[
-
-   ],
    "id":45494460,
-   "emails":{
-      "PERSONAL":{
-         "primary":false,
-         "createdAt":"2018-06-21T21:12:57Z",
-         "updatedAt":"2018-06-21T21:12:57Z",
+   "emails":{  
+      "PERSONAL":{  
+         "primary":False,
+         "createdAt":"2018-06-20T20:58:15Z",
+         "updatedAt":"2018-06-20T20:58:15Z",
          "status":"ADDED",
          "type":"PERSONAL",
-         "id":821179,
-         "emailAddress":"satya+test@poynt.com"
+         "id":939970,
+         "emailAddress":"satya+test1@poynt.com"
       }
    },
-   "phones":{
-
-   },
-   "attributes":{
-
+   "attributes":{  
+      "imageUrl":"https://bit.ly/2IjahBz"
    },
    "firstName":"Satya",
    "lastName":"Vedule",
@@ -222,8 +182,8 @@ Response:
 ### Order can be viewed from Order Inbox in the Register app.
 <img src="{{site.url}}/developer/assets/OrderAhead2.jpg" alt="OrderAhead2" width="400" style="border:20px;margin:20px">
 
-
-### Native-Order-Ahead-App-Integration
+ 
+### <a name="NativeOrderAhead">Native Order Ahead App Integration</a>
 
 A Native Order Ahead app can be built to work with Poynt. Here are the steps involved:
 
@@ -245,9 +205,9 @@ Create a Customer followed by an Order as described in the previous article of O
 
 
 
-#### 2. Implement the Appropriate Intent
+#### 2. Register to listen to order details intent in your app's activity
 
-When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be handled to create a custom Order details view and provide a native app experience.
+When the user taps on the Order Notification on the terminal, the `Intents.ACTION_GO_TO_ORDER_DETAILS` can be handled to create a custom Order details view in your app.
 
 <img src="{{site.url}}/developer/assets/OrderAhead3.jpg" alt="OrderAhead3" width="400" style="border:20px;margin:20px">
 
