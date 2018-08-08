@@ -147,9 +147,12 @@ We host our services on AWS and cannot guarantee static IPs. The terminal needs 
 
 * https://fouroneone.poynt.net
 * https://mothership.poynt.net
+* https://mothership-eu.poynt.net
 * https://services.poynt.net
+* https://services-eu.poynt.net
 * https://ding2rj4jlgsl.cloudfront.net
 * wss://pcm.poynt.net
+* wss://pcm-eu.poynt.net
 * http://connectivitycheck.gstatic.com
 * http://clients3.google.com
 
