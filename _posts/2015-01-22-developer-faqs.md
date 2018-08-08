@@ -159,7 +159,7 @@ We host our services on AWS and cannot guarantee static IPs. The terminal needs 
 **How can I check card reader configuration?**<br>
 Go to `Settings` > `Developer Preferences` > `Card Reader Configuration`. Tap on `Get Config` button. You should see configuration options set for CONTACT, CONTACTLESS and MSR interfaces.
 
-**How can I project both screen of Poynt Smart Terminal on my desktop/laptop screen?**<br>
+**How can I project both screens of Poynt Smart Terminal onto my desktop/laptop screen?**<br>
 You can use the following [utility](https://github.com/dsnatochy/PoyntScreenMonitor).
 
 <!-- feedback widget -->
