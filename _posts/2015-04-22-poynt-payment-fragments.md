@@ -88,6 +88,8 @@ _Payment_{:.italic} object contains a number of parameters that allows developer
 
 **tipAmount** _(long)_{:.italic} - Presets the tip amount. The tip selection screen will be skipped
 
+**tipAmounts** _(Map)_{:.italic} - set by the Payment Fragment and contains the mapping between transactionId and tip amount. In case of a multi-tender transaction, tip can be left on more than one transaction. You should always look at the tipAmount in `Transaction.amounts.tipAmount` and use `tipAmounts` map as a fall back.
+
 **references** _(List\<TransactionReferences\>)_{:.italic} - Allows the application to pass custom reference information, such as custom order id and other metadata. This list is returned inside Transaction object once the payment is completed
 
 **multiTender** _(boolean)_{:.italic} - starts the payment fragment in the multiTender mode which allows the buyer to pay using 2 or more tenders
