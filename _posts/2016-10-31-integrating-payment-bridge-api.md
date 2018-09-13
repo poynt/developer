@@ -21,7 +21,7 @@ Here is how it works:
 
 ### Payment Bridge Sequence Diagram
 
-![PaymentBridgeSequenceDiagram]({{site.url}}/developer/assets/PaymentBridgeAPI.png)
+![PaymentBridgeSequenceDiagram](../assets/PaymentBridgeAPI.png)
 
 ### Poynt Message format
 
@@ -213,6 +213,17 @@ A: Go to Developer Preferences > Poynt API. Toggle the switch for ENABLE HTTP CO
 
 **Q: My request fails with HTTP 401**<br>
 A: This indicates that your appId does not have permission to send cloud messages to the merchant's terminals. Please refer to Step 3 of **Prerequires**.
+
+**Q: My API request returns HTTP 202 however the payment fragment does not come up on the terminal**<br>
+A: First check the logcat to see if the message even makes it to the terminal `adb logcat -v time | grep -i pcm`. If you don't see the messages being logged it's likely because the connection between the terminal and the cloud was terminated. You can verify that by checking Poynt Settings:<br>
+![Live Stream Disconnected](../assets/live_stream_disconnected.png)<br>
+To reconnect you can double tap on the clock on the launcher:<br>
+![Reset live stream connection](../assets/resetting_livestream.png)<br>
+After that you can confirm that the connection has been re-established:<br>
+![Live Stream Connected](../assets/live_stream_connected.png)<br>
+
+<div class="note"><span style="font-weight:bold">Note: </span>Please note that if you are using an emulator you need to check that the <span style="font-weight:bold">co.poynt.cloudmessaging</span> package has been installed.</div>
+
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
