@@ -19,7 +19,7 @@ sections: [
     ['cloud', '** Cloud Apps **'],
     ['semi', '** Semi-Integration **'],
     ['peripherals', '** Integrating Peripherals** '],
-    ['appstore', '** Appstore & App Review **'],
+    ['appstore', '** App Marketplace & App Review **'],
     ['acquirer', '** Acquirer/Gateway Integration **'],
     ['reference', '** References** '],
 
