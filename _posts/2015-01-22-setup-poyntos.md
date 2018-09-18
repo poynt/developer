@@ -33,8 +33,7 @@ Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_v1.z
 
 #### Poynt Smart Terminal v2 (for EU Region)
 Download and unzip the PoyntOS emulator installer here:
-[PoyntOS\_Emulator\_v2.zip](https://poynt-emulator.s3.amazonaws.com/p61b/emulator-p61b-0917.zip). Run the installation script setup_poynt_os.py <br>
-Set the API level of emulator to 23.
+[PoyntOS\_Emulator\_v2.zip](https://poynt-emulator.s3.amazonaws.com/p61b/emulator-p61b-0917.zip). Run the installation script `setup_poynt_os.py`. Set the API level of emulator to 23.
 
 ### Activating your virtual Poynt terminal
 1. The first time you boot up your device you'll be asked to choose a launcher. Select `Setup Wizard` to start Poynt's OOBE ("out of box experience") application. NOTE: If you're using Genymotion, enable `Use virtual keyboard for text input` option in device configuration.
