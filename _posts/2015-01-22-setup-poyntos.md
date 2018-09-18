@@ -29,7 +29,7 @@ Activating a PoyntOS virtual device on a device emulator is just like activating
 
 ### Download and install emulator
 #### Poynt Smart Terminal v1
-Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_v1.zip](https://poynt-emulator.s3.amazonaws.com/p61b/emulator-p61b-0917.zip). Run the installation script `setup_poynt_os.py`
+Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_v1.zip](https://poynt-emulator.s3.amazonaws.com/v1.2.26/PoyntOS_Emulator_Install_v235.zip). Run the installation script `setup_poynt_os.py`
 
 #### Poynt Smart Terminal v2 (for EU Region)
 Download and unzip the PoyntOS emulator installer here:
