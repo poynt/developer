@@ -5,6 +5,9 @@ category: semi
 date: 2016-04-01 13:05:00
 ---
 
+<div class="note"><span style="font-weight: bold">Note:</span> While this API is currently availalbe at no charge, Poynt reserves the right to introduce an API usage fee in the future.</div> 
+<p>&nbsp;</p>
+
 Payment Bridge API provides a way for external systems (e.g. web-based point-of-sale systems) to start a transaction flow on Poynt Terminal without requiring to build any apps/services that have to run on the terminal itself.
 
 Here is how it works:
