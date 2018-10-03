@@ -8,19 +8,19 @@ date: 2016-04-01 13:05:00
 <div class="note"><span style="font-weight: bold">Note:</span> While this API is currently availalbe at no charge, Poynt reserves the right to introduce an API usage fee in the future.</div> 
 <p>&nbsp;</p>
 
-Payment Bridge API provides a way for external systems (e.g. web-based point-of-sale systems) to start a transaction flow on Poynt Terminal without requiring to build any apps/services that have to run on the terminal itself.
+Payment Bridge API provides a way for external systems (e.g. web-based point-of-sale systems) to start a transaction flow on Poynt Terminal using Poynt cloud APIs.
 
 Here is how it works:
 
-1. External System [sends a Poynt Cloud Message](../onterminal/poynt-cloud-messages.html) with a payment request containing business id, store id and optionally terminal id of the merchant
-2. Poynt Cloud authorizes the caller and routes the message to the corresponding merchant terminal(s)
+1. External System [sends a Poynt Cloud Message](../onterminal/poynt-cloud-messages.html) with a payment request containing business id, store id and terminal id of the merchant
+2. Poynt Cloud authorizes the caller and routes the message to the corresponding merchant terminal
 3. Poynt Payment Bridge receives the incoming message and starts the necessary payment flows on the device.
 
 ### Prerequites:
 
 1. [Create a developer account and activate your developer terminal](../setup/activate-poynt-terminal.html). (Note: if you don't have a developer unit you can use [emulator](../setup/setup-poyntos.html))
-2. Create an app and make sure it has "Cloud Messages" WRITE permission
-3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](../cloud/integrating-with-poynt-cloud-apis.html)
+2. Generate API credentials (i.e. appId and private key) by [creating an app](../cloud/integrating-with-poynt-cloud-apis.html#create-app). Make sure it has "Cloud Messages" WRITE permission
+3. Use "Merchant Login Url" of your app to [Authorize one of your test merchants](../cloud/integrating-with-poynt-cloud-apis.html#authorize-merchant)
 
 ### Payment Bridge Sequence Diagram
 
