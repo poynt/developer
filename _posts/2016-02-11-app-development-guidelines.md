@@ -60,6 +60,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * The application apk must be under 50MB. 
   * Only use the Poynt Payment Fragment to collect payment, tip, signature, PIN and payment processor response information.
   * Disable Pay/Charge button when launching Payment Fragment to prevent multiple Payment Fragments from stacking up if the merchant clicks the button repeatedly.
+  * Paid plans should start at $4.99, €4.99 or £4.99 (US, CA, UK, IE). 
 
 ---
 
