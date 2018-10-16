@@ -74,7 +74,7 @@ If you are uploading a new version of your app provide the list of changes in th
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot17.png" alt="AppSubmit_Screenshot17" style="border:20px;margin:20px">
 
-Upload a minimum of two screenshots (for best results use 800x1280px resolution).
+Upload a minimum of two screenshots (for best results use 800x1280px resolution). You can also upload a video (up to 10MB).
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot18.png" alt="AppSubmit_Screenshot18" style="border:20px;margin:20px">
 
@@ -89,7 +89,7 @@ Save the submission
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot22.png" alt="AppSubmit_Screenshot22" style="border:20px;margin:20px">
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot23.png" alt="AppSubmit_Screenshot23" style="border:20px;margin:20px">
+`Cancelation Policy` determines if the subscription will be canceled immediatey or will remain to be active until the end of the current billing cycle.
 
 #### 9. Submit the apk for Poynt Review
 <img class="shadow image" src="../assets/AppSubmit_Screenshot24.png" alt="AppSubmit_Screenshot24" style="border:20px;margin:20px">

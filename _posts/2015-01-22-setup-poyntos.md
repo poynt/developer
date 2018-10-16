@@ -31,9 +31,9 @@ Activating a PoyntOS virtual device on a device emulator is just like activating
 #### Poynt Smart Terminal v1
 Download and unzip the PoyntOS emulator installer here: [PoyntOS\_Emulator\_v1.zip](https://poynt-emulator.s3.amazonaws.com/v1.2.26/PoyntOS_Emulator_Install_v235.zip). Run the installation script `setup_poynt_os.py`
 
-#### Poynt Smart Terminal v2 (for EU Region)
+#### Poynt Smart Terminal v2 (for US & EU Region)
 Download and unzip the PoyntOS emulator installer here:
-[PoyntOS\_Emulator\_v2.zip](https://poynt-emulator.s3.amazonaws.com/p61b/emulator-p61b-0917.zip). Run the installation script `setup_poynt_os.py`. Set the API level of emulator to 23.
+[PoyntOS\_Emulator\_v2.zip](https://poynt-emulator.s3.amazonaws.com/p61b/p61b-338.zip). Run the installation script `setup_poynt_os.py`. Set the API level of emulator to 23.
 
 ### Activating your virtual Poynt terminal
 1. The first time you boot up your device you'll be asked to choose a launcher. Select `Setup Wizard` to start Poynt's OOBE ("out of box experience") application. NOTE: If you're using Genymotion, enable `Use virtual keyboard for text input` option in device configuration.
@@ -84,7 +84,13 @@ This is very useful to pinpoint what's failing. If you do need any assistance, h
 
 ![Create Cloud Application](../assets/p5emu07.png)
 
-8) Download the [Poynt 5 emulator installer](https://poynt-emulator.s3.amazonaws.com/P5/p5-198.zip) and unzip the archive. Run the python installer script. After the installer finished running you should see the following screen:
+8) Download the Poynt 5 emulator installer and unzip the archive. Run the python installer script. After the installer finished running you should see the following screen:
+
+#### Poynt 5 (US)
+[Poynt\_5\_OS\_Emulator.zip](https://poynt-emulator.s3.amazonaws.com/P5/p5-282.zip)
+
+#### Poynt 5 (EU)
+[Poynt\_5\_OS\_Emulator.zip](https://poynt-emulator.s3.amazonaws.com/P5/p5-dev-388.zip)
 
 ![Create Cloud Application](../assets/p5emu08.png)
 
