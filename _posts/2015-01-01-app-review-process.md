@@ -6,13 +6,23 @@ date: 2015-02-11 12:35:00
 ---
 
 
-![](https://d347164ulyc57y.cloudfront.net/2017/07/Final-Developer-flow--3-.png)
+<!-- ![](https://d347164ulyc57y.cloudfront.net/2017/07/Final-Developer-flow--3-.png -->
+  ![](../assets/Developer_flow_10232018.png)
+
 
 
 ## Pre-Requisites
-Developers have signed up for a [Developer account](https://poynt.net/auth/signup/developer).
 
-Developers have an app submitted for review through the [Developer portal](https://poynt.net/terminalapps).
+1) To maintain app adoption and continued merchant interest, Poynt requires all NEW app developers to please note the following:
+```
+* The app being submitted should solve a merchant Need / Pain point. This need has not been solved yet via another app offering on the Poynt
+  app store preferably.
+* The app developer is responsible for finding merchant/reseller who is waiting for the app
+```
+
+2) Developers sign up for a [Developer account](https://poynt.net/auth/signup/developer).
+
+3) Developers submit an app for review through the [Developer portal](https://poynt.net/terminalapps).
 
 ### Step 1:
 Developer verifies whether the app follows the general guidelines as described in the [Poynt App Development Guidelines](../appstore/app-development-guidelines.html).
@@ -26,12 +36,12 @@ The submission form requires the developer to provide a short application summar
 When the app is created, Poynt generates 2048 bit RSA private key that the developer needs to download to securely communicate with their app. Poynt does not store the private key, so if the developer loses the key the will need to generate a new one on poynt.net.
 
 
-### Step 4 & 5:
+### Step 4:
 Upon submission, app status changes to “Submitted” in Poynt developer portal.
 Once the app is submitted an automated ticket is generated in the Poynt ticketing system. App review team gets notified via email that the app has been submitted for review.
 
-### Step 6:
-Poynt app team will request for supporting documents and information:
+### Step 5 and 6:
+Access the following [Onboarding forms](https://poynt.net/mc/#/account/docs) within the developer portal:
 ```
 * App support form
 * Infrastructure readiness
@@ -41,19 +51,19 @@ Poynt app team will request for supporting documents and information:
 * Marketing collateral(Images, write-ups etc for post go-live marketing)
 ```
 ### Step 7:
-Developer returns completed and signed forms to the Poynt app team via email.
+Developer returns completed and signed forms to the Poynt app team at `app-reviews@poynt.co`.
 
 
 ### Step 8:
-At this point, the **Poynt App Review Team** is engaged and an app review analyst reviews the submitted app.
-During the review, if any app issues are discovered the app gets rejected and would need to be updated for further consideration. The app is placed back in the queue(Step 2) if rejected.
+At this point, the **Poynt App Review Team** is notified and an app review analyst reviews the submitted app.
+During the review if any issues are found the app is rejected with the recommendation to update the app for further consideration. The app is placed back in the queue(Step 2) if rejected.
 If the app passes all checks, the app moves to the next step in the process.
 
 ### Step 9:
 If the app passes all the necessary checks, it is signed.
 
 ### Step 10:
-If the app needs to be run on a select few terminals for sanity checks etc, there could be an optional step to run a pilot test before Go-Live.
+After the app is signed, the app status is set to `In PILOT`. During this Pilot / Beta testing phase, the developer finds merchants with specific criteria to Pilot their app (some are outlined in the Pre-Requisites section). This step allows the developer to run a pilot test with merchants on the Poynt app store before Go-Live.
 
 ### Step 11:
 Billing plans can be created under your app within the [App Dashboard](https://poynt.net/mc/#/developer/dashboard). Please follow the [**Billing Best practices**](../appstore/app-billing-best-practices.html) when requesting plans creation and through the app billing lifecycle. Plan information should be requested in the following format (Example below):
