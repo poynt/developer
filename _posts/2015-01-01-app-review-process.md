@@ -13,10 +13,10 @@ date: 2015-02-11 12:35:00
 
 ## Pre-Requisites
 
-1) To maintain app adoption and continued merchant interest, Poynt requires all NEW app developers to please note the following:
+1) To maintain app adoption and continued merchant interest, Poynt requires all NEW app developers do the following:
 ```
 * The app being submitted should solve a merchant Need / Pain point. This need has not been solved yet via another app offering on the Poynt
-  app store preferably.
+  app store.
 * The app developer is responsible for finding merchant/reseller who is waiting for the app
 ```
 
