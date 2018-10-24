@@ -23,7 +23,7 @@ Should any changes be required, developer updates their app.
 ### Step 3:
 The submission form requires the developer to provide a short application summary, detailed description, change log information, app screenshots and the country of distribution. This information will be used by the app review team and it will be displayed in the app marketplace (“Store”) once the app has been approved.
 
-When the app apk is uploaded for the first time, Poynt generates 2048 bit RSA private key that the developer needs to download to securely communicate with their app. Poynt does not store the private key, so if the developer loses the key the will need to generate a new one on poynt.net.
+When the app is created, Poynt generates 2048 bit RSA private key that the developer needs to download to securely communicate with their app. Poynt does not store the private key, so if the developer loses the key the will need to generate a new one on poynt.net.
 
 
 ### Step 4 & 5:
