@@ -26,8 +26,6 @@ This configuration file provides the necessary information for PoyntOS to discov
     <!-- descriptive name of this capability. This name will show in Payment
       Fragment options menu-->
     <provider>Sample Loyalty</provider>
-    <!-- not used currently -->
-    <logo>@mipmap/ic_launcher</logo>
 
     <!--
         CUSTOM -> custom entry mode managed by capability
