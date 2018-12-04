@@ -63,7 +63,12 @@ If the app passes all checks, the app moves to the next step in the process.
 If the app passes all the necessary checks, it is signed.
 
 ### Step 10:
-After the app is signed, the app status is set to `In Pilot`. During this Pilot / Beta testing phase, the developer finds merchants with specific criteria to pilot their app (some are outlined in the Pre-Requisites section). This step allows the developer to run a pilot test with merchants on the Poynt app store before Go-Live.
+After the app is signed, the app status is set to `In Pilot`. 
+<div class="note"><span style="font-weight:bold">IMPORTANT!</span> During this Pilot / Beta testing phase, the developer finds merchants with specific criteria to pilot their app (some are outlined in the Pre-Requisites section). This step allows the developer to run a pilot test with merchants on the Poynt app store before Go-Live.</div>
+<p>&nbsp;</p>
+<p>
+Upon request Poynt will install the app on up to 5 devices for beta testing.</p>
+
 
 ### Step 11:
 Billing plans can be created under your app within the [App Dashboard](https://poynt.net/mc/#/developer/dashboard). Please follow the [**Billing Best practices**](../appstore/app-billing-best-practices.html) when requesting plans creation and through the app billing lifecycle. Plan information should be requested in the following format (Example below):
