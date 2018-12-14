@@ -165,5 +165,8 @@ You can use the following [utility](https://github.com/dsnatochy/PoyntScreenMoni
 **How can I wipe the developer terminal locally (i.e. directly from the device)?**<br>
 Go to Settings > Developer Preferences (unlock Dev Prefs if needed) and tap 10 times on WARNING. Please note, this won't unlink the terminal from the business account. If you need to do that, initiate wipe from Developer Portal.
 
+**Does Poynt5 support BLE?**<br>
+Yes.
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
