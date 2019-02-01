@@ -40,7 +40,12 @@ Please follow the guidelines below when developing apps for the Poynt platform.
 
 #### RELIABILITY, USABILITY AND RESPONSIVENESS:
 * Thoroughly test your app to prevent `NullPointerException` (NPE) and Application Not Responding (ANR) errors.
-* Create a snappy, responsive, simple and intuitive UI
+* Optimize operations for battery usage (i.e. push long running tasks to the cloud).
+* Provide support contact information for customers with issues/questions.
+* The app has an About/Help screen with the support information how the merchant can get assistance with the app
+* The app uses an error crashing library (e.g. Bugsnag, Rollbar, Crashlystics, etc) to proactively detect issues
+* Authenticate users through Poynt's login screen and Token Service. PoyntOS security locks the screen and requires authentication. Additional layers of authentication are unnecessary and time consuming for merchant users.
+* Create a snappy, responsive, simple and intuitive UI:
   * Make touch targets at least 48x48 pixels.
   * Support standard gesture navigation.
   * Ensure the product is still usable with larger font sizes.
@@ -50,9 +55,7 @@ Please follow the guidelines below when developing apps for the Poynt platform.
   * Use the following dimensions for logo image assets: 70px(w) x 70px(h) (52dp x 52dp, tvdpi).
   * A flat color logo without any effects is recommended.
   * Provide navigation inside application including back and home buttons.
-  * Authenticate users through Poynt's login screen and Token Service. PoyntOS security locks the screen and requires authentication. Additional layers of authentication are unnecessary and time consuming for merchant users.
-  * Optimize operations for battery usage (i.e. push long running tasks to the cloud).
-  * Provide support contact information for customers with issues/questions.
+
 
 
 #### POYNT SPECIFIC:
