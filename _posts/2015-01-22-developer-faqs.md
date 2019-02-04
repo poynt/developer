@@ -171,6 +171,12 @@ Yes.
 **How can I use adb on a Poynt Smart Terminal V2 when it's docked?**<br>
 USB debugging does not work on V2 when it is docked. However you can use ADB over Wi-fi. Please refer to [Connect to a Device over Wi-Fi](https://developer.android.com/studio/command-line/adb#wireless).
 
+**I can't use Gradle. How do I download Poynt dependencies for my project?**<br>
+PoyntOS sdk and api model can be download from the following locations:
+
+ * **SDK**: https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/{version}/poynt-sdk-{version}.aar. For example, the URL to download SDK v1.2.33 is https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/1.2.33/poynt-sdk-1.2.33.aar
+ * **API model**: https://nexus.poynt.com/content/repositories/releases/co/poynt/api/android-api-model/{version}/android-api-model-{version}.jar
+
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
