@@ -177,7 +177,7 @@ PoyntOS sdk and api model can be download from the following locations:
  * **SDK**: https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/{version}/poynt-sdk-{version}.aar. For example, the URL to download SDK v1.2.33 is https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/1.2.33/poynt-sdk-1.2.33.aar
  * **API model**: https://nexus.poynt.com/content/repositories/releases/co/poynt/api/android-api-model/{version}/android-api-model-{version}.jar
 
-**I uploaded wrong apk. How can I remove it and upload the correct one?**<br>
+**I uploaded wrong the apk. How can I remove it and upload the correct one?**<br>
 There is no way to remove the wrong apk. If the package name of the correct apk is the same you can just increment **versionCode** in build.gradle and upload the correct version. If the package name of the correct apk is different you will need to create a new application.
 
 <!-- feedback widget -->
