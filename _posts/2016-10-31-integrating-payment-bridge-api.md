@@ -97,11 +97,13 @@ Example response for a processed transaction (could be either success/approval o
 
 # Terminal Connectivity
 
-Terminals maintain a persistent connection to the Poynt cloud but from time to time the connection may get dropped. By default, terminals send a ping message to check if the connection is active every 5 minutes. However you can change the timeout to be more agressive to ensure that the connection does not get dropped by sending the following message to the terminal:
+Terminals maintain a persistent connection to the Poynt cloud but from time to time the connection may get dropped. By default, terminals send a ping message to check if the connection is active every 5 minutes. However you should set a more aggressive connectivity profile to ensure that the connection does not get dropped by sending the following message to the terminal:
 
 <script src="https://gist.github.com/dsnatochy/dbb9d215ef5137205bc86f5e148b100e.js"></script>
 
-The message does not use a callback url as it does not require a postback.
+The message does not use a callback url as it does not require a postback. If you are testing this on a developer terminal, you can confirm that the profile has been applied by checking the logcat:
+
+<script src="https://gist.github.com/dsnatochy/a6c077b2010d8d68263852a1e0f09f52.js"></script>
 
 ## FAQ
 **Q: The body in the callback request is gzip compressed. How can I disable the compression?**<br>
