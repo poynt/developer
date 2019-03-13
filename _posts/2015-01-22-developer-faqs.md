@@ -165,5 +165,20 @@ You can use the following [utility](https://github.com/dsnatochy/PoyntScreenMoni
 **How can I wipe the developer terminal locally (i.e. directly from the device)?**<br>
 Go to Settings > Developer Preferences (unlock Dev Prefs if needed) and tap 10 times on WARNING. Please note, this won't unlink the terminal from the business account. If you need to do that, initiate wipe from Developer Portal.
 
+**Does Poynt5 support BLE?**<br>
+Yes.
+
+**How can I use adb on a Poynt Smart Terminal V2 when it's docked?**<br>
+USB debugging does not work on V2 when it is docked. However you can use ADB over Wi-fi. Please refer to [Connect to a Device over Wi-Fi](https://developer.android.com/studio/command-line/adb#wireless).
+
+**I can't use Gradle. How do I download Poynt dependencies for my project?**<br>
+PoyntOS sdk and api model can be download from the following locations:
+
+ * **SDK**: https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/{version}/poynt-sdk-{version}.aar. For example, the URL to download SDK v1.2.33 is https://nexus.poynt.com/content/repositories/releases/co/poynt/android/sdk/poynt-sdk/1.2.33/poynt-sdk-1.2.33.aar
+ * **API model**: https://nexus.poynt.com/content/repositories/releases/co/poynt/api/android-api-model/{version}/android-api-model-{version}.jar
+
+**I have uploaded the wrong apk. How can I remove it and upload the correct one?**<br>
+There is no way to remove the wrong apk. If the package name of the correct apk is the same you can just increment **versionCode** in build.gradle and upload the correct version. If the package name of the correct apk is different you will need to create a new application.
+
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>

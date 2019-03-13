@@ -561,6 +561,9 @@ CODE_UNEXPECTED_EXCEPTION
 
 ## FAQ
 
+**Why is my custom tender transaction not showing up in Transaction list?**<br>
+Please check the logcat when you create the transaction. The most likely reason is that you are not setting a required field in the Transaction object in which case you would see a 400 error in the logcat with the message explaining which field should be set.
+
 **When I perform a refund the Payment Fragment shows status Refunded but after Transaction list refreshes the SALE transaction is still showing as refundable**<br>
 Please check the logcat to see if `PUT` call to record the refund in the Poynt cloud has failed. This could happen if your transaction processor did not set all of the required fields in the Transaction object. The developerMessage in the error response will indicate which required field is not set.
 

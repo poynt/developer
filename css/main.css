@@ -55,3 +55,33 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,canvas,captio
   padding: 10px;
   background: white;
 }
+
+/**
+ * The following code will make a github embedded gists reponsive
+ * The gist will be 100% in width width, and scroll if a line is to long
+ * if you want wrapping, uncomment the wrapping section
+ * Do note that identation may be butcherd tough
+ */
+.gist{
+
+   width:100%;
+
+   & table{
+	table-layout: fixed;
+  }
+
+  & td.js-line-number{
+	// We need an explicit width for the other column to be auto
+	width: 50px;
+		text-align: center;
+	}
+
+
+
+  // Uncomment this scetion to enable wrapping and disable horizontal scrolling
+  & .blob-code-inner{
+	 white-space: pre-wrap;
+	 whites-space: wrap;
+	 word-wrap:break-word;
+ }
+}

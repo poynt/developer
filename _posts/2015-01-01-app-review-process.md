@@ -13,14 +13,14 @@ date: 2015-02-11 12:35:00
 
 ## Pre-Requisites
 
-1) To maintain app adoption and continued merchant interest, Poynt requires all NEW app developers do the following:
+1) To maintain app adoption and continued merchant interest, the app review process considers the following factors:
+
 ```
-* The app being submitted should solve a merchant Need / Pain point. This need has not been solved yet via another app offering on the Poynt
-  app store.
-* The app developer is responsible for finding merchant/reseller who is waiting for the app
+* The app should be solving a specific merchant need or pain point or targetting a specific merchant vertical. The app should offer functionality that differentiates it from other apps available.
+* The app developer is responsible for finding merchant/reseller who wants to use/distribute their app.
 ```
 
-2) Developers sign up for a [Developer account](https://poynt.net/auth/signup/developer).
+2) Developers sign up for a Developer account ([US](https://poynt.net/auth/signup/developer) \| [EU](https://eu.poynt.net/auth/signup/developer)).
 
 3) Developers submit an app for review through the [Developer portal](https://poynt.net/terminalapps).
 
@@ -31,14 +31,13 @@ Developer verifies whether the app follows the general guidelines as described i
 Should any changes be required, developer updates their app.
 
 ### Step 3:
-The submission form requires the developer to provide a short application summary, detailed description, change log information, app screenshots and the country of distribution. This information will be used by the app review team and it will be displayed in the app marketplace (“Store”) once the app has been approved.
+When the app is created, Poynt generates 2048 bit RSA private key that the developer needs to download to securely communicate with their app. Poynt does not store the private key, so if the developer loses the key the will need to generate a new one on poynt.net.
 
-When the app apk is uploaded for the first time, Poynt generates 2048 bit RSA private key that the developer needs to download to securely communicate with their app. Poynt does not store the private key, so if the developer loses the key the will need to generate a new one on poynt.net.
-
+The apk submission form requires the developer to provide a short application summary, detailed description, change log information, app screenshots and the country of distribution. This information will be used by the app review team and it will be displayed in the app marketplace (`Poynt Store`) once the app has been approved.
 
 ### Step 4:
-Upon submission, app status changes to “Submitted” in Poynt developer portal.
-Once the app is submitted an automated ticket is generated in the Poynt ticketing system. App review team gets notified via email that the app has been submitted for review.
+Upon submission, app status changes to `Submitted` in Poynt developer portal.
+Once the app is submitted an automated ticket is generated in the Poynt ticketing system. App review team gets notified via email that the app has been submitted for review. You should receive an email confirmation as well with the next steps.
 
 ### Step 5 and 6:
 Access the following [Onboarding forms](https://poynt.net/mc/#/account/docs) within the developer portal:
@@ -50,20 +49,26 @@ Access the following [Onboarding forms](https://poynt.net/mc/#/account/docs) wit
 * Test credentials(for app review)
 * Marketing collateral(Images, write-ups etc for post go-live marketing)
 ```
+
+
 ### Step 7:
-Developer returns completed and signed forms to the Poynt app team at `app-reviews@poynt.co`.
+Developer returns completed and signed forms to the Poynt app team by responding to the automated email generated after apk was submitted. If you did not receive that email you can send the documents direclty to `app-reviews@poynt.co`.
 
 
 ### Step 8:
-At this point, the **Poynt App Review Team** is notified and an app review analyst reviews the submitted app.
-During the review if any issues are found the app is rejected with the recommendation to update the app for further consideration. The app is placed back in the queue(Step 2) if rejected.
-If the app passes all checks, the app moves to the next step in the process.
+When an app is submitted, Poynt app analyzer reviews the app within 24 hours. If any issues are found the app is rejected with the recommendation to update the app for further consideration. The results are made available under the developer portal for review. The app is placed back in the queue(Step 2) if rejected.
+If the app passes all checks, the app advances to the next step.
 
 ### Step 9:
 If the app passes all the necessary checks, it is signed.
 
 ### Step 10:
-After the app is signed, the app status is set to `In PILOT`. During this Pilot / Beta testing phase, the developer finds merchants with specific criteria to Pilot their app (some are outlined in the Pre-Requisites section). This step allows the developer to run a pilot test with merchants on the Poynt app store before Go-Live.
+After the app is signed, the app is set to show up under the `Beta Apps` section of the app store on the terminal. Details provided under <a href="https://poynt.github.io/developer/appstore/how-to-submit-apk.html#WhatsNew">How to Submit an apk - "What's New"</a> section.
+<div class="note"><span style="font-weight:bold">IMPORTANT!</span> During the Pilot / Beta testing phase, the app can be installed on up to 10 devices for beta testing. As soon as the device limit is reached the app will not be displayed under the `Beta Apps` section of the app store.</div>
+<p>&nbsp;</p>
+<p>
+</p>
+
 
 ### Step 11:
 Billing plans can be created under your app within the [App Dashboard](https://poynt.net/mc/#/developer/dashboard). Please follow the [**Billing Best practices**](../appstore/app-billing-best-practices.html) when requesting plans creation and through the app billing lifecycle. Plan information should be requested in the following format (Example below):
@@ -117,11 +122,12 @@ The Poynt app team creates the plan and will respond with plan information. Samp
 Once the app integration is complete, developer informs the Poynt app team. App team Activates (*"status": "ACTIVE"*) the plan. At this point the plan shows up in the Poynt App Store.
 
 Additional plans can be requested in a similar way or all at once initially.
+
 ### Step 12:
 The app is set to **LIVE** by the app review analyst. The app shows up on the Poynt app store. Merchants can now find the app and Subscribe to the App's plans(as described in Step 11) by downloading and installing the app on their terminal.
 
 ### Step 13:
-Poynt Marketing team will reach out to the developer contact for details on setting up webinars, distribution strategy etc.
+Poynt developer marketing team may reach out to the developer contact for details on setting up webinars, distribution strategy, etc.
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
