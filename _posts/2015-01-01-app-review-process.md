@@ -52,18 +52,19 @@ Access the following [Onboarding forms](https://poynt.net/mc/#/account/docs) wit
 
 
 ### Step 7:
-Developer returns completed and signed forms to the Poynt app team by responding to the automated email generated after apk was submitted. If you did not receive that email you can send the documents direclty to `app-reviews@poynt.co`.
+Developer returns completed and signed forms to the Poynt app team by sending the documents directly to `app-reviews@poynt.co`.
 
 
 ### Step 8:
-When an app is submitted, Poynt app analyzer reviews the app within 24 hours. If any issues are found the app is rejected with the recommendation to update the app for further consideration. The results are made available under the developer portal for review. The app is placed back in the queue(Step 2) if rejected.
+When an app is submitted, the app is reviewed within 24 hours. If any issues, app is rejected and the rejection reasons are displayed within developer portal. Developer can update the app and resubmit a new version for further consideration. The app is placed back in the queue(Step 2) if rejected.
+
 If the app passes all checks, the app advances to the next step.
 
 ### Step 9:
 If the app passes all the necessary checks, it is signed.
 
 ### Step 10:
-After the app is signed, the app is set to show up under the `Beta Apps` section of the app store on the terminal. Details provided under <a href="https://poynt.github.io/developer/appstore/how-to-submit-apk.html#WhatsNew">How to Submit an apk - "What's New"</a> section.
+After the app is signed, the app is set to show up under the `Beta Apps` section of the app store on the terminal. Details provided under <a href="https://poynt.github.io/developer/appstore/how-to-submit-apk.html#BetaApps">Step 10 - Beta Apps</a>.
 <div class="note"><span style="font-weight:bold">IMPORTANT!</span> During the Pilot / Beta testing phase, the app can be installed on up to 10 devices for beta testing. As soon as the device limit is reached the app will not be displayed under the `Beta Apps` section of the app store.</div>
 <p>&nbsp;</p>
 <p>
@@ -80,7 +81,7 @@ Billing plans can be created under your app within the [App Dashboard](https://p
 "currency": "USD",
 "value": 3999
 "interval": "MONTH",
-"scope": "BUSINESS",
+"scope": "STORE",
 "trialPeriodDays": 30
 ```
 
@@ -97,7 +98,7 @@ The Poynt app team creates the plan and will respond with plan information. Samp
 ```
 {
     "description": "Basic services plan with 30-day trial",
-    "scope": "BUSINESS",
+    "scope": "STORE",
     "createdAt": "2017-08-17T23:10:52.430Z",
     "updatedAt": "2017-08-17T23:10:52.430Z",
     "amounts": [
@@ -124,7 +125,7 @@ Once the app integration is complete, developer informs the Poynt app team. App 
 Additional plans can be requested in a similar way or all at once initially.
 
 ### Step 12:
-The app is set to **LIVE** by the app review analyst. The app shows up on the Poynt app store. Merchants can now find the app and Subscribe to the App's plans(as described in Step 11) by downloading and installing the app on their terminal.
+The app Billing plans are approved and the app is set to **LIVE** by the app review analyst. The app shows up on the Poynt app store. Merchants can now find the app and Subscribe to the App's plans(as described in Step 11) by downloading and installing the app on their terminal.
 
 ### Step 13:
 Poynt developer marketing team may reach out to the developer contact for details on setting up webinars, distribution strategy, etc.
