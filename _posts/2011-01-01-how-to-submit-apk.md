@@ -119,14 +119,15 @@ The apk is reviewed within 24 hrs. If all the checks pass, the apk status change
 <img class="shadow image" src="../assets/AppSubmit_Screenshot24.png" alt="AppSubmit_Screenshot24" style="border:20px;margin:20px">
 
 
-If the apk is rejected, the rejection reasons are displayed for that version.
+If the apk is rejected, the rejection reasons are displayed for that version.<br>
+
 <img class="shadow image" src="../assets/AppSubmit_Screenshot25.png" alt="AppSubmit_Screenshot25" style="border:20px;margin:20px">
 
 
 #### 11. Plan approval & Go-Live
 
 If the app exits the Pilot phase successfully, Poynt review analyst will change Billing plan status from `Pending` to `Approved`.
-The app is also set to `Live` status and the app made available on the app store.
+The app is also set to `Live` status and the app made available on the app store.<br>
 
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot26.png" alt="AppSubmit_Screenshot26" style="border:20px;margin:20px">
