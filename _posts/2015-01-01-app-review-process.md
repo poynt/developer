@@ -14,6 +14,7 @@ date: 2015-02-11 12:35:00
 ## Pre-Requisites
 
 1) To maintain app adoption and continued merchant interest, the app review process considers the following factors:
+
 ```
 * The app should be solving a specific merchant need or pain point or targetting a specific merchant vertical. The app should offer functionality that differentiates it from other apps available.
 * The app developer is responsible for finding merchant/reseller who wants to use/distribute their app.
@@ -51,23 +52,23 @@ Access the following [Onboarding forms](https://poynt.net/mc/#/account/docs) wit
 
 
 ### Step 7:
-Developer returns completed and signed forms to the Poynt app team by responding to the automated email generated after apk was submitted. If you did not receive that email you can send the documents direclty to `app-reviews@poynt.co`.
+Developer returns completed and signed forms to the Poynt app team by sending the documents directly to `app-reviews@poynt.co`.
 
 
 ### Step 8:
-At this point, the **Poynt App Review Team** is notified and an app review analyst reviews the submitted app.
-During the review if any issues are found the app is rejected with the recommendation to update the app for further consideration. The app is placed back in the queue(Step 2) if rejected.
-If the app passes all checks, the app moves to the next step in the process.
+When an app is submitted, the app is reviewed within 24 hours. If any issues, app is rejected and the rejection reasons are displayed within developer portal. Developer can update the app and resubmit a new version for further consideration. The app is placed back in the queue(Step 2) if rejected.
+
+If the app passes all checks, the app advances to the next step.
 
 ### Step 9:
 If the app passes all the necessary checks, it is signed.
 
 ### Step 10:
-After the app is signed, the app status is set to `In Pilot`. 
-<div class="note"><span style="font-weight:bold">IMPORTANT!</span> During this Pilot / Beta testing phase, the developer finds merchants with specific criteria to pilot their app (some are outlined in the Pre-Requisites section). This step allows the developer to run a pilot test with merchants on the Poynt app store before Go-Live.</div>
+After the app is signed, the app is set to show up under the `Beta Apps` section of the app store on the terminal. Details provided under <a href="https://poynt.github.io/developer/appstore/how-to-submit-apk.html#BetaApps">Step 10 - Beta Apps</a>.
+<div class="note"><span style="font-weight:bold">IMPORTANT!</span> During the Pilot / Beta testing phase, the app can be installed on up to 10 devices for beta testing. As soon as the device limit is reached the app will not be displayed under the `Beta Apps` section of the app store.</div>
 <p>&nbsp;</p>
 <p>
-Upon request Poynt will install the app on up to 5 devices for beta testing.</p>
+</p>
 
 
 ### Step 11:
@@ -80,7 +81,7 @@ Billing plans can be created under your app within the [App Dashboard](https://p
 "currency": "USD",
 "value": 3999
 "interval": "MONTH",
-"scope": "BUSINESS",
+"scope": "STORE",
 "trialPeriodDays": 30
 ```
 
@@ -97,7 +98,7 @@ The Poynt app team creates the plan and will respond with plan information. Samp
 ```
 {
     "description": "Basic services plan with 30-day trial",
-    "scope": "BUSINESS",
+    "scope": "STORE",
     "createdAt": "2017-08-17T23:10:52.430Z",
     "updatedAt": "2017-08-17T23:10:52.430Z",
     "amounts": [
@@ -124,10 +125,10 @@ Once the app integration is complete, developer informs the Poynt app team. App 
 Additional plans can be requested in a similar way or all at once initially.
 
 ### Step 12:
-The app is set to **LIVE** by the app review analyst. The app shows up on the Poynt app store. Merchants can now find the app and Subscribe to the App's plans(as described in Step 11) by downloading and installing the app on their terminal.
+The app Billing plans are approved and the app is set to **LIVE** by the app review analyst. The app shows up on the Poynt app store. Merchants can now find the app and Subscribe to the App's plans(as described in Step 11) by downloading and installing the app on their terminal.
 
 ### Step 13:
-Poynt developerm marketing team may reach out to the developer contact for details on setting up webinars, distribution strategy, etc.
+Poynt developer marketing team may reach out to the developer contact for details on setting up webinars, distribution strategy, etc.
 
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
