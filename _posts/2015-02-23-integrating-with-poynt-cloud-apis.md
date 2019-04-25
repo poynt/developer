@@ -111,6 +111,8 @@ The accessToken is an encoded JWT (https://jwt.io) containing a poynt.biz attrib
 }
 {% endhighlight %}
 
+14. To terminal merchant's login session redirect merchant to `https://poynt.net/auth/signout?redirect={URL_TO_REDIRECT_MERCHANT}`. </br>
+
 At this point your app has all the necessary permissions to make API calls on behalf of the merchant.
 
 
