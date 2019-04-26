@@ -111,6 +111,9 @@ The accessToken is an encoded JWT (https://jwt.io) containing a poynt.biz attrib
 }
 {% endhighlight %}
 
+{:start="14"}
+14. To terminate merchant's poynt.net session redirect them to `https://services.poynt.net/auth/signout?redirect={REDIRECT_URL}`<br/>  
+
 At this point your app has all the necessary permissions to make API calls on behalf of the merchant.
 
 
