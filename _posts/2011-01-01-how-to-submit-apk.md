@@ -20,7 +20,7 @@ date: 2013-01-06 07:05:00
 #### 2. Create an App
 <img class="shadow image" src="../assets/AppSubmit_Screenshot1.png" alt="AppSubmit_Screenshot1" style="border:20px;margin:20px">
 
-Enter the app name as you want it to show in Poynt Store.<br/>
+Enter the app name as you want it displayed in Poynt Store.<br/>
 <img class="shadow image" src="../assets/AppSubmit_Screenshot3.png" alt="AppSubmit_Screenshot3" style="border:20px;margin:20px">
 
 #### 3. Download the Public-Private keypair
@@ -55,6 +55,9 @@ The package name of your app has to be unique in the Poynt Store. The best pract
 You are not done yet. Uploading your apk does not submit your app for review!
 
 #### 7. Provide additional information needed for your app to be listed in Poynt Store
+
+Select the terminal types that the app is compatible with under `Terminal Compatibility`.
+
 <img class="shadow image" src="../assets/AppSubmit_Screenshot13.png" alt="AppSubmit_Screenshot13" style="border:20px;margin:20px">
 
 * `Tagline` is a short description for your app when it's displayed as a recommended app. 
@@ -72,47 +75,70 @@ Based on the country you select you will be promted to accept the Distribution A
 
 If you are uploading a new version of your app provide the list of changes in the Change Log.
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot17.png" alt="AppSubmit_Screenshot17" style="border:20px;margin:20px">
-
 Upload a minimum of two screenshots (for best results use 800x1280px resolution). You can also upload a video (up to 10MB).
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot18.png" alt="AppSubmit_Screenshot18" style="border:20px;margin:20px">
+Save the submission.
+
+<img class="shadow image" src="../assets/AppSubmit_Screenshot17.png" alt="AppSubmit_Screenshot17" style="border:20px;margin:20px">
+
+
+
+<!-- <img class="shadow image" src="../assets/AppSubmit_Screenshot18.png" alt="AppSubmit_Screenshot18" style="border:20px;margin:20px">
 
 <img class="shadow image" src="../assets/AppSubmit_Screenshot19.png" alt="AppSubmit_Screenshot19" style="border:20px;margin:20px">
+ -->
 
-Save the submission
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot20.png" alt="AppSubmit_Screenshot20" style="border:20px;margin:20px">
+<!-- <img class="shadow image" src="../assets/AppSubmit_Screenshot20.png" alt="AppSubmit_Screenshot20" style="border:20px;margin:20px"> -->
 
 #### 8. Create Billing plans
 <img class="shadow image" src="../assets/AppSubmit_Screenshot21.png" alt="AppSubmit_Screenshot21" style="border:20px;margin:20px">
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot22.png" alt="AppSubmit_Screenshot22" style="border:20px;margin:20px">
+<!-- <img class="shadow image" src="../assets/AppSubmit_Screenshot22.png" alt="AppSubmit_Screenshot22" style="border:20px;margin:20px"> -->
 
 `Cancelation Policy` determines if the subscription will be canceled immediatey or will remain to be active until the end of the current billing cycle.
 
-#### 9. Submit the apk for Poynt Review
-<img class="shadow image" src="../assets/AppSubmit_Screenshot24.png" alt="AppSubmit_Screenshot24" style="border:20px;margin:20px">
+Save and submit the plan. Plan will be in Pending state until a Poynt analyst approves it.
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot25.png" alt="AppSubmit_Screenshot25" style="border:20px;margin:20px">
+#### 9. Submit the apk for Poynt Review
+<img class="shadow image" src="../assets/AppSubmit_Screenshot22.png" alt="AppSubmit_Screenshot22" style="border:20px;margin:20px">
+
+<img class="shadow image" src="../assets/AppSubmit_Screenshot23.png" alt="AppSubmit_Screenshot23" style="border:20px;margin:20px">
 
 The app has now been successfully Submitted.
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot26.png" alt="AppSubmit_Screenshot26" style="border:20px;margin:20px">
+<!-- <img class="shadow image" src="../assets/AppSubmit_Screenshot26.png" alt="AppSubmit_Screenshot26" style="border:20px;margin:20px"> -->
 
 <p>&nbsp;</p>
-## Next Steps:
-After a Poynt agent approves the Plans, plan status changes from `Pending` to `Approved`.
+#### 10. <a name="BetaApps">Beta Apps:</a>
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot27.png" alt="AppSubmit_Screenshot27" style="border:20px;margin:20px">
+The apk is reviewed within 24 hrs. If all the checks pass, the apk status changes to IN-PILOT. The app is now available under the `Beta Apps` section of the app store on the terminal.
 
-After a Poynt agent approves the Apk for Beta-Testing, status changes to APPROVED.
+<div class="note"><span style="font-weight:bold">IMPORTANT!</span> During the Pilot / Beta testing phase, the app can be installed on up to 10 devices for beta testing. As soon as the device limit is reached the app will not be displayed under the `Beta Apps` section of the app store.</div>
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot28.png" alt="AppSubmit_Screenshot28" style="border:20px;margin:20px">
+<img class="shadow image" src="../assets/AppSubmit_Screenshot24.png" alt="AppSubmit_Screenshot24" style="border:20px;margin:20px">
 
-After a Poynt agent approves the Apk for the Poynt App Marketplace, status changes to `LIVE`.
 
-<img class="shadow image" src="../assets/AppSubmit_Screenshot29.png" alt="AppSubmit_Screenshot29" style="border:20px;margin:20px">
+If the apk is rejected, the rejection reasons are displayed for that version.<br>
 
+<img class="shadow image" src="../assets/AppSubmit_Screenshot25.png" alt="AppSubmit_Screenshot25" style="border:20px;margin:20px">
+
+
+#### 11. Plan approval & Go-Live
+
+If the app exits the Pilot phase successfully, Poynt review analyst will change Billing plan status from `Pending` to `Approved`.
+The app is also set to `Live` status and the app made available on the app store.<br>
+
+
+<img class="shadow image" src="../assets/AppSubmit_Screenshot26.png" alt="AppSubmit_Screenshot26" style="border:20px;margin:20px">
+
+
+<!-- ### <a name="WhatsNew">What's New:</a>
+App Compatibility with different Terminal types can now be set for every apk upload.
+<img class="shadow image" src="../assets/AppSubmit_Screenshot30.png" alt="AppSubmit_Screenshot30" style="border:20px;margin:20px">
+
+If an App gets rejected, the rejection reasons are displayed for that apk version.
+<img class="shadow image" src="../assets/AppSubmit_Screenshot31.png" alt="AppSubmit_Screenshot31" style="border:20px;margin:20px">
+ -->
 <!-- feedback widget -->
 <SCRIPT type="text/javascript">window.doorbellOptions = { appKey: 'eDRWq9iHMZLMyue0tGGchA7bvMGCFBeaHm8XBDUSkdBFcv0cYCi9eDTRBEIekznx' };(function(w, d, t) { var hasLoaded = false; function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6657?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); } if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); } if (d.readyState == 'complete') { l(); } }(window, document, 'SCRIPT')); </SCRIPT>
