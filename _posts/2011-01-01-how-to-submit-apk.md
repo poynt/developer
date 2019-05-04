@@ -15,6 +15,35 @@ date: 2013-01-06 07:05:00
 }
 </style>
 
+<br>
+## Pre-Requisites
+
+Before uploading to Poynt developer portal, APKs must be digitally signed with android keys. Steps as follows:
+
+### a. Generate an Upload key and keystore
+
+In Android Studio select `Build->Generate Signed Bundle/APK`
+
+<img class="shadow image" src="../assets/app-signing-1.png" alt="app-signing-1" style="border:20px;margin:20px">
+
+<img class="shadow image" src="../assets/app-signing-2.png" alt="app-signing-2" style="border:20px;margin:20px">
+
+
+### b. Choose Signature version and sign the app with your key
+
+Select the appropriate Build variant, signing version as `V1(Jar Signature)` and generate the signed apk.
+
+
+<img class="shadow image" src="../assets/app-signing-3.png" alt="app-signing-3" style="border:20px;margin:20px">
+
+Locate the apk named `app-release.apk` or the `app-debug.apk` depending on the build variant chosen. Upload this apk to Poynt developer portal.
+
+<img class="shadow image" src="../assets/app-signing-4.png" alt="app-signing-4" style="border:20px;margin:20px">
+
+<br><br>
+
+## APK Submission through developer portal
+
 #### 1. <a href='../setup/activate-poynt-terminal.html#installation'>Create a New developer</a> account or Sign-In to your existing one
 
 #### 2. Create an App
