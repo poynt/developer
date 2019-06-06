@@ -7,5 +7,5 @@ date: 2015-05-19 11:21:25
 
 
 <script language="javascript">
-window.location="overview/overview.html"
+window.location="https://poynt.github.io/developer-docs"
 </script>
