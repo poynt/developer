@@ -127,3 +127,7 @@ This is very useful to pinpoint what's failing. If you do need any assistance, h
 ![Create Cloud Application](../assets/p5emu16.png)
 
 Your Emulator is set up!
+
+<script language="javascript">
+window.location="https://poynt.github.io/developer-docs/setupTerminal/setup-emulator.html"
+</script>
