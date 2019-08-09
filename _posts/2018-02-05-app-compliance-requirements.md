@@ -29,3 +29,7 @@ The apps developed should be in accordance with the Poynt's Compliance requireme
 
 
 <p>&nbsp;</p>
+
+<script language="javascript">
+window.location="https://poynt.github.io/developer-docs/appStore/app-compliance-requirements.html"
+</script>
