@@ -81,3 +81,7 @@ To help you address your App's compliance with the GDPR we have set out the foll
   **Data sharing** - Do not use the data for any purpose the user has not agreed with. Do not track user activity for business intelligence. Do not show ads based on user behavior or sell user data to a 3rd party without the explicit consent of the user. Avoid security questions that disclose personal information.
 
   **Data Transfers** – if your App transfers any personal data from the European Economic Area to another non-EEA country, ensure that the transfer of this data is protected in accordance with the GDPR (most typically via the deployment of Standard Contractual Clauses or the Privacy Shield).
+  
+<script language="javascript">
+window.location="https://poynt.github.io/developer-docs/appStore/gdpr-guidelines.html"
+</script>
